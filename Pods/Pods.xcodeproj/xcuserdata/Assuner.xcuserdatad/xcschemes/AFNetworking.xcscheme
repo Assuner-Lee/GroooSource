@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "82AF89621E48400B00676D29"
-               BuildableName = "GroooSource.app"
-               BlueprintName = "GroooSource"
-               ReferencedContainer = "container:GroooSource.xcodeproj">
+               BlueprintIdentifier = "9E033EDB5EC0819481B0546434FA577B"
+               BuildableName = "libAFNetworking.a"
+               BlueprintName = "AFNetworking"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "82AF89621E48400B00676D29"
-            BuildableName = "GroooSource.app"
-            BlueprintName = "GroooSource"
-            ReferencedContainer = "container:GroooSource.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -51,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "82AF89621E48400B00676D29"
-            BuildableName = "GroooSource.app"
-            BlueprintName = "GroooSource"
-            ReferencedContainer = "container:GroooSource.xcodeproj">
+            BlueprintIdentifier = "9E033EDB5EC0819481B0546434FA577B"
+            BuildableName = "libAFNetworking.a"
+            BlueprintName = "AFNetworking"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "82AF89621E48400B00676D29"
-            BuildableName = "GroooSource.app"
-            BlueprintName = "GroooSource"
-            ReferencedContainer = "container:GroooSource.xcodeproj">
+            BlueprintIdentifier = "9E033EDB5EC0819481B0546434FA577B"
+            BuildableName = "libAFNetworking.a"
+            BlueprintName = "AFNetworking"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
