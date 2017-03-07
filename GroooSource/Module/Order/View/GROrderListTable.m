@@ -28,9 +28,10 @@ static NSString *GROrderListCellID = @"GROrderListCellID";
 }
 
 - (void)initView {
-    self.frame = CGRectMake(SCREEN_WIDTH * _tableType, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 64 - 44);
+    self.frame = CGRectMake(SCREEN_WIDTH * _tableType, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 64);
     self.dataSource = self;
     self.delegate = self;
+    self.contentInset = UIEdgeInsetsMake(44, 0, 49, 0);
     self.backgroundColor = [UIColor groupTableViewBackgroundColor];
     self.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self registerNib:[UINib nibWithNibName:@"GROrderListCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:GROrderListCellID];
@@ -39,7 +40,11 @@ static NSString *GROrderListCellID = @"GROrderListCellID";
 - (void)setCellDataArray:(NSArray<GROrder *> *)cellDataArray {
     if (cellDataArray.count) {
         _cellDataArray = cellDataArray;
-        [self reloadData];
+        if (self.visibleCells.count) {
+            [self reloadSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, cellDataArray.count)] withRowAnimation:UITableViewRowAnimationAutomatic];
+        } else {
+            [self reloadData];
+        }
     }
 }
 

@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [GRAppStyle viewBaseColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self.navigationController.navigationBar setTitleTextAttributes:[GRAppStyle attributeWithFont:[GRAppStyle font16] color:[UIColor whiteColor]]];
     

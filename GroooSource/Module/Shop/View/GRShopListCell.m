@@ -37,7 +37,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    self.backgroundColor = [GRAppStyle viewBaseColor];
+    self.backgroundColor = [UIColor whiteColor];
     self.selectedBackgroundView = [[UIView alloc] initWithFrame:self.frame];
     self.selectedBackgroundView.backgroundColor = [GRAppStyle mainColorWithAlpha:0.5];
     self.shopStatusLabel.layer.borderWidth = 1.0f;

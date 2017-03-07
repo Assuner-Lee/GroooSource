@@ -8,9 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol GRSegmentHeadViewDelegate <NSObject>
+
+@optional
+- (void)changeWithTapIndex:(NSUInteger)index;
+
+@end
+
+
 @interface GRSegmentHeadView : UIView
 
 @property (nonatomic, strong) NSArray<NSString *> *titleArray;
 @property (nonatomic, strong) UIView *slideLine;
+
+@property (nonatomic, weak) id <GRSegmentHeadViewDelegate> delegate;
 
 @end
