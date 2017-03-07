@@ -84,8 +84,8 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGRect rect = self.headView.slideLine.frame;
-    CGFloat offset = scrollView.contentOffset.x / scrollView.contentSize.width * scrollView.frame.size.width + (scrollView.frame.size.width/3 - rect.size.width)/2;
-    self.headView.slideLine.frame = CGRectMake(offset, rect.origin.y, rect.size.width, rect.size.height);
+    CGFloat orignX = scrollView.contentOffset.x / scrollView.contentSize.width * scrollView.frame.size.width + (scrollView.frame.size.width/3 - rect.size.width)/2;
+    self.headView.slideLine.frame = CGRectMake(orignX, rect.origin.y, rect.size.width, rect.size.height);
 }
 
 # pragma - GRSegmentHeadView

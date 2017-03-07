@@ -67,8 +67,8 @@
         NSAttributedString *string1 = [[NSAttributedString alloc] initWithString:titleArray[0] attributes:attribute];
         NSAttributedString *string2 = [[NSAttributedString alloc] initWithString:titleArray[1] attributes:attribute];
         CGFloat distance = (SCREEN_WIDTH - string1.size.width - string2.size.width) / 3;
-        _title1.frame = CGRectMake(0.5 * distance, 13, string1.size.width, string1.size.height);
-        _title2.frame = CGRectMake(_title1.gr_right + 2 * distance, 13, string2.size.width, string2.size.height);
+        _title1.frame = CGRectMake(0.5 * distance, 10, string1.size.width, string1.size.height + 6);
+        _title2.frame = CGRectMake(_title1.gr_right + 2 * distance, 10, string2.size.width, string2.size.height);
         [_title1 setAttributedTitle:string1 forState:UIControlStateNormal];
         [_title2 setAttributedTitle:string2 forState:UIControlStateNormal];
         
@@ -78,9 +78,9 @@
         NSAttributedString *string2 = [[NSAttributedString alloc] initWithString:titleArray[1] attributes:attribute];
         NSAttributedString *string3 = [[NSAttributedString alloc] initWithString:titleArray[2] attributes:attribute];
         CGFloat distance = (SCREEN_WIDTH - string1.size.width - string2.size.width - string3.size.width) / 3;
-        _title1.frame = CGRectMake(0.5 * distance, 13, string1.size.width, string1.size.height);
-        _title2.frame = CGRectMake(_title1.gr_right + 1 * distance, 13, string2.size.width, string2.size.height);
-        _title3.frame = CGRectMake(_title2.gr_right + 1 * distance, 13, string3.size.width, string3.size.height);
+        _title1.frame = CGRectMake(0.5 * distance, 10, string1.size.width, string1.size.height + 6);
+        _title2.frame = CGRectMake(_title1.gr_right + 1 * distance, 10, string2.size.width, string2.size.height + 6);
+        _title3.frame = CGRectMake(_title2.gr_right + 1 * distance, 10, string3.size.width, string3.size.height + 6);
         [_title1 setAttributedTitle:string1 forState:UIControlStateNormal];
         [_title2 setAttributedTitle:string2 forState:UIControlStateNormal];
         [_title3 setAttributedTitle:string3 forState:UIControlStateNormal];
