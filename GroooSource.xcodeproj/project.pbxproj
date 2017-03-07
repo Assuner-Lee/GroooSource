@@ -35,10 +35,12 @@
 		9C5384A21E52F914004EDBCF /* GRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5384A11E52F914004EDBCF /* GRUser.m */; };
 		9CAAF56A1E6D0E8B00730810 /* GROrderListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF5681E6D0E8B00730810 /* GROrderListCell.m */; };
 		9CAAF56B1E6D0E8B00730810 /* GROrderListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CAAF5691E6D0E8B00730810 /* GROrderListCell.xib */; };
-		9CAAF56E1E6D378D00730810 /* GROrderLIstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF56D1E6D378D00730810 /* GROrderLIstViewController.m */; };
 		9CAAF5741E6E83C600730810 /* GROrderStatusLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF5731E6E83C600730810 /* GROrderStatusLabel.m */; };
 		9CAAF5771E6E8A0800730810 /* GROperateOrderBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF5761E6E8A0800730810 /* GROperateOrderBtn.m */; };
 		9CAAF57C1E6E930700730810 /* GRSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF57B1E6E930700730810 /* GRSegmentView.m */; };
+		9CAAF57F1E6E9E4B00730810 /* GROrderListTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF57E1E6E9E4B00730810 /* GROrderListTable.m */; };
+		9CAAF5821E6ED1F700730810 /* GRSegmentHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF5811E6ED1F700730810 /* GRSegmentHeadView.m */; };
+		9CAAF5851E6F048E00730810 /* GROrderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF5841E6F048E00730810 /* GROrderListViewController.m */; };
 		9CB92AB61E5D67AD00650CC5 /* GRShopListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB92AB41E5D67AD00650CC5 /* GRShopListCell.m */; };
 		9CB92AB71E5D67AD00650CC5 /* GRShopListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CB92AB51E5D67AD00650CC5 /* GRShopListCell.xib */; };
 		9CB92ABA1E5DB14A00650CC5 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB92AB91E5DB14A00650CC5 /* MBProgressHUD.m */; };
@@ -108,8 +110,6 @@
 		9CAAF5671E6D0E8B00730810 /* GROrderListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GROrderListCell.h; sourceTree = "<group>"; };
 		9CAAF5681E6D0E8B00730810 /* GROrderListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GROrderListCell.m; sourceTree = "<group>"; };
 		9CAAF5691E6D0E8B00730810 /* GROrderListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GROrderListCell.xib; sourceTree = "<group>"; };
-		9CAAF56C1E6D378D00730810 /* GROrderLIstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GROrderLIstViewController.h; sourceTree = "<group>"; };
-		9CAAF56D1E6D378D00730810 /* GROrderLIstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GROrderLIstViewController.m; sourceTree = "<group>"; };
 		9CAAF5701E6D6FA200730810 /* GRHeaders.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GRHeaders.pch; sourceTree = "<group>"; };
 		9CAAF5711E6E808900730810 /* GROrderStatusEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GROrderStatusEnum.h; sourceTree = "<group>"; };
 		9CAAF5721E6E83C600730810 /* GROrderStatusLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GROrderStatusLabel.h; sourceTree = "<group>"; };
@@ -118,6 +118,12 @@
 		9CAAF5761E6E8A0800730810 /* GROperateOrderBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GROperateOrderBtn.m; sourceTree = "<group>"; };
 		9CAAF57A1E6E930700730810 /* GRSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRSegmentView.h; sourceTree = "<group>"; };
 		9CAAF57B1E6E930700730810 /* GRSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRSegmentView.m; sourceTree = "<group>"; };
+		9CAAF57D1E6E9E4B00730810 /* GROrderListTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GROrderListTable.h; sourceTree = "<group>"; };
+		9CAAF57E1E6E9E4B00730810 /* GROrderListTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GROrderListTable.m; sourceTree = "<group>"; };
+		9CAAF5801E6ED1F700730810 /* GRSegmentHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRSegmentHeadView.h; sourceTree = "<group>"; };
+		9CAAF5811E6ED1F700730810 /* GRSegmentHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRSegmentHeadView.m; sourceTree = "<group>"; };
+		9CAAF5831E6F048E00730810 /* GROrderListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GROrderListViewController.h; sourceTree = "<group>"; };
+		9CAAF5841E6F048E00730810 /* GROrderListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GROrderListViewController.m; sourceTree = "<group>"; };
 		9CB92AB31E5D67AD00650CC5 /* GRShopListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRShopListCell.h; sourceTree = "<group>"; };
 		9CB92AB41E5D67AD00650CC5 /* GRShopListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRShopListCell.m; sourceTree = "<group>"; };
 		9CB92AB51E5D67AD00650CC5 /* GRShopListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRShopListCell.xib; sourceTree = "<group>"; };
@@ -452,6 +458,8 @@
 			children = (
 				9CAAF57A1E6E930700730810 /* GRSegmentView.h */,
 				9CAAF57B1E6E930700730810 /* GRSegmentView.m */,
+				9CAAF5801E6ED1F700730810 /* GRSegmentHeadView.h */,
+				9CAAF5811E6ED1F700730810 /* GRSegmentHeadView.m */,
 			);
 			path = GRSegmentView;
 			sourceTree = "<group>";
@@ -479,8 +487,8 @@
 		9CB9DF9D1E659CE400C8F5E8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9CAAF56C1E6D378D00730810 /* GROrderLIstViewController.h */,
-				9CAAF56D1E6D378D00730810 /* GROrderLIstViewController.m */,
+				9CAAF5831E6F048E00730810 /* GROrderListViewController.h */,
+				9CAAF5841E6F048E00730810 /* GROrderListViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -507,6 +515,8 @@
 				9CAAF5671E6D0E8B00730810 /* GROrderListCell.h */,
 				9CAAF5681E6D0E8B00730810 /* GROrderListCell.m */,
 				9CAAF5691E6D0E8B00730810 /* GROrderListCell.xib */,
+				9CAAF57D1E6E9E4B00730810 /* GROrderListTable.h */,
+				9CAAF57E1E6E9E4B00730810 /* GROrderListTable.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -647,12 +657,12 @@
 			files = (
 				9CB92ABD1E5F0FF800650CC5 /* GRShopListViewController.m in Sources */,
 				9CAAF57C1E6E930700730810 /* GRSegmentView.m in Sources */,
+				9CAAF5851E6F048E00730810 /* GROrderListViewController.m in Sources */,
 				9CB9DFA51E65A9F800C8F5E8 /* GROrderListRequest.m in Sources */,
 				9C1507F11E5085F3007C2B8F /* GRRegisterViewController.m in Sources */,
 				823FE45A1E4C94FE008E8CB0 /* UIImage+GROperation.m in Sources */,
 				82AF89BE1E4AE7BD00676D29 /* GRAppStyle.m in Sources */,
 				82AF89AB1E49765300676D29 /* GRNetRequestObject.m in Sources */,
-				9CAAF56E1E6D378D00730810 /* GROrderLIstViewController.m in Sources */,
 				82AF89B21E49DA1600676D29 /* GRModel.m in Sources */,
 				82AF89C81E4AF51C00676D29 /* GRShopListRequest.m in Sources */,
 				82AF89B51E4AC38200676D29 /* GRListTypeModel.m in Sources */,
@@ -667,11 +677,13 @@
 				9C1507F51E515905007C2B8F /* GRLoginRequest.m in Sources */,
 				82AF89D51E4B3F5200676D29 /* NSString+GRCommen.m in Sources */,
 				82AF89E31E4C542000676D29 /* GRWebViewController.m in Sources */,
+				9CAAF57F1E6E9E4B00730810 /* GROrderListTable.m in Sources */,
 				9CB92AC61E63F1A700650CC5 /* GRRouter.m in Sources */,
 				82AF89811E48418800676D29 /* main.m in Sources */,
 				9C53849F1E52F626004EDBCF /* GRUserManager.m in Sources */,
 				9CB9DFA21E659D7000C8F5E8 /* GROrderList.m in Sources */,
 				9CAAF5741E6E83C600730810 /* GROrderStatusLabel.m in Sources */,
+				9CAAF5821E6ED1F700730810 /* GRSegmentHeadView.m in Sources */,
 				9C5384A21E52F914004EDBCF /* GRUser.m in Sources */,
 				82AF89AE1E498F6600676D29 /* GRHTTPManager.m in Sources */,
 				82AF89D11E4B2FA100676D29 /* GRViewController.m in Sources */,

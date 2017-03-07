@@ -9,7 +9,7 @@
 #import "GRTabBarViewController.h"
 #import "GRShopListViewController.h"
 #import "GRLoginViewController.h"
-#import "GROrderLIstViewController.h"
+#import "GROrderListViewController.h"
 
 @interface GRTabBarViewController ()
 
@@ -29,7 +29,7 @@
 - (instancetype)init {
     if (self = [super init]) {
         UINavigationController *shopListNVC = [[UINavigationController alloc] initWithRootViewController:[[GRShopListViewController alloc] init]];
-        UINavigationController *orderListNVC = [[UINavigationController alloc] initWithRootViewController:[[GROrderLIstViewController alloc] init]];
+        UINavigationController *orderListNVC = [[UINavigationController alloc] initWithRootViewController:[[GROrderListViewController alloc] init]];
         GRLoginViewController *login = [GRLoginViewController new];
         self.viewControllers = @[shopListNVC, orderListNVC,login];
     }

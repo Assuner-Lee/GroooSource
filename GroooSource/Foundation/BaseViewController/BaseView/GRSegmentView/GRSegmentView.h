@@ -13,6 +13,7 @@
 @property (nonatomic, strong) NSArray<UIView *> *subViewsArray;
 @property (nonatomic, strong) NSArray<NSString *> *titleArray;
 @property (nonatomic, assign) CGFloat orignY;
+@property (nonatomic, strong) UIColor *backgroundColor;
 
 
 - (instancetype)initWithSubviewArray:(NSArray<UIView *> *)subviewArray titleArray:(NSArray<NSString *> *)titleArray orignY:(CGFloat)orignY;
