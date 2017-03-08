@@ -55,7 +55,7 @@
     self.baseView.showsVerticalScrollIndicator = NO;
     self.baseView.showsHorizontalScrollIndicator = NO;
     self.baseView.delegate = self;
-    self.baseView.contentInset = UIEdgeInsetsMake(-64, 0, -64, 0);
+    self.baseView.contentInset = UIEdgeInsetsMake(-64, 0, -49, 0);
     [self addSubviews];
     [self addSubview:self.baseView];
 
