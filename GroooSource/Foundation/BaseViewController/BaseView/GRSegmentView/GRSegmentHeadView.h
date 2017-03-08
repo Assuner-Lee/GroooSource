@@ -23,4 +23,7 @@
 
 @property (nonatomic, weak) id <GRSegmentHeadViewDelegate> delegate;
 
+- (instancetype)initWithFrame:(CGRect)frame mainColor:(UIColor *)aColor;
+- (void)selectIndex:(NSUInteger)index;
+
 @end

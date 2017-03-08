@@ -14,6 +14,7 @@ static NSString *GROrderListCellID = @"GROrderListCellID";
 @interface GROrderListTable () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, assign) GROrderTableType tableType;
+@property (nonatomic, strong) UIView *blankView;
 
 @end
 
@@ -35,9 +36,19 @@ static NSString *GROrderListCellID = @"GROrderListCellID";
     self.backgroundColor = [UIColor groupTableViewBackgroundColor];
     self.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self registerNib:[UINib nibWithNibName:@"GROrderListCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:GROrderListCellID];
+    [self initBlankView];
+}
+
+- (void)initBlankView {
+    self.blankView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.gr_width, self.gr_height)];
+    self.blankView.backgroundColor = [UIColor whiteColor];
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0.44 * self.gr_width, self.gr_height -  0.66 * self.gr_width - 49 - 44, 0.56 * self.gr_width, 0.66 * self.gr_width)];
+    imgView.image = [UIImage imageNamed:@"grooo_blank"];
+    [self.blankView addSubview:imgView];
 }
 
 - (void)setCellDataArray:(NSArray<GROrder *> *)cellDataArray {
+    [_blankView removeFromSuperview];
     if (cellDataArray.count) {
         _cellDataArray = cellDataArray;
         if (self.visibleCells.count) {
@@ -45,6 +56,8 @@ static NSString *GROrderListCellID = @"GROrderListCellID";
         } else {
             [self reloadData];
         }
+    } else if (!self.visibleCells.count) {
+        [self addSubview:self.blankView];
     }
 }
 

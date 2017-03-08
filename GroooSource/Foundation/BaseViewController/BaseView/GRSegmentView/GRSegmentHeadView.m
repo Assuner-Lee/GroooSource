@@ -14,14 +14,16 @@
 @property (nonatomic, strong) UIButton *title2;
 @property (nonatomic, strong) UIButton *title3;
 
+@property (nonatomic, strong) UIColor *mainColor;
 @end
 
 
 @implementation GRSegmentHeadView
 
-- (instancetype)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame mainColor:(UIColor *)aColor {
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = [[GRAppStyle viewBaseColor] colorWithAlphaComponent:0.6];
+        self.mainColor = aColor;
         UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
         UIVisualEffectView *effectview = [[UIVisualEffectView alloc] initWithEffect:blur];
         effectview.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
@@ -30,7 +32,7 @@
         line.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.12];
         [self addSubview:line];
         self.slideLine = [[UIView alloc] init];
-        self.slideLine.backgroundColor = [GRAppStyle mainColor];
+        self.slideLine.backgroundColor = _mainColor;
         self.slideLine.layer.cornerRadius = 1.5;
         self.slideLine.clipsToBounds = YES;
         [self addSubview:self.slideLine];
@@ -46,6 +48,15 @@
     self.title1.tag = 1;
     self.title2.tag = 2;
     self.title3.tag = 3;
+    self.title1.titleLabel.font = [UIFont systemFontOfSize:13.0];
+    self.title2.titleLabel.font = [UIFont systemFontOfSize:13.0];
+    self.title3.titleLabel.font = [UIFont systemFontOfSize:13.0];
+    [self.title1 setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+    [self.title2 setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+    [self.title3 setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+    [self.title1 setTitleColor:_mainColor forState:UIControlStateSelected];
+    [self.title2 setTitleColor:_mainColor forState:UIControlStateSelected];
+    [self.title3 setTitleColor:_mainColor forState:UIControlStateSelected];
     [self.title1 addTarget:self action:@selector(tapTitle:) forControlEvents:UIControlEventTouchUpInside];
     [self.title2 addTarget:self action:@selector(tapTitle:) forControlEvents:UIControlEventTouchUpInside];
     [self.title3 addTarget:self action:@selector(tapTitle:) forControlEvents:UIControlEventTouchUpInside];
@@ -81,9 +92,9 @@
         _title1.frame = CGRectMake(0.5 * distance, 10, string1.size.width, string1.size.height + 6);
         _title2.frame = CGRectMake(_title1.gr_right + 1 * distance, 10, string2.size.width, string2.size.height + 6);
         _title3.frame = CGRectMake(_title2.gr_right + 1 * distance, 10, string3.size.width, string3.size.height + 6);
-        [_title1 setAttributedTitle:string1 forState:UIControlStateNormal];
-        [_title2 setAttributedTitle:string2 forState:UIControlStateNormal];
-        [_title3 setAttributedTitle:string3 forState:UIControlStateNormal];
+        [_title1 setTitle:string1.string forState:UIControlStateNormal];
+        [_title2 setTitle:string2.string forState:UIControlStateNormal];
+        [_title3 setTitle:string3.string forState:UIControlStateNormal];
        
     }
     
@@ -95,6 +106,19 @@
 - (void)tapTitle:(UIButton *)sender {
     if ([self.delegate respondsToSelector:@selector(changeWithTapIndex:)]) {
         [self.delegate changeWithTapIndex:(sender.tag - 1)];
+    }
+    [self selectIndex:sender.tag];
+}
+
+- (void)selectIndex:(NSUInteger)index {
+    NSArray<UIButton *> *array = @[_title1, _title2, _title3];
+    index = index < 1 ? 1 : index;
+    for (UIButton *btn in array) {
+        if ([btn isEqual:array[index - 1]]) {
+            btn.selected = YES;
+        } else {
+            btn.selected = NO;
+        }
     }
 }
 

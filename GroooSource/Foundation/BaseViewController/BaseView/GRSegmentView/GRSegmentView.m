@@ -10,20 +10,25 @@
 #import "GRSegmentHeadView.h"
 
 @interface GRSegmentView () <UIScrollViewDelegate, GRSegmentHeadViewDelegate>
+@property (nonatomic, strong) NSArray<UIView *> *subViewsArray;
+@property (nonatomic, strong) NSArray<NSString *> *titleArray;
+@property (nonatomic, assign) CGFloat orignY;
 
 @property (nonatomic, strong) GRSegmentHeadView *headView;
 @property (nonatomic, strong) UIScrollView *baseView;
 @property (nonatomic, assign) CGFloat subviewHight;
 @property (nonatomic, assign) NSUInteger scrollCount;
+@property (nonatomic, strong) UIColor *mainColor;
 
 @end
 
 @implementation GRSegmentView
 
-- (instancetype)initWithSubviewArray:(NSArray<UIView *> *)subviewArray titleArray:(NSArray<NSString *> *)titleArray orignY:(CGFloat)orignY {
+- (instancetype)initWithSubviewArray:(NSArray<UIView *> *)subviewArray titleArray:(NSArray<NSString *> *)titleArray orignY:(CGFloat)orignY mainColor:(UIColor *)aColor {
     if (self = [super init]) {
         self.orignY = orignY;
         self.scrollCount = subviewArray.count;
+        self.mainColor = aColor;
         if (!self.scrollCount) {
             return nil;
         }
@@ -41,8 +46,9 @@
 }
 
 - (void)initHeadView {
-    self.headView = [[GRSegmentHeadView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 44)];
+    self.headView = [[GRSegmentHeadView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 44) mainColor:self.mainColor];
     self.headView.delegate = self;
+    [self.headView selectIndex:1];
     [self addSubview:self.headView];
    }
 
@@ -86,6 +92,11 @@
     CGRect rect = self.headView.slideLine.frame;
     CGFloat orignX = scrollView.contentOffset.x / scrollView.contentSize.width * scrollView.frame.size.width + (scrollView.frame.size.width/3 - rect.size.width)/2;
     self.headView.slideLine.frame = CGRectMake(orignX, rect.origin.y, rect.size.width, rect.size.height);
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    NSUInteger index = 1 + floor(scrollView.contentOffset.x / scrollView.gr_width);
+    [self.headView selectIndex:index];
 }
 
 # pragma - GRSegmentHeadView

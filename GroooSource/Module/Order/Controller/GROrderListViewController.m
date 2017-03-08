@@ -60,7 +60,7 @@
     self.onGoingOrderTable = [[GROrderListTable alloc] initWithType:GROrderTableTypeOnGoing];
     self.finishOrderTable = [[GROrderListTable alloc] initWithType:GROrderTableTypeFinished];
     self.otherOrderTable = [[GROrderListTable alloc] initWithType:GROrderTableTypeOther];
-    self.segmentView = [[GRSegmentView alloc] initWithSubviewArray:@[_onGoingOrderTable, _finishOrderTable, _otherOrderTable] titleArray:@[_onGoingOrderTable.title, _finishOrderTable.title,  _otherOrderTable.title] orignY:64];
+    self.segmentView = [[GRSegmentView alloc] initWithSubviewArray:@[_onGoingOrderTable, _finishOrderTable, _otherOrderTable] titleArray:@[_onGoingOrderTable.title, _finishOrderTable.title,  _otherOrderTable.title] orignY:64 mainColor:[GRAppStyle mainColor]];
     self.segmentView.backgroundColor = [UIColor groupTableViewBackgroundColor];
     [self.view addSubview:self.segmentView];
 }
