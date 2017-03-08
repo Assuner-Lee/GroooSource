@@ -83,7 +83,7 @@
     _orderDetailView = [[UIButton alloc] initWithFrame:CGRectMake(0, 130, SCREEN_WIDTH, orderData.orderCellMaxHight - 130)];
     [self addSubview:_orderDetailView];
     UIView *topLine = [[UIView alloc] initWithFrame:CGRectMake(8, 0, _orderDetailView.gr_width - 8, 0.7)];
-    topLine.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.12];
+    topLine.backgroundColor = [GRAppStyle lineColor];
     [_orderDetailView addSubview:topLine];
     NSDictionary *foodStringattribute = [GRAppStyle attributeWithFont:[GRAppStyle font12] color:[UIColor darkGrayColor]];
     for (int i = 1; i <= orderData.orderDetail.count; i++) {
@@ -104,7 +104,7 @@
         [_orderDetailView addSubview:countLabel];
         
         UIView *line = [[UIView alloc] initWithFrame:CGRectMake(8, 30 * i, _orderDetailView.gr_width - 8, 0.7)];
-        line.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.12];
+        line.backgroundColor = [GRAppStyle lineColor];
         [_orderDetailView addSubview:line];
     }
 }

@@ -56,12 +56,11 @@
     return [self colorWithRed:114 green:188 blue:73];
 }
 
++ (UIColor *)lineColor {
+    return [[UIColor blackColor] colorWithAlphaComponent:0.12];
+}
 
 #pragma - font
-
-+ (UIFont *)font16 {
-    return [UIFont systemFontOfSize:16.0];
-}
 
 + (UIFont *)font12 {
     return [UIFont systemFontOfSize:12.0];
@@ -71,6 +70,13 @@
     return [UIFont systemFontOfSize:9.0];
 }
 
++ (UIFont *)font13 {
+    return [UIFont systemFontOfSize:13.0];
+}
+
++ (UIFont *)font16 {
+    return [UIFont systemFontOfSize:16.0];
+}
 #pragma - other
 
 + (NSDictionary *)attributeWithFont:(UIFont *)aFont color:(UIColor *)aColor {

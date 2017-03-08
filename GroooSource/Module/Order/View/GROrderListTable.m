@@ -41,8 +41,7 @@ static NSString *GROrderListCellID = @"GROrderListCellID";
 
 - (void)initBlankView {
     self.blankView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.gr_width, self.gr_height)];
-    self.blankView.backgroundColor = [UIColor whiteColor];
-    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0.44 * self.gr_width, self.gr_height -  0.66 * self.gr_width - 49 - 44, 0.56 * self.gr_width, 0.66 * self.gr_width)];
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(self.gr_width - 0.9*ADAPTX_VALUE(320), self.gr_height - 0.9*ADAPTX_VALUE(500) - 49 - 44, 0.9*ADAPTY_VALUE(320), 0.9*ADAPTX_VALUE(500))];
     imgView.image = [UIImage imageNamed:@"grooo_blank"];
     [self.blankView addSubview:imgView];
 }

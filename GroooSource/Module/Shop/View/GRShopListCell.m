@@ -59,7 +59,7 @@
     _activityLabel.numberOfLines = 0;
 
     self.separateLine = [UIView new];
-    self.separateLine.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.12];
+    self.separateLine.backgroundColor = [GRAppStyle lineColor];
     [self.contentView addSubview:self.separateLine];
 }
 

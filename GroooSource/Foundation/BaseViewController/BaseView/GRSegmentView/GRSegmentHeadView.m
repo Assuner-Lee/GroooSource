@@ -15,6 +15,7 @@
 @property (nonatomic, strong) UIButton *title3;
 
 @property (nonatomic, strong) UIColor *mainColor;
+
 @end
 
 
@@ -29,7 +30,7 @@
         effectview.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
         [self addSubview:effectview];
         UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0, frame.size.height - 1, frame.size.width, 1)];
-        line.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.12];
+        line.backgroundColor = [GRAppStyle lineColor];
         [self addSubview:line];
         self.slideLine = [[UIView alloc] init];
         self.slideLine.backgroundColor = _mainColor;
@@ -48,9 +49,9 @@
     self.title1.tag = 1;
     self.title2.tag = 2;
     self.title3.tag = 3;
-    self.title1.titleLabel.font = [UIFont systemFontOfSize:13.0];
-    self.title2.titleLabel.font = [UIFont systemFontOfSize:13.0];
-    self.title3.titleLabel.font = [UIFont systemFontOfSize:13.0];
+    self.title1.titleLabel.font = [GRAppStyle font13];
+    self.title2.titleLabel.font = [GRAppStyle font13];
+    self.title3.titleLabel.font = [GRAppStyle font13];
     [self.title1 setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
     [self.title2 setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
     [self.title3 setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
@@ -73,31 +74,29 @@
     _title1.frame = CGRectZero;
     _title2.frame = CGRectZero;
     _title3.frame = CGRectZero;
-    NSDictionary *attribute = [GRAppStyle attributeWithFont:[UIFont systemFontOfSize:13] color:[UIColor darkGrayColor]];
+    
     if (titleArray.count == 2) {
-        NSAttributedString *string1 = [[NSAttributedString alloc] initWithString:titleArray[0] attributes:attribute];
-        NSAttributedString *string2 = [[NSAttributedString alloc] initWithString:titleArray[1] attributes:attribute];
-        CGFloat distance = (SCREEN_WIDTH - string1.size.width - string2.size.width) / 3;
-        _title1.frame = CGRectMake(0.5 * distance, 10, string1.size.width, string1.size.height + 6);
-        _title2.frame = CGRectMake(_title1.gr_right + 2 * distance, 10, string2.size.width, string2.size.height);
-        [_title1 setAttributedTitle:string1 forState:UIControlStateNormal];
-        [_title2 setAttributedTitle:string2 forState:UIControlStateNormal];
+        CGSize size1 = SIZE_OF_TEXT(titleArray[0], CGSizeZero, 13.0).size;
+        CGSize size2 = SIZE_OF_TEXT(titleArray[1], CGSizeZero, 13.0).size;
+        CGFloat distance = (SCREEN_WIDTH - size1.width - size2.width) / 3;
+        _title1.frame = CGRectMake(0.5 * distance, 10, size1.width, size1.height + 6);
+        _title2.frame = CGRectMake(_title1.gr_right + 2 * distance, 10, size2.width, size2.height + 6);
+        [_title1 setTitle:titleArray[0] forState:UIControlStateNormal];
+        [_title2 setTitle:titleArray[1] forState:UIControlStateNormal];
         
     }
     if (titleArray.count == 3) {
-        NSAttributedString *string1 = [[NSAttributedString alloc] initWithString:titleArray[0] attributes:attribute];
-        NSAttributedString *string2 = [[NSAttributedString alloc] initWithString:titleArray[1] attributes:attribute];
-        NSAttributedString *string3 = [[NSAttributedString alloc] initWithString:titleArray[2] attributes:attribute];
-        CGFloat distance = (SCREEN_WIDTH - string1.size.width - string2.size.width - string3.size.width) / 3;
-        _title1.frame = CGRectMake(0.5 * distance, 10, string1.size.width, string1.size.height + 6);
-        _title2.frame = CGRectMake(_title1.gr_right + 1 * distance, 10, string2.size.width, string2.size.height + 6);
-        _title3.frame = CGRectMake(_title2.gr_right + 1 * distance, 10, string3.size.width, string3.size.height + 6);
-        [_title1 setTitle:string1.string forState:UIControlStateNormal];
-        [_title2 setTitle:string2.string forState:UIControlStateNormal];
-        [_title3 setTitle:string3.string forState:UIControlStateNormal];
-       
+        CGSize size1 = SIZE_OF_TEXT(titleArray[0], CGSizeZero, 13.0).size;
+        CGSize size2 = SIZE_OF_TEXT(titleArray[1], CGSizeZero, 13.0).size;
+        CGSize size3 = SIZE_OF_TEXT(titleArray[2], CGSizeZero, 13.0).size;
+        CGFloat distance = (SCREEN_WIDTH - size1.width - size2.width - size3.width) / 3;
+        _title1.frame = CGRectMake(0.5 * distance, 10, size1.width, size1.height + 6);
+        _title2.frame = CGRectMake(_title1.gr_right + 1 * distance, 10, size2.width, size2.height + 6);
+        _title3.frame = CGRectMake(_title2.gr_right + 1 * distance, 10, size3.width, size3.height + 6);
+        [_title1 setTitle:titleArray[0] forState:UIControlStateNormal];
+        [_title2 setTitle:titleArray[1] forState:UIControlStateNormal];
+        [_title3 setTitle:titleArray[2] forState:UIControlStateNormal];
     }
-    
     _slideLine.frame = CGRectMake(_title1.gr_left, self.gr_height - 1 - 3, _title1.gr_width, 3);
 }
 

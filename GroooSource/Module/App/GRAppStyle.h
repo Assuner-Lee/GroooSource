@@ -34,13 +34,17 @@
 
 + (UIColor *)newGreenColor;
 
++ (UIColor *)lineColor;
+
 //***************UIFont*****************
 
-+ (UIFont *)font16;
++ (UIFont *)font9;
 
 + (UIFont *)font12;
 
-+ (UIFont *)font9;
++ (UIFont *)font13;
+
++ (UIFont *)font16;
 
 //***************other******************
 
