@@ -50,6 +50,8 @@
 		9CB92AC91E63FC8000650CC5 /* GRTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB92AC81E63FC8000650CC5 /* GRTabBarViewController.m */; };
 		9CB9DFA21E659D7000C8F5E8 /* GROrderList.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB9DFA11E659D7000C8F5E8 /* GROrderList.m */; };
 		9CB9DFA51E65A9F800C8F5E8 /* GROrderListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB9DFA41E65A9F800C8F5E8 /* GROrderListRequest.m */; };
+		9CFF24CD1E83B886004D92D7 /* GRMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CFF24CB1E83B886004D92D7 /* GRMenuViewController.m */; };
+		9CFF24CE1E83B886004D92D7 /* GRMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CFF24CC1E83B886004D92D7 /* GRMenuViewController.xib */; };
 		E2954B97A1FCB5F571EBF9A5 /* libPods-GroooSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E584F6C8F6FD08D02E5B18 /* libPods-GroooSource.a */; };
 /* End PBXBuildFile section */
 
@@ -142,6 +144,9 @@
 		9CB9DFA11E659D7000C8F5E8 /* GROrderList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GROrderList.m; sourceTree = "<group>"; };
 		9CB9DFA31E65A9F800C8F5E8 /* GROrderListRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GROrderListRequest.h; sourceTree = "<group>"; };
 		9CB9DFA41E65A9F800C8F5E8 /* GROrderListRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GROrderListRequest.m; sourceTree = "<group>"; };
+		9CFF24CA1E83B886004D92D7 /* GRMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMenuViewController.h; sourceTree = "<group>"; };
+		9CFF24CB1E83B886004D92D7 /* GRMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRMenuViewController.m; sourceTree = "<group>"; };
+		9CFF24CC1E83B886004D92D7 /* GRMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRMenuViewController.xib; sourceTree = "<group>"; };
 		A71905685320E5462FE3E37D /* Pods-GroooSource.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroooSource.release.xcconfig"; path = "Pods/Target Support Files/Pods-GroooSource/Pods-GroooSource.release.xcconfig"; sourceTree = "<group>"; };
 		D2038BDCB8836837AC626A84 /* Pods-GroooSource.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroooSource.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GroooSource/Pods-GroooSource.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -250,6 +255,7 @@
 		82AF898D1E4842B300676D29 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				9CFF24C61E83B7C7004D92D7 /* Menu */,
 				9CB9DF9C1E659CE400C8F5E8 /* Order */,
 				82AF89C91E4B158A00676D29 /* Account */,
 				82AF89BF1E4AEFC600676D29 /* Shop */,
@@ -521,6 +527,40 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		9CFF24C61E83B7C7004D92D7 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				9CFF24C71E83B7C7004D92D7 /* Controller */,
+				9CFF24C81E83B7C7004D92D7 /* Model */,
+				9CFF24C91E83B7C7004D92D7 /* View */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		9CFF24C71E83B7C7004D92D7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9CFF24CA1E83B886004D92D7 /* GRMenuViewController.h */,
+				9CFF24CB1E83B886004D92D7 /* GRMenuViewController.m */,
+				9CFF24CC1E83B886004D92D7 /* GRMenuViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9CFF24C81E83B7C7004D92D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9CFF24C91E83B7C7004D92D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		A95C499E4B7623A2CA08FB37 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -594,6 +634,7 @@
 				9CB92AB71E5D67AD00650CC5 /* GRShopListCell.xib in Resources */,
 				823FE4661E4D911E008E8CB0 /* Assets.xcassets in Resources */,
 				82AF89E41E4C542000676D29 /* GRWebViewController.xib in Resources */,
+				9CFF24CE1E83B886004D92D7 /* GRMenuViewController.xib in Resources */,
 				9C1507F21E5085F3007C2B8F /* GRRegisterViewController.xib in Resources */,
 				823FE46B1E4D9A1D008E8CB0 /* GRLoginViewController.xib in Resources */,
 				9CAAF56B1E6D0E8B00730810 /* GROrderListCell.xib in Resources */,
@@ -687,6 +728,7 @@
 				9C5384A21E52F914004EDBCF /* GRUser.m in Sources */,
 				82AF89AE1E498F6600676D29 /* GRHTTPManager.m in Sources */,
 				82AF89D11E4B2FA100676D29 /* GRViewController.m in Sources */,
+				9CFF24CD1E83B886004D92D7 /* GRMenuViewController.m in Sources */,
 				9CB92AC91E63FC8000650CC5 /* GRTabBarViewController.m in Sources */,
 				82AF89C51E4AF0C900676D29 /* GRShopList.m in Sources */,
 				82AF89971E48457F00676D29 /* GRAppDelegate.m in Sources */,
