@@ -10,4 +10,6 @@
 
 @interface GRMenuListRequest : GRNetRequestObject
 
+- (instancetype)initWithShopID:(NSUInteger)shopID;
+
 @end

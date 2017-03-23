@@ -10,14 +10,14 @@
 
 @interface GRMenu : GRModel
 
-@property (nonatomic, strong) NSString *menuCategory;
-@property (nonatomic, strong) NSString *menuDesc;
-@property (nonatomic, strong) NSString *menuID;
-@property (nonatomic, strong) NSString *menuLogo;
-@property (nonatomic, assign) NSUInteger menuMonthSold;
-@property (nonatomic, strong) NSString *menuName;
-@property (nonatomic, assign) NSUInteger menuPrice;
-@property (nonatomic, assign) NSUInteger menuRemain;
+@property (nonatomic, strong) NSString *menuCategory;        //类型
+@property (nonatomic, strong) NSString *menuDesc;            //描述
+@property (nonatomic, strong) NSString *menuID;              //ID
+@property (nonatomic, strong) NSString *menuLogo;            //图片
+@property (nonatomic, assign) NSUInteger menuMonthSold;      //月销量
+@property (nonatomic, strong) NSString *menuName;            //名字
+@property (nonatomic, assign) NSUInteger menuPrice;          //价格
+@property (nonatomic, assign) NSUInteger menuRemain;         //库存
 
 @end
 
