@@ -33,21 +33,21 @@ static NSString * const API_USER_LOGIN = @"/accounts/token";
 static NSString * const API_SHOP_LIST = @"/shops/shop?school_id=1";
 //***商家列表***
 
-static NSString * const API_RATE_LIST = @"/shops/shop/%lu/rating";
+static NSString * const API_RATE_LIST_F = @"/shops/shop/%lu/rating";
 //***商家评价列表***
 
 
-static NSString * const API_MENU_LIST = @"/shops/shop/%lu/menu";
+static NSString * const API_MENU_LIST_F = @"/shops/shop/%lu/menu";
 //***菜单列表***
 
-static NSString * const API_PLACE_ORDER = @"/shops/shop/%lu/order";
+static NSString * const API_PLACE_ORDER_F = @"/shops/shop/%lu/order";
 //***下单操作***
 
 
 static NSString * const API_USER_ORDER = @"/shops/user/order";
 //***用户订单列表、评价订单***
 
-static NSString * const API_ORDER_STATUS = @"/shops/shop/%lu/order";
+static NSString * const API_ORDER_STATUS_F = @"/shops/shop/%lu/order";
 //***修改订单状态***
 
 

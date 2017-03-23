@@ -33,6 +33,7 @@
 		9C5384971E51D4BC004EDBCF /* GRRegisterRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5384961E51D4BC004EDBCF /* GRRegisterRequest.m */; };
 		9C53849F1E52F626004EDBCF /* GRUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C53849E1E52F626004EDBCF /* GRUserManager.m */; };
 		9C5384A21E52F914004EDBCF /* GRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5384A11E52F914004EDBCF /* GRUser.m */; };
+		9C8CF6CE1E83C5DE0030F54E /* GRMenuListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8CF6CD1E83C5DE0030F54E /* GRMenuListRequest.m */; };
 		9CAAF56A1E6D0E8B00730810 /* GROrderListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF5681E6D0E8B00730810 /* GROrderListCell.m */; };
 		9CAAF56B1E6D0E8B00730810 /* GROrderListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CAAF5691E6D0E8B00730810 /* GROrderListCell.xib */; };
 		9CAAF5741E6E83C600730810 /* GROrderStatusLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF5731E6E83C600730810 /* GROrderStatusLabel.m */; };
@@ -50,8 +51,7 @@
 		9CB92AC91E63FC8000650CC5 /* GRTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB92AC81E63FC8000650CC5 /* GRTabBarViewController.m */; };
 		9CB9DFA21E659D7000C8F5E8 /* GROrderList.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB9DFA11E659D7000C8F5E8 /* GROrderList.m */; };
 		9CB9DFA51E65A9F800C8F5E8 /* GROrderListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB9DFA41E65A9F800C8F5E8 /* GROrderListRequest.m */; };
-		9CFF24CD1E83B886004D92D7 /* GRMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CFF24CB1E83B886004D92D7 /* GRMenuViewController.m */; };
-		9CFF24CE1E83B886004D92D7 /* GRMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CFF24CC1E83B886004D92D7 /* GRMenuViewController.xib */; };
+		9CFF24D41E83BE0C004D92D7 /* GRMenuList.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CFF24D31E83BE0C004D92D7 /* GRMenuList.m */; };
 		E2954B97A1FCB5F571EBF9A5 /* libPods-GroooSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E584F6C8F6FD08D02E5B18 /* libPods-GroooSource.a */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +109,8 @@
 		9C53849E1E52F626004EDBCF /* GRUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRUserManager.m; sourceTree = "<group>"; };
 		9C5384A01E52F914004EDBCF /* GRUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRUser.h; sourceTree = "<group>"; };
 		9C5384A11E52F914004EDBCF /* GRUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRUser.m; sourceTree = "<group>"; };
+		9C8CF6CC1E83C5DE0030F54E /* GRMenuListRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMenuListRequest.h; sourceTree = "<group>"; };
+		9C8CF6CD1E83C5DE0030F54E /* GRMenuListRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRMenuListRequest.m; sourceTree = "<group>"; };
 		9CAAF5671E6D0E8B00730810 /* GROrderListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GROrderListCell.h; sourceTree = "<group>"; };
 		9CAAF5681E6D0E8B00730810 /* GROrderListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GROrderListCell.m; sourceTree = "<group>"; };
 		9CAAF5691E6D0E8B00730810 /* GROrderListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GROrderListCell.xib; sourceTree = "<group>"; };
@@ -144,9 +146,8 @@
 		9CB9DFA11E659D7000C8F5E8 /* GROrderList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GROrderList.m; sourceTree = "<group>"; };
 		9CB9DFA31E65A9F800C8F5E8 /* GROrderListRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GROrderListRequest.h; sourceTree = "<group>"; };
 		9CB9DFA41E65A9F800C8F5E8 /* GROrderListRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GROrderListRequest.m; sourceTree = "<group>"; };
-		9CFF24CA1E83B886004D92D7 /* GRMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMenuViewController.h; sourceTree = "<group>"; };
-		9CFF24CB1E83B886004D92D7 /* GRMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRMenuViewController.m; sourceTree = "<group>"; };
-		9CFF24CC1E83B886004D92D7 /* GRMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRMenuViewController.xib; sourceTree = "<group>"; };
+		9CFF24D21E83BE0C004D92D7 /* GRMenuList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMenuList.h; sourceTree = "<group>"; };
+		9CFF24D31E83BE0C004D92D7 /* GRMenuList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRMenuList.m; sourceTree = "<group>"; };
 		A71905685320E5462FE3E37D /* Pods-GroooSource.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroooSource.release.xcconfig"; path = "Pods/Target Support Files/Pods-GroooSource/Pods-GroooSource.release.xcconfig"; sourceTree = "<group>"; };
 		D2038BDCB8836837AC626A84 /* Pods-GroooSource.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroooSource.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GroooSource/Pods-GroooSource.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -540,9 +541,6 @@
 		9CFF24C71E83B7C7004D92D7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9CFF24CA1E83B886004D92D7 /* GRMenuViewController.h */,
-				9CFF24CB1E83B886004D92D7 /* GRMenuViewController.m */,
-				9CFF24CC1E83B886004D92D7 /* GRMenuViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -550,6 +548,10 @@
 		9CFF24C81E83B7C7004D92D7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9CFF24D21E83BE0C004D92D7 /* GRMenuList.h */,
+				9CFF24D31E83BE0C004D92D7 /* GRMenuList.m */,
+				9C8CF6CC1E83C5DE0030F54E /* GRMenuListRequest.h */,
+				9C8CF6CD1E83C5DE0030F54E /* GRMenuListRequest.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -634,7 +636,6 @@
 				9CB92AB71E5D67AD00650CC5 /* GRShopListCell.xib in Resources */,
 				823FE4661E4D911E008E8CB0 /* Assets.xcassets in Resources */,
 				82AF89E41E4C542000676D29 /* GRWebViewController.xib in Resources */,
-				9CFF24CE1E83B886004D92D7 /* GRMenuViewController.xib in Resources */,
 				9C1507F21E5085F3007C2B8F /* GRRegisterViewController.xib in Resources */,
 				823FE46B1E4D9A1D008E8CB0 /* GRLoginViewController.xib in Resources */,
 				9CAAF56B1E6D0E8B00730810 /* GROrderListCell.xib in Resources */,
@@ -697,6 +698,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CB92ABD1E5F0FF800650CC5 /* GRShopListViewController.m in Sources */,
+				9CFF24D41E83BE0C004D92D7 /* GRMenuList.m in Sources */,
 				9CAAF57C1E6E930700730810 /* GRSegmentView.m in Sources */,
 				9CAAF5851E6F048E00730810 /* GROrderListViewController.m in Sources */,
 				9CB9DFA51E65A9F800C8F5E8 /* GROrderListRequest.m in Sources */,
@@ -717,6 +719,7 @@
 				823FE4631E4D850F008E8CB0 /* UIView+GRShortcut.m in Sources */,
 				9C1507F51E515905007C2B8F /* GRLoginRequest.m in Sources */,
 				82AF89D51E4B3F5200676D29 /* NSString+GRCommen.m in Sources */,
+				9C8CF6CE1E83C5DE0030F54E /* GRMenuListRequest.m in Sources */,
 				82AF89E31E4C542000676D29 /* GRWebViewController.m in Sources */,
 				9CAAF57F1E6E9E4B00730810 /* GROrderListTable.m in Sources */,
 				9CB92AC61E63F1A700650CC5 /* GRRouter.m in Sources */,
@@ -728,7 +731,6 @@
 				9C5384A21E52F914004EDBCF /* GRUser.m in Sources */,
 				82AF89AE1E498F6600676D29 /* GRHTTPManager.m in Sources */,
 				82AF89D11E4B2FA100676D29 /* GRViewController.m in Sources */,
-				9CFF24CD1E83B886004D92D7 /* GRMenuViewController.m in Sources */,
 				9CB92AC91E63FC8000650CC5 /* GRTabBarViewController.m in Sources */,
 				82AF89C51E4AF0C900676D29 /* GRShopList.m in Sources */,
 				82AF89971E48457F00676D29 /* GRAppDelegate.m in Sources */,
