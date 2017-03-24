@@ -7,10 +7,14 @@
 //
 
 #import "GRMenuViewController.h"
+#import "GRMenuHeadView.h"
+
 
 @interface GRMenuViewController ()
 
 @property (nonatomic, strong) GRShop *shop;
+@property (nonatomic, strong) GRMenuHeadView *headView;
+@property (nonatomic, strong) UIScrollView *scrollView;
 
 @end
 

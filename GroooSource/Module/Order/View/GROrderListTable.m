@@ -110,7 +110,7 @@ static NSString *GROrderListCellID = @"GROrderListCellID";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     _cellDataArray[indexPath.section].isSpread = !_cellDataArray[indexPath.section].isSpread;
     [self beginUpdates];
-    GROrderListCell *cell = [self cellForRowAtIndexPath:indexPath];
+    GROrderListCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     cell.selected = NO;
     [self endUpdates];
     cell.isSpread = _cellDataArray[indexPath.section].isSpread;

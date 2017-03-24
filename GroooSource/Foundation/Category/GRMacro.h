@@ -31,5 +31,6 @@ __strong typeof(weakSelf) self = weakSelf
                 attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:font]}    \
                    context:nil]
 
+#define MIN_SIZE(label) label.attributedText.size
 
 #endif /* GRMacro_h */

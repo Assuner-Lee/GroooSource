@@ -15,13 +15,13 @@
 
 @property (nonatomic, strong) UIImageView *backsideImageView;
 
-
+@property (nonatomic, strong) UIVisualEffectView *effectBacksideView;
 
 @property (nonatomic, strong) UIImageView *shopLogoView;
 
 @property (nonatomic, strong) UILabel *shopNameLabel;
 
-@property (nonatomic, strong) UILabel *shopPhoneLabel;
+@property (nonatomic, strong) UILabel *shopMonthSoldLabel;
 
 @end
 
@@ -31,8 +31,8 @@
 - (instancetype)initWithShop:(GRShop *)shop {
     if (self = [super init]) {
         _shop = shop;
-        self.frame = CGRectMake(0, 0, SCREEN_WIDTH, 128);
-        [self initBacksideImageView];
+        self.frame = CGRectMake(0, 0, SCREEN_WIDTH, 155);
+        [self initView];
     }
     return self;
 }
@@ -41,8 +41,50 @@
     [imageview setImageWithURL:[NSURL URLWithString:[_shop.shopLogo stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]] placeholderImage:[UIImage imageNamed:@"shop_placeholder"]];
 }
 
-- (void)initBacksideImageView {
+- (void)initView {
+    _backsideImageView = [[UIImageView alloc] init];
+    _backsideImageView.contentMode = UIViewContentModeScaleToFill;
+    [self setImage:_backsideImageView];
+    [self addSubview:_backsideImageView];
     
+    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    _effectBacksideView = [[UIVisualEffectView alloc] initWithEffect:effect];
+    [_backsideImageView addSubview:_effectBacksideView];
+
+    
+    _shopLogoView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 26, 70, 70)];
+    _shopLogoView.gr_centerX = self.gr_centerX;
+    [self setImage:_shopLogoView];
+    _shopLogoView.layer.cornerRadius = self.gr_width / 2;
+    _shopLogoView.layer.borderWidth = 2.5f;
+    _shopLogoView.layer.borderColor = [GRAppStyle mainColor].CGColor;
+    _shopLogoView.clipsToBounds = YES;
+    [self addSubview:_shopLogoView];
+    
+    _shopMonthSoldLabel = [UILabel new];
+    _shopMonthSoldLabel.attributedText = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"月销量: %zd", _shop.monthSold] attributes:[GRAppStyle attributeWithFont:[UIFont boldSystemFontOfSize:13.0] color:[GRAppStyle mainColor]]];
+    _shopMonthSoldLabel.frame = CGRectMake(0, 0, MIN_SIZE(_shopMonthSoldLabel).width, MIN_SIZE(_shopMonthSoldLabel).height);
+    _shopMonthSoldLabel.gr_centerX = self.gr_centerX;
+    [self addSubview:_shopMonthSoldLabel];
+    
+    _shopNameLabel = [UILabel new];
+    _shopNameLabel.attributedText = [[NSAttributedString alloc] initWithString:_shop.shopName attributes:[GRAppStyle attributeWithFont:[UIFont boldSystemFontOfSize:15.0] color:[GRAppStyle mainColor]]];
+    _shopNameLabel.frame = CGRectMake(0, 0, MIN_SIZE(_shopNameLabel).width, MIN_SIZE(_shopNameLabel).height);
+    _shopNameLabel.gr_centerX = self.gr_centerX;
+    [self addSubview:_shopNameLabel];
+    
+    [self setDynamicFrame];
+}
+
+- (void)setDynamicFrame {
+    _backsideImageView.frame = self.bounds;
+    _effectBacksideView.frame = _backsideImageView.bounds;
+    _shopMonthSoldLabel.gr_bottom = self.gr_height - 6;
+    _shopNameLabel.gr_bottom = _shopMonthSoldLabel.gr_top - 9;
+}
+
+- (void)layoutSubviews {
+    [self setDynamicFrame];
 }
 
 @end

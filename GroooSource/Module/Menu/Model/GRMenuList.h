@@ -19,6 +19,8 @@
 @property (nonatomic, assign) NSUInteger menuPrice;          //价格
 @property (nonatomic, assign) NSUInteger menuRemain;         //库存
 
+@property (nonatomic, assign) NSUInteger selectCount;
+
 @end
 
 
