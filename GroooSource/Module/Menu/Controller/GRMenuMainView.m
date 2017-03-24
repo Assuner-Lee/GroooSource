@@ -11,7 +11,7 @@
 @interface GRMenuMainView () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *categoryTableView;
-@property (nonatomic, strong) UITableView *menuTableView;
+@property (nonatomic, strong) UITableView *menuDetailTableView;
 
 @property (nonatomic, strong) NSMutableDictionary *menuDataDic;
 @property (nonatomic, strong) NSMutableArray<NSString *> *categoryDataArray;
@@ -38,18 +38,20 @@
     _categoryTableView.dataSource = self;
     _categoryTableView.delegate = self;
     _categoryTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    _categoryTableView.showsVerticalScrollIndicator = NO;
     _categoryTableView.contentInset = UIEdgeInsetsMake(44, 0, 44, 0);
     _categoryTableView.tag = 0;
     [self addSubview:_categoryTableView];
     
-    _menuTableView = [[UITableView alloc] initWithFrame:CGRectMake(0.33*SCREEN_WIDTH, 0, 0.67*SCREEN_WIDTH, SCREEN_HEIGHT - 64) style:UITableViewStylePlain];
-    _menuTableView.backgroundColor = [UIColor whiteColor];
-    _menuTableView.dataSource = self;
-    _menuTableView.delegate = self;
-    _menuTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    _menuTableView.contentInset = UIEdgeInsetsMake(44, 0, 44, 0);
-    _menuTableView.tag = 1;
-    [self addSubview:_menuTableView];
+    _menuDetailTableView = [[UITableView alloc] initWithFrame:CGRectMake(0.33*SCREEN_WIDTH, 0, 0.67*SCREEN_WIDTH, SCREEN_HEIGHT - 64) style:UITableViewStylePlain];
+    _menuDetailTableView.backgroundColor = [UIColor whiteColor];
+    _menuDetailTableView.dataSource = self;
+    _menuDetailTableView.delegate = self;
+    _menuDetailTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    _menuDetailTableView.showsVerticalScrollIndicator = YES;
+    _menuDetailTableView.contentInset = UIEdgeInsetsMake(44, 0, 44, 0);
+    _menuDetailTableView.tag = 1;
+    [self addSubview:_menuDetailTableView];
 }
 
 - (void)setMenuDataArray:(NSArray<GRMenu *> *)menuDataArray {
@@ -75,7 +77,7 @@
 - (void)setMenuDetailDataArray:(NSArray<GRMenu *> *)menuDetailDataArray {
     if (menuDetailDataArray.count && _menuDetailDataArray != menuDetailDataArray) {
         _menuDetailDataArray = menuDetailDataArray;
-        [_menuTableView reloadData];
+        [_menuDetailTableView reloadData];
     }
 }
 
