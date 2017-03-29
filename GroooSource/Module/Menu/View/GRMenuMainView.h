@@ -13,5 +13,7 @@
 
 @property (nonatomic, strong) NSArray<GRMenu *> *menuDataArray;
 
+- (instancetype)initWithShopStatus:(NSUInteger)shopStatus;
+
 @end
 

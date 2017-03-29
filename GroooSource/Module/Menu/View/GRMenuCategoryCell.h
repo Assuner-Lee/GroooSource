@@ -10,4 +10,6 @@
 
 @interface GRMenuCategoryCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
+
 @end
