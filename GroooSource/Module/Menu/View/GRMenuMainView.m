@@ -126,7 +126,7 @@ static NSString *GRMenuDetailCellID = @"GRMenuDetailCellID";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (tableView.tag == 1) {
+    if (tableView.tag == 0) {
         self.menuDetailDataArray = _menuDataDic[_categoryDataArray[indexPath.row]];
     }
 }
