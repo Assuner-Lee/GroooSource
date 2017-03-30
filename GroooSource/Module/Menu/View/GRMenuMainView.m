@@ -107,11 +107,11 @@ static NSString *GRMenuDetailCellID = @"GRMenuDetailCellID";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (tableView.tag == 0) {
-        GRMenuCategoryCell *cell = [_categoryTableView dequeueReusableCellWithIdentifier:GRMenuCategoryCellID forIndexPath:indexPath];
+        GRMenuCategoryCell *cell = [tableView dequeueReusableCellWithIdentifier:GRMenuCategoryCellID forIndexPath:indexPath];
         cell.categoryLabel.text = self.categoryDataArray[indexPath.row];
         return cell;
     } else {
-        GRMenuDetailCell *cell = [_menuDetailTableView dequeueReusableCellWithIdentifier:GRMenuDetailCellID forIndexPath:indexPath];
+        GRMenuDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:GRMenuDetailCellID forIndexPath:indexPath];
         [cell setMenu:self.menuDetailDataArray[indexPath.row] shopStatus:_shopStatus];
         return cell;
     }

@@ -98,7 +98,7 @@ static NSString *GROrderListCellID = @"GROrderListCellID";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    GROrderListCell *cell  = [self dequeueReusableCellWithIdentifier:GROrderListCellID forIndexPath:indexPath];
+    GROrderListCell *cell  = [tableView dequeueReusableCellWithIdentifier:GROrderListCellID forIndexPath:indexPath];
     cell.orderData = self.cellDataArray[indexPath.section];
     return cell;
 }

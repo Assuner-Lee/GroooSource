@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GRShopRatingList.h"
 
 @interface GRShopRatingRightCell : UITableViewCell
+
+@property (nonatomic, strong) GRShopRating *shopRating;
 
 @end

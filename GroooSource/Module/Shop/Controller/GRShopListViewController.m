@@ -204,7 +204,7 @@ static NSString *GRShopListCellID = @"GRShopListCellID";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    GRShopListCell *cell  = [self.shopListTableView dequeueReusableCellWithIdentifier:GRShopListCellID forIndexPath:indexPath];
+    GRShopListCell *cell  = [tableView dequeueReusableCellWithIdentifier:GRShopListCellID forIndexPath:indexPath];
     cell.shopData = self.cellDataArray[indexPath.row];
     return cell;
 }
