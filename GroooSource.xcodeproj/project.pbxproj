@@ -38,8 +38,10 @@
 		9C44D4461E8CAA2900F85757 /* GRShopRatingTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C44D4451E8CAA2900F85757 /* GRShopRatingTable.m */; };
 		9C44D4491E8CAC3100F85757 /* GRShopRatingListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C44D4481E8CAC3100F85757 /* GRShopRatingListRequest.m */; };
 		9C44D44C1E8CAD3300F85757 /* GRShopRatingList.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C44D44B1E8CAD3300F85757 /* GRShopRatingList.m */; };
-		9C44D4501E8CD9A800F85757 /* GRShopRatingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C44D44E1E8CD9A800F85757 /* GRShopRatingCell.m */; };
-		9C44D4511E8CD9A800F85757 /* GRShopRatingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C44D44F1E8CD9A800F85757 /* GRShopRatingCell.xib */; };
+		9C44D4621E8CFBA000F85757 /* GRShopRatingLeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C44D4601E8CFBA000F85757 /* GRShopRatingLeftCell.m */; };
+		9C44D4631E8CFBA000F85757 /* GRShopRatingLeftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C44D4611E8CFBA000F85757 /* GRShopRatingLeftCell.xib */; };
+		9C44D4671E8CFD6300F85757 /* GRShopRatingRightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C44D4651E8CFD6300F85757 /* GRShopRatingRightCell.m */; };
+		9C44D4681E8CFD6300F85757 /* GRShopRatingRightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C44D4661E8CFD6300F85757 /* GRShopRatingRightCell.xib */; };
 		9C5384971E51D4BC004EDBCF /* GRRegisterRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5384961E51D4BC004EDBCF /* GRRegisterRequest.m */; };
 		9C53849F1E52F626004EDBCF /* GRUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C53849E1E52F626004EDBCF /* GRUserManager.m */; };
 		9C5384A21E52F914004EDBCF /* GRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5384A11E52F914004EDBCF /* GRUser.m */; };
@@ -128,9 +130,12 @@
 		9C44D4481E8CAC3100F85757 /* GRShopRatingListRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRShopRatingListRequest.m; sourceTree = "<group>"; };
 		9C44D44A1E8CAD3300F85757 /* GRShopRatingList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRShopRatingList.h; sourceTree = "<group>"; };
 		9C44D44B1E8CAD3300F85757 /* GRShopRatingList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRShopRatingList.m; sourceTree = "<group>"; };
-		9C44D44D1E8CD9A800F85757 /* GRShopRatingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRShopRatingCell.h; sourceTree = "<group>"; };
-		9C44D44E1E8CD9A800F85757 /* GRShopRatingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRShopRatingCell.m; sourceTree = "<group>"; };
-		9C44D44F1E8CD9A800F85757 /* GRShopRatingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRShopRatingCell.xib; sourceTree = "<group>"; };
+		9C44D45F1E8CFBA000F85757 /* GRShopRatingLeftCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRShopRatingLeftCell.h; sourceTree = "<group>"; };
+		9C44D4601E8CFBA000F85757 /* GRShopRatingLeftCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRShopRatingLeftCell.m; sourceTree = "<group>"; };
+		9C44D4611E8CFBA000F85757 /* GRShopRatingLeftCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRShopRatingLeftCell.xib; sourceTree = "<group>"; };
+		9C44D4641E8CFD6300F85757 /* GRShopRatingRightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRShopRatingRightCell.h; sourceTree = "<group>"; };
+		9C44D4651E8CFD6300F85757 /* GRShopRatingRightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRShopRatingRightCell.m; sourceTree = "<group>"; };
+		9C44D4661E8CFD6300F85757 /* GRShopRatingRightCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRShopRatingRightCell.xib; sourceTree = "<group>"; };
 		9C5384951E51D4BC004EDBCF /* GRRegisterRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRRegisterRequest.h; sourceTree = "<group>"; };
 		9C5384961E51D4BC004EDBCF /* GRRegisterRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRRegisterRequest.m; sourceTree = "<group>"; };
 		9C5384981E52A47B004EDBCF /* GRMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GRMacro.h; sourceTree = "<group>"; };
@@ -456,9 +461,12 @@
 		9C44D4521E8CEDBB00F85757 /* GRShopRatingCell */ = {
 			isa = PBXGroup;
 			children = (
-				9C44D44D1E8CD9A800F85757 /* GRShopRatingCell.h */,
-				9C44D44E1E8CD9A800F85757 /* GRShopRatingCell.m */,
-				9C44D44F1E8CD9A800F85757 /* GRShopRatingCell.xib */,
+				9C44D45F1E8CFBA000F85757 /* GRShopRatingLeftCell.h */,
+				9C44D4601E8CFBA000F85757 /* GRShopRatingLeftCell.m */,
+				9C44D4611E8CFBA000F85757 /* GRShopRatingLeftCell.xib */,
+				9C44D4641E8CFD6300F85757 /* GRShopRatingRightCell.h */,
+				9C44D4651E8CFD6300F85757 /* GRShopRatingRightCell.m */,
+				9C44D4661E8CFD6300F85757 /* GRShopRatingRightCell.xib */,
 			);
 			name = GRShopRatingCell;
 			sourceTree = "<group>";
@@ -699,11 +707,12 @@
 				9C1BE9401E8B8F37007F5733 /* GRMenuCategoryCell.xib in Resources */,
 				823FE4661E4D911E008E8CB0 /* Assets.xcassets in Resources */,
 				82AF89E41E4C542000676D29 /* GRWebViewController.xib in Resources */,
+				9C44D4631E8CFBA000F85757 /* GRShopRatingLeftCell.xib in Resources */,
 				9C1507F21E5085F3007C2B8F /* GRRegisterViewController.xib in Resources */,
 				823FE46B1E4D9A1D008E8CB0 /* GRLoginViewController.xib in Resources */,
+				9C44D4681E8CFD6300F85757 /* GRShopRatingRightCell.xib in Resources */,
 				9C1BE9461E8B923F007F5733 /* GRMenuDetailCell.xib in Resources */,
 				9CAAF56B1E6D0E8B00730810 /* GROrderListCell.xib in Resources */,
-				9C44D4511E8CD9A800F85757 /* GRShopRatingCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -774,8 +783,10 @@
 				82AF89AB1E49765300676D29 /* GRNetRequestObject.m in Sources */,
 				82AF89B21E49DA1600676D29 /* GRModel.m in Sources */,
 				82AF89C81E4AF51C00676D29 /* GRShopListRequest.m in Sources */,
+				9C44D4671E8CFD6300F85757 /* GRShopRatingRightCell.m in Sources */,
 				82AF89B51E4AC38200676D29 /* GRListTypeModel.m in Sources */,
 				9C8CF6D41E83D1AC0030F54E /* GRMenuHeadView.m in Sources */,
+				9C44D4621E8CFBA000F85757 /* GRShopRatingLeftCell.m in Sources */,
 				9CB92ABA1E5DB14A00650CC5 /* MBProgressHUD.m in Sources */,
 				9CAAF5771E6E8A0800730810 /* GROperateOrderBtn.m in Sources */,
 				9C8CF6D11E83CC350030F54E /* GRMenuViewController.m in Sources */,
@@ -783,7 +794,6 @@
 				9C1BE93F1E8B8F37007F5733 /* GRMenuCategoryCell.m in Sources */,
 				823FE4601E4D6617008E8CB0 /* GRNavigationController.m in Sources */,
 				9C1BE9411E8B8F37007F5733 /* GRMenuMainView.m in Sources */,
-				9C44D4501E8CD9A800F85757 /* GRShopRatingCell.m in Sources */,
 				9C5384971E51D4BC004EDBCF /* GRRegisterRequest.m in Sources */,
 				9CAAF56A1E6D0E8B00730810 /* GROrderListCell.m in Sources */,
 				9CB92AB61E5D67AD00650CC5 /* GRShopListCell.m in Sources */,
