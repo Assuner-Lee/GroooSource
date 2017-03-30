@@ -11,4 +11,6 @@
 
 @interface GRMenuViewController : GRViewController
 
+- (instancetype)initWithShop:(GRShop *)shop;
+
 @end

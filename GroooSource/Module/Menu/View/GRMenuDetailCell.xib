@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="240" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sZb-uj-eim" userLabel="Menu Logo Img View">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_place_holder" translatesAutoresizingMaskIntoConstraints="NO" id="sZb-uj-eim" userLabel="Menu Logo Img View">
                         <rect key="frame" x="10" y="10" width="60" height="60"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="60" id="CIf-Nu-Hvx"/>
@@ -131,15 +131,9 @@
             </connections>
             <point key="canvasLocation" x="-619" y="-111"/>
         </tableViewCell>
-        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cnw-oH-2Xd">
-            <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-            <nil key="textColor"/>
-            <nil key="highlightedColor"/>
-        </label>
     </objects>
     <resources>
+        <image name="menu_place_holder" width="87" height="87"/>
         <image name="minus" width="56" height="56"/>
         <image name="plus" width="56" height="56"/>
     </resources>

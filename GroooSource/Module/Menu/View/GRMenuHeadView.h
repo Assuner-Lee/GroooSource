@@ -11,4 +11,6 @@
 
 @interface GRMenuHeadView : UIView
 
+- (instancetype)initWithShop:(GRShop *)shop;
+
 @end

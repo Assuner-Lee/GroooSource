@@ -10,6 +10,7 @@
 #import "GRShopList.h"
 #import "GRShopListRequest.h"
 #import "GRShopListCell.h"
+#import "GRMenuViewController.h"
 
 static NSString *GRShopListCellID = @"GRShopListCellID";
 
@@ -211,6 +212,12 @@ static NSString *GRShopListCellID = @"GRShopListCellID";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return self.cellDataArray[indexPath.row].shopCellParams.shopCellHight;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    GRMenuViewController *menuVC = [[GRMenuViewController alloc] initWithShop:self.cellDataArray[indexPath.row]];
+    [self.navigationController pushViewController:menuVC animated:YES];
+    
 }
 
 @end

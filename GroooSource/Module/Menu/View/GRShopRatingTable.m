@@ -35,7 +35,7 @@ static NSString *GRShopRatingRightCellID = @"GRShopRatingRightCellID";
 }
 
 - (void)initView {
-    self.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 64);
+    self.frame = CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 64);
     self.backgroundColor = [UIColor whiteColor];
     self.dataSource = self;
     self.delegate = self;
@@ -50,10 +50,12 @@ static NSString *GRShopRatingRightCellID = @"GRShopRatingRightCellID";
     if (request.cache) {
         self.cellDataArray = [request.cache dataArray];
     }
+    GRWEAK(self);
     [request startRequestComplete:^(GRShopRatingList *  _Nullable responseObject, NSError * _Nullable error) {
         if (error) {
             return;
         }
+        GRSTRONG(self);
         self.cellDataArray = responseObject.dataArray;
     }];
 }
@@ -73,7 +75,7 @@ static NSString *GRShopRatingRightCellID = @"GRShopRatingRightCellID";
     return 1;
 }
 
-- (NSInteger)numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.cellDataArray.count;
 }
 
