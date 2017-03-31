@@ -62,13 +62,13 @@
     [self addSubview:_shopLogoView];
     
     _shopMonthSoldLabel = [UILabel new];
-    _shopMonthSoldLabel.attributedText = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"月销量: %zd", _shop.monthSold] attributes:[GRAppStyle attributeWithFont:[UIFont boldSystemFontOfSize:13.0] color:[GRAppStyle mainColor]]];
+    _shopMonthSoldLabel.attributedText = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"月销量: %zd", _shop.monthSold] attributes:[GRAppStyle attributeWithFont:[UIFont systemFontOfSize:13.0] color:[GRAppStyle mainColor]]];
     _shopMonthSoldLabel.frame = CGRectMake(0, 0, MIN_SIZE(_shopMonthSoldLabel).width, MIN_SIZE(_shopMonthSoldLabel).height);
     _shopMonthSoldLabel.gr_centerX = self.gr_centerX;
     [self addSubview:_shopMonthSoldLabel];
     
     _shopNameLabel = [UILabel new];
-    _shopNameLabel.attributedText = [[NSAttributedString alloc] initWithString:_shop.shopName attributes:[GRAppStyle attributeWithFont:[UIFont boldSystemFontOfSize:15.0] color:[GRAppStyle mainColor]]];
+    _shopNameLabel.attributedText = [[NSAttributedString alloc] initWithString:_shop.shopName attributes:[GRAppStyle attributeWithFont:[UIFont systemFontOfSize:15.0] color:[GRAppStyle mainColor]]];
     _shopNameLabel.frame = CGRectMake(0, 0, MIN_SIZE(_shopNameLabel).width, MIN_SIZE(_shopNameLabel).height);
     _shopNameLabel.gr_centerX = self.gr_centerX;
     [self addSubview:_shopNameLabel];

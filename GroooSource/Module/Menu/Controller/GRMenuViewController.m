@@ -58,7 +58,7 @@
     self.mainView = [[GRMenuMainView alloc] initWithShopStatus:self.shop.shopStatus];
     self.ratingTable = [[GRShopRatingTable alloc] initWithShopID:self.shop.shopID];
     
-    self.segmentView = [[GRSegmentView alloc] initWithSubviewArray:@[_mainView, _ratingTable] titleArray:@[@"菜单", @"评价"] orignY:_headView.gr_height mainColor:[GRAppStyle mainColor]];
+    self.segmentView = [[GRSegmentView alloc] initWithSubviewArray:@[_mainView, _ratingTable] titleArray:@[@"菜单", @"用户评价"] orignY:_headView.gr_height mainColor:[GRAppStyle mainColor]];
     [self.scrollView addSubview:self.segmentView];
 }
 
