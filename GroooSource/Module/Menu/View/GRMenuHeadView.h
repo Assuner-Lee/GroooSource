@@ -12,5 +12,6 @@
 @interface GRMenuHeadView : UIView
 
 - (instancetype)initWithShop:(GRShop *)shop;
+- (void)changeWithOffsetY:(CGFloat)y;
 
 @end

@@ -24,6 +24,8 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    self.userLogoImgView.layer.cornerRadius = 8;
+    self.userLogoImgView.clipsToBounds = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

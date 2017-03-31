@@ -37,7 +37,7 @@ typedef NS_ENUM(NSUInteger, GRTransitionType) {
 
 - (void)presentViewController:(UIViewController *)viewController animation:(GRTransitionType)type completion:(void (^ __nullable)(void))completion;
 - (void)dismissViewControllerWithAnimation:(GRTransitionType)type completion:(void (^ __nullable)(void))completion;
-
+- (void)setupBarItem;
 @end
 
 NS_ASSUME_NONNULL_END

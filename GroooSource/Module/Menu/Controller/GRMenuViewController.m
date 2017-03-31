@@ -13,7 +13,11 @@
 #import "GRShopRatingTable.h"
 #import "GRMenuListRequest.h"
 
-@interface GRMenuViewController ()
+@interface GRMenuViewController () <UIScrollViewDelegate>
+
+{
+    CGFloat _originalHeadViewHeight;
+}
 
 @property (nonatomic, strong) GRShop *shop;
 @property (nonatomic, strong) UIScrollView *scrollView;
@@ -22,16 +26,18 @@
 @property (nonatomic, strong) GRMenuMainView *mainView;
 @property (nonatomic, strong) GRShopRatingTable *ratingTable;
 
+@property (nonatomic, strong) NSArray *rightItemArray;
+
 @end
 
 
-@implementation GRMenuViewController
+@implementation GRMenuViewController 
 
 - (instancetype)initWithShop:(GRShop *)shop {
     if (self = [super init]) {
         _shop = shop;
         self.hidesBottomBarWhenPushed = YES;
-        
+        self.automaticallyAdjustsScrollViewInsets = NO;
     }
     return self;
 }
@@ -40,6 +46,17 @@
     [super viewDidLoad];
     [self initView];
     [self startRequest];
+    [self initRightItemArray];
+}
+
+- (void)initRightItemArray {
+    [super setupBarItem];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"call"] style:UIBarButtonItemStylePlain target:self action:@selector(shopCall)];
+    
+    UIBarButtonItem *flexSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    flexSpace.width = 5;
+    
+    self.rightItemArray = @[rightItem, flexSpace];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -60,10 +77,11 @@
     self.scrollView.showsHorizontalScrollIndicator = NO;
     self.scrollView.contentSize = CGSizeMake(SCREEN_WIDTH, SCREEN_HEIGHT * 2);
     self.scrollView.backgroundColor = [UIColor whiteColor];
-    self.scrollView.contentInset = UIEdgeInsetsMake(-64, 0, 49, 0);
-    self.view = self.scrollView;
+    self.scrollView.delegate = self;
+    [self.view addSubview:self.scrollView] ;
     
     self.headView = [[GRMenuHeadView alloc] initWithShop:self.shop];
+    _originalHeadViewHeight = _headView.gr_height;
     [self.scrollView addSubview:self.headView];
     
     self.mainView = [[GRMenuMainView alloc] initWithShopStatus:self.shop.shopStatus];
@@ -93,4 +111,28 @@
     }];
 }
 
+- (void)shopCall {
+    NSString * str=[[NSString alloc] initWithFormat:@"telprompt://%@", _shop.shopPhone];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str] options:nil completionHandler:nil];
+    
+}
+
+#pragma - UIScrollView 
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat offsetY = scrollView.contentOffset.y;
+    if (offsetY > _originalHeadViewHeight - 64) {
+        offsetY = _originalHeadViewHeight - 64;
+        self.scrollView.contentOffset = CGPointMake(0, offsetY);
+        self.title = _shop.shopName;
+        self.navigationItem.rightBarButtonItems = self.rightItemArray;
+    } else {
+        self.title = @"";
+        self.navigationItem.rightBarButtonItem = nil;
+    }
+    _headView.gr_top = offsetY;
+    _headView.gr_height = _originalHeadViewHeight - offsetY;
+    [_headView changeWithOffsetY:offsetY];
+    
+}
 @end

@@ -87,7 +87,7 @@ static NSString *GRMenuDetailCellID = @"GRMenuDetailCellID";
 - (void)setMenuDetailDataArray:(NSArray<GRMenu *> *)menuDetailDataArray {
     if (menuDetailDataArray.count && _menuDetailDataArray != menuDetailDataArray) {
         _menuDetailDataArray = menuDetailDataArray;
-        [_menuDetailTableView reloadData];
+        [_menuDetailTableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationMiddle];
     }
 }
 

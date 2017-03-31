@@ -75,7 +75,7 @@ static NSString *GRShopListCellID = @"GRShopListCellID";
     self.navigationItem.titleView = self.titleSegmentedCtrl;
     
     self.searchItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(touchRightBarItem)];
-    self.closeItem= [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(touchRightBarItem)];
+    self.closeItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(touchRightBarItem)];
     self.navigationItem.rightBarButtonItem = self.searchItem;
 }
 
@@ -138,7 +138,7 @@ static NSString *GRShopListCellID = @"GRShopListCellID";
 - (void)setCellDataArray:(NSArray<GRShop *> *)cellDataArray {
     if (cellDataArray.count) {
         _cellDataArray = cellDataArray;
-         [self.shopListTableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];
+         [self.shopListTableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationMiddle];
     }
 }
 

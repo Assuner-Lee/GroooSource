@@ -51,7 +51,7 @@ static NSString *GROrderListCellID = @"GROrderListCellID";
     if (cellDataArray.count) {
         _cellDataArray = cellDataArray;
         if (self.visibleCells.count) {
-            [self reloadSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, cellDataArray.count)] withRowAnimation:UITableViewRowAnimationAutomatic];
+            [self reloadSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, cellDataArray.count)] withRowAnimation:UITableViewRowAnimationMiddle];
         } else {
             [self reloadData];
         }
