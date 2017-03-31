@@ -113,7 +113,7 @@
 
 - (void)shopCall {
     NSString * str=[[NSString alloc] initWithFormat:@"telprompt://%@", _shop.shopPhone];
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str] options:nil completionHandler:nil];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str] options:@{} completionHandler:nil];
     
 }
 

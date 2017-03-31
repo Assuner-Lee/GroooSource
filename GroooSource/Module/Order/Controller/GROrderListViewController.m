@@ -45,6 +45,7 @@
         self.finishedOrderArray = [[NSMutableArray alloc] init];
         self.otherOrderArray = [[NSMutableArray alloc] init];
     }
+    self.automaticallyAdjustsScrollViewInsets = NO;
     return self;
 }
 

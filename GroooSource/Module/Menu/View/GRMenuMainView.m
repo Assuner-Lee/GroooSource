@@ -40,24 +40,24 @@ static NSString *GRMenuDetailCellID = @"GRMenuDetailCellID";
 }
 
 - (void)initView {
-    _categoryTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, 80, SCREEN_HEIGHT - 64) style:UITableViewStylePlain];
+    _categoryTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 80, SCREEN_HEIGHT - 64) style:UITableViewStylePlain];
     _categoryTableView.backgroundColor = [UIColor whiteColor];
     _categoryTableView.dataSource = self;
     _categoryTableView.delegate = self;
     _categoryTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _categoryTableView.showsVerticalScrollIndicator = NO;
-    _categoryTableView.contentInset = UIEdgeInsetsMake(44, 0, 44, 0);
+    _categoryTableView.contentInset = UIEdgeInsetsMake(44, 0, 44 + 49 + 44, 0);
     _categoryTableView.tag = 0;
     [_categoryTableView registerNib:[UINib nibWithNibName:@"GRMenuCategoryCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:GRMenuCategoryCellID];
     [self addSubview:_categoryTableView];
     
-    _menuDetailTableView = [[UITableView alloc] initWithFrame:CGRectMake(80, 64, SCREEN_WIDTH - 80, SCREEN_HEIGHT - 64) style:UITableViewStylePlain];
+    _menuDetailTableView = [[UITableView alloc] initWithFrame:CGRectMake(80, 0, SCREEN_WIDTH - 80, SCREEN_HEIGHT - 64) style:UITableViewStylePlain];
     _menuDetailTableView.backgroundColor = [UIColor whiteColor];
     _menuDetailTableView.dataSource = self;
     _menuDetailTableView.delegate = self;
     _menuDetailTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _menuDetailTableView.showsVerticalScrollIndicator = YES;
-    _menuDetailTableView.contentInset = UIEdgeInsetsMake(44, 0, 44, 0);
+    _menuDetailTableView.contentInset = UIEdgeInsetsMake(44, 0, 44 + 49 + 44, 0);
     _menuDetailTableView.tag = 1;
     [_menuDetailTableView registerNib:[UINib nibWithNibName:@"GRMenuDetailCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:GRMenuDetailCellID];
     [self addSubview:_menuDetailTableView];
