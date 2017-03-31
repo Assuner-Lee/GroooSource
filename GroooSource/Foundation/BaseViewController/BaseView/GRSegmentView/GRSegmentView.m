@@ -90,7 +90,7 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGRect rect = self.headView.slideLine.frame;
-    CGFloat orignX = scrollView.contentOffset.x / scrollView.contentSize.width * scrollView.frame.size.width + (scrollView.frame.size.width/3 - rect.size.width)/2;
+    CGFloat orignX = scrollView.contentOffset.x / _subViewsArray.count  + (scrollView.frame.size.width/_titleArray.count - rect.size.width)/2;
     self.headView.slideLine.frame = CGRectMake(orignX, rect.origin.y, rect.size.width, rect.size.height);
 }
 
@@ -103,7 +103,7 @@
 
 - (void)changeWithTapIndex:(NSUInteger)index {
    [UIView animateWithDuration:0.3 animations:^{
-        [_baseView setContentOffset:CGPointMake(index * _baseView.gr_width, 0)];
+        [_baseView setContentOffset:CGPointMake(index * _baseView.gr_width,  0)];
    }];
 }
 

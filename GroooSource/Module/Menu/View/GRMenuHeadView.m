@@ -55,7 +55,8 @@
     _shopLogoView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 26, 70, 70)];
     _shopLogoView.gr_centerX = self.gr_centerX;
     [self setImage:_shopLogoView];
-    _shopLogoView.layer.cornerRadius = self.gr_width / 2;
+    _shopLogoView.backgroundColor = [UIColor blueColor];
+    _shopLogoView.layer.cornerRadius = _shopLogoView.gr_width / 2;
     _shopLogoView.layer.borderWidth = 2.5f;
     _shopLogoView.layer.borderColor = [GRAppStyle mainColor].CGColor;
     _shopLogoView.clipsToBounds = YES;
@@ -68,7 +69,7 @@
     [self addSubview:_shopMonthSoldLabel];
     
     _shopNameLabel = [UILabel new];
-    _shopNameLabel.attributedText = [[NSAttributedString alloc] initWithString:_shop.shopName attributes:[GRAppStyle attributeWithFont:[UIFont systemFontOfSize:15.0] color:[GRAppStyle mainColor]]];
+    _shopNameLabel.attributedText = [[NSAttributedString alloc] initWithString:_shop.shopName attributes:[GRAppStyle attributeWithFont:[UIFont systemFontOfSize:14.0] color:[GRAppStyle mainColor]]];
     _shopNameLabel.frame = CGRectMake(0, 0, MIN_SIZE(_shopNameLabel).width, MIN_SIZE(_shopNameLabel).height);
     _shopNameLabel.gr_centerX = self.gr_centerX;
     [self addSubview:_shopNameLabel];
@@ -84,6 +85,7 @@
 }
 
 - (void)layoutSubviews {
+    [super layoutSubviews];
     [self setDynamicFrame];
 }
 

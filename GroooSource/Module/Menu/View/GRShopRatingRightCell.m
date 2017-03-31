@@ -7,6 +7,7 @@
 //
 
 #import "GRShopRatingRightCell.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface GRShopRatingRightCell ()
 
@@ -36,6 +37,7 @@
     _userNameLabel.text = shopRating.userNickName;
     _userRemarkLabel.text = shopRating.userRemark.length ? [NSString stringWithFormat:@"“%@”", shopRating.userRemark] : @"“未吱声”";
     _timeLabel.text = shopRating.time;
+    [_userLogoImgView setImageWithURL:[NSURL URLWithString:[shopRating.userLogo stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]] placeholderImage:[UIImage imageNamed:@"user_placeholder_right"]];
 }
 
 @end

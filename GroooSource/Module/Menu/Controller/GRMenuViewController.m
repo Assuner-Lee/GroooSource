@@ -30,15 +30,23 @@
 - (instancetype)initWithShop:(GRShop *)shop {
     if (self = [super init]) {
         _shop = shop;
-        [self initView];
-        [self startRequest];
+        self.hidesBottomBarWhenPushed = YES;
+        
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self initView];
+    [self startRequest];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:[GRAppStyle transparentColor]] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setShadowImage:[UIImage imageWithColor:[GRAppStyle transparentColor]]];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,8 +57,11 @@
 - (void)initView {
     self.scrollView = [[UIScrollView alloc] initWithFrame:SCREEN_BOUNDS];
     self.scrollView.showsVerticalScrollIndicator = NO;
+    self.scrollView.showsHorizontalScrollIndicator = NO;
     self.scrollView.contentSize = CGSizeMake(SCREEN_WIDTH, SCREEN_HEIGHT * 2);
-    [self.view addSubview:self.scrollView];
+    self.scrollView.backgroundColor = [UIColor whiteColor];
+    self.scrollView.contentInset = UIEdgeInsetsMake(-64, 0, 49, 0);
+    self.view = self.scrollView;
     
     self.headView = [[GRMenuHeadView alloc] initWithShop:self.shop];
     [self.scrollView addSubview:self.headView];

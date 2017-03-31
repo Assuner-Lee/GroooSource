@@ -47,6 +47,7 @@
 - (void)setGr_bottom:(CGFloat)bottom {
     CGRect frame = self.frame;
     frame.origin.y = bottom - self.frame.size.height;
+    self.frame = frame;
 }
 
 - (CGFloat)gr_width {

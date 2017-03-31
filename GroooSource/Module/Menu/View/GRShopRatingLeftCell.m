@@ -37,6 +37,7 @@
     _userNameLabel.text = shopRating.userNickName;
     _userRemarkLabel.text = shopRating.userRemark.length ? [NSString stringWithFormat:@"“%@”", shopRating.userRemark] : @"“暂无评价”";
     _timeLabel.text = shopRating.time;
+    [_userLogoImgView setImageWithURL:[NSURL URLWithString:[shopRating.userLogo stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]] placeholderImage:[UIImage imageNamed:@"user_placeholder"]];
 }
 
 @end

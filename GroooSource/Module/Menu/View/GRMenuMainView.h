@@ -10,7 +10,6 @@
 #import "GRMenuList.h"
 
 @interface GRMenuMainView : UIView
-
 @property (nonatomic, strong) NSArray<GRMenu *> *menuDataArray;
 
 - (instancetype)initWithShopStatus:(NSUInteger)shopStatus;

@@ -31,7 +31,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    _menuLogoImgView.layer.cornerRadius = self.gr_width / 2;
+    _menuLogoImgView.layer.cornerRadius = _menuLogoImgView.gr_width / 2;
     _menuLogoImgView.clipsToBounds = YES;
     
     _plusBtn.tag = 0;

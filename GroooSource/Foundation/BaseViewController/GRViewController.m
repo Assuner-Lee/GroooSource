@@ -23,9 +23,7 @@
     
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:[GRAppStyle mainColorWithAlpha:0.89]] forBarMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar setShadowImage:[UIImage imageWithColor:[GRAppStyle transparentColor]]];
-    [self.navigationController setHidesBottomBarWhenPushed:YES];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
-    self.hidesBottomBarWhenPushed = YES;
     [self setupBarItem];
 }
 
