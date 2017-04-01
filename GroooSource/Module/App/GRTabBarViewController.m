@@ -14,9 +14,11 @@
 @interface GRTabBarViewController ()
 
 @end
-
+@class GRTabBarViewController;
 @implementation GRTabBarViewController
-
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tabBar.tintColor = [GRAppStyle mainColor];

@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:View.xib">
-   </FileRef>
-   <FileRef
       location = "group:GroooSource.xcodeproj">
    </FileRef>
    <FileRef

@@ -138,7 +138,7 @@ static NSString *GRShopListCellID = @"GRShopListCellID";
 - (void)setCellDataArray:(NSArray<GRShop *> *)cellDataArray {
     if (cellDataArray.count) {
         _cellDataArray = cellDataArray;
-         [self.shopListTableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationMiddle];
+         [self.shopListTableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];
     }
 }
 

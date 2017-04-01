@@ -40,7 +40,7 @@ static NSString *GRShopRatingRightCellID = @"GRShopRatingRightCellID";
     self.dataSource = self;
     self.delegate = self;
     self.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.contentInset = UIEdgeInsetsMake(64, 0, 44, 0);
+    self.contentInset = UIEdgeInsetsMake(64, 0, 44 + 49 + 44, 0);
     [self registerNib:[UINib nibWithNibName:@"GRShopRatingLeftCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:GRShopRatingLeftCellID];
     [self registerNib:[UINib nibWithNibName:@"GRShopRatingRightCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:GRShopRatingRightCellID];
 }
