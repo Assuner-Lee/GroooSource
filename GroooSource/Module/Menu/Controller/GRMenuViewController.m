@@ -73,6 +73,11 @@
     
 }
 
+- (void)back {
+    [_cashierdeskView clear];
+    [super back];
+}
+
 - (void)initView {
     self.scrollView = [[UIScrollView alloc] initWithFrame:SCREEN_BOUNDS];
     self.scrollView.showsVerticalScrollIndicator = NO;
@@ -97,7 +102,7 @@
     self.segmentView = [[GRSegmentView alloc] initWithSubviewArray:@[_mainView, _ratingTable] titleArray:@[@"菜单", @"用户评价"] orignY:_headView.gr_height mainColor:[GRAppStyle mainColor]];
     [self.scrollView addSubview:self.segmentView];
     
-    self.cashierdeskView = [[GRCashierdeskView alloc] initWithShopID:_shop.shopID basePrice:_shop.basePrice];
+    self.cashierdeskView = [[GRCashierdeskView alloc] initWithShop:_shop];
     [self.view addSubview:self.cashierdeskView];
 }
 

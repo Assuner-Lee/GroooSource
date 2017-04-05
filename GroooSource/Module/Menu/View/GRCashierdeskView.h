@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "GRMenuList.h"
+#import "GRShopList.h"
 
 @interface GRCashierdeskView : UIView
 
-- (instancetype)initWithShopID:(NSUInteger)shopID basePrice:(NSUInteger)basePrice;
+- (instancetype)initWithShop:(GRShop *)shop;
 - (void)changeWithMenu:(GRMenu *)menu valueChange:(NSInteger)valueChange;
+- (void)clear;
 
 @end

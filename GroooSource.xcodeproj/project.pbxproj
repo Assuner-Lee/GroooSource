@@ -66,6 +66,8 @@
 		9CB92AC91E63FC8000650CC5 /* GRTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB92AC81E63FC8000650CC5 /* GRTabBarViewController.m */; };
 		9CB9DFA21E659D7000C8F5E8 /* GROrderList.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB9DFA11E659D7000C8F5E8 /* GROrderList.m */; };
 		9CB9DFA51E65A9F800C8F5E8 /* GROrderListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB9DFA41E65A9F800C8F5E8 /* GROrderListRequest.m */; };
+		9CCC22C91E950EE60029B0EB /* GRCashierdeskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCC22C71E950EE60029B0EB /* GRCashierdeskCell.m */; };
+		9CCC22CA1E950EE60029B0EB /* GRCashierdeskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CCC22C81E950EE60029B0EB /* GRCashierdeskCell.xib */; };
 		9CFF24D41E83BE0C004D92D7 /* GRMenuList.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CFF24D31E83BE0C004D92D7 /* GRMenuList.m */; };
 		E2954B97A1FCB5F571EBF9A5 /* libPods-GroooSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E584F6C8F6FD08D02E5B18 /* libPods-GroooSource.a */; };
 /* End PBXBuildFile section */
@@ -187,6 +189,9 @@
 		9CB9DFA11E659D7000C8F5E8 /* GROrderList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GROrderList.m; sourceTree = "<group>"; };
 		9CB9DFA31E65A9F800C8F5E8 /* GROrderListRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GROrderListRequest.h; sourceTree = "<group>"; };
 		9CB9DFA41E65A9F800C8F5E8 /* GROrderListRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GROrderListRequest.m; sourceTree = "<group>"; };
+		9CCC22C61E950EE60029B0EB /* GRCashierdeskCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRCashierdeskCell.h; sourceTree = "<group>"; };
+		9CCC22C71E950EE60029B0EB /* GRCashierdeskCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRCashierdeskCell.m; sourceTree = "<group>"; };
+		9CCC22C81E950EE60029B0EB /* GRCashierdeskCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRCashierdeskCell.xib; sourceTree = "<group>"; };
 		9CFF24D21E83BE0C004D92D7 /* GRMenuList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMenuList.h; sourceTree = "<group>"; };
 		9CFF24D31E83BE0C004D92D7 /* GRMenuList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRMenuList.m; sourceTree = "<group>"; };
 		A71905685320E5462FE3E37D /* Pods-GroooSource.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroooSource.release.xcconfig"; path = "Pods/Target Support Files/Pods-GroooSource/Pods-GroooSource.release.xcconfig"; sourceTree = "<group>"; };
@@ -595,6 +600,18 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		9CCC22C51E950E9A0029B0EB /* GRCashierdeskView */ = {
+			isa = PBXGroup;
+			children = (
+				9C44D46A1E8F82F600F85757 /* GRCashierdeskView.h */,
+				9C44D46B1E8F82F600F85757 /* GRCashierdeskView.m */,
+				9CCC22C61E950EE60029B0EB /* GRCashierdeskCell.h */,
+				9CCC22C71E950EE60029B0EB /* GRCashierdeskCell.m */,
+				9CCC22C81E950EE60029B0EB /* GRCashierdeskCell.xib */,
+			);
+			name = GRCashierdeskView;
+			sourceTree = "<group>";
+		};
 		9CFF24C61E83B7C7004D92D7 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -638,8 +655,7 @@
 				9C1BE93E1E8B8F37007F5733 /* GRMenuMainView.m */,
 				9C44D4441E8CAA2900F85757 /* GRShopRatingTable.h */,
 				9C44D4451E8CAA2900F85757 /* GRShopRatingTable.m */,
-				9C44D46A1E8F82F600F85757 /* GRCashierdeskView.h */,
-				9C44D46B1E8F82F600F85757 /* GRCashierdeskView.m */,
+				9CCC22C51E950E9A0029B0EB /* GRCashierdeskView */,
 				9C44D4691E8F81CD00F85757 /* GRMenuMainViewCell */,
 				9C44D4521E8CEDBB00F85757 /* GRShopRatingCell */,
 			);
@@ -716,6 +732,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CCC22CA1E950EE60029B0EB /* GRCashierdeskCell.xib in Resources */,
 				9CB92AB71E5D67AD00650CC5 /* GRShopListCell.xib in Resources */,
 				9C1BE9401E8B8F37007F5733 /* GRMenuCategoryCell.xib in Resources */,
 				823FE4661E4D911E008E8CB0 /* Assets.xcassets in Resources */,
@@ -823,6 +840,7 @@
 				9CB9DFA21E659D7000C8F5E8 /* GROrderList.m in Sources */,
 				9CAAF5741E6E83C600730810 /* GROrderStatusLabel.m in Sources */,
 				9C44D46C1E8F82F600F85757 /* GRCashierdeskView.m in Sources */,
+				9CCC22C91E950EE60029B0EB /* GRCashierdeskCell.m in Sources */,
 				9CAAF5821E6ED1F700730810 /* GRSegmentHeadView.m in Sources */,
 				9C5384A21E52F914004EDBCF /* GRUser.m in Sources */,
 				9C44D44C1E8CAD3300F85757 /* GRShopRatingList.m in Sources */,

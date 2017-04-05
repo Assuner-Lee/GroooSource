@@ -16,8 +16,7 @@ typedef NS_ENUM(NSInteger, GROperateState) {
 
 @interface GRCashierdeskView ()
 
-@property (nonatomic, assign) NSUInteger shopID;
-@property (nonatomic, assign) NSUInteger basePrice;
+@property (nonatomic, strong) GRShop *shop;
 @property (nonatomic, strong) NSMutableDictionary *loggerDic;
 @property (nonatomic, assign) NSUInteger totolPrice;
 @property (nonatomic, assign) GROperateState operateState;
@@ -34,10 +33,9 @@ typedef NS_ENUM(NSInteger, GROperateState) {
 
 @implementation GRCashierdeskView
 
-- (instancetype)initWithShopID:(NSUInteger)shopID basePrice:(NSUInteger)basePrice {
+- (instancetype)initWithShop:(GRShop *)shop {
     if (self = [super init]) {
-        _shopID = shopID;
-        _basePrice = basePrice;
+        _shop = shop;
         self.frame = CGRectMake(0, SCREEN_HEIGHT - 44, SCREEN_WIDTH, 44);
         self.backgroundColor = [GRAppStyle mainColorWithAlpha:0.7];
         UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
@@ -113,7 +111,7 @@ typedef NS_ENUM(NSInteger, GROperateState) {
 - (GROperateState)operateState {
     if (!_totolPrice) {
         return GROperateStateZero;
-    } else if (_totolPrice < _basePrice) {
+    } else if (_totolPrice < _shop.basePrice) {
         return GROperateStateLessThanBase;
     } else {
         return GROperateStateReachBase;
@@ -142,7 +140,11 @@ typedef NS_ENUM(NSInteger, GROperateState) {
             
             _operateLabel.backgroundColor = [UIColor lightGrayColor];
             _operateLabel.textColor = [UIColor whiteColor];
-            _operateLabel.text = @"还没选哦";
+            if (_shop.shopStatus) {
+                 _operateLabel.text = @"还没选哦";
+            } else {
+                 _operateLabel.text = @"休息中";
+            }
             break;
         }
         case GROperateStateLessThanBase: {
@@ -153,7 +155,7 @@ typedef NS_ENUM(NSInteger, GROperateState) {
             
             _operateLabel.backgroundColor = [UIColor whiteColor];
             _operateLabel.textColor = [UIColor blackColor];
-            _operateLabel.text = [NSString stringWithFormat:@"还差%zd元", _basePrice - _totolPrice];
+            _operateLabel.text = [NSString stringWithFormat:@"还差%zd元", _shop.basePrice - _totolPrice];
             break;
         }
         case GROperateStateReachBase: {
@@ -170,7 +172,7 @@ typedef NS_ENUM(NSInteger, GROperateState) {
     }
 }
 
-- (void)back {
+- (void)clear {
     NSArray<NSString *> *array = self.loggerDic.allKeys;
     for (NSString *menuID in array) {
         GRMenu *menu = self.loggerDic[menuID];
@@ -181,19 +183,20 @@ typedef NS_ENUM(NSInteger, GROperateState) {
 #pragma - Actions
 
 - (void)iconPressed {
-    if (!self.isOpen) {
-        [self.superview addSubview:self.backsideView];
-        [UIView animateWithDuration:0.3 animations:^{
-            _backsideView.alpha = 1.0;
-        }];
-    } else {
-        [_backsideView removeFromSuperview];
-        [UIView animateWithDuration:0.3 animations:^{
-            _backsideView.alpha = 0.0;
-        }];
-    }
-    self.open = !self.isOpen;
-}
+    if (_loggerDic.allKeys.count) {
+        if (!self.isOpen) {
+            [self.superview addSubview:self.backsideView];
+            [UIView animateWithDuration:0.3 animations:^{
+                _backsideView.alpha = 1.0;
+            }];
+        } else {
+            [_backsideView removeFromSuperview];
+            [UIView animateWithDuration:0.3 animations:^{
+                _backsideView.alpha = 0.0;
+            }];
+        }
+        self.open = !self.isOpen;
+    }}
 
 - (void)operate {
     
