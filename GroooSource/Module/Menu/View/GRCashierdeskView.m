@@ -8,6 +8,12 @@
 
 #import "GRCashierdeskView.h"
 
+typedef NS_ENUM(NSInteger, GROperateState) {
+    GROperateStateZero = -1,
+    GROperateStateLessThanBase = 0,
+    GROperateStateReachBase = 1,
+};
+
 @interface GRCashierdeskView ()
 
 @property (nonatomic, assign) NSUInteger shopID;
@@ -15,6 +21,7 @@
 @property (nonatomic, strong) NSMutableDictionary *loggerDic;
 @property (nonatomic, strong) UIView *detailView;
 @property (nonatomic, strong) UIView *backsideView;
+@property (nonatomic, strong) UILabel *operateLabel;
 
 @end
 
@@ -33,7 +40,8 @@
 }
 
 - (void)initView {
-    
+    _operateLabel = [[UILabel alloc] init];
+    _operateLabel.backgroundColor =
 }
 
 @end

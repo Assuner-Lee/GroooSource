@@ -192,7 +192,7 @@
                 <constraint firstAttribute="bottom" secondItem="20j-nJ-Y6R" secondAttribute="bottom" constant="20.5" id="v78-zk-u4d"/>
                 <constraint firstItem="B0a-kJ-6rN" firstAttribute="top" secondItem="uTH-DL-Z2P" secondAttribute="bottom" id="weT-px-jRN"/>
             </constraints>
-            <point key="canvasLocation" x="-3069" y="-321"/>
+            <point key="canvasLocation" x="-3504" y="-758"/>
         </view>
     </objects>
     <resources>

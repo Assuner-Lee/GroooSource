@@ -9,5 +9,6 @@
 #import "GRViewController.h"
 
 @interface GRLoginViewController : GRViewController
+@property (strong, nonatomic) IBOutlet UIView *uiview;
 
 @end

@@ -35,13 +35,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GroooSource/Module/App/GRTabBarViewController.m"
-            timestampString = "512757208.070683"
+            filePath = "GroooSource/Module/Account/Login/Controller/GRLoginViewController.m"
+            timestampString = "512762640.244877"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
             endingLineNumber = "36"
-            landmarkName = "-init"
+            landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
