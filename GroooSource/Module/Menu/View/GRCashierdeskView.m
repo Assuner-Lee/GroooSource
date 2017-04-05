@@ -26,6 +26,9 @@ typedef NS_ENUM(NSInteger, GROperateState) {
 @property (nonatomic, strong) UILabel *priceLabel;
 @property (nonatomic, strong) UILabel *operateLabel;
 
+@property (nonatomic, strong) UIView *backsideView;
+@property (nonatomic, assign, getter=isOpen) BOOL open;
+
 @end
 
 
@@ -70,6 +73,7 @@ typedef NS_ENUM(NSInteger, GROperateState) {
 
 - (void)initView {
     _icon = [[UIImageView alloc] initWithFrame:CGRectMake(10, 5, 45, 35)];
+    _icon.userInteractionEnabled = YES;
     UITapGestureRecognizer *iconTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(iconPressed)];
     [_icon addGestureRecognizer:iconTap];
     [self addSubview:_icon];
@@ -116,6 +120,18 @@ typedef NS_ENUM(NSInteger, GROperateState) {
     }
 }
 
+- (UIView *)backsideView {
+    if (!_backsideView) {
+        _backsideView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 44)];
+        _backsideView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
+        _backsideView.alpha = 0.0;
+        UITapGestureRecognizer *backsideTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(iconPressed)];
+        [_backsideView addGestureRecognizer:backsideTap];
+        return _backsideView;
+    }
+    return _backsideView;
+}
+
 - (void)setTotolPrice:(NSUInteger)number {
     _totolPrice = number;
     switch (self.operateState) {
@@ -154,10 +170,29 @@ typedef NS_ENUM(NSInteger, GROperateState) {
     }
 }
 
+- (void)back {
+    NSArray<NSString *> *array = self.loggerDic.allKeys;
+    for (NSString *menuID in array) {
+        GRMenu *menu = self.loggerDic[menuID];
+        menu.selectCount = 0;
+    }
+}
+
 #pragma - Actions
 
 - (void)iconPressed {
-    
+    if (!self.isOpen) {
+        [self.superview addSubview:self.backsideView];
+        [UIView animateWithDuration:0.3 animations:^{
+            _backsideView.alpha = 1.0;
+        }];
+    } else {
+        [_backsideView removeFromSuperview];
+        [UIView animateWithDuration:0.3 animations:^{
+            _backsideView.alpha = 0.0;
+        }];
+    }
+    self.open = !self.isOpen;
 }
 
 - (void)operate {
