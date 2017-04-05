@@ -88,15 +88,20 @@
 - (void)doSelect:(UIButton *)sender {
     if (sender.tag == 0) {
         ++ _menu.selectCount;
-        _variation = _menu.menuPrice;
+        if (self.selectBlock) {
+            self.selectBlock(_menu, +1);
+        }
+        [UIView gr_showOscillatoryAnimationWithLayer:_selectedCountLabel.layer type:GROscillatoryAnimationToBigger range:1.5];
+        [UIView gr_showOscillatoryAnimationWithLayer:_plusBtn.layer type:GROscillatoryAnimationToBigger range:1.5];
     } else if (sender.tag == 1 && _menu.selectCount > 0) {
         -- _menu.selectCount;
-         _variation = - _menu.menuPrice;
+        if (self.selectBlock) {
+            self.selectBlock(_menu, -1);
+        }
+        [UIView gr_showOscillatoryAnimationWithLayer:_selectedCountLabel.layer type:GROscillatoryAnimationToSmaller range:0.5];
+        [UIView gr_showOscillatoryAnimationWithLayer:_minusBtn.layer type:GROscillatoryAnimationToBigger range:0.5];
     }
     [self selectedCountChanged];
-    if (self.selectBlock) {
-        self.selectBlock(_variation);
-    }
 }
 
 @end

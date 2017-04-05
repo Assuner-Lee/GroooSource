@@ -115,13 +115,13 @@
     for (UIButton *btn in array) {
         if ([btn isEqual:array[index - 1]]) {
             btn.selected = YES;
-            if (_slideLine.gr_width != btn.gr_width) {
-                [UIView animateWithDuration:0.1 animations:^{
+            [UIView gr_showOscillatoryAnimationWithLayer:btn.layer type:GROscillatoryAnimationToBigger range:1.3];
+            [UIView animateWithDuration:0.1 animations:^{
                     _slideLine.gr_left = btn.gr_left;
                     _slideLine.gr_width = btn.gr_width;
                     
                 }];
-            }
+            
         } else {
             btn.selected = NO;
         }

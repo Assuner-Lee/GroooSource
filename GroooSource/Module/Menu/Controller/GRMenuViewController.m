@@ -12,6 +12,7 @@
 #import "GRMenuMainView.h"
 #import "GRShopRatingTable.h"
 #import "GRMenuListRequest.h"
+#import "GRCashierdeskView.h"
 
 @interface GRMenuViewController () <UIScrollViewDelegate>
 
@@ -25,6 +26,7 @@
 @property (nonatomic, strong) GRSegmentView *segmentView;
 @property (nonatomic, strong) GRMenuMainView *mainView;
 @property (nonatomic, strong) GRShopRatingTable *ratingTable;
+@property (nonatomic, strong) GRCashierdeskView *cashierdeskView;
 
 @property (nonatomic, strong) NSArray *rightItemArray;
 
@@ -85,10 +87,18 @@
     [self.scrollView addSubview:self.headView];
     
     self.mainView = [[GRMenuMainView alloc] initWithShopStatus:self.shop.shopStatus];
+    GRWEAK(self);
+    self.mainView.selectBlock = ^(GRMenu *menu, NSInteger valueChange) {
+        GRSTRONG(self);
+        [self.cashierdeskView changeWithMenu:menu valueChange:valueChange];
+    };
     self.ratingTable = [[GRShopRatingTable alloc] initWithShopID:self.shop.shopID];
     
     self.segmentView = [[GRSegmentView alloc] initWithSubviewArray:@[_mainView, _ratingTable] titleArray:@[@"菜单", @"用户评价"] orignY:_headView.gr_height mainColor:[GRAppStyle mainColor]];
     [self.scrollView addSubview:self.segmentView];
+    
+    self.cashierdeskView = [[GRCashierdeskView alloc] initWithShopID:_shop.shopID basePrice:_shop.basePrice];
+    [self.view addSubview:self.cashierdeskView];
 }
 
 - (void)startRequest {

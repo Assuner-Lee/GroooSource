@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "GRMenuList.h"
+#import "GRMenuDetailCell.h"
 
 @interface GRMenuMainView : UIView
+
 @property (nonatomic, strong) NSArray<GRMenu *> *menuDataArray;
+@property (nonatomic, copy) GRSelectedBlock selectBlock;
 
 - (instancetype)initWithShopStatus:(NSUInteger)shopStatus;
 

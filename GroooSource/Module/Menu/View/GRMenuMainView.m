@@ -8,7 +8,6 @@
 
 #import "GRMenuMainView.h"
 #import "GRMenuCategoryCell.h"
-#import "GRMenuDetailCell.h"
 
 static NSString *GRMenuCategoryCellID = @"GRMenuCategoryCellID";
 static NSString *GRMenuDetailCellID = @"GRMenuDetailCellID";
@@ -113,6 +112,7 @@ static NSString *GRMenuDetailCellID = @"GRMenuDetailCellID";
     } else {
         GRMenuDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:GRMenuDetailCellID forIndexPath:indexPath];
         [cell setMenu:self.menuDetailDataArray[indexPath.row] shopStatus:_shopStatus];
+        cell.selectBlock = self.selectBlock;
         return cell;
     }
 }

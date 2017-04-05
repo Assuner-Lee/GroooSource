@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GRMenuList.h"
 
-typedef void (^GRSelectedBlock)(NSInteger variation);
+typedef void (^GRSelectedBlock)(GRMenu *menu, NSInteger valueChange);
 
 @interface GRMenuDetailCell : UITableViewCell
 

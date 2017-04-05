@@ -86,4 +86,21 @@
     self.center = CGPointMake(self.center.x, centerY);
 }
 
++ (void)gr_showOscillatoryAnimationWithLayer:(CALayer *)layer type:(GROscillatoryAnimationType)type range:(CGFloat)range {
+    NSNumber *animationScale1 = type == GROscillatoryAnimationToBigger ? @(range = range ? : 1.15) : @(range = range ? : 0.7);
+    NSNumber *animationScale2 = type == GROscillatoryAnimationToBigger ? @(0.92) : @(1.15);
+    
+    [UIView animateWithDuration:0.15 delay:0 options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseInOut animations:^{
+        [layer setValue:animationScale1 forKeyPath:@"transform.scale"];
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.15 delay:0 options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseInOut animations:^{
+            [layer setValue:animationScale2 forKeyPath:@"transform.scale"];
+        } completion:^(BOOL finished) {
+            [UIView animateWithDuration:0.1 delay:0 options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseInOut animations:^{
+                [layer setValue:@(1.0) forKeyPath:@"transform.scale"];
+            } completion:nil];
+        }];
+    }];
+}
+
 @end

@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSUInteger, GROscillatoryAnimationType){
+    GROscillatoryAnimationToBigger,
+    GROscillatoryAnimationToSmaller,
+};
+
 @interface UIView (GRShortcut)
 
 @property (nonatomic) CGFloat gr_left;
@@ -18,5 +23,7 @@
 @property (nonatomic) CGFloat gr_height;
 @property (nonatomic) CGFloat gr_centerX;
 @property (nonatomic) CGFloat gr_centerY;
+
++ (void)gr_showOscillatoryAnimationWithLayer:(CALayer *)layer type:(GROscillatoryAnimationType)type range:(CGFloat)range;
 
 @end
