@@ -7,6 +7,7 @@
 //
 
 #import "GRCashierdeskView.h"
+#import "GRCashierdeskCell.h"
 
 typedef NS_ENUM(NSInteger, GROperateState) {
     GROperateStateZero = 0,
@@ -14,19 +15,23 @@ typedef NS_ENUM(NSInteger, GROperateState) {
     GROperateStateReachBase = 2,
 };
 
-@interface GRCashierdeskView ()
+static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
+
+@interface GRCashierdeskView () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) GRShop *shop;
 @property (nonatomic, strong) NSMutableDictionary *loggerDic;
 @property (nonatomic, assign) NSUInteger totolPrice;
 @property (nonatomic, assign) GROperateState operateState;
+@property (nonatomic, assign, getter=isOpen) BOOL open;
 
 @property (nonatomic, strong) UIImageView *icon;
 @property (nonatomic, strong) UILabel *priceLabel;
 @property (nonatomic, strong) UILabel *operateLabel;
 
 @property (nonatomic, strong) UIView *backsideView;
-@property (nonatomic, assign, getter=isOpen) BOOL open;
+@property (nonatomic, strong) UITableView *cashierdeskTable;
+@property (nonatomic, strong) NSArray<GRMenu *> *cellDataArray;
 
 @end
 
@@ -130,6 +135,27 @@ typedef NS_ENUM(NSInteger, GROperateState) {
     return _backsideView;
 }
 
+- (UITableView *)cashierdeskTable {
+    if (!_cashierdeskTable) {
+        _cashierdeskTable = [[UITableView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - 44, SCREEN_WIDTH, 35 * _cellDataArray.count) style:UITableViewStylePlain];
+        _cashierdeskTable.dataSource = self;
+        _cashierdeskTable.delegate = self;
+        _cashierdeskTable.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _cashierdeskTable.showsVerticalScrollIndicator = NO;
+        [_cashierdeskTable registerNib:[UINib nibWithNibName:@"GRCashierdeskCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:GRCashierdeskCellID];
+        [self.superview addSubview:self.backsideView];
+        [self.superview addSubview:self.cashierdeskTable];
+    }
+    return _cashierdeskTable;
+}
+
+- (void)setCellDataArray:(NSArray<GRMenu *> *)cellDataArray {
+    if (cellDataArray.count) {
+        _cellDataArray = cellDataArray;
+        [self.cashierdeskTable reloadData];
+    }
+}
+
 - (void)setTotolPrice:(NSUInteger)number {
     _totolPrice = number;
     switch (self.operateState) {
@@ -185,14 +211,17 @@ typedef NS_ENUM(NSInteger, GROperateState) {
 - (void)iconPressed {
     if (_loggerDic.allKeys.count) {
         if (!self.isOpen) {
-            [self.superview addSubview:self.backsideView];
+            self.cellDataArray = _loggerDic.allValues;
+            [self.superview bringSubviewToFront:self];
             [UIView animateWithDuration:0.3 animations:^{
                 _backsideView.alpha = 1.0;
+                _cashierdeskTable.frame = CGRectMake(0, SCREEN_HEIGHT - 44 - 35 * _cellDataArray.count, SCREEN_WIDTH, 35 * _cellDataArray.count);
             }];
         } else {
-            [_backsideView removeFromSuperview];
+        
             [UIView animateWithDuration:0.3 animations:^{
                 _backsideView.alpha = 0.0;
+                _cashierdeskTable.frame = CGRectMake(0, SCREEN_HEIGHT - 44, SCREEN_WIDTH, 0);
             }];
         }
         self.open = !self.isOpen;
@@ -200,6 +229,22 @@ typedef NS_ENUM(NSInteger, GROperateState) {
 
 - (void)operate {
     
+}
+
+#pragma - UITableView 
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _cellDataArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    GRCashierdeskCell *cell = [tableView dequeueReusableCellWithIdentifier:GRCashierdeskCellID forIndexPath:indexPath];
+    cell.menu = _cellDataArray[indexPath.row];
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 35.0;
 }
 
 @end
