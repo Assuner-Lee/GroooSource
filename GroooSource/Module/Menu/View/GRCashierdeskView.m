@@ -58,7 +58,7 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
 }
 
 - (void)changeWithMenu:(GRMenu *)menu valueChange:(NSInteger)valueChange {
-    NSString *key = [NSString stringWithFormat:@"%zd", menu.menuID];
+    NSString *key = menu.menuID;
     if ([_loggerDic.allKeys containsObject:key]) {
         if (!menu.selectCount) {
             [_loggerDic removeObjectForKey:key];
@@ -307,14 +307,14 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
     cell.toZeroBlock = ^{
         GRSTRONG(cell);
         [self.cellDataArray removeObject:cell.menu];
-        [self.cashierdeskTable deleteRowsAtIndexPaths:@[[_cashierdeskTable indexPathForCell:cell]] withRowAnimation:(_cellDataArray.count > 5 ? UITableViewRowAnimationLeft : UITableViewRowAnimationFade)];
+        [tableView deleteRowsAtIndexPaths:@[[_cashierdeskTable indexPathForCell:cell]] withRowAnimation:(_cellDataArray.count > 5 ? UITableViewRowAnimationLeft : UITableViewRowAnimationFade)];
         [UIView animateWithDuration:0.3 animations:^{
              _tableBackView.frame = CGRectMake(0, SCREEN_HEIGHT - 44 - [self tableViewHight] - 30, SCREEN_WIDTH, [self tableViewHight] + 30);
         }];
         if (!_cellDataArray.count) {
             [self iconPressed];
         }
-        };
+    };
     GRWEAK(self);
     cell.selectBlock = ^(GRMenu *menu, NSInteger valueChange) {
         GRSTRONG(self);
@@ -333,4 +333,19 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
 - (CGFloat)tableViewHight {
     return 40.0 * (_cellDataArray.count > 5 ? 5 : _cellDataArray.count);
 }
+
+- (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewRowAction *clearAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"清空" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+    GRCashierdeskCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.menu.selectCount = 0;
+    if (cell.selectBlock) {
+        cell.selectBlock(cell.menu, -1);
+    }
+    if (cell.toZeroBlock) {
+        cell.toZeroBlock();
+    }
+    }];
+    return @[clearAction];
+}
+
 @end
