@@ -30,4 +30,6 @@ typedef NS_ENUM(NSUInteger, GRHTTPMethod) {
 
 - (void)startRequestComplete:(GRRequestComplete)complete;
 
+- (NSDictionary *)paramsDic;
+
 @end

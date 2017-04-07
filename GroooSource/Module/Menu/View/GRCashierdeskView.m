@@ -8,6 +8,7 @@
 
 #import "GRCashierdeskView.h"
 #import "GRNotification.h"
+#import "GRPlaceOrderRequest.h"
 
 typedef NS_ENUM(NSInteger, GROperateState) {
     GROperateStateZero = 0,
@@ -24,6 +25,7 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
 @property (nonatomic, assign) NSUInteger totolPrice;
 @property (nonatomic, assign) GROperateState operateState;
 @property (nonatomic, assign, getter=isOpen) BOOL open;
+@property (nonatomic, strong) NSMutableArray *orderDetailArray;
 
 @property (nonatomic, strong) UIImageView *icon;
 @property (nonatomic, strong) UILabel *priceLabel;
@@ -50,6 +52,7 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
         effectview.frame = self.bounds;
         [self addSubview:effectview];
         self.loggerDic = [[NSMutableDictionary alloc] init];
+        self.orderDetailArray = [[NSMutableArray alloc] init];
         [self initView];
         self.totolPrice = [self getTotolPrice];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clearDic) name:GRMenuReloadedNotification object:nil];
@@ -94,6 +97,7 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
     _operateLabel.textAlignment = NSTextAlignmentCenter;
     _operateLabel.font = [UIFont systemFontOfSize:15.0];
     _operateLabel.textColor = [UIColor whiteColor];
+    _operateLabel.userInteractionEnabled = YES;
     
     UITapGestureRecognizer *operateTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(operate)];
     [_operateLabel addGestureRecognizer:operateTap];
@@ -112,6 +116,19 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
         totolPrice += menu.menuPrice*menu.selectCount;
     }
     return totolPrice;
+}
+
+- (void)initMenus {
+    NSArray<NSString *> *array = self.loggerDic.allKeys;
+    for (NSString *menuID in array) {
+        GRMenu *menu = self.loggerDic[menuID];
+        menu.selectCount = 0;
+    }
+}
+
+- (void)clear {
+    [self initMenus];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma - Override
@@ -238,17 +255,15 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
     }
 }
 
-- (void)initMenus {
-    NSArray<NSString *> *array = self.loggerDic.allKeys;
-    for (NSString *menuID in array) {
-        GRMenu *menu = self.loggerDic[menuID];
-        menu.selectCount = 0;
+- (NSMutableArray *)orderDetailArray {
+    [_orderDetailArray removeAllObjects];
+    NSArray *valueArray = _loggerDic.allValues;
+    if (valueArray.count) {
+        for (GRMenu *menu in valueArray) {
+            [_orderDetailArray addObject:@{@"id": menu.menuID, @"count": @(menu.selectCount)}];
+        }
     }
-}
-
-- (void)clear {
-    [self initMenus];
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    return _orderDetailArray;
 }
 
 #pragma - Actions
@@ -277,7 +292,14 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
 }
 
 - (void)operate {
-    
+    if (!self.orderDetailArray.count) {
+        return;
+    }
+    [[[GRPlaceOrderRequest alloc] initWithShopID:_shop.shopID ordersParams:self.orderDetailArray] startRequestComplete:^(id  _Nullable responseObject, NSError * _Nullable error) {
+        if (error) {
+            return;
+        }
+    }];
 }
 
 - (void)clearDic {

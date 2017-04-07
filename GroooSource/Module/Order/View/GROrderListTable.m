@@ -48,8 +48,8 @@ static NSString *GROrderListCellID = @"GROrderListCellID";
 
 - (void)setCellDataArray:(NSArray<GROrder *> *)cellDataArray {
     [_blankView removeFromSuperview];
+    _cellDataArray = cellDataArray;
     if (cellDataArray.count) {
-        _cellDataArray = cellDataArray;
         if (self.visibleCells.count) {
             [self reloadSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, cellDataArray.count)] withRowAnimation:UITableViewRowAnimationMiddle];
         } else {
