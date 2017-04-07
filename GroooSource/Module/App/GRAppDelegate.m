@@ -8,6 +8,9 @@
 
 #import "GRAppDelegate.h"
 #import "GRTabBarViewController.h"
+#import "GRNotification.h"
+#import "GRViewController.h"
+#import "GRLoginViewController.h"
 
 @implementation GRAppDelegate
 
@@ -15,6 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self showRootView];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showLoginVC) name:GRTokenInvaildNotification object:nil];
     return YES;
 }
 
@@ -44,4 +48,13 @@
     [self.window makeKeyAndVisible];
     
 }
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)showLoginVC {
+    [(GRViewController *)(((UINavigationController *)((GRTabBarViewController *)MAIN_WINDOW.rootViewController).selectedViewController).topViewController) presentViewController:[GRLoginViewController new] animation:GRTransitionTypeRippleEffect completion:^{[MBProgressHUD gr_showFailure:@"请先登录"];}];
+}
+
 @end

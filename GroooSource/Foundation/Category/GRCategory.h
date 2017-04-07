@@ -14,5 +14,6 @@
 #import "UIView+GRShortcut.h"
 #import "UIImage+GROperation.h"
 #import "NSString+GRCommen.h"
+#import "MBProgressHUD+GRShow.h"
 
 #endif /* GRCategory_h */

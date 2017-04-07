@@ -295,7 +295,9 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
     if (!self.orderDetailArray.count) {
         return;
     }
+    [MBProgressHUD gr_showProgress];
     [[[GRPlaceOrderRequest alloc] initWithShopID:_shop.shopID ordersParams:self.orderDetailArray] startRequestComplete:^(id  _Nullable responseObject, NSError * _Nullable error) {
+        [MBProgressHUD gr_hideProgress];
         if (error) {
             return;
         }
