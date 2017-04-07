@@ -19,7 +19,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="川菜系列" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qm-nn-gR0">
-                        <rect key="frame" x="0.0" y="0.0" width="80" height="49"/>
+                        <rect key="frame" x="5" y="0.0" width="75" height="49"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="49" id="k9Y-bc-gUd"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -28,24 +31,23 @@
                         <rect key="frame" x="0.0" y="49" width="80" height="1"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="1" id="wiG-CY-ATg"/>
+                            <constraint firstAttribute="height" constant="1" id="9kO-Bi-0PH"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="4qm-nn-gR0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="6D3-Ac-tzD"/>
-                    <constraint firstAttribute="bottom" secondItem="4qm-nn-gR0" secondAttribute="bottom" constant="0.5" id="CvS-xF-PeZ"/>
-                    <constraint firstAttribute="trailing" secondItem="Mgc-Uz-tIk" secondAttribute="trailing" id="Ebh-2c-t5m"/>
-                    <constraint firstAttribute="bottom" secondItem="Mgc-Uz-tIk" secondAttribute="bottom" constant="-0.5" id="F71-0A-ye2"/>
-                    <constraint firstItem="Mgc-Uz-tIk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="TH9-H0-Ase"/>
-                    <constraint firstItem="4qm-nn-gR0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="VGP-g6-E5j"/>
-                    <constraint firstAttribute="trailing" secondItem="4qm-nn-gR0" secondAttribute="trailing" id="mXH-kc-hgo"/>
+                    <constraint firstAttribute="trailing" secondItem="Mgc-Uz-tIk" secondAttribute="trailing" id="1NE-xm-e6W"/>
+                    <constraint firstItem="4qm-nn-gR0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="4Sq-3d-5FY"/>
+                    <constraint firstItem="4qm-nn-gR0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="6xp-O8-h10"/>
+                    <constraint firstAttribute="trailing" secondItem="4qm-nn-gR0" secondAttribute="trailing" id="AWM-26-0uT"/>
+                    <constraint firstAttribute="bottom" secondItem="Mgc-Uz-tIk" secondAttribute="bottom" id="iaF-fc-Ywb"/>
+                    <constraint firstItem="Mgc-Uz-tIk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="mND-eF-nzN"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="categoryLabel" destination="4qm-nn-gR0" id="kdP-ds-lQW"/>
             </connections>
-            <point key="canvasLocation" x="-330.5" y="-165"/>
+            <point key="canvasLocation" x="-331" y="-165"/>
         </tableViewCell>
     </objects>
 </document>

@@ -85,6 +85,7 @@ static NSString *GRMenuDetailCellID = @"GRMenuDetailCellID";
         }
         [_categoryTableView reloadData];
         [self tableView:_categoryTableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+        [_categoryTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:UITableViewScrollPositionTop];
         [[NSNotificationCenter defaultCenter] postNotificationName:GRMenuReloadedNotification object:nil];
     }
 }

@@ -57,6 +57,7 @@
             self.selectBlock(_menu, +1);
         }
         [UIView gr_showOscillatoryAnimationWithLayer:_selectedCountLabel.layer type:GROscillatoryAnimationToBigger range:1.5];
+        [UIView gr_showOscillatoryAnimationWithLayer:_totalPriceLabel.layer type:GROscillatoryAnimationToBigger range:1.5];
     } else if (sender.tag == 1 && _menu.selectCount > 0) {
         -- _menu.selectCount;
         if (!_menu.selectCount && self.toZeroBlock) {
@@ -66,6 +67,7 @@
             self.selectBlock(_menu, -1);
         }
         [UIView gr_showOscillatoryAnimationWithLayer:_selectedCountLabel.layer type:GROscillatoryAnimationToSmaller range:0.5];
+        [UIView gr_showOscillatoryAnimationWithLayer:_totalPriceLabel.layer type:GROscillatoryAnimationToSmaller range:0.5];
     }
     if (_menu.selectCount) {
         [self setView];

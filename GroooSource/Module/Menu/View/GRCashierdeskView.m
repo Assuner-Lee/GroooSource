@@ -140,7 +140,7 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
 
 - (UIView *)tableBackView {
     if (!_tableBackView) {
-        _tableBackView = [[UIView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - 44, SCREEN_WIDTH, [self tableViewHight] + 30)];
+        _tableBackView = [[UIView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - 43, SCREEN_WIDTH, [self tableViewHight] + 30)];
         _tableBackView.backgroundColor = [UIColor whiteColor];
     }
     return _tableBackView;
@@ -149,7 +149,7 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
 - (UIView *)tableHeaderView {
     if (!_tableHeaderView) {
         _tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 30)];
-        _tableHeaderView.backgroundColor = [[GRAppStyle mainColor] colorWithAlphaComponent:0.7];;
+        _tableHeaderView.backgroundColor = [[GRAppStyle mainColor] colorWithAlphaComponent:0.9];;
         
         UIView *line = [[UIView alloc] initWithFrame:CGRectMake(10, 7.5, 3, 15)];
         line.backgroundColor = [UIColor whiteColor];
@@ -161,7 +161,7 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
         titleLabel.attributedText = [[NSAttributedString alloc] initWithString:@"购物车" attributes:[GRAppStyle attributeWithFont:[UIFont boldSystemFontOfSize:14.0] color:[UIColor whiteColor]]];
         [_tableHeaderView addSubview:titleLabel];
         
-        UIImageView *clearIcon = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 42.5, 0, 45, 30)];
+        UIImageView *clearIcon = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 43, 0, 45, 30)];
         clearIcon.image = [UIImage imageNamed:@"bin_icon"];
         clearIcon.contentMode = UIViewContentModeScaleAspectFit;
         clearIcon.userInteractionEnabled = YES;
@@ -258,9 +258,11 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
         if (_loggerDic.allKeys.count) {
             self.cellDataArray = [NSMutableArray arrayWithArray:_loggerDic.allValues];
             [self.superview bringSubviewToFront:self];
+            _cashierdeskTable.gr_height = [self tableViewHight];
             [UIView animateWithDuration:0.3 animations:^{
                 _backsideView.alpha = 1.0;
                 _tableBackView.frame = CGRectMake(0, SCREEN_HEIGHT - 44 - [self tableViewHight] - 30, SCREEN_WIDTH, [self tableViewHight] + 30);
+                
             }];
              self.open = !self.isOpen;
         }
