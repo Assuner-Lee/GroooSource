@@ -24,7 +24,7 @@ static NSString * const API_USER_REGISTER = @"/accounts/";
 //***用户注册***
 
 static NSString * const API_DORM_LIST = @"/shops/building?school_id=1";
-//***宿舍列表***
+//***宿舍列表***                          
 
 static NSString * const API_USER_LOGIN = @"/accounts/token";
 //***用户登录***

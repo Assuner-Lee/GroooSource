@@ -98,6 +98,7 @@
         ballIcon.clipsToBounds = YES;
         [_orderDetailView addSubview:ballIcon];
         
+        
         NSAttributedString *countString = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"x %zd", orderData.orderDetail[i - 1].foodCount] attributes:foodStringattribute];
         UILabel *countLabel = [[UILabel alloc] initWithFrame:CGRectMake(_orderDetailView.gr_width - 35, foodLabel.gr_top, countString.size.width, countString.size.height)];
         countLabel.attributedText = countString;

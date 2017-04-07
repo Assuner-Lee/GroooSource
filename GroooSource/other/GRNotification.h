@@ -11,4 +11,6 @@
 
 static NSString * const GRTokenInvaildNotification = @"GRTokenInvaildNotification";
 
+static NSString * const GRMenuReloadedNotification = @"GRMenuReloadedNotification";
+
 #endif /* GRNotification_h */

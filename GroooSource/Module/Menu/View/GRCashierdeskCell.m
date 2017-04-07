@@ -59,12 +59,17 @@
         [UIView gr_showOscillatoryAnimationWithLayer:_selectedCountLabel.layer type:GROscillatoryAnimationToBigger range:1.5];
     } else if (sender.tag == 1 && _menu.selectCount > 0) {
         -- _menu.selectCount;
+        if (!_menu.selectCount && self.toZeroBlock) {
+            self.toZeroBlock();
+        }
         if (self.selectBlock) {
             self.selectBlock(_menu, -1);
         }
         [UIView gr_showOscillatoryAnimationWithLayer:_selectedCountLabel.layer type:GROscillatoryAnimationToSmaller range:0.5];
     }
-    [self setView];
+    if (_menu.selectCount) {
+        [self setView];
+    }
 }
 
 @end

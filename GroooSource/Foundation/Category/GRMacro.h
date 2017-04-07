@@ -11,11 +11,11 @@
 
 //**************** macro ****************
 
-#define GRWEAK(self) \
-__weak typeof(self) weakSelf = self
+#define GRWEAK(aObject) \
+__weak typeof(aObject) weak##aObject = aObject
 
-#define GRSTRONG(self) \
-__strong typeof(weakSelf) self = weakSelf
+#define GRSTRONG(aObject) \
+__strong typeof(weak##aObject) aObject = weak##aObject
 
 
 #define SCREEN_BOUNDS [UIScreen mainScreen].bounds

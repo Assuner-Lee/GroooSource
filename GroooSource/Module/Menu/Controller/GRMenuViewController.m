@@ -103,6 +103,10 @@
     [self.scrollView addSubview:self.segmentView];
     
     self.cashierdeskView = [[GRCashierdeskView alloc] initWithShop:_shop];
+    self.cashierdeskView.reloadBlock = ^{
+        GRSTRONG(self);
+        [self.mainView reload];
+    };
     [self.view addSubview:self.cashierdeskView];
 }
 

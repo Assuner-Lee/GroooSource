@@ -16,6 +16,7 @@
 @property (nonatomic, copy) GRSelectedBlock selectBlock;
 
 - (instancetype)initWithShopStatus:(NSUInteger)shopStatus;
+- (void)reload;
 
 @end
 

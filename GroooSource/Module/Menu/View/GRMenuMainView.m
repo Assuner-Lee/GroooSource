@@ -8,6 +8,7 @@
 
 #import "GRMenuMainView.h"
 #import "GRMenuCategoryCell.h"
+#import "GRNotification.h"
 
 static NSString *GRMenuCategoryCellID = @"GRMenuCategoryCellID";
 static NSString *GRMenuDetailCellID = @"GRMenuDetailCellID";
@@ -62,6 +63,10 @@ static NSString *GRMenuDetailCellID = @"GRMenuDetailCellID";
     [self addSubview:_menuDetailTableView];
 }
 
+- (void)reload {
+    [self.menuDetailTableView reloadData];
+}
+
 - (void)setMenuDataArray:(NSArray<GRMenu *> *)menuDataArray {
     if (menuDataArray.count) {
          _menuDataArray = menuDataArray;
@@ -80,6 +85,7 @@ static NSString *GRMenuDetailCellID = @"GRMenuDetailCellID";
         }
         [_categoryTableView reloadData];
         [self tableView:_categoryTableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+        [[NSNotificationCenter defaultCenter] postNotificationName:GRMenuReloadedNotification object:nil];
     }
 }
 
