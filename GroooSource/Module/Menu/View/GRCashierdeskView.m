@@ -30,6 +30,7 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
 @property (nonatomic, strong) UILabel *operateLabel;
 
 @property (nonatomic, strong) UIView *backsideView;
+@property (nonatomic, strong) UIView *tableBackView;
 @property (nonatomic, strong) UITableView *cashierdeskTable;
 @property (nonatomic, strong) NSMutableArray<GRMenu *> *cellDataArray;
 
@@ -136,19 +137,29 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
     return _backsideView;
 }
 
+- (UIView *)tableBackView {
+    if (!_tableBackView) {
+        _tableBackView = [[UIView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - 44, SCREEN_WIDTH, [self tableViewHight] + 30)];
+        
+        UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 30)];
+        headView.backgroundColor = [GRAppStyle mainColor];
+        [_tableBackView addSubview:headView];
+    }
+    return _tableBackView;
+}
+
 - (UITableView *)cashierdeskTable {
     if (!_cashierdeskTable) {
-        _cashierdeskTable = [[UITableView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - 44, SCREEN_WIDTH, [self tableViewHight]) style:UITableViewStylePlain];
+        _cashierdeskTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 30, SCREEN_WIDTH, [self tableViewHight]) style:UITableViewStylePlain];
         _cashierdeskTable.dataSource = self;
         _cashierdeskTable.delegate = self;
         _cashierdeskTable.separatorStyle = UITableViewCellSeparatorStyleNone;
         _cashierdeskTable.showsVerticalScrollIndicator = NO;
         [_cashierdeskTable registerNib:[UINib nibWithNibName:@"GRCashierdeskCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:GRCashierdeskCellID];
-        [self.superview addSubview:self.backsideView];
-        [self.superview addSubview:self.cashierdeskTable];
         
-        UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 30)];
-        headView.backgroundColor = [[GRAppStyle mainColor] colorWithAlphaComponent:0.7];
+        [self.superview addSubview:self.backsideView];
+        [self.superview addSubview:self.tableBackView];
+        [self.tableBackView addSubview:_cashierdeskTable];
     }
     return _cashierdeskTable;
 }
@@ -220,14 +231,14 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
             [self.superview bringSubviewToFront:self];
             [UIView animateWithDuration:0.3 animations:^{
                 _backsideView.alpha = 1.0;
-                _cashierdeskTable.frame = CGRectMake(0, SCREEN_HEIGHT - 44 - [self tableViewHight], SCREEN_WIDTH, [self tableViewHight]);
+                _tableBackView.frame = CGRectMake(0, SCREEN_HEIGHT - 44 - [self tableViewHight] - 30, SCREEN_WIDTH, [self tableViewHight] + 30);
             }];
              self.open = !self.isOpen;
         }
     } else {
         [UIView animateWithDuration:0.3 animations:^{
             _backsideView.alpha = 0.0;
-            _cashierdeskTable.frame = CGRectMake(0, SCREEN_HEIGHT - 44, SCREEN_WIDTH, 0);
+            _tableBackView.frame = CGRectMake(0, SCREEN_HEIGHT - 44, SCREEN_WIDTH, [self tableViewHight] + 30);
         }];
         self.open = !self.isOpen;
     }
@@ -256,9 +267,9 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
     cell.toZeroBlock = ^{
         GRSTRONG(cell);
         [self.cellDataArray removeObject:cell.menu];
-        [self.cashierdeskTable deleteRowsAtIndexPaths:@[[_cashierdeskTable indexPathForCell:cell]] withRowAnimation:UITableViewRowAnimationLeft];
+        [self.cashierdeskTable deleteRowsAtIndexPaths:@[[_cashierdeskTable indexPathForCell:cell]] withRowAnimation:(_cellDataArray.count > 5 ? UITableViewRowAnimationLeft : UITableViewRowAnimationFade)];
         [UIView animateWithDuration:0.3 animations:^{
-            _cashierdeskTable.frame = CGRectMake(0, SCREEN_HEIGHT - 44 - [self tableViewHight], SCREEN_WIDTH, [self tableViewHight]);
+             _tableBackView.frame = CGRectMake(0, SCREEN_HEIGHT - 44 - [self tableViewHight] - 30, SCREEN_WIDTH, [self tableViewHight] + 30);
         }];
         if (!_cellDataArray.count) {
             [self iconPressed];
@@ -280,6 +291,6 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
 }
 
 - (CGFloat)tableViewHight {
-    return 40.0 * (_cellDataArray.count > 3 ? 3 : _cellDataArray.count) + 30;
+    return 40.0 * (_cellDataArray.count > 5 ? 5 : _cellDataArray.count);
 }
 @end
