@@ -46,9 +46,9 @@
 - (CGFloat)orderCellHight {
     if (!_orderCellHight) {
         if (_isSpread) {
-            return 30 * _orderDetail.count + 130;
+            return 30 * _orderDetail.count + 140;
         } else {
-            return 130;
+            return 140;
         }
     } else {
         return _orderCellHight;
@@ -56,7 +56,7 @@
 }
 
 - (CGFloat)orderCellMaxHight {
-   return 30 * _orderDetail.count + 130;
+   return 30 * _orderDetail.count + 140;
 }
 
 @end

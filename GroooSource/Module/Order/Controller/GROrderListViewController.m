@@ -36,10 +36,6 @@
     [super viewDidLoad];
     [self initView];
     [self initRequest];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
     [self startRequest];
 }
 

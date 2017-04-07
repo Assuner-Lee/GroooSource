@@ -10,4 +10,6 @@
 
 @interface GROrderListViewController : GRViewController
 
+- (void)startRequest;
+
 @end
