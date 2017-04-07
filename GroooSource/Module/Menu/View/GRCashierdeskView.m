@@ -31,6 +31,7 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
 
 @property (nonatomic, strong) UIView *backsideView;
 @property (nonatomic, strong) UIView *tableBackView;
+@property (nonatomic, strong) UIView *tableHeaderView;
 @property (nonatomic, strong) UITableView *cashierdeskTable;
 @property (nonatomic, strong) NSMutableArray<GRMenu *> *cellDataArray;
 
@@ -140,12 +141,35 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
 - (UIView *)tableBackView {
     if (!_tableBackView) {
         _tableBackView = [[UIView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - 44, SCREEN_WIDTH, [self tableViewHight] + 30)];
-        
-        UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 30)];
-        headView.backgroundColor = [GRAppStyle mainColor];
-        [_tableBackView addSubview:headView];
+        _tableBackView.backgroundColor = [UIColor whiteColor];
     }
     return _tableBackView;
+}
+
+- (UIView *)tableHeaderView {
+    if (!_tableHeaderView) {
+        _tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 30)];
+        _tableHeaderView.backgroundColor = [[GRAppStyle mainColor] colorWithAlphaComponent:0.7];;
+        
+        UIView *line = [[UIView alloc] initWithFrame:CGRectMake(10, 7.5, 3, 15)];
+        line.backgroundColor = [UIColor whiteColor];
+        line.layer.cornerRadius = 1;
+        line.clipsToBounds = YES;
+        [_tableHeaderView addSubview:line];
+        
+        UILabel *titleLabel= [[UILabel alloc] initWithFrame:CGRectMake(25, 0, 60, 30)];
+        titleLabel.attributedText = [[NSAttributedString alloc] initWithString:@"购物车" attributes:[GRAppStyle attributeWithFont:[UIFont boldSystemFontOfSize:14.0] color:[UIColor whiteColor]]];
+        [_tableHeaderView addSubview:titleLabel];
+        
+        UIImageView *clearIcon = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 42.5, 0, 45, 30)];
+        clearIcon.image = [UIImage imageNamed:@"bin_icon"];
+        clearIcon.contentMode = UIViewContentModeScaleAspectFit;
+        clearIcon.userInteractionEnabled = YES;
+        [_tableHeaderView addSubview:clearIcon];
+        UITapGestureRecognizer *clearIconTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapClearIcon)];
+        [clearIcon addGestureRecognizer:clearIconTap];
+    }
+    return _tableHeaderView;
 }
 
 - (UITableView *)cashierdeskTable {
@@ -159,6 +183,7 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
         
         [self.superview addSubview:self.backsideView];
         [self.superview addSubview:self.tableBackView];
+        [self.tableBackView addSubview:self.tableHeaderView];
         [self.tableBackView addSubview:_cashierdeskTable];
     }
     return _cashierdeskTable;
@@ -213,12 +238,16 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
     }
 }
 
-- (void)clear {
+- (void)initMenus {
     NSArray<NSString *> *array = self.loggerDic.allKeys;
     for (NSString *menuID in array) {
         GRMenu *menu = self.loggerDic[menuID];
         menu.selectCount = 0;
     }
+}
+
+- (void)clear {
+    [self initMenus];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
@@ -252,6 +281,15 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
 - (void)clearDic {
     [_loggerDic removeAllObjects];
     self.totolPrice = [self getTotolPrice];
+}
+
+- (void)tapClearIcon {
+    [self initMenus];
+    [self clearDic];
+    if (self.reloadBlock) {
+        self.reloadBlock();
+    }
+    [self iconPressed];
 }
 
 #pragma - UITableView 
