@@ -8,7 +8,6 @@
 
 #import "GRMenuMainView.h"
 #import "GRMenuCategoryCell.h"
-#import "GRNotification.h"
 
 static NSString *GRMenuCategoryCellID = @"GRMenuCategoryCellID";
 static NSString *GRMenuDetailCellID = @"GRMenuDetailCellID";

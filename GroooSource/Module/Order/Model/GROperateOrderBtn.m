@@ -16,19 +16,19 @@
     switch (orderStatus) {
         case GROrderStatusNotTaked: {
             [self setTitle:@"取消" forState: UIControlStateNormal];
-            [self setBackgroundColor:[UIColor blueColor]];
+            [self setBackgroundColor:[GRAppStyle orangeColor]];
             return;
         }
         
         case GROrderStatusTaked: {
             [self setTitle:@"确认" forState: UIControlStateNormal];
-            [self setBackgroundColor:[UIColor redColor]];
+            [self setBackgroundColor:[GRAppStyle mainColor]];
             return;
         }
         
         case GROrderStatusDone: {
             [self setTitle:@"评价" forState: UIControlStateNormal];
-            [self setBackgroundColor:[GRAppStyle mainColor]];
+            [self setBackgroundColor:[GRAppStyle goldColor]];
             return;
         }
         

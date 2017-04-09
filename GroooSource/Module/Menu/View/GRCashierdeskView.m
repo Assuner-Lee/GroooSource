@@ -7,7 +7,6 @@
 //
 
 #import "GRCashierdeskView.h"
-#import "GRNotification.h"
 #import "GRPlaceOrderRequest.h"
 
 typedef NS_ENUM(NSInteger, GROperateState) {
@@ -91,6 +90,9 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
     _priceLabel.textAlignment = NSTextAlignmentLeft;
     _priceLabel.font = [UIFont boldSystemFontOfSize:17.0];
     _priceLabel.textColor = [UIColor whiteColor];
+    _priceLabel.userInteractionEnabled = YES;
+    UITapGestureRecognizer *priceTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(iconPressed)];
+    [_priceLabel addGestureRecognizer:priceTap];
     [self addSubview:_priceLabel];
     
     _operateLabel = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - ADAPTX_VALUE(88), 0, ADAPTX_VALUE(88), 44)];
@@ -157,7 +159,7 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
 
 - (UIView *)tableBackView {
     if (!_tableBackView) {
-        _tableBackView = [[UIView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - 43, SCREEN_WIDTH, [self tableViewHight] + 30)];
+        _tableBackView = [[UIView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, [self tableViewHight] + 30)];
         _tableBackView.backgroundColor = [UIColor whiteColor];
     }
     return _tableBackView;
@@ -178,7 +180,7 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
         titleLabel.attributedText = [[NSAttributedString alloc] initWithString:@"购物车" attributes:[GRAppStyle attributeWithFont:[UIFont boldSystemFontOfSize:14.0] color:[UIColor whiteColor]]];
         [_tableHeaderView addSubview:titleLabel];
         
-        UIImageView *clearIcon = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 43, 0, 45, 30)];
+        UIImageView *clearIcon = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 43, 3, 45, 24)];
         clearIcon.image = [UIImage imageNamed:@"bin_icon"];
         clearIcon.contentMode = UIViewContentModeScaleAspectFit;
         clearIcon.userInteractionEnabled = YES;
@@ -274,7 +276,7 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
             self.cellDataArray = [NSMutableArray arrayWithArray:_loggerDic.allValues];
             [self.superview bringSubviewToFront:self];
             _cashierdeskTable.gr_height = [self tableViewHight];
-            [UIView animateWithDuration:0.3 animations:^{
+            [UIView animateWithDuration:0.5 animations:^{
                 _backsideView.alpha = 1.0;
                 _tableBackView.frame = CGRectMake(0, SCREEN_HEIGHT - 44 - [self tableViewHight] - 30, SCREEN_WIDTH, [self tableViewHight] + 30);
                 
@@ -284,7 +286,7 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
     } else {
         [UIView animateWithDuration:0.3 animations:^{
             _backsideView.alpha = 0.0;
-            _tableBackView.frame = CGRectMake(0, SCREEN_HEIGHT - 44, SCREEN_WIDTH, [self tableViewHight] + 30);
+            _tableBackView.frame = CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, [self tableViewHight] + 30);
         }];
         self.open = !self.isOpen;
     }
@@ -301,6 +303,8 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
         if (error) {
             return;
         }
+        [MBProgressHUD gr_showSuccess:@"下单成功"];
+        [[NSNotificationCenter defaultCenter] postNotificationName:GRUpdateOrderListNextAppearedNotification object:nil];
     }];
 }
 

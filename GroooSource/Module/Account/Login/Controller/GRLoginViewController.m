@@ -101,6 +101,7 @@
         [GRUserManager sharedManager].currentUser.token = responseObject.loginData.token;
         [GRUserManager saveUserToDefaults];
         [[GRHTTPManager sharedManager].requestSerializer setValue:responseObject.loginData.token forHTTPHeaderField:@"Authorization"];
+        [[NSNotificationCenter defaultCenter] postNotificationName:GRLoginSuccessNotification object:nil];
         [self back];
     }];
 }

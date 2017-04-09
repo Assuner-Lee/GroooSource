@@ -12,5 +12,6 @@
 #import "GRCategory.h"
 #import "GRMacro.h"
 #import "GRAppStyle.h"
+#import "GRNotification.h"
 
 #endif /* GRHeaders_pch */

@@ -32,7 +32,7 @@ static NSString *GROrderListCellID = @"GROrderListCellID";
     self.frame = CGRectMake(SCREEN_WIDTH * _tableType, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 64);
     self.dataSource = self;
     self.delegate = self;
-    self.contentInset = UIEdgeInsetsMake(44 - 5, 0, 49, 0);
+    self.contentInset = UIEdgeInsetsMake(44 - 5, 0, 49 + 5, 0);
     self.backgroundColor = [UIColor groupTableViewBackgroundColor];
     self.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self registerNib:[UINib nibWithNibName:@"GROrderListCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:GROrderListCellID];
@@ -50,9 +50,8 @@ static NSString *GROrderListCellID = @"GROrderListCellID";
 - (void)setCellDataArray:(NSArray<GROrder *> *)cellDataArray {
     [_blankView removeFromSuperview];
     _cellDataArray = cellDataArray;
-    if (cellDataArray.count) {
-        [self reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];
-    } else if (!self.visibleCells.count) {
+    [self reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];
+    if (!cellDataArray.count) {
         [self addSubview:self.blankView];
     }
 }

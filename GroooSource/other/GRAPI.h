@@ -41,7 +41,7 @@ static NSString * const API_MENU_LIST_F = @"/shops/shop/%zd/menu";
 //***菜单列表***
 
 static NSString * const API_PLACE_ORDER_F = @"/shops/shop/%zd/order";
-//***下单操作***
+//***下单操作(商家订单列表)***
 
 
 static NSString * const API_USER_ORDER = @"/shops/user/order";
@@ -55,5 +55,10 @@ static NSString * const API_ORDER_STATUS_F = @"/shops/shop/%zd/order";
 
 static NSString * const kURL_FINDPASSWORD = @"http://www.grooo.cn/user/findPassword";
 
+//************ 商家账号 **********
+
+//18716036890 036890
+
+//************ 商家账号 **********
 
 #endif /* GRAPI_h */

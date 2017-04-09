@@ -25,10 +25,16 @@
     [self.navigationController.navigationBar setShadowImage:[UIImage imageWithColor:[GRAppStyle transparentColor]]];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     [self setupBarItem];
+    
+    [self addObservedNotification];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)addObservedNotification {
+    
 }
 
 - (void)setupBarItem {
@@ -134,8 +140,6 @@
     [self dismissViewControllerAnimated:NO completion:completion];
          
 }
-
-
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];

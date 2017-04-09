@@ -7,7 +7,6 @@
 //
 
 #import "GRHTTPManager.h"
-#import "GRNotification.h"
 #import "GRUserManager.h"
 
 #pragma mark C-Method
