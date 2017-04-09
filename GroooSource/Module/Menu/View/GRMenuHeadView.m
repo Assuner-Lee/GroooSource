@@ -80,12 +80,21 @@
 - (void)changeWithOffsetY:(CGFloat)y {
     [self setDynamicImage];
     if (y < 0) {
+        _shopMonthSoldLabel.alpha = 1;
+        _shopNameLabel.alpha = 1;
+        _shopLogoView.alpha = 1;
         [self setDynamicLabel];
     } else {
-        CGFloat alpha = 1.0 - y / self.gr_height;
-        _shopLogoView.alpha = alpha;
-        _shopNameLabel.alpha = alpha;
-        _shopMonthSoldLabel.alpha = alpha;
+        if (y < 25) {
+            CGFloat alpha = 1.0 - y / 25;
+            _shopMonthSoldLabel.alpha = alpha;
+        } else if (y < 50) {
+             CGFloat alpha = 1.0 - (y - 25) / 25;
+            _shopNameLabel.alpha = alpha;
+        } else {
+            CGFloat alpha = 1.0 - (y - 50) / (self.gr_height - 50);
+            _shopLogoView.alpha = alpha;
+        }
     }
 }
 

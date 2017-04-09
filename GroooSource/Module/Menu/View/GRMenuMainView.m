@@ -40,7 +40,7 @@ static NSString *GRMenuDetailCellID = @"GRMenuDetailCellID";
 }
 
 - (void)initView {
-    _categoryTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 80, SCREEN_HEIGHT - 64) style:UITableViewStylePlain];
+    _categoryTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 79, SCREEN_HEIGHT - 64) style:UITableViewStylePlain];
     _categoryTableView.backgroundColor = [UIColor whiteColor];
     _categoryTableView.dataSource = self;
     _categoryTableView.delegate = self;
@@ -50,6 +50,10 @@ static NSString *GRMenuDetailCellID = @"GRMenuDetailCellID";
     _categoryTableView.tag = 0;
     [_categoryTableView registerNib:[UINib nibWithNibName:@"GRMenuCategoryCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:GRMenuCategoryCellID];
     [self addSubview:_categoryTableView];
+    
+    UIView *line = [[UIView alloc] initWithFrame:CGRectMake(79, 0, 1, SCREEN_HEIGHT - 64)];
+    line.backgroundColor = [GRAppStyle lineColor];
+    [self addSubview:line];
     
     _menuDetailTableView = [[UITableView alloc] initWithFrame:CGRectMake(80, 0, SCREEN_WIDTH - 80, SCREEN_HEIGHT - 64) style:UITableViewStylePlain];
     _menuDetailTableView.backgroundColor = [UIColor whiteColor];
