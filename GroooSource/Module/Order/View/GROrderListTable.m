@@ -32,7 +32,7 @@ static NSString *GROrderListCellID = @"GROrderListCellID";
     self.frame = CGRectMake(SCREEN_WIDTH * _tableType, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 64);
     self.dataSource = self;
     self.delegate = self;
-    self.contentInset = UIEdgeInsetsMake(44 - 10, 0, 49, 0);
+    self.contentInset = UIEdgeInsetsMake(44 - 5, 0, 49, 0);
     self.backgroundColor = [UIColor groupTableViewBackgroundColor];
     self.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self registerNib:[UINib nibWithNibName:@"GROrderListCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:GROrderListCellID];
@@ -90,7 +90,7 @@ static NSString *GROrderListCellID = @"GROrderListCellID";
     _cellDataArray[indexPath.row].isSpread = !_cellDataArray[indexPath.row].isSpread;
     [self beginUpdates];
     GROrderListCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    cell.selected = NO;
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
     [self endUpdates];
     cell.isSpread = _cellDataArray[indexPath.row].isSpread;
 }

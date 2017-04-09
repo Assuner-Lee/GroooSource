@@ -32,7 +32,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.backgroundColor = [UIColor whiteColor];
-    self.selectedView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 140)];
+    self.selectedView = [[UIView alloc] initWithFrame:CGRectMake(0, 10, SCREEN_WIDTH, 130)];
     self.selectedView.backgroundColor = [GRAppStyle mainColorWithAlpha:0.5];
     self.operateStatusBtn.layer.cornerRadius = 8;
     self.operateStatusBtn.clipsToBounds = YES;
