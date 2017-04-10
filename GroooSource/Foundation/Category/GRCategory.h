@@ -9,6 +9,8 @@
 #ifndef GRCategory_h
 #define GRCategory_h
 
+typedef void (^GRBlankBlock)(void);
+
 //**************** header ****************
 
 #import "UIView+GRShortcut.h"

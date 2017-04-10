@@ -7,6 +7,7 @@
 //
 
 #import "GRNavigationController.h"
+#import "UINavigationController+FDFullscreenPopGesture.h"
 
 @interface GRNavigationController () <UIGestureRecognizerDelegate>
 

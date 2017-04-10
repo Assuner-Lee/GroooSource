@@ -23,6 +23,12 @@
 
 @property (nonatomic, strong) UILabel *shopMonthSoldLabel;
 
+@property (nonatomic, strong) UIButton *backBtn;
+
+@property (nonatomic, strong) UIButton *callBtn;
+
+@property (nonatomic, strong) UILabel *titleLabel;
+
 @end
 
 
@@ -51,6 +57,23 @@
     _effectBacksideView = [[UIVisualEffectView alloc] initWithEffect:effect];
     [_backsideImageView addSubview:_effectBacksideView];
 
+    _backBtn = [[UIButton alloc] initWithFrame:CGRectMake(2, 25, 30, 30)];
+    [_backBtn setImage:[UIImage imageNamed:@"back_arrow_icon"] forState:UIControlStateNormal];
+    [_backBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview:_backBtn];
+    
+    _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 30, 200, 20)];
+    _titleLabel.textAlignment = NSTextAlignmentCenter;
+    _titleLabel.attributedText = [[NSAttributedString alloc] initWithString:_shop.shopName attributes:[GRAppStyle attributeWithFont:[GRAppStyle font16] color:[UIColor whiteColor]]];
+    _titleLabel.gr_centerX = self.gr_centerX;
+    _titleLabel.hidden = YES;
+    [self addSubview:_titleLabel];
+    
+    _callBtn = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 35, 25, 30, 30)];
+    [_callBtn setImage:[UIImage imageNamed:@"call"] forState:UIControlStateNormal];
+    [_callBtn addTarget:self action:@selector(shopCall) forControlEvents:UIControlEventTouchUpInside];
+    _callBtn.hidden = YES;
+    [self addSubview:_callBtn];
     
     _shopLogoView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 26, 70, 70)];
     _shopLogoView.gr_centerX = self.gr_centerX;
@@ -94,6 +117,13 @@
         } else {
             CGFloat alpha = 1.0 - (y - 50) / (self.gr_height - 50);
             _shopLogoView.alpha = alpha;
+            if (alpha <= 0) {
+                _titleLabel.hidden = NO;
+                _callBtn.hidden = NO;
+            } else {
+                _titleLabel.hidden = YES;
+                _callBtn.hidden = YES;
+            }
         }
     }
 }
@@ -109,6 +139,20 @@
 }
 
 - (void)setDynamicAlpha {
+    
+}
+
+#pragma - Action 
+
+- (void)back {
+    if (self.backBlock) {
+        self.backBlock();
+    }
+}
+
+- (void)shopCall {
+    NSString * str=[[NSString alloc] initWithFormat:@"telprompt://%@", _shop.shopPhone];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str] options:@{} completionHandler:nil];
     
 }
 

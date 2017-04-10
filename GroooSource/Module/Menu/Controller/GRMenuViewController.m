@@ -48,24 +48,16 @@
     [super viewDidLoad];
     [self initView];
     [self startRequest];
-    [self initRightItemArray];
-}
-
-- (void)initRightItemArray {
-    [super setupBarItem];
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"call"] style:UIBarButtonItemStylePlain target:self action:@selector(shopCall)];
-    
-    UIBarButtonItem *flexSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-    flexSpace.width = 5;
-    
-    self.rightItemArray = @[rightItem, flexSpace];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:[GRAppStyle transparentColor]] forBarMetrics:UIBarMetricsDefault];
-    [self.navigationController.navigationBar setShadowImage:[UIImage imageWithColor:[GRAppStyle transparentColor]]];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -89,10 +81,14 @@
     
     self.headView = [[GRMenuHeadView alloc] initWithShop:self.shop];
     _originalHeadViewHeight = _headView.gr_height;
+    GRWEAK(self);
+    self.headView.backBlock = ^{
+        GRSTRONG(self);
+        [self back];
+    };
     [self.scrollView addSubview:self.headView];
     
     self.mainView = [[GRMenuMainView alloc] initWithShopStatus:self.shop.shopStatus];
-    GRWEAK(self);
     self.mainView.selectBlock = ^(GRMenu *menu, NSInteger valueChange) {
         GRSTRONG(self);
         [self.cashierdeskView changeWithMenu:menu valueChange:valueChange];
@@ -128,12 +124,6 @@
         }
         self.mainView.menuDataArray = responseObject.dataArray;
     }];
-}
-
-- (void)shopCall {
-    NSString * str=[[NSString alloc] initWithFormat:@"telprompt://%@", _shop.shopPhone];
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str] options:@{} completionHandler:nil];
-    
 }
 
 #pragma - UIScrollView 

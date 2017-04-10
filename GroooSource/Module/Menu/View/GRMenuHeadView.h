@@ -11,6 +11,8 @@
 
 @interface GRMenuHeadView : UIView
 
+@property (nonatomic, copy) GRBlankBlock backBlock;
+
 - (instancetype)initWithShop:(GRShop *)shop;
 - (void)changeWithOffsetY:(CGFloat)y;
 

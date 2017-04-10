@@ -8,6 +8,7 @@
 
 #import "GRSegmentView.h"
 #import "GRSegmentHeadView.h"
+#import "GRScrollView.h"
 
 @interface GRSegmentView () <UIScrollViewDelegate, GRSegmentHeadViewDelegate>
 @property (nonatomic, strong) NSArray<UIView *> *subViewsArray;
@@ -15,7 +16,7 @@
 @property (nonatomic, assign) CGFloat orignY;
 
 @property (nonatomic, strong) GRSegmentHeadView *headView;
-@property (nonatomic, strong) UIScrollView *baseView;
+@property (nonatomic, strong) GRScrollView *baseView;
 @property (nonatomic, assign) CGFloat subviewHight;
 @property (nonatomic, assign) NSUInteger scrollCount;
 @property (nonatomic, strong) UIColor *mainColor;
@@ -53,7 +54,7 @@
    }
 
 - (void)initBaseView {
-    self.baseView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, _subviewHight)];
+    self.baseView = [[GRScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, _subviewHight)];
     self.baseView.contentSize = CGSizeMake(SCREEN_WIDTH * _scrollCount, _subviewHight);
     self.baseView.pagingEnabled = YES;
     self.baseView.alwaysBounceVertical = NO;

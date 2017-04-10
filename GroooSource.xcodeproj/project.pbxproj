@@ -51,6 +51,8 @@
 		9C8CF6CE1E83C5DE0030F54E /* GRMenuListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8CF6CD1E83C5DE0030F54E /* GRMenuListRequest.m */; };
 		9C8CF6D11E83CC350030F54E /* GRMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8CF6D01E83CC350030F54E /* GRMenuViewController.m */; };
 		9C8CF6D41E83D1AC0030F54E /* GRMenuHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8CF6D31E83D1AC0030F54E /* GRMenuHeadView.m */; };
+		9CA98E441E9B2DF9008D603E /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA98E431E9B2DF9008D603E /* UINavigationController+FDFullscreenPopGesture.m */; };
+		9CA98E471E9B539D008D603E /* GRScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA98E461E9B539D008D603E /* GRScrollView.m */; };
 		9CAAF56A1E6D0E8B00730810 /* GROrderListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF5681E6D0E8B00730810 /* GROrderListCell.m */; };
 		9CAAF56B1E6D0E8B00730810 /* GROrderListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CAAF5691E6D0E8B00730810 /* GROrderListCell.xib */; };
 		9CAAF5741E6E83C600730810 /* GROrderStatusLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF5731E6E83C600730810 /* GROrderStatusLabel.m */; };
@@ -160,6 +162,10 @@
 		9C8CF6D01E83CC350030F54E /* GRMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRMenuViewController.m; sourceTree = "<group>"; };
 		9C8CF6D21E83D1AC0030F54E /* GRMenuHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMenuHeadView.h; sourceTree = "<group>"; };
 		9C8CF6D31E83D1AC0030F54E /* GRMenuHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRMenuHeadView.m; sourceTree = "<group>"; };
+		9CA98E421E9B2DF9008D603E /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		9CA98E431E9B2DF9008D603E /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		9CA98E451E9B539D008D603E /* GRScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRScrollView.h; sourceTree = "<group>"; };
+		9CA98E461E9B539D008D603E /* GRScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRScrollView.m; sourceTree = "<group>"; };
 		9CAAF5671E6D0E8B00730810 /* GROrderListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GROrderListCell.h; sourceTree = "<group>"; };
 		9CAAF5681E6D0E8B00730810 /* GROrderListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GROrderListCell.m; sourceTree = "<group>"; };
 		9CAAF5691E6D0E8B00730810 /* GROrderListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GROrderListCell.xib; sourceTree = "<group>"; };
@@ -470,6 +476,8 @@
 				823FE4591E4C94FE008E8CB0 /* UIImage+GROperation.m */,
 				823FE4611E4D850F008E8CB0 /* UIView+GRShortcut.h */,
 				823FE4621E4D850F008E8CB0 /* UIView+GRShortcut.m */,
+				9CA98E421E9B2DF9008D603E /* UINavigationController+FDFullscreenPopGesture.h */,
+				9CA98E431E9B2DF9008D603E /* UINavigationController+FDFullscreenPopGesture.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -545,6 +553,8 @@
 			children = (
 				9CAAF57A1E6E930700730810 /* GRSegmentView.h */,
 				9CAAF57B1E6E930700730810 /* GRSegmentView.m */,
+				9CA98E451E9B539D008D603E /* GRScrollView.h */,
+				9CA98E461E9B539D008D603E /* GRScrollView.m */,
 				9CAAF5801E6ED1F700730810 /* GRSegmentHeadView.h */,
 				9CAAF5811E6ED1F700730810 /* GRSegmentHeadView.m */,
 			);
@@ -841,6 +851,7 @@
 				823FE4631E4D850F008E8CB0 /* UIView+GRShortcut.m in Sources */,
 				9C1507F51E515905007C2B8F /* GRLoginRequest.m in Sources */,
 				82AF89D51E4B3F5200676D29 /* NSString+GRCommen.m in Sources */,
+				9CA98E441E9B2DF9008D603E /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				9C8CF6CE1E83C5DE0030F54E /* GRMenuListRequest.m in Sources */,
 				82AF89E31E4C542000676D29 /* GRWebViewController.m in Sources */,
 				9CAAF57F1E6E9E4B00730810 /* GROrderListTable.m in Sources */,
@@ -857,6 +868,7 @@
 				9C5384A21E52F914004EDBCF /* GRUser.m in Sources */,
 				9C44D44C1E8CAD3300F85757 /* GRShopRatingList.m in Sources */,
 				82AF89AE1E498F6600676D29 /* GRHTTPManager.m in Sources */,
+				9CA98E471E9B539D008D603E /* GRScrollView.m in Sources */,
 				82AF89D11E4B2FA100676D29 /* GRViewController.m in Sources */,
 				9C1BE9451E8B923F007F5733 /* GRMenuDetailCell.m in Sources */,
 				9CB92AC91E63FC8000650CC5 /* GRTabBarViewController.m in Sources */,
