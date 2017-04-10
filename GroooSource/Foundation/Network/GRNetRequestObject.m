@@ -76,6 +76,8 @@
                if (self.allowCache && self.httpMethod == GRHTTPMethodGet) {
                   [GRCacheManager saveCacheWithObject:object json:responseObject forKey:self.requestPath];
                }
+            } else {
+                [NSException raise:@"GRReruestError" format:@"class:(%@) doesn't exist or isn't subclass of GRModel", modelClass];
             }
         } else {
            self.complete(responseObject, nil);

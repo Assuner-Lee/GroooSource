@@ -60,10 +60,10 @@
                     [self presentViewController:vc animation:[animatedType isEqualToString:@"NO"] ? GRTransitionTypeNone : GRTransitionTypeRippleEffect completion:block];
                 }
             } else {
-                [NSException raise:@"GRouterClassError" format:@"class:(%@) can't init", className];
+                [NSException raise:@"GRRouterClassError" format:@"class:(%@) can't init", className];
             }
         } else {
-            [NSException raise:@"GRouterClassError" format:@"class:(%@) doesn't exist or isn't subclass of GRViewController", className];
+            [NSException raise:@"GRRouterClassError" format:@"class:(%@) doesn't exist or isn't subclass of GRViewController", className];
         }
     }
 }
