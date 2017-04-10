@@ -32,7 +32,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.backgroundColor = [UIColor whiteColor];
-    self.selectedView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 140 - 2)];
+    self.selectedView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 140)];
     self.selectedView.backgroundColor = [GRAppStyle mainColorWithAlpha:0.5];
     UIView *fakeView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 10)];
     fakeView.backgroundColor = [UIColor groupTableViewBackgroundColor];

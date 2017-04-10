@@ -105,7 +105,9 @@
 }
 
 - (void)changeUpadateState {
-    self.updateNextAppeared = YES;
+    if (self.viewIfLoaded) {
+        self.updateNextAppeared = YES;
+    }
 }
 
 #pragma - SetterOverride
