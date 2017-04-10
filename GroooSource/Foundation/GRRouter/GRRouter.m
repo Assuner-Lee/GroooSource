@@ -27,6 +27,19 @@
     return router;
 }
 
+
+- (GRNavigationController *)hostViewController {
+    return ((GRNavigationController *)((GRTabBarViewController *)MAIN_WINDOW.rootViewController).selectedViewController);
+}
+
++ (void)pushViewController:(UIViewController *)aVC animated:(BOOL)animated {
+    [[[self sharedRouter] hostViewController] pushViewController:aVC animated:animated];
+}
+
++ (void)presentViewController:(UIViewController *)aVC animation:(GRTransitionType)type completion:(void (^)(void))completion {
+    [(GRViewController *)([[self sharedRouter] hostViewController].topViewController) presentViewController:aVC animation:type completion:completion];
+}
+
 //@"push->GRMenuViewController?YES"
 //@"present->GRLoginViewController?NO"
 + (void)open:(NSString *)url params:(NSDictionary *)params completed:(GRBlankBlock)block {
@@ -46,8 +59,11 @@
                 if ([openType isEqualToString:@"present"]) {
                     [self presentViewController:vc animation:[animatedType isEqualToString:@"NO"] ? GRTransitionTypeNone : GRTransitionTypeRippleEffect completion:block];
                 }
-
+            } else {
+                [NSException raise:@"GRouterClassError" format:@"class:(%@) can't init", className];
             }
+        } else {
+            [NSException raise:@"GRouterClassError" format:@"class:(%@) doesn't exist or isn't subclass of GRViewController", className];
         }
     }
 }
@@ -56,16 +72,5 @@
     [self open:url params:params completed:nil];
 }
 
-- (GRNavigationController *)hostViewController {
-    return ((GRNavigationController *)((GRTabBarViewController *)MAIN_WINDOW.rootViewController).selectedViewController);
-}
-
-+ (void)pushViewController:(UIViewController *)aVC animated:(BOOL)animated {
-    [[[self sharedRouter] hostViewController] pushViewController:aVC animated:animated];
-}
-
-+ (void)presentViewController:(UIViewController *)aVC animation:(GRTransitionType)type completion:(void (^)(void))completion {
-    [(GRViewController *)([[self sharedRouter] hostViewController].topViewController) presentViewController:aVC animation:type completion:completion];
-}
 
 @end

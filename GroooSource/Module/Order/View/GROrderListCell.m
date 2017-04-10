@@ -10,7 +10,6 @@
 #import "UIImageView+AFNetworking.h"
 #import "GROrderStatusLabel.h"
 #import "GROperateOrderBtn.h"
-#import "GRMenuViewController.h"
 
 @interface GROrderListCell ()
 @property (weak, nonatomic) IBOutlet UILabel *shopNameLabel;

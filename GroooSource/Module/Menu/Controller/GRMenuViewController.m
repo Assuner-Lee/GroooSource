@@ -71,6 +71,7 @@
     }
     return nil;
 }
+
 - (void)back {
     [_cashierdeskView clear];
     [super back];

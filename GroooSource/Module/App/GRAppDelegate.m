@@ -8,8 +8,6 @@
 
 #import "GRAppDelegate.h"
 #import "GRTabBarViewController.h"
-#import "GRViewController.h"
-#import "GRLoginViewController.h"
 
 @implementation GRAppDelegate
 

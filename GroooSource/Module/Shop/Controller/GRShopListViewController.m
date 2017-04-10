@@ -10,7 +10,6 @@
 #import "GRShopList.h"
 #import "GRShopListRequest.h"
 #import "GRShopListCell.h"
-#import "GRMenuViewController.h"
 
 static NSString *GRShopListCellID = @"GRShopListCellID";
 
