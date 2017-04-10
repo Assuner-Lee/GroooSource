@@ -30,8 +30,8 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-        UINavigationController *shopListNVC = [[UINavigationController alloc] initWithRootViewController:[[GRShopListViewController alloc] init]];
-        UINavigationController *orderListNVC = [[UINavigationController alloc] initWithRootViewController:[[GROrderListViewController alloc] init]];
+        GRNavigationController *shopListNVC = [[GRNavigationController alloc] initWithRootViewController:[[GRShopListViewController alloc] init]];
+        GRNavigationController *orderListNVC = [[GRNavigationController alloc] initWithRootViewController:[[GROrderListViewController alloc] init]];
         GRLoginViewController *login = [GRLoginViewController new];
         self.viewControllers = @[shopListNVC, orderListNVC,login];
     }

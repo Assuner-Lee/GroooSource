@@ -38,9 +38,9 @@
     return self;
 }
 
-+ (UINavigationController *)modalWebviewWithURL:(NSString *)url title:(NSString *)text
++ (GRNavigationController *)modalWebviewWithURL:(NSString *)url title:(NSString *)text
 {
-    return [[UINavigationController alloc] initWithRootViewController:[[self alloc] initWithURL:url title:text]];
+    return [[GRNavigationController alloc] initWithRootViewController:[[self alloc] initWithURL:url title:text]];
 }
 
 - (void)startLoad {
