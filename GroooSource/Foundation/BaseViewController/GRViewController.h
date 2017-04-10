@@ -41,6 +41,8 @@ typedef NS_ENUM(NSUInteger, GRTransitionType) {
 - (void)back;
 - (void)addObservedNotification;
 
++ (instancetype)routerObjWithParams:(NSDictionary *)params;
+
 @end
 
 NS_ASSUME_NONNULL_END

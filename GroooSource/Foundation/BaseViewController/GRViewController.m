@@ -25,7 +25,6 @@
     [self.navigationController.navigationBar setShadowImage:[UIImage imageWithColor:[GRAppStyle transparentColor]]];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     [self setupBarItem];
-    
     [self addObservedNotification];
 }
 
@@ -35,6 +34,10 @@
 
 - (void)addObservedNotification {
     
+}
+
++ (instancetype)routerObjWithParams:(NSDictionary *)params {
+    return [[self alloc] init];
 }
 
 - (void)setupBarItem {

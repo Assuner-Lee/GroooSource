@@ -65,6 +65,12 @@
     
 }
 
++ (instancetype)routerObjWithParams:(NSDictionary *)params {
+    if ([params objectForKey:@"shop"]) {
+        return [[self alloc] initWithShop:[params objectForKey:@"shop"]];
+    }
+    return nil;
+}
 - (void)back {
     [_cashierdeskView clear];
     [super back];

@@ -13,5 +13,6 @@
 #import "GRMacro.h"
 #import "GRAppStyle.h"
 #import "GRNotification.h"
+#import "GRRouter.h"
 
 #endif /* GRHeaders_pch */

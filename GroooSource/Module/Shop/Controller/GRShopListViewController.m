@@ -216,8 +216,7 @@ static NSString *GRShopListCellID = @"GRShopListCellID";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    GRMenuViewController *menuVC = [[GRMenuViewController alloc] initWithShop:self.cellDataArray[indexPath.row]];
-    [self.navigationController pushViewController:menuVC animated:YES];
+    [GRRouter open:@"push->GRMenuViewController" params:@{@"shop": _shopDataArray[indexPath.row]}];
 }
 
 @end

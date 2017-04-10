@@ -53,7 +53,7 @@
 }
 
 - (void)showLoginVC {
-    [(GRViewController *)(((UINavigationController *)((GRTabBarViewController *)MAIN_WINDOW.rootViewController).selectedViewController).topViewController) presentViewController:[GRLoginViewController new] animation:GRTransitionTypeRippleEffect completion:^{[MBProgressHUD gr_showFailure:@"请先登录"];}];
+   [GRRouter open:@"present->GRLoginViewController" params:nil completed:^{[MBProgressHUD gr_showFailure:@"请先登录"];}];
 }
 
 @end

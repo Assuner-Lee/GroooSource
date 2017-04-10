@@ -11,12 +11,10 @@
 
 typedef void (^GRSelectedBlock)(GRMenu *menu, NSInteger valueChange);
 
-typedef void (^GRTozeroBlock)(void);
-
 @interface GRCashierdeskCell : UITableViewCell
 
 @property (nonatomic, copy) GRSelectedBlock selectBlock;
-@property (nonatomic, copy) GRTozeroBlock toZeroBlock;
+@property (nonatomic, copy) GRBlankBlock toZeroBlock;
 @property (nonatomic, strong) GRMenu *menu;
 
 @end

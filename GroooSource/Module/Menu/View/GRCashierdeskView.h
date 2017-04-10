@@ -10,10 +10,10 @@
 #import "GRMenuList.h"
 #import "GRShopList.h"
 #import "GRCashierdeskCell.h"
-typedef void (^GRReloadBlock)(void);
+
 @interface GRCashierdeskView : UIView
 
-@property (nonatomic, copy) GRReloadBlock reloadBlock;
+@property (nonatomic, copy) GRBlankBlock reloadBlock;
 
 - (instancetype)initWithShop:(GRShop *)shop;
 - (void)changeWithMenu:(GRMenu *)menu valueChange:(NSInteger)valueChange;
