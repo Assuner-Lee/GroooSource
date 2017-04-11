@@ -15,6 +15,13 @@
 
 @implementation GRViewController
 
+- (instancetype)init {
+    if (self = [super init]) {
+        self.hidesBottomBarWhenPushed = YES;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];

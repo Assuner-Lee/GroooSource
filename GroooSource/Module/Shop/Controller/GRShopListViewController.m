@@ -106,7 +106,9 @@ static NSString *GRShopListCellID = @"GRShopListCellID";
             [self showTimeOut];
             return;
         }
+        [self showProgress];
         self.shopDataArray = responseObject.dataArray;
+        [self hideProgress];
     }];
 }
 
@@ -215,7 +217,7 @@ static NSString *GRShopListCellID = @"GRShopListCellID";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    [GRRouter open:@"push->GRMenuViewController" params:@{@"shop": _shopDataArray[indexPath.row]}];
+    [GRRouter open:@"push->GRMenuViewController" params:@{@"shop": _cellDataArray[indexPath.row]}];
 }
 
 @end

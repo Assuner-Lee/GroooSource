@@ -28,8 +28,6 @@
 @property (nonatomic, strong) GRShopRatingTable *ratingTable;
 @property (nonatomic, strong) GRCashierdeskView *cashierdeskView;
 
-@property (nonatomic, strong) NSArray *rightItemArray;
-
 @end
 
 
@@ -44,7 +42,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.hidesBottomBarWhenPushed = YES;
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self initView];
     [self startRequest];
@@ -122,7 +119,14 @@
             [self showTimeOut];
             return;
         }
-        self.mainView.menuDataArray = responseObject.dataArray;
+        if (responseObject.dataArray.count) {
+            [self showProgress];
+            self.mainView.menuDataArray = responseObject.dataArray;
+            [self hideProgress];
+        } else {
+            [MBProgressHUD gr_showFailure:[NSString stringWithFormat:@"%@:暂无菜单", _shop.shopName]];
+            [self back];
+        }
     }];
 }
 
@@ -133,11 +137,6 @@
     if (offsetY > _originalHeadViewHeight - 64) {
         offsetY = _originalHeadViewHeight - 64;
         self.scrollView.contentOffset = CGPointMake(0, offsetY);
-        self.title = _shop.shopName;
-        self.navigationItem.rightBarButtonItems = self.rightItemArray;
-    } else {
-        self.title = @"";
-        self.navigationItem.rightBarButtonItem = nil;
     }
     _headView.gr_top = offsetY;
     _headView.gr_height = _originalHeadViewHeight - offsetY;
