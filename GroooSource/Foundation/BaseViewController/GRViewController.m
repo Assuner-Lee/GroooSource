@@ -36,9 +36,6 @@
     
 }
 
-+ (instancetype)routerObjWithParams:(NSDictionary *)params {
-    return [[self alloc] init];
-}
 
 - (void)setupBarItem {
     if (self.navigationController.viewControllers.count > 1) {

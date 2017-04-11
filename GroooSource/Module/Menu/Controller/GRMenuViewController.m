@@ -38,14 +38,14 @@
 - (instancetype)initWithShop:(GRShop *)shop {
     if (self = [super init]) {
         _shop = shop;
-        self.hidesBottomBarWhenPushed = YES;
-        self.automaticallyAdjustsScrollViewInsets = NO;
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.hidesBottomBarWhenPushed = YES;
+    self.automaticallyAdjustsScrollViewInsets = NO;
     [self initView];
     [self startRequest];
 }
@@ -63,13 +63,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     
-}
-
-+ (instancetype)routerObjWithParams:(NSDictionary *)params {
-    if ([params objectForKey:@"shop"]) {
-        return [[self alloc] initWithShop:[params objectForKey:@"shop"]];
-    }
-    return nil;
 }
 
 - (void)back {

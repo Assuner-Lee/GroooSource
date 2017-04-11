@@ -40,7 +40,7 @@
     [(GRViewController *)([[self sharedRouter] hostViewController].topViewController) presentViewController:aVC animation:type completion:completion];
 }
 
-//@"push->GRMenuViewController?YES"
+//@"push->GRMenuViewController"
 //@"present->GRLoginViewController?NO"
 + (void)open:(NSString *)url params:(NSDictionary *)params completed:(GRBlankBlock)block {
     if (url.length) {
@@ -48,11 +48,16 @@
         NSRange sufRange = [url rangeOfString:@"?"];
         NSString *openType = [url substringWithRange:NSMakeRange(0, preRange.location)];
         NSString *className = [url substringWithRange:NSMakeRange(preRange.location + preRange.length, (sufRange.length ? sufRange.location : url.length) - (preRange.location + preRange.length))];
-        NSString *animatedType = [url substringWithRange:NSMakeRange(sufRange.location + sufRange.length , url.length - (sufRange.location + sufRange.length))];
+        NSString *animatedType = sufRange.length ? [url substringWithRange:NSMakeRange(sufRange.location + sufRange.length , url.length - (sufRange.location + sufRange.length))] : nil;
         Class class = NSClassFromString(className);
         if (class && [class isSubclassOfClass:[GRViewController class]]) {
-            GRViewController *vc = [class routerObjWithParams:params];
+            GRViewController *vc = [[class alloc] init];
             if (vc) {
+                for (NSString *key in params.allKeys) {
+                    if (params[key]) {
+                       [vc setValue:params[key] forKey:key];
+                    }
+                }
                 if ([openType isEqualToString:@"push"]) {
                     [self pushViewController:vc animated:([animatedType isEqualToString:@"YES"] || [animatedType isEqualToString:@"NO"]) ? animatedType.boolValue : YES];
                 }
