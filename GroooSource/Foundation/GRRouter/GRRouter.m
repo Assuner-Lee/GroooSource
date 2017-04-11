@@ -51,8 +51,8 @@
         NSString *className = [url substringWithRange:NSMakeRange(preRange.location + preRange.length, (sufRange.length ? sufRange.location : url.length) - (preRange.location + preRange.length))];
         NSString *animatedType = sufRange.length ? [url substringWithRange:NSMakeRange(sufRange.location + sufRange.length , url.length - (sufRange.location + sufRange.length))] : nil;
         Class class = NSClassFromString(className);
-        if (class && [class isSubclassOfClass:[GRViewController class]]) {
-            GRViewController *vc = [[class alloc] init];
+        if (class && [class isSubclassOfClass:[UIViewController class]]) {
+            UIViewController *vc = [[class alloc] init];
             if (vc) {
                 unsigned int count;
                 objc_property_t* props = class_copyPropertyList(class, &count);
@@ -65,22 +65,22 @@
                             NSString *propertyName = [NSString stringWithCString:name encoding:NSUTF8StringEncoding];
                             if ([propertyName isEqualToString:key]) {
                                 isMatched = YES;
-                                const char * type = property_getAttributes(property);
-                                NSString *typeString = [NSString stringWithCString:type encoding:NSUTF8StringEncoding];
-                                NSArray * attributes = [typeString componentsSeparatedByString:@","];
-                                NSString * typeAttribute = [attributes objectAtIndex:0];
-                                NSString * propertyType = [typeAttribute substringWithRange:NSMakeRange(3, typeAttribute.length - 1 - 3)] ;
-                                Class propertyClass = NSClassFromString(propertyType);
+                                const char * attributesChar = property_getAttributes(property);
+                                NSString *attributesString = [NSString stringWithCString:attributesChar encoding:NSUTF8StringEncoding];
+                                NSArray * attributesArray = [attributesString componentsSeparatedByString:@","];
+                                NSString *classAttribute = [attributesArray objectAtIndex:0];
+                                NSString * propertyClassString = [classAttribute substringWithRange:NSMakeRange(3, classAttribute.length - 1 - 3)] ;
+                                Class propertyClass = NSClassFromString(propertyClassString);
                                 if (propertyClass && [params[key] isKindOfClass:propertyClass]) {
                                     [vc setValue:params[key] forKey:key];
                                 } else {
-                                    [NSException raise:@"GRRouterParamsError" format:@"param:value of (%@) isn't kind of class (%@) but (%@)", key, propertyType, NSStringFromClass([params[key] class])];
+                                    [NSException raise:@"GRRouterParamsError" format:@"param:value of (%@) isn't kind of class (%@) but (%@)", key, propertyClassString, NSStringFromClass([params[key] class])];
                                 }
                                 break;
                             }
                       }
                         if (!isMatched) {
-                             [NSException raise:@"GRRouterParamsError" format:@"param:key named (%@) doesn't exist", key];
+                             [NSException raise:@"GRRouterParamsError" format:@"param:key named (%@) doesn't exist in class (%@)", key, className];
                         }
                   }
               }
@@ -96,7 +96,7 @@
                 [NSException raise:@"GRRouterClassError" format:@"class:(%@) can't init", className];
             }
         } else {
-            [NSException raise:@"GRRouterClassError" format:@"class:(%@) doesn't exist or isn't subclass of GRViewController", className];
+            [NSException raise:@"GRRouterClassError" format:@"class:(%@) doesn't exist or isn't subclass of UIViewController", className];
         }
     }
 }
