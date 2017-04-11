@@ -9,6 +9,7 @@
 #import "GRRouter.h"
 #import "GRNavigationController.h"
 #import "GRTabBarViewController.h"
+#import <objc/runtime.h>
 
 @interface GRRouter ()
 
@@ -40,7 +41,7 @@
     [(GRViewController *)([[self sharedRouter] hostViewController].topViewController) presentViewController:aVC animation:type completion:completion];
 }
 
-//@"push->GRMenuViewController"
+//@"push->GRMenuViewController?NO"
 //@"present->GRLoginViewController?NO"
 + (void)open:(NSString *)url params:(NSDictionary *)params completed:(GRBlankBlock)block {
     if (url.length) {
@@ -53,16 +54,43 @@
         if (class && [class isSubclassOfClass:[GRViewController class]]) {
             GRViewController *vc = [[class alloc] init];
             if (vc) {
+                unsigned int count;
+                objc_property_t* props = class_copyPropertyList(class, &count);
                 for (NSString *key in params.allKeys) {
                     if (params[key]) {
-                       [vc setValue:params[key] forKey:key];
-                    }
-                }
+                        BOOL isMatched = NO;
+                        for (int i = 0; i < count; i++) {
+                            objc_property_t property = props[i];
+                            const char * name = property_getName(property);
+                            NSString *propertyName = [NSString stringWithCString:name encoding:NSUTF8StringEncoding];
+                            if ([propertyName isEqualToString:key]) {
+                                isMatched = YES;
+                                const char * type = property_getAttributes(property);
+                                NSString *typeString = [NSString stringWithCString:type encoding:NSUTF8StringEncoding];
+                                NSArray * attributes = [typeString componentsSeparatedByString:@","];
+                                NSString * typeAttribute = [attributes objectAtIndex:0];
+                                NSString * propertyType = [typeAttribute substringWithRange:NSMakeRange(3, typeAttribute.length - 1 - 3)] ;
+                                Class propertyClass = NSClassFromString(propertyType);
+                                if (propertyClass && [params[key] isKindOfClass:propertyClass]) {
+                                    [vc setValue:params[key] forKey:key];
+                                } else {
+                                    [NSException raise:@"GRRouterParamsError" format:@"param:value of (%@) isn't kind of class (%@) but (%@)", key, propertyType, NSStringFromClass([params[key] class])];
+                                }
+                                break;
+                            }
+                      }
+                        if (!isMatched) {
+                             [NSException raise:@"GRRouterParamsError" format:@"param:key named (%@) doesn't exist", key];
+                        }
+                  }
+              }
+                free(props);
                 if ([openType isEqualToString:@"push"]) {
                     [self pushViewController:vc animated:([animatedType isEqualToString:@"YES"] || [animatedType isEqualToString:@"NO"]) ? animatedType.boolValue : YES];
-                }
-                if ([openType isEqualToString:@"present"]) {
+                } else if ([openType isEqualToString:@"present"]) {
                     [self presentViewController:vc animation:[animatedType isEqualToString:@"NO"] ? GRTransitionTypeNone : GRTransitionTypeRippleEffect completion:block];
+                } else {
+                    [NSException raise:@"GRRouterOpenTypeError" format:@"openType:(%@) doesn't exist", openType];
                 }
             } else {
                 [NSException raise:@"GRRouterClassError" format:@"class:(%@) can't init", className];
