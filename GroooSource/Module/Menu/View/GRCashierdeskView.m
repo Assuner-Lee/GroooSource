@@ -297,14 +297,19 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
     if (!self.orderDetailArray.count) {
         return;
     }
+    [UIView gr_showOscillatoryAnimationWithLayer:_operateLabel.layer type:GROscillatoryAnimationToBigger range:1.5];
+    _operateLabel.gestureRecognizers[0].enabled = NO;
     [MBProgressHUD gr_showProgress];
     [[[GRPlaceOrderRequest alloc] initWithShopID:_shop.shopID ordersParams:self.orderDetailArray] startRequestComplete:^(id  _Nullable responseObject, NSError * _Nullable error) {
         [MBProgressHUD gr_hideProgress];
         if (error) {
+            _operateLabel.gestureRecognizers[0].enabled = YES;
             return;
         }
+        _operateLabel.gestureRecognizers[0].enabled = YES;
         [MBProgressHUD gr_showSuccess:@"下单成功"];
         [[NSNotificationCenter defaultCenter] postNotificationName:GRUpdateOrderListNextAppearedNotification object:nil];
+        [ROOT_VC setSelectedIndex:1];
     }];
 }
 

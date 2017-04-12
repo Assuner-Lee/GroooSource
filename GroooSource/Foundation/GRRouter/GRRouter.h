@@ -11,6 +11,7 @@
 
 @interface GRRouter : NSObject
 
++ (GRNavigationController *)hostViewController;
 + (void)pushViewController:(UIViewController *)aVC animated:(BOOL)animated;
 + (void)presentViewController:(UIViewController *)aVC animation:(GRTransitionType)type completion:(void (^)(void))completion;
 + (void)open:(NSString *)url params:(NSDictionary *)params completed:(GRBlankBlock)block;

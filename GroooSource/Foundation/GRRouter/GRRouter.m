@@ -8,7 +8,6 @@
 
 #import "GRRouter.h"
 #import "GRNavigationController.h"
-#import "GRTabBarViewController.h"
 #import <objc/runtime.h>
 
 @interface GRRouter ()
@@ -28,9 +27,12 @@
     return router;
 }
 
++ (GRNavigationController *)hostViewController {
+    return [[self sharedRouter] hostViewController];
+}
 
 - (GRNavigationController *)hostViewController {
-    return ((GRNavigationController *)((GRTabBarViewController *)MAIN_WINDOW.rootViewController).selectedViewController);
+    return (GRNavigationController *)(ROOT_VC.selectedViewController);
 }
 
 + (void)pushViewController:(UIViewController *)aVC animated:(BOOL)animated {

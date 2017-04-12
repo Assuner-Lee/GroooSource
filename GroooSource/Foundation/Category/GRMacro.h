@@ -18,6 +18,7 @@ __weak typeof(aObject) weak##aObject = aObject
 __strong typeof(weak##aObject) aObject = weak##aObject
 
 #define MAIN_WINDOW  [UIApplication sharedApplication].delegate.window
+#define ROOT_VC      ((GRTabBarViewController *)(MAIN_WINDOW.rootViewController))
 #define SCREEN_BOUNDS [UIScreen mainScreen].bounds
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
