@@ -34,8 +34,15 @@
 @implementation GRMenuViewController 
 
 - (instancetype)initWithShop:(GRShop *)shop {
-    if (self = [super init]) {
+    if (self = [self init]) {
         _shop = shop;
+    }
+    return self;
+}
+
+- (instancetype)init {
+    if (self = [super init]) {
+        self.hidesBottomBarWhenPushed = YES;
     }
     return self;
 }
@@ -49,13 +56,11 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.tabBarController.tabBar.hidden = YES;
     [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    self.tabBarController.tabBar.hidden = NO;
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
