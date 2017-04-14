@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,7 +19,7 @@
                 <outlet property="mobileTextField" destination="Hai-zI-Ka9" id="kap-aY-IrG"/>
                 <outlet property="passwordTextField" destination="i3G-mv-XqU" id="ZyM-yV-c4M"/>
                 <outlet property="registerBtn" destination="zZ5-Vc-OWf" id="1eG-kh-tul"/>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="BN0-En-vnZ"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -192,7 +192,7 @@
                 <constraint firstAttribute="bottom" secondItem="20j-nJ-Y6R" secondAttribute="bottom" constant="20.5" id="v78-zk-u4d"/>
                 <constraint firstItem="B0a-kJ-6rN" firstAttribute="top" secondItem="uTH-DL-Z2P" secondAttribute="bottom" id="weT-px-jRN"/>
             </constraints>
-            <point key="canvasLocation" x="-2544" y="-149"/>
+            <point key="canvasLocation" x="-3504" y="-758"/>
         </view>
     </objects>
     <resources>

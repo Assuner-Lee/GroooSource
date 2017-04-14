@@ -32,7 +32,7 @@ static NSString *GROrderListCellID = @"GROrderListCellID";
     self.frame = CGRectMake(SCREEN_WIDTH * _tableType, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 64);
     self.dataSource = self;
     self.delegate = self;
-    self.contentInset = UIEdgeInsetsMake(44, 0, 49, 0);
+    self.contentInset = UIEdgeInsetsMake(44 - 5, 0, 49 + 5, 0);
     self.backgroundColor = [UIColor groupTableViewBackgroundColor];
     self.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self registerNib:[UINib nibWithNibName:@"GROrderListCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:GROrderListCellID];
@@ -44,18 +44,14 @@ static NSString *GROrderListCellID = @"GROrderListCellID";
     UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(self.gr_width - 0.9*ADAPTX_VALUE(320), self.gr_height - 0.9*ADAPTX_VALUE(500) - 49 - 44, 0.9*ADAPTY_VALUE(320), 0.9*ADAPTX_VALUE(500))];
     imgView.image = [UIImage imageNamed:@"grooo_blank"];
     [self.blankView addSubview:imgView];
+    [self addSubview:_blankView];
 }
 
 - (void)setCellDataArray:(NSArray<GROrder *> *)cellDataArray {
     [_blankView removeFromSuperview];
-    if (cellDataArray.count) {
-        _cellDataArray = cellDataArray;
-        if (self.visibleCells.count) {
-            [self reloadSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, cellDataArray.count)] withRowAnimation:UITableViewRowAnimationAutomatic];
-        } else {
-            [self reloadData];
-        }
-    } else if (!self.visibleCells.count) {
+    _cellDataArray = cellDataArray;
+    [self reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];
+    if (!cellDataArray.count) {
         [self addSubview:self.blankView];
     }
 }
@@ -75,45 +71,27 @@ static NSString *GROrderListCellID = @"GROrderListCellID";
 
 #pragma - TableView
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    if (section == 0) {
-        return 0;
-    } else {
-        return 10;
-    }
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 10)];
-    headerView.backgroundColor = [UIColor clearColor];
-    return headerView;
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.cellDataArray.count;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
-}
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    GROrderListCell *cell  = [self dequeueReusableCellWithIdentifier:GROrderListCellID forIndexPath:indexPath];
-    cell.orderData = self.cellDataArray[indexPath.section];
+    GROrderListCell *cell  = [tableView dequeueReusableCellWithIdentifier:GROrderListCellID forIndexPath:indexPath];
+    cell.orderData = self.cellDataArray[indexPath.row];
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return self.cellDataArray[indexPath.section].orderCellHight;
+    return self.cellDataArray[indexPath.row].orderCellHight;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    _cellDataArray[indexPath.section].isSpread = !_cellDataArray[indexPath.section].isSpread;
+    _cellDataArray[indexPath.row].isSpread = !_cellDataArray[indexPath.row].isSpread;
     [self beginUpdates];
-    GROrderListCell *cell = [self cellForRowAtIndexPath:indexPath];
-    cell.selected = NO;
+    GROrderListCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
     [self endUpdates];
-    cell.isSpread = _cellDataArray[indexPath.section].isSpread;
+    cell.isSpread = _cellDataArray[indexPath.row].isSpread;
 }
 
 @end

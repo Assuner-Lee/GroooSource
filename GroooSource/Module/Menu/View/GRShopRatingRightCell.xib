@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="GRShopRatingRightCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat_bubble_right" translatesAutoresizingMaskIntoConstraints="NO" id="Pau-98-Pkf" userLabel="Bg Img">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015-02-31 10:58:61" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ya3-hW-JPG" userLabel="Time">
+                        <rect key="frame" x="76" y="55" width="156" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="Byv-hp-DG8"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;非常好&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3L-w8-QAx" userLabel="User Remark">
+                        <rect key="frame" x="76" y="33" width="156" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="iPH-nw-0SJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★★★★★" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0PX-10-sz1" userLabel="User Rating">
+                        <rect key="frame" x="76" y="12" width="75" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="75" id="3kg-i1-DvT"/>
+                            <constraint firstAttribute="height" constant="17" id="v8r-bB-GHp"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.95712751149999997" green="0.84028756869999999" blue="0.10862133359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Assuner" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kg2-Bq-lym" userLabel="User Name">
+                        <rect key="frame" x="165" y="13" width="67" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="5t5-sQ-Xz7"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_placeholder_right" translatesAutoresizingMaskIntoConstraints="NO" id="uLh-gm-rDl" userLabel="User Logo">
+                        <rect key="frame" x="240" y="13" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="AfH-c3-dbM"/>
+                            <constraint firstAttribute="width" constant="50" id="eKA-sc-Z3q"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="uLh-gm-rDl" secondAttribute="trailing" constant="22" id="3Pf-fi-ieF"/>
+                    <constraint firstItem="n3L-w8-QAx" firstAttribute="top" secondItem="kg2-Bq-lym" secondAttribute="bottom" constant="4" id="6lJ-66-QXm"/>
+                    <constraint firstItem="Pau-98-Pkf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="7Jm-zf-Cdi"/>
+                    <constraint firstItem="0PX-10-sz1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="68" id="88H-Hp-d52"/>
+                    <constraint firstItem="n3L-w8-QAx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="68" id="8Kc-Be-oEO"/>
+                    <constraint firstItem="Ya3-hW-JPG" firstAttribute="top" secondItem="n3L-w8-QAx" secondAttribute="bottom" constant="6" id="9af-q0-m9T"/>
+                    <constraint firstItem="kg2-Bq-lym" firstAttribute="leading" secondItem="0PX-10-sz1" secondAttribute="trailing" constant="14" id="AsQ-bQ-uLu"/>
+                    <constraint firstItem="Ya3-hW-JPG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="68" id="M1V-YQ-1dE"/>
+                    <constraint firstAttribute="bottom" secondItem="Pau-98-Pkf" secondAttribute="bottom" constant="20" id="NaF-DC-HOc"/>
+                    <constraint firstItem="uLh-gm-rDl" firstAttribute="leading" secondItem="Ya3-hW-JPG" secondAttribute="trailing" constant="8" id="Wg8-Sh-Wbt"/>
+                    <constraint firstItem="kg2-Bq-lym" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="Wwo-au-wVj"/>
+                    <constraint firstItem="uLh-gm-rDl" firstAttribute="leading" secondItem="n3L-w8-QAx" secondAttribute="trailing" constant="8" id="ZLE-BX-DnC"/>
+                    <constraint firstItem="uLh-gm-rDl" firstAttribute="leading" secondItem="kg2-Bq-lym" secondAttribute="trailing" constant="8" id="ejy-A6-GAS"/>
+                    <constraint firstAttribute="trailing" secondItem="Pau-98-Pkf" secondAttribute="trailing" id="fX9-B9-WhS"/>
+                    <constraint firstItem="Pau-98-Pkf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="kZv-Pb-nRJ"/>
+                    <constraint firstItem="uLh-gm-rDl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="kwr-Da-gUA"/>
+                    <constraint firstItem="0PX-10-sz1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="4" id="wTs-cH-7dB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="timeLabel" destination="Ya3-hW-JPG" id="Ajk-05-H10"/>
+                <outlet property="userLogoImgView" destination="uLh-gm-rDl" id="KkU-K1-3Hg"/>
+                <outlet property="userNameLabel" destination="kg2-Bq-lym" id="b88-Mg-78I"/>
+                <outlet property="userRatingLabel" destination="0PX-10-sz1" id="1RB-Dq-18T"/>
+                <outlet property="userRemarkLabel" destination="n3L-w8-QAx" id="DNR-Go-0af"/>
+            </connections>
+            <point key="canvasLocation" x="-475" y="-128"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chat_bubble_right" width="696" height="259"/>
+        <image name="user_placeholder_right" width="200" height="200"/>
+    </resources>
+</document>

@@ -60,6 +60,9 @@
     return [[UIColor blackColor] colorWithAlphaComponent:0.12];
 }
 
++ (UIColor *)orangeColor {
+    return [self colorWithRed:252 green:186 blue:40];
+}
 #pragma - font
 
 + (UIFont *)font12 {

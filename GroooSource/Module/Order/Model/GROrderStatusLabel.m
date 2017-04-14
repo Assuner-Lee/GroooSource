@@ -14,7 +14,7 @@
     _orderStatus = orderStatus;
     switch (orderStatus) {
         case GROrderStatusNotTaked: {
-            self.textColor = [UIColor blueColor];
+            self.textColor = [UIColor orangeColor];
             self.text = @"未接单";
             return;
         }

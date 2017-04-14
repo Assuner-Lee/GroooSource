@@ -23,14 +23,19 @@
     
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:[GRAppStyle mainColorWithAlpha:0.89]] forBarMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar setShadowImage:[UIImage imageWithColor:[GRAppStyle transparentColor]]];
-    [self.navigationController setHidesBottomBarWhenPushed:YES];
-    
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
     [self setupBarItem];
+    [self addObservedNotification];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
+- (void)addObservedNotification {
+    
+}
+
 
 - (void)setupBarItem {
     if (self.navigationController.viewControllers.count > 1) {
@@ -55,29 +60,11 @@
 }
 
 - (void)showMessage:(NSString *_Nonnull)text {
-    if ([NSString gr_isInvalid:text]) {
-        return;
-    }
-    [MBProgressHUD hideHUDForView:self.view animated:NO];
-    MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.view];
-    hud.mode = MBProgressHUDModeText;
-    hud.detailsLabelFont = [GRAppStyle font16];
-    hud.detailsLabelText = text;
-    [self.view addSubview:hud];
-    [hud show:YES];
-    [hud hide:YES afterDelay:1.0];
+    [MBProgressHUD gr_show:text icon:nil view:self.view];
 }
 
 - (void)show:(NSString *)text icon:(NSString *)icon {
-    [MBProgressHUD hideHUDForView:self.view animated:NO];
-    MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.view];
-    hud.mode = MBProgressHUDModeCustomView;
-    hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed: icon]];
-    hud.detailsLabelFont = [GRAppStyle font16];
-    hud.labelText = text;
-    [self.view addSubview:hud];
-    [hud show:YES];
-    [hud hide:YES afterDelay:1.0];
+    [MBProgressHUD gr_show:text icon:icon view:self.view];
 }
 
 - (void)showSuccess:(NSString *)text {
@@ -153,8 +140,6 @@
     [self dismissViewControllerAnimated:NO completion:completion];
          
 }
-
-
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];

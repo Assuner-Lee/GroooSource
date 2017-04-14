@@ -28,6 +28,8 @@
 @property (nonatomic, strong) GROrderListTable *finishOrderTable;
 @property (nonatomic, strong) GROrderListTable *otherOrderTable;
 
+@property (nonatomic, assign, getter=shouldUpdateNextAppeared) BOOL updateNextAppeared;
+
 @end
 
 @implementation GROrderListViewController
@@ -39,12 +41,25 @@
     [self startRequest];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    if (self.shouldUpdateNextAppeared) {
+        [self startRequest];
+        self.updateNextAppeared = NO;
+    }
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+
 - (instancetype)init {
     if (self = [super init]) {
         self.onGoingOrderArray = [[NSMutableArray alloc] init];
         self.finishedOrderArray = [[NSMutableArray alloc] init];
         self.otherOrderArray = [[NSMutableArray alloc] init];
     }
+    self.automaticallyAdjustsScrollViewInsets = NO;
     return self;
 }
 
@@ -52,8 +67,10 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"刷新" style:UIBarButtonItemStylePlain target:self action:@selector(startRequest)];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+- (void)addObservedNotification {
+    [super addObservedNotification];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeUpadateState) name:GRUpdateOrderListNextAppearedNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeUpadateState) name:GRLoginSuccessNotification object:nil];
 }
 
 - (void)initView {
@@ -73,25 +90,29 @@
 }
 
 - (void)startRequest {
-    if (!self.orderListRequest.cache) {
-        [self showProgress];
-    }
+    [self showProgress];
     GRWEAK(self);
     [self.orderListRequest startRequestComplete:^(GROrderList *  _Nullable responseObject, NSError * _Nullable error) {
         GRSTRONG(self);
         [self hideProgress];
         if (error) {
             [self showTimeOut];
+            self.dataArray = nil;
             return;
         }
         self.dataArray = responseObject.dataArray;
     }];
 }
 
+- (void)changeUpadateState {
+    if (self.viewIfLoaded) {
+        self.updateNextAppeared = YES;
+    }
+}
+
 #pragma - SetterOverride
 
 - (void)setDataArray:(NSArray<GROrder *> *)dataArray {
-    if (dataArray.count) {
         _dataArray = dataArray;
         [_onGoingOrderArray removeAllObjects];
         [_finishedOrderArray removeAllObjects];
@@ -108,7 +129,6 @@
         _onGoingOrderTable.cellDataArray = _onGoingOrderArray;
         _finishOrderTable.cellDataArray = _finishedOrderArray;
         _otherOrderTable.cellDataArray = _otherOrderArray;
-    }
 }
 
 @end

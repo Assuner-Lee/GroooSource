@@ -8,6 +8,7 @@
 
 #import "GRSegmentView.h"
 #import "GRSegmentHeadView.h"
+#import "GRScrollView.h"
 
 @interface GRSegmentView () <UIScrollViewDelegate, GRSegmentHeadViewDelegate>
 @property (nonatomic, strong) NSArray<UIView *> *subViewsArray;
@@ -15,7 +16,7 @@
 @property (nonatomic, assign) CGFloat orignY;
 
 @property (nonatomic, strong) GRSegmentHeadView *headView;
-@property (nonatomic, strong) UIScrollView *baseView;
+@property (nonatomic, strong) GRScrollView *baseView;
 @property (nonatomic, assign) CGFloat subviewHight;
 @property (nonatomic, assign) NSUInteger scrollCount;
 @property (nonatomic, strong) UIColor *mainColor;
@@ -53,7 +54,7 @@
    }
 
 - (void)initBaseView {
-    self.baseView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, _subviewHight)];
+    self.baseView = [[GRScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, _subviewHight)];
     self.baseView.contentSize = CGSizeMake(SCREEN_WIDTH * _scrollCount, _subviewHight);
     self.baseView.pagingEnabled = YES;
     self.baseView.alwaysBounceVertical = NO;
@@ -61,7 +62,6 @@
     self.baseView.showsVerticalScrollIndicator = NO;
     self.baseView.showsHorizontalScrollIndicator = NO;
     self.baseView.delegate = self;
-    self.baseView.contentInset = UIEdgeInsetsMake(-64, 0, -49, 0);
     [self addSubviews];
     [self addSubview:self.baseView];
 
@@ -90,7 +90,7 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGRect rect = self.headView.slideLine.frame;
-    CGFloat orignX = scrollView.contentOffset.x / scrollView.contentSize.width * scrollView.frame.size.width + (scrollView.frame.size.width/3 - rect.size.width)/2;
+    CGFloat orignX = scrollView.contentOffset.x / _subViewsArray.count  + (scrollView.frame.size.width/_titleArray.count - rect.size.width)/2;
     self.headView.slideLine.frame = CGRectMake(orignX, rect.origin.y, rect.size.width, rect.size.height);
 }
 
@@ -103,7 +103,7 @@
 
 - (void)changeWithTapIndex:(NSUInteger)index {
    [UIView animateWithDuration:0.3 animations:^{
-        [_baseView setContentOffset:CGPointMake(index * _baseView.gr_width, 0)];
+        [_baseView setContentOffset:CGPointMake(index * _baseView.gr_width,  0)];
    }];
 }
 

@@ -32,8 +32,12 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.backgroundColor = [UIColor whiteColor];
-    self.selectedView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 135)];
+    self.selectedView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 140)];
     self.selectedView.backgroundColor = [GRAppStyle mainColorWithAlpha:0.5];
+    UIView *fakeView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 10)];
+    fakeView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    [self.selectedView addSubview:fakeView];
+    
     self.operateStatusBtn.layer.cornerRadius = 8;
     self.operateStatusBtn.clipsToBounds = YES;
     self.shopLogo.layer.cornerRadius = 2;
@@ -80,7 +84,7 @@
 
 - (void)configOrderDetailView:(GROrder *)orderData {
     [_orderDetailView removeFromSuperview];
-    _orderDetailView = [[UIButton alloc] initWithFrame:CGRectMake(0, 130, SCREEN_WIDTH, orderData.orderCellMaxHight - 130)];
+    _orderDetailView = [[UIButton alloc] initWithFrame:CGRectMake(0, 140, SCREEN_WIDTH, orderData.orderCellMaxHight - 140)];
     [self addSubview:_orderDetailView];
     UIView *topLine = [[UIView alloc] initWithFrame:CGRectMake(8, 0, _orderDetailView.gr_width - 8, 0.7)];
     topLine.backgroundColor = [GRAppStyle lineColor];
@@ -98,6 +102,7 @@
         ballIcon.clipsToBounds = YES;
         [_orderDetailView addSubview:ballIcon];
         
+        
         NSAttributedString *countString = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"x %zd", orderData.orderDetail[i - 1].foodCount] attributes:foodStringattribute];
         UILabel *countLabel = [[UILabel alloc] initWithFrame:CGRectMake(_orderDetailView.gr_width - 35, foodLabel.gr_top, countString.size.width, countString.size.height)];
         countLabel.attributedText = countString;
@@ -112,6 +117,7 @@
 #pragma - Actions 
 
 - (void)tapShopLogo {
+    [GRRouter open:@"push->GRMenuViewController" params:@{@"shop": _orderData.shop}];
 }
 
 @end

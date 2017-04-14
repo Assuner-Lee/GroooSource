@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "GRNetRequestObject.h"
-
+#import "GRNavigationController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -37,6 +37,9 @@ typedef NS_ENUM(NSUInteger, GRTransitionType) {
 
 - (void)presentViewController:(UIViewController *)viewController animation:(GRTransitionType)type completion:(void (^ __nullable)(void))completion;
 - (void)dismissViewControllerWithAnimation:(GRTransitionType)type completion:(void (^ __nullable)(void))completion;
+- (void)setupBarItem;
+- (void)back;
+- (void)addObservedNotification;
 
 @end
 

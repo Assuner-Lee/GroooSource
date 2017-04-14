@@ -24,7 +24,7 @@ static NSString * const API_USER_REGISTER = @"/accounts/";
 //***用户注册***
 
 static NSString * const API_DORM_LIST = @"/shops/building?school_id=1";
-//***宿舍列表***
+//***宿舍列表***                          
 
 static NSString * const API_USER_LOGIN = @"/accounts/token";
 //***用户登录***
@@ -33,21 +33,21 @@ static NSString * const API_USER_LOGIN = @"/accounts/token";
 static NSString * const API_SHOP_LIST = @"/shops/shop?school_id=1";
 //***商家列表***
 
-static NSString * const API_RATE_LIST = @"/shops/shop/%lu/rating";
+static NSString * const API_RATE_LIST_F = @"/shops/shop/%zd/rating";
 //***商家评价列表***
 
 
-static NSString * const API_MENU_LIST = @"/shops/shop/%lu/menu";
+static NSString * const API_MENU_LIST_F = @"/shops/shop/%zd/menu";
 //***菜单列表***
 
-static NSString * const API_PLACE_ORDER = @"/shops/shop/%lu/order";
-//***下单操作***
+static NSString * const API_PLACE_ORDER_F = @"/shops/shop/%zd/order";
+//***下单操作(商家订单列表)***
 
 
 static NSString * const API_USER_ORDER = @"/shops/user/order";
 //***用户订单列表、评价订单***
 
-static NSString * const API_ORDER_STATUS = @"/shops/shop/%lu/order";
+static NSString * const API_ORDER_STATUS_F = @"/shops/shop/%zd/order";
 //***修改订单状态***
 
 
@@ -55,5 +55,10 @@ static NSString * const API_ORDER_STATUS = @"/shops/shop/%lu/order";
 
 static NSString * const kURL_FINDPASSWORD = @"http://www.grooo.cn/user/findPassword";
 
+//************ 商家账号 **********
+
+//18716036890 036890
+
+//************ 商家账号 **********
 
 #endif /* GRAPI_h */

@@ -11,13 +11,14 @@
 
 //**************** macro ****************
 
-#define GRWEAK(self) \
-__weak typeof(self) weakSelf = self
+#define GRWEAK(aObject) \
+__weak typeof(aObject) weak##aObject = aObject
 
-#define GRSTRONG(self) \
-__strong typeof(weakSelf) self = weakSelf
+#define GRSTRONG(aObject) \
+__strong typeof(weak##aObject) aObject = weak##aObject
 
-
+#define MAIN_WINDOW  [UIApplication sharedApplication].delegate.window
+#define ROOT_VC      ((GRTabBarViewController *)(MAIN_WINDOW.rootViewController))
 #define SCREEN_BOUNDS [UIScreen mainScreen].bounds
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
@@ -31,5 +32,6 @@ __strong typeof(weakSelf) self = weakSelf
                 attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:font]}    \
                    context:nil]
 
+#define MIN_SIZE(label) label.attributedText.size
 
 #endif /* GRMacro_h */

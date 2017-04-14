@@ -68,7 +68,7 @@ static NSString *GRShopListCellID = @"GRShopListCellID";
     self.navigationItem.titleView = self.titleSegmentedCtrl;
     
     self.searchItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(touchRightBarItem)];
-    self.closeItem= [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(touchRightBarItem)];
+    self.closeItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(touchRightBarItem)];
     self.navigationItem.rightBarButtonItem = self.searchItem;
 }
 
@@ -106,7 +106,9 @@ static NSString *GRShopListCellID = @"GRShopListCellID";
             [self showTimeOut];
             return;
         }
+        [self showProgress];
         self.shopDataArray = responseObject.dataArray;
+        [self hideProgress];
     }];
 }
 
@@ -204,13 +206,18 @@ static NSString *GRShopListCellID = @"GRShopListCellID";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    GRShopListCell *cell  = [self.shopListTableView dequeueReusableCellWithIdentifier:GRShopListCellID forIndexPath:indexPath];
+    GRShopListCell *cell  = [tableView dequeueReusableCellWithIdentifier:GRShopListCellID forIndexPath:indexPath];
     cell.shopData = self.cellDataArray[indexPath.row];
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return self.cellDataArray[indexPath.row].shopCellParams.shopCellHight;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    [GRRouter open:@"push->GRMenuViewController" params:@{@"shop": _cellDataArray[indexPath.row]}];
 }
 
 @end

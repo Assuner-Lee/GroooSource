@@ -9,10 +9,13 @@
 #ifndef GRCategory_h
 #define GRCategory_h
 
+typedef void (^GRBlankBlock)(void);
+
 //**************** header ****************
 
 #import "UIView+GRShortcut.h"
 #import "UIImage+GROperation.h"
 #import "NSString+GRCommen.h"
+#import "MBProgressHUD+GRShow.h"
 
 #endif /* GRCategory_h */

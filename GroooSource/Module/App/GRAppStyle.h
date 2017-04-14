@@ -36,6 +36,8 @@
 
 + (UIColor *)lineColor;
 
++ (UIColor *)orangeColor;
+
 //***************UIFont*****************
 
 + (UIFont *)font9;

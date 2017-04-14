@@ -12,5 +12,8 @@
 #import "GRCategory.h"
 #import "GRMacro.h"
 #import "GRAppStyle.h"
+#import "GRNotification.h"
+#import "GRRouter.h"
+#import "GRTabBarViewController.h"
 
 #endif /* GRHeaders_pch */

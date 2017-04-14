@@ -78,9 +78,9 @@
     if (titleArray.count == 2) {
         CGSize size1 = SIZE_OF_TEXT(titleArray[0], CGSizeZero, 13.0).size;
         CGSize size2 = SIZE_OF_TEXT(titleArray[1], CGSizeZero, 13.0).size;
-        CGFloat distance = (SCREEN_WIDTH - size1.width - size2.width) / 3;
+        CGFloat distance = (SCREEN_WIDTH - size1.width - size2.width) / 2;
         _title1.frame = CGRectMake(0.5 * distance, 10, size1.width, size1.height + 6);
-        _title2.frame = CGRectMake(_title1.gr_right + 2 * distance, 10, size2.width, size2.height + 6);
+        _title2.frame = CGRectMake(_title1.gr_right + distance, 10, size2.width, size2.height + 6);
         [_title1 setTitle:titleArray[0] forState:UIControlStateNormal];
         [_title2 setTitle:titleArray[1] forState:UIControlStateNormal];
         
@@ -115,10 +115,18 @@
     for (UIButton *btn in array) {
         if ([btn isEqual:array[index - 1]]) {
             btn.selected = YES;
+            [UIView gr_showOscillatoryAnimationWithLayer:btn.layer type:GROscillatoryAnimationToBigger range:1.3];
+            [UIView animateWithDuration:0.1 animations:^{
+                    _slideLine.gr_left = btn.gr_left;
+                    _slideLine.gr_width = btn.gr_width;
+                    
+                }];
+            
         } else {
             btn.selected = NO;
         }
     }
+    
 }
 
 @end

@@ -7,7 +7,6 @@
 //
 
 #import "GRHTTPManager.h"
-#import "GRNotification.h"
 #import "GRUserManager.h"
 
 #pragma mark C-Method
@@ -79,7 +78,7 @@ NSString *getFullURL(NSString *path) {
 
 + (void)prehandleFailure:(NSURLSessionDataTask *)task {
     if ([(NSHTTPURLResponse *)task.response statusCode] == 401) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:GRTokenInvaildNotification object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:GRTokenInvaildNotification object:nil userInfo:@{@"reason": @"tokenInvaild"}];
     }
 }
 
