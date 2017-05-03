@@ -43,13 +43,6 @@
     [super didReceiveMemoryWarning];
 }
 
-- (instancetype)init {
-    if (self = [super init]) {
-        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我的" image:[UIImage imageNamed:@"bar_item_user"] tag:0];
-    }
-    return self;
-}
-
 - (void)initView {
     self.view.backgroundColor = [GRAppStyle mainPageImageColor];
     self.inputView.layer.cornerRadius = 4;

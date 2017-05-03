@@ -72,6 +72,8 @@
 		9CB9DFA51E65A9F800C8F5E8 /* GROrderListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB9DFA41E65A9F800C8F5E8 /* GROrderListRequest.m */; };
 		9CCC22C91E950EE60029B0EB /* GRCashierdeskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCC22C71E950EE60029B0EB /* GRCashierdeskCell.m */; };
 		9CCC22CA1E950EE60029B0EB /* GRCashierdeskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CCC22C81E950EE60029B0EB /* GRCashierdeskCell.xib */; };
+		9CF50A241EB9E24300E05514 /* GRUserInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF50A221EB9E24300E05514 /* GRUserInfoController.m */; };
+		9CF50A251EB9E24300E05514 /* GRUserInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CF50A231EB9E24300E05514 /* GRUserInfoController.xib */; };
 		9CFF24D41E83BE0C004D92D7 /* GRMenuList.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CFF24D31E83BE0C004D92D7 /* GRMenuList.m */; };
 		E2954B97A1FCB5F571EBF9A5 /* libPods-GroooSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E584F6C8F6FD08D02E5B18 /* libPods-GroooSource.a */; };
 /* End PBXBuildFile section */
@@ -204,6 +206,9 @@
 		9CCC22C61E950EE60029B0EB /* GRCashierdeskCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRCashierdeskCell.h; sourceTree = "<group>"; };
 		9CCC22C71E950EE60029B0EB /* GRCashierdeskCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRCashierdeskCell.m; sourceTree = "<group>"; };
 		9CCC22C81E950EE60029B0EB /* GRCashierdeskCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRCashierdeskCell.xib; sourceTree = "<group>"; };
+		9CF50A211EB9E24300E05514 /* GRUserInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRUserInfoController.h; sourceTree = "<group>"; };
+		9CF50A221EB9E24300E05514 /* GRUserInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRUserInfoController.m; sourceTree = "<group>"; };
+		9CF50A231EB9E24300E05514 /* GRUserInfoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRUserInfoController.xib; sourceTree = "<group>"; };
 		9CFF24D21E83BE0C004D92D7 /* GRMenuList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMenuList.h; sourceTree = "<group>"; };
 		9CFF24D31E83BE0C004D92D7 /* GRMenuList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRMenuList.m; sourceTree = "<group>"; };
 		A71905685320E5462FE3E37D /* Pods-GroooSource.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroooSource.release.xcconfig"; path = "Pods/Target Support Files/Pods-GroooSource/Pods-GroooSource.release.xcconfig"; sourceTree = "<group>"; };
@@ -403,6 +408,7 @@
 		82AF89C91E4B158A00676D29 /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				9CF50A1E1EB9DE4C00E05514 /* userInfo */,
 				9C5384991E52D3F2004EDBCF /* UserManager */,
 				82AF89CA1E4B158A00676D29 /* Login */,
 				82AF89CD1E4B158A00676D29 /* Register */,
@@ -630,6 +636,32 @@
 			name = GRCashierdeskView;
 			sourceTree = "<group>";
 		};
+		9CF50A1E1EB9DE4C00E05514 /* userInfo */ = {
+			isa = PBXGroup;
+			children = (
+				9CF50A1F1EB9E20F00E05514 /* Mdoel */,
+				9CF50A201EB9E20F00E05514 /* Controller */,
+			);
+			path = userInfo;
+			sourceTree = "<group>";
+		};
+		9CF50A1F1EB9E20F00E05514 /* Mdoel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mdoel;
+			sourceTree = "<group>";
+		};
+		9CF50A201EB9E20F00E05514 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9CF50A211EB9E24300E05514 /* GRUserInfoController.h */,
+				9CF50A221EB9E24300E05514 /* GRUserInfoController.m */,
+				9CF50A231EB9E24300E05514 /* GRUserInfoController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		9CFF24C61E83B7C7004D92D7 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -757,6 +789,7 @@
 				9C1BE9401E8B8F37007F5733 /* GRMenuCategoryCell.xib in Resources */,
 				823FE4661E4D911E008E8CB0 /* Assets.xcassets in Resources */,
 				82AF89E41E4C542000676D29 /* GRWebViewController.xib in Resources */,
+				9CF50A251EB9E24300E05514 /* GRUserInfoController.xib in Resources */,
 				9C44D4631E8CFBA000F85757 /* GRShopRatingLeftCell.xib in Resources */,
 				9C1507F21E5085F3007C2B8F /* GRRegisterViewController.xib in Resources */,
 				823FE46B1E4D9A1D008E8CB0 /* GRLoginViewController.xib in Resources */,
@@ -870,6 +903,7 @@
 				82AF89AE1E498F6600676D29 /* GRHTTPManager.m in Sources */,
 				9CA98E471E9B539D008D603E /* GRScrollView.m in Sources */,
 				82AF89D11E4B2FA100676D29 /* GRViewController.m in Sources */,
+				9CF50A241EB9E24300E05514 /* GRUserInfoController.m in Sources */,
 				9C1BE9451E8B923F007F5733 /* GRMenuDetailCell.m in Sources */,
 				9CB92AC91E63FC8000650CC5 /* GRTabBarViewController.m in Sources */,
 				82AF89C51E4AF0C900676D29 /* GRShopList.m in Sources */,
