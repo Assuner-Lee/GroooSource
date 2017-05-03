@@ -14,16 +14,24 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - LPDSplashScreenManager (0.1.0):
+    - SDWebImage
   - MJExtension (3.0.13)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
 
 DEPENDENCIES:
   - AFNetworking
+  - LPDSplashScreenManager (= 0.1.0)
   - MJExtension
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  LPDSplashScreenManager: 6feb406e847f3fbe0b242087291c2a8b6657eaa7
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
-PODFILE CHECKSUM: 16431109feee8b4d65f29fa4822a3ac19c1e7ac9
+PODFILE CHECKSUM: 8e00245082fb661fe753697a22000182c530d3f2
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.1

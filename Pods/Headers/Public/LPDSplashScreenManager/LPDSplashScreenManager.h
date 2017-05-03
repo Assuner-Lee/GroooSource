@@ -1,0 +1,1 @@
+../../../LPDSplashScreenManager/LPDSplashScreenManager/Classes/LPDSplashScreenManager.h

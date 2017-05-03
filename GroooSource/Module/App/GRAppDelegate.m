@@ -8,6 +8,7 @@
 
 #import "GRAppDelegate.h"
 #import "GRTabBarViewController.h"
+#import <LPDSplashScreenManager/LPDSplashScreenManager.h>
 
 @implementation GRAppDelegate
 
