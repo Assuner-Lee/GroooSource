@@ -60,6 +60,8 @@
         self.otherOrderArray = [[NSMutableArray alloc] init];
     }
     self.automaticallyAdjustsScrollViewInsets = NO;
+    self.title = @"我的订单";
+    self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"订单" image:[UIImage imageNamed:@"bar_item_orderlist"] tag:0];
     return self;
 }
 

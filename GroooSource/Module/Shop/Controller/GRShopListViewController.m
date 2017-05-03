@@ -52,12 +52,12 @@ static NSString *GRShopListCellID = @"GRShopListCellID";
         self.marketArray = [[NSMutableArray alloc] init];
         self.searchBarBeginFrame = CGRectMake(SCREEN_WIDTH - 50, 0, 0, 30);
         self.searchBarEndFrame = CGRectMake(0, 0, SCREEN_WIDTH - 50, 30);
+        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"商家" image:[UIImage imageNamed:@"bar_item_shoplist"] tag:0];
     }
     return self;
 }
 
 - (void)setupBarItem {
-    self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"商家" image:[UIImage imageNamed:@"bar_item_shoplist"] tag:0];
     self.titleSegmentedCtrl = [[UISegmentedControl alloc] initWithItems:@[@"外卖", @"超市"]];
     [self.titleSegmentedCtrl setWidth:48 forSegmentAtIndex:0];
     [self.titleSegmentedCtrl setWidth:48 forSegmentAtIndex:1];

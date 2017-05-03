@@ -61,6 +61,7 @@
     self.baseView.alwaysBounceHorizontal = YES;
     self.baseView.showsVerticalScrollIndicator = NO;
     self.baseView.showsHorizontalScrollIndicator = NO;
+    self.baseView.bounces = NO;
     self.baseView.delegate = self;
     [self addSubviews];
     [self addSubview:self.baseView];
