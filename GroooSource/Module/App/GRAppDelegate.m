@@ -10,11 +10,15 @@
 #import "GRTabBarViewController.h"
 #import <LPDSplashScreenManager/LPDSplashScreenManager.h>
 
+
 @implementation GRAppDelegate
 
 #pragma mark - app delegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [NSThread sleepForTimeInterval:0.7];
+    NSString *imgUrlKey = [NSString stringWithFormat:@"splash_image%zd", (int)([UIScreen mainScreen].bounds.size.height*[UIScreen mainScreen].scale)];
+    [LPDSplashScreenManager showSplashScreenWithImageUrl:getSplashImageUrlDic()[imgUrlKey] duration:2.0];
     [self showRootView];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showLoginVC) name:GRTokenInvaildNotification object:nil];
     return YES;
@@ -53,6 +57,10 @@
 
 - (void)showLoginVC {
    [GRRouter open:@"present->GRLoginViewController" params:nil completed:^{[MBProgressHUD gr_showFailure:@"请先登录"];}];
+}
+
+NSDictionary *getSplashImageUrlDic() {
+    return @{@"splash_image960": @"http://upload-images.jianshu.io/upload_images/4133010-075eff58051efe97.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240", @"splash_image1136": @"http://upload-images.jianshu.io/upload_images/4133010-1f3d55efeca2aade.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240", @"splash_image1334": @"http://upload-images.jianshu.io/upload_images/4133010-87fb97284a1d034b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240", @"splash_image2208": @"http://upload-images.jianshu.io/upload_images/4133010-211af378d42916f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"};
 }
 
 @end

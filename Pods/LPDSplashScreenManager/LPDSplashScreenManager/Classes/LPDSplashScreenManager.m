@@ -78,7 +78,7 @@ static dispatch_once_t _onceToken;
             manager.splashWindow.windowLevel = UIWindowLevelStatusBar + 10000;
             manager.splashWindow.rootViewController = [[LPDSplashScreenController alloc] initWithImage:[UIImage imageWithData:imageDate]];
             [manager.splashWindow makeKeyAndVisible];
-            [manager performSelector:@selector(removeSplashScreen) withObject:nil afterDelay:(time > 0 ?: 1)];
+            [manager performSelector:@selector(removeSplashScreen) withObject:nil afterDelay:(time ?: 1)];
         }
     } else {
         [manager startDownLoadNewImage];
