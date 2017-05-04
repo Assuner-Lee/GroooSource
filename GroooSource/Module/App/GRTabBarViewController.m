@@ -8,7 +8,7 @@
 
 #import "GRTabBarViewController.h"
 #import "GRShopListViewController.h"
-#import "GRLoginViewController.h"
+#import "GRUserInfoController.h"
 #import "GROrderListViewController.h"
 
 @interface GRTabBarViewController ()
@@ -32,8 +32,8 @@
     if (self = [super init]) {
         GRNavigationController *shopListNVC = [[GRNavigationController alloc] initWithRootViewController:[[GRShopListViewController alloc] init]];
         GRNavigationController *orderListNVC = [[GRNavigationController alloc] initWithRootViewController:[[GROrderListViewController alloc] init]];
-        GRLoginViewController *login = [GRLoginViewController new];
-        self.viewControllers = @[shopListNVC, orderListNVC,login];
+        GRNavigationController *userInfoNVC = [[GRNavigationController alloc] initWithRootViewController:[[GRUserInfoController alloc] init]];
+        self.viewControllers = @[shopListNVC, orderListNVC, userInfoNVC];
     }
     return self;
 }

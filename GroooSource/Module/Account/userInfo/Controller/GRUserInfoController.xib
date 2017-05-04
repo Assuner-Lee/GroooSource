@@ -11,6 +11,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GRUserInfoController">
             <connections>
+                <outlet property="addressStatusLabel" destination="b2A-ts-NKa" id="mG3-eT-4XI"/>
+                <outlet property="addressView" destination="jcF-wX-Nn4" id="lS3-aJ-JSH"/>
+                <outlet property="avatarImgView" destination="dKQ-Bw-nFj" id="o3X-HO-uqy"/>
+                <outlet property="nickNameLabel" destination="ktR-Zn-eGa" id="LW6-EQ-FNq"/>
+                <outlet property="passwordView" destination="EP2-0s-thZ" id="tQx-rj-p20"/>
+                <outlet property="scoreLabel" destination="ajj-z9-Klb" id="ADO-4S-d0d"/>
+                <outlet property="settingView" destination="28d-t7-xzg" id="Nz2-Mw-ZVN"/>
+                <outlet property="userEmailLabel" destination="Xm2-nW-MVk" id="ZvU-YQ-xvE"/>
+                <outlet property="userRatingLabel" destination="nHg-LL-4B4" id="AxH-gP-YAk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -201,7 +210,7 @@
                         <constraint firstItem="b2A-ts-NKa" firstAttribute="top" secondItem="jcF-wX-Nn4" secondAttribute="top" constant="1" id="uBb-rF-iQJ"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EP2-0s-thZ" userLabel="SettingView">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EP2-0s-thZ" userLabel="Password View">
                     <rect key="frame" x="0.0" y="292" width="375" height="50"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R27-hX-RCV" userLabel="More Label">
@@ -243,7 +252,7 @@
                         <constraint firstItem="Q0E-dy-LgX" firstAttribute="leading" secondItem="EP2-0s-thZ" secondAttribute="leading" constant="14" id="eul-95-A1O"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="28d-t7-xzg" userLabel="Password View">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="28d-t7-xzg" userLabel="Setting View">
                     <rect key="frame" x="0.0" y="358" width="375" height="50"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFS-8I-x3A" userLabel="More Label">
@@ -304,7 +313,7 @@
                 <constraint firstItem="jcF-wX-Nn4" firstAttribute="top" secondItem="0d3-jR-d2n" secondAttribute="bottom" constant="16" id="yEf-Ga-UCe"/>
                 <constraint firstAttribute="trailing" secondItem="28d-t7-xzg" secondAttribute="trailing" id="yKw-Ej-AiG"/>
             </constraints>
-            <point key="canvasLocation" x="-432.5" y="-574.5"/>
+            <point key="canvasLocation" x="-798" y="-568"/>
         </view>
     </objects>
     <resources>
