@@ -10,7 +10,7 @@
 
 @interface GRLoginData : GRModel
 
-@property (nonatomic, assign) NSUInteger ID;
+@property (nonatomic, assign) NSUInteger userID;
 
 @property (nonatomic, strong) NSString *token;
 

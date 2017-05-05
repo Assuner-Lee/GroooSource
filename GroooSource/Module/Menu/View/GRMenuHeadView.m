@@ -7,7 +7,6 @@
 //
 
 #import "GRMenuHeadView.h"
-#import "UIImageView+AFNetworking.h"
 
 @interface GRMenuHeadView ()
 

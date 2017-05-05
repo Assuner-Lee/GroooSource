@@ -50,6 +50,7 @@ static NSString * const API_USER_ORDER = @"/shops/user/order";
 static NSString * const API_ORDER_STATUS_F = @"/shops/shop/%zd/order";
 //***修改订单状态***
 
+static NSString * const API_USER_INFO_F = @"/accounts/%zd/profile";
 
 //**************** URL ****************
 

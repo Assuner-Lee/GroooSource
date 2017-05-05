@@ -7,24 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GRUserInfoData.h"
+#import "GRLoginResponse.h"
 
 @interface GRUser : NSObject
 
-//********************* jsonData *******************
+//********************* netData *******************
 
-@property (nonatomic, assign) NSUInteger userID;
+@property (nonatomic, strong) GRLoginData *loginData;
 
-@property (nonatomic, strong) NSString *token;
-
-@property (nonatomic, strong) NSString *nickName;
-
-@property (nonatomic, strong) NSString *avatar;
-
-@property (nonatomic, strong) NSString *email;
-
-@property (nonatomic, strong) NSString *schoolName;
-
-@property (nonatomic, assign) double score;
+@property (nonatomic, strong) GRUserInfo *userInfo;
 
 //********************* localData *******************
 

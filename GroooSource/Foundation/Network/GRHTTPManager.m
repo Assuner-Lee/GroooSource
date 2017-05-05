@@ -7,7 +7,6 @@
 //
 
 #import "GRHTTPManager.h"
-#import "GRUserManager.h"
 
 #pragma mark C-Method
 
@@ -28,8 +27,8 @@ NSString *getFullURL(NSString *path) {
         manager.responseSerializer = responseSerializer;
         manager.requestSerializer.timeoutInterval = 20;
         [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-        if ([GRUserManager sharedManager].currentUser.token) {
-            [manager.requestSerializer setValue:[GRUserManager sharedManager].currentUser.token forHTTPHeaderField:@"Authorization"];
+        if ([GRUserManager sharedManager].currentUser.loginData.token) {
+            [manager.requestSerializer setValue:[GRUserManager sharedManager].currentUser.loginData.token forHTTPHeaderField:@"Authorization"];
         }
     });
     return manager;

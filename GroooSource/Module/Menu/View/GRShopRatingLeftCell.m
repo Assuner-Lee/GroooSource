@@ -7,7 +7,6 @@
 //
 
 #import "GRShopRatingLeftCell.h"
-#import "UIImageView+AFNetworking.h"
 
 @interface GRShopRatingLeftCell ()
 

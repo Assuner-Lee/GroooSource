@@ -8,7 +8,6 @@
 
 #import "GRShopListCell.h"
 #import "GRAppStyle.h"
-#import "UIImageView+AFNetworking.h"
 #import "UIView+GRShortcut.h"
 
 @interface GRShopListCell ()

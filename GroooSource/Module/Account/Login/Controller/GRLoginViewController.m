@@ -11,7 +11,6 @@
 #import "GRLoginRequest.h"
 #import "GRRegisterViewController.h"
 #import "GRWebViewController.h"
-#import "GRUserManager.h"
 
 @interface GRLoginViewController ()
 
@@ -98,7 +97,7 @@
             return;
         }
         [self showSuccess:@"登陆成功"];
-        [GRUserManager sharedManager].currentUser.token = responseObject.loginData.token;
+        [GRUserManager sharedManager].currentUser.loginData = responseObject.loginData;
         [GRUserManager saveUserToDefaults];
         [[GRHTTPManager sharedManager].requestSerializer setValue:responseObject.loginData.token forHTTPHeaderField:@"Authorization"];
         [[NSNotificationCenter defaultCenter] postNotificationName:GRLoginSuccessNotification object:nil];

@@ -10,4 +10,6 @@
 
 @interface GRUserInfoController : GRViewController
 
+- (void)clear;
+
 @end

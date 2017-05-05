@@ -7,7 +7,6 @@
 //
 
 #import "GRMenuDetailCell.h"
-#import "UIImageView+AFNetworking.h"
 
 @interface GRMenuDetailCell ()
 

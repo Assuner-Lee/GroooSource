@@ -33,6 +33,7 @@ typedef NS_ENUM(NSUInteger, GRTransitionType) {
 - (void)showMessage:(NSString *)text;
 - (void)show:(NSString *)text icon:(NSString *)icon;
 - (void)showSuccess:(NSString *)text;
+- (void)showFailure:(NSString *)text;
 - (void)showTimeOut;
 
 - (void)presentViewController:(UIViewController *)viewController animation:(GRTransitionType)type completion:(void (^ __nullable)(void))completion;

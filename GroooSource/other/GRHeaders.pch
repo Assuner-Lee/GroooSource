@@ -15,5 +15,6 @@
 #import "GRNotification.h"
 #import "GRRouter.h"
 #import "GRTabBarViewController.h"
+#import "GRUserManager.h" 
 
 #endif /* GRHeaders_pch */

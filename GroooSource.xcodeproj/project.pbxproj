@@ -37,6 +37,8 @@
 		9C1BE9461E8B923F007F5733 /* GRMenuDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C1BE9441E8B923F007F5733 /* GRMenuDetailCell.xib */; };
 		9C2C3FAF1E978CCA003E77E5 /* GRPlaceOrderRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C3FAE1E978CCA003E77E5 /* GRPlaceOrderRequest.m */; };
 		9C2C3FB21E97AB5B003E77E5 /* MBProgressHUD+GRShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C3FB11E97AB5B003E77E5 /* MBProgressHUD+GRShow.m */; };
+		9C2CC6941EBC0C80001E2F31 /* GRUserInfoData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2CC6931EBC0C80001E2F31 /* GRUserInfoData.m */; };
+		9C2CC6971EBC1375001E2F31 /* GRUserInfoRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2CC6961EBC1375001E2F31 /* GRUserInfoRequest.m */; };
 		9C44D4461E8CAA2900F85757 /* GRShopRatingTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C44D4451E8CAA2900F85757 /* GRShopRatingTable.m */; };
 		9C44D4491E8CAC3100F85757 /* GRShopRatingListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C44D4481E8CAC3100F85757 /* GRShopRatingListRequest.m */; };
 		9C44D44C1E8CAD3300F85757 /* GRShopRatingList.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C44D44B1E8CAD3300F85757 /* GRShopRatingList.m */; };
@@ -137,6 +139,10 @@
 		9C2C3FAE1E978CCA003E77E5 /* GRPlaceOrderRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRPlaceOrderRequest.m; sourceTree = "<group>"; };
 		9C2C3FB01E97AB5B003E77E5 /* MBProgressHUD+GRShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+GRShow.h"; sourceTree = "<group>"; };
 		9C2C3FB11E97AB5B003E77E5 /* MBProgressHUD+GRShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+GRShow.m"; sourceTree = "<group>"; };
+		9C2CC6921EBC0C80001E2F31 /* GRUserInfoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRUserInfoData.h; sourceTree = "<group>"; };
+		9C2CC6931EBC0C80001E2F31 /* GRUserInfoData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRUserInfoData.m; sourceTree = "<group>"; };
+		9C2CC6951EBC1375001E2F31 /* GRUserInfoRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRUserInfoRequest.h; sourceTree = "<group>"; };
+		9C2CC6961EBC1375001E2F31 /* GRUserInfoRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRUserInfoRequest.m; sourceTree = "<group>"; };
 		9C44D4441E8CAA2900F85757 /* GRShopRatingTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRShopRatingTable.h; sourceTree = "<group>"; };
 		9C44D4451E8CAA2900F85757 /* GRShopRatingTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRShopRatingTable.m; sourceTree = "<group>"; };
 		9C44D4471E8CAC3100F85757 /* GRShopRatingListRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRShopRatingListRequest.h; sourceTree = "<group>"; };
@@ -648,6 +654,10 @@
 		9CF50A1F1EB9E20F00E05514 /* Mdoel */ = {
 			isa = PBXGroup;
 			children = (
+				9C2CC6921EBC0C80001E2F31 /* GRUserInfoData.h */,
+				9C2CC6931EBC0C80001E2F31 /* GRUserInfoData.m */,
+				9C2CC6951EBC1375001E2F31 /* GRUserInfoRequest.h */,
+				9C2CC6961EBC1375001E2F31 /* GRUserInfoRequest.m */,
 			);
 			path = Mdoel;
 			sourceTree = "<group>";
@@ -857,6 +867,7 @@
 				9CB92ABD1E5F0FF800650CC5 /* GRShopListViewController.m in Sources */,
 				9CFF24D41E83BE0C004D92D7 /* GRMenuList.m in Sources */,
 				9CAAF57C1E6E930700730810 /* GRSegmentView.m in Sources */,
+				9C2CC6971EBC1375001E2F31 /* GRUserInfoRequest.m in Sources */,
 				9CAAF5851E6F048E00730810 /* GROrderListViewController.m in Sources */,
 				9CB9DFA51E65A9F800C8F5E8 /* GROrderListRequest.m in Sources */,
 				9C1507F11E5085F3007C2B8F /* GRRegisterViewController.m in Sources */,
@@ -907,6 +918,7 @@
 				9C1BE9451E8B923F007F5733 /* GRMenuDetailCell.m in Sources */,
 				9CB92AC91E63FC8000650CC5 /* GRTabBarViewController.m in Sources */,
 				82AF89C51E4AF0C900676D29 /* GRShopList.m in Sources */,
+				9C2CC6941EBC0C80001E2F31 /* GRUserInfoData.m in Sources */,
 				82AF89971E48457F00676D29 /* GRAppDelegate.m in Sources */,
 				823FE46E1E4DC7E7008E8CB0 /* GRLoginResponse.m in Sources */,
 				9CB92AC01E601EC000650CC5 /* GRCacheManager.m in Sources */,

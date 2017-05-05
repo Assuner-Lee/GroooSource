@@ -7,7 +7,6 @@
 //
 
 #import "GROrderListCell.h"
-#import "UIImageView+AFNetworking.h"
 #import "GROrderStatusLabel.h"
 #import "GROperateOrderBtn.h"
 

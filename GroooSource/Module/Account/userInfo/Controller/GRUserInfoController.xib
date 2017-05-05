@@ -18,6 +18,7 @@
                 <outlet property="passwordView" destination="EP2-0s-thZ" id="tQx-rj-p20"/>
                 <outlet property="scoreLabel" destination="ajj-z9-Klb" id="ADO-4S-d0d"/>
                 <outlet property="settingView" destination="28d-t7-xzg" id="Nz2-Mw-ZVN"/>
+                <outlet property="settingViewTop" destination="pWA-Q6-Tbi" id="Agk-SU-ItD"/>
                 <outlet property="userEmailLabel" destination="Xm2-nW-MVk" id="ZvU-YQ-xvE"/>
                 <outlet property="userRatingLabel" destination="nHg-LL-4B4" id="AxH-gP-YAk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -45,7 +46,7 @@
                                 <constraint firstAttribute="height" constant="1" id="OaX-Ud-hUP"/>
                             </constraints>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Assuner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktR-Zn-eGa" userLabel="Nickname Label">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktR-Zn-eGa" userLabel="Nickname Label">
                             <rect key="frame" x="100" y="15" width="260" height="36"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="36" id="Iik-9L-nSJ"/>
@@ -61,7 +62,7 @@
                                 <constraint firstAttribute="height" constant="20" id="Isy-Bn-hmL"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="810547735@qq.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xm2-nW-MVk" userLabel="Useremail Label">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="暂无数据" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Xm2-nW-MVk" userLabel="Useremail Label">
                             <rect key="frame" x="134" y="57" width="229" height="26"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="26" id="rsu-Cv-zaJ"/>
@@ -99,7 +100,7 @@
                                 <constraint firstAttribute="width" constant="1" id="QTD-sj-nwZ"/>
                             </constraints>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="555.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajj-z9-Klb" userLabel="Score Label">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="***" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajj-z9-Klb" userLabel="Score Label">
                             <rect key="frame" x="8" y="8" width="171" height="27"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="27" id="5G3-TR-j9I"/>
@@ -117,7 +118,7 @@
                             <color key="textColor" red="0.99953407049999998" green="0.64904962489999996" blue="0.1292102275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHg-LL-4B4" userLabel="Rating TitleLabel">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="***" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHg-LL-4B4" userLabel="Rating TitleLabel">
                             <rect key="frame" x="196" y="10" width="171" height="27"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="27" id="cUW-xb-MDD"/>
@@ -172,7 +173,7 @@
                                 <constraint firstAttribute="width" constant="74" id="gTb-K7-LwP"/>
                                 <constraint firstAttribute="height" constant="50" id="v8u-0S-3pM"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -186,7 +187,7 @@
                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已设置" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2A-ts-NKa" userLabel="Address Status Label">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未登录" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2A-ts-NKa" userLabel="Address Status Label">
                             <rect key="frame" x="289" y="1" width="49" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="49" id="866-p1-kx0"/>
@@ -236,7 +237,7 @@
                                 <constraint firstAttribute="height" constant="49" id="cCn-LY-Wtb"/>
                                 <constraint firstAttribute="width" constant="74" id="xuf-Kr-Bep"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -278,7 +279,7 @@
                                 <constraint firstAttribute="height" constant="49" id="ZQe-ix-CZB"/>
                                 <constraint firstAttribute="width" constant="42" id="rji-Tq-Oi3"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -313,7 +314,7 @@
                 <constraint firstItem="jcF-wX-Nn4" firstAttribute="top" secondItem="0d3-jR-d2n" secondAttribute="bottom" constant="16" id="yEf-Ga-UCe"/>
                 <constraint firstAttribute="trailing" secondItem="28d-t7-xzg" secondAttribute="trailing" id="yKw-Ej-AiG"/>
             </constraints>
-            <point key="canvasLocation" x="-798" y="-568"/>
+            <point key="canvasLocation" x="-907" y="-543"/>
         </view>
     </objects>
     <resources>

@@ -11,7 +11,7 @@
 @implementation GRLoginData
 
 + (NSDictionary *)mj_replacedKeyFromPropertyName {
-    return @{@"ID": @"id"};
+    return @{@"userID": @"id"};
 }
 
 @end
