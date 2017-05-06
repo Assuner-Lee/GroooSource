@@ -17,4 +17,6 @@
 
 + (void)saveUserToDefaults;
 
++ (void)clearUserData;
+
 @end

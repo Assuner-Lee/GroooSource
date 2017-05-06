@@ -56,11 +56,8 @@
 }
 
 - (void)showLoginVC {
-    if ([GRUserManager sharedManager].currentUser.loginData.token) {
-        [GRUserManager sharedManager].currentUser = nil;
-        [GRUserManager saveUserToDefaults];
-        [GRRouter open:@"present->GRLoginViewController" params:nil completed:^{[MBProgressHUD gr_showFailure:@"请先登录"];}];
-    }
+    [GRUserManager clearUserData];
+    [GRRouter open:@"present->GRLoginViewController" params:nil completed:^{[MBProgressHUD gr_showFailure:@"请先登录"];}];
 }
 
 NSDictionary *getSplashImageUrlDic() {

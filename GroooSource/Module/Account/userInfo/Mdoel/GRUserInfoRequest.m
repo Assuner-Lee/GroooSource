@@ -12,6 +12,7 @@
 
 - (instancetype)init {
     if (self = [super init]) {
+        self.requestPath = [NSString stringWithFormat:API_USER_INFO_F, [GRUserManager sharedManager].currentUser.loginData.userID];
         self.httpMethod = GRHTTPMethodGet;
         self.modelClassName = @"GRUserInfoData";
     }

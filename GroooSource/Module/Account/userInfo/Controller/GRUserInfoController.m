@@ -9,6 +9,7 @@
 #import "GRUserInfoController.h"
 #import "GRUserInfoRequest.h"
 #import "GRUserInfoData.h"
+#import "GRChangePasswordController.h"
 
 @interface GRUserInfoController ()
 
@@ -65,9 +66,14 @@
     return self;
 }
 
+- (void)setupBarItem {
+    [super setupBarItem];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(startRequest)];
+}
+
 - (void)addObservedNotification {
     [super addObservedNotification];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clear) name:GRTokenInvaildNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clearInfo) name:GRTokenInvaildNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeUpadateState) name:GRLoginSuccessNotification object:nil];
 }
 
@@ -127,7 +133,7 @@
     [self.settingView addGestureRecognizer:settingViewTap];
 }
 
-- (void)clear {
+- (void)clearInfo {
     self.settingViewTop.constant = 16 - 2 - self.passwordView.gr_height;
     self.passwordView.hidden = YES;
     self.avatarImgView.image = [UIImage imageNamed:@"user_avatar_placeholder"];
@@ -161,7 +167,7 @@
 }
 
 - (void)tapPasswordView {
-    
+    [self.navigationController pushViewController:[[GRChangePasswordController alloc] init] animated:YES];
 }
 
 - (void)tapSettingView {

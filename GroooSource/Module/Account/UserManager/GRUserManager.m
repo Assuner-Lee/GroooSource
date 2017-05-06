@@ -38,11 +38,15 @@
 
 + (void)saveUserToDefaults {
     NSDictionary *userDic = [self sharedManager].currentUser.mj_keyValues;
+    if (!userDic) {
+        userDic =  [[NSDictionary alloc] init];
+    }
     [userDic writeToFile:[self filePath] atomically:YES];
 }
 
 + (void)clearUserData {
-    [self sharedManager].currentUser = nil;
+    [[GRHTTPManager sharedManager].requestSerializer clearAuthorizationHeader];
+    [self sharedManager].currentUser = [[GRUser alloc] init];
     NSDictionary *userDic = [[NSDictionary alloc] init];
     [userDic writeToFile:[self filePath] atomically:YES];
 }
