@@ -10,6 +10,7 @@
 #import "GRShopList.h"
 #import "GRShopListRequest.h"
 #import "GRShopListCell.h"
+#import "GRSchoolNoticeView.h"
 
 static NSString *GRShopListCellID = @"GRShopListCellID";
 
@@ -85,6 +86,8 @@ static NSString *GRShopListCellID = @"GRShopListCellID";
     self.searchBar = [[UISearchBar alloc] initWithFrame:self.searchBarBeginFrame];
     self.searchBar.placeholder = @"查询";
     self.searchBar.delegate = self;
+    
+    [self.view addSubview:[[GRSchoolNoticeView alloc] init]];
 }
 
 - (void)initRequest {

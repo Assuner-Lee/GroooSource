@@ -38,6 +38,8 @@
 		9C2748F51EBD64620022ABCC /* GRChangePasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2748F31EBD64620022ABCC /* GRChangePasswordController.m */; };
 		9C2748F61EBD64620022ABCC /* GRChangePasswordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C2748F41EBD64620022ABCC /* GRChangePasswordController.xib */; };
 		9C2748F91EBD7C7A0022ABCC /* GRChangePasswordRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2748F81EBD7C7A0022ABCC /* GRChangePasswordRequest.m */; };
+		9C2748FC1EBDD3470022ABCC /* GRSchoolNoticeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2748FB1EBDD3470022ABCC /* GRSchoolNoticeView.m */; };
+		9C2749011EBDD9F10022ABCC /* GRSchoolNoticeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2749001EBDD9F10022ABCC /* GRSchoolNoticeRequest.m */; };
 		9C2C3FAF1E978CCA003E77E5 /* GRPlaceOrderRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C3FAE1E978CCA003E77E5 /* GRPlaceOrderRequest.m */; };
 		9C2C3FB21E97AB5B003E77E5 /* MBProgressHUD+GRShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C3FB11E97AB5B003E77E5 /* MBProgressHUD+GRShow.m */; };
 		9C2CC6941EBC0C80001E2F31 /* GRUserInfoData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2CC6931EBC0C80001E2F31 /* GRUserInfoData.m */; };
@@ -143,6 +145,10 @@
 		9C2748F41EBD64620022ABCC /* GRChangePasswordController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRChangePasswordController.xib; sourceTree = "<group>"; };
 		9C2748F71EBD7C7A0022ABCC /* GRChangePasswordRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRChangePasswordRequest.h; sourceTree = "<group>"; };
 		9C2748F81EBD7C7A0022ABCC /* GRChangePasswordRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRChangePasswordRequest.m; sourceTree = "<group>"; };
+		9C2748FA1EBDD3470022ABCC /* GRSchoolNoticeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRSchoolNoticeView.h; sourceTree = "<group>"; };
+		9C2748FB1EBDD3470022ABCC /* GRSchoolNoticeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRSchoolNoticeView.m; sourceTree = "<group>"; };
+		9C2748FF1EBDD9F10022ABCC /* GRSchoolNoticeRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRSchoolNoticeRequest.h; sourceTree = "<group>"; };
+		9C2749001EBDD9F10022ABCC /* GRSchoolNoticeRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRSchoolNoticeRequest.m; sourceTree = "<group>"; };
 		9C2C3FAD1E978CCA003E77E5 /* GRPlaceOrderRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRPlaceOrderRequest.h; sourceTree = "<group>"; };
 		9C2C3FAE1E978CCA003E77E5 /* GRPlaceOrderRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRPlaceOrderRequest.m; sourceTree = "<group>"; };
 		9C2C3FB01E97AB5B003E77E5 /* MBProgressHUD+GRShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+GRShow.h"; sourceTree = "<group>"; };
@@ -405,6 +411,8 @@
 				82AF89C41E4AF0C900676D29 /* GRShopList.m */,
 				82AF89C61E4AF51C00676D29 /* GRShopListRequest.h */,
 				82AF89C71E4AF51C00676D29 /* GRShopListRequest.m */,
+				9C2748FF1EBDD9F10022ABCC /* GRSchoolNoticeRequest.h */,
+				9C2749001EBDD9F10022ABCC /* GRSchoolNoticeRequest.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -415,6 +423,8 @@
 				9CB92AB31E5D67AD00650CC5 /* GRShopListCell.h */,
 				9CB92AB41E5D67AD00650CC5 /* GRShopListCell.m */,
 				9CB92AB51E5D67AD00650CC5 /* GRShopListCell.xib */,
+				9C2748FA1EBDD3470022ABCC /* GRSchoolNoticeView.h */,
+				9C2748FB1EBDD3470022ABCC /* GRSchoolNoticeView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -885,12 +895,14 @@
 				9CAAF5851E6F048E00730810 /* GROrderListViewController.m in Sources */,
 				9CB9DFA51E65A9F800C8F5E8 /* GROrderListRequest.m in Sources */,
 				9C1507F11E5085F3007C2B8F /* GRRegisterViewController.m in Sources */,
+				9C2748FC1EBDD3470022ABCC /* GRSchoolNoticeView.m in Sources */,
 				9C44D4461E8CAA2900F85757 /* GRShopRatingTable.m in Sources */,
 				823FE45A1E4C94FE008E8CB0 /* UIImage+GROperation.m in Sources */,
 				82AF89BE1E4AE7BD00676D29 /* GRAppStyle.m in Sources */,
 				82AF89AB1E49765300676D29 /* GRNetRequestObject.m in Sources */,
 				82AF89B21E49DA1600676D29 /* GRModel.m in Sources */,
 				82AF89C81E4AF51C00676D29 /* GRShopListRequest.m in Sources */,
+				9C2749011EBDD9F10022ABCC /* GRSchoolNoticeRequest.m in Sources */,
 				9C44D4671E8CFD6300F85757 /* GRShopRatingRightCell.m in Sources */,
 				82AF89B51E4AC38200676D29 /* GRListTypeModel.m in Sources */,
 				9C8CF6D41E83D1AC0030F54E /* GRMenuHeadView.m in Sources */,
