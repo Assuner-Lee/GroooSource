@@ -15,6 +15,8 @@
 
 + (id)modelCacheOfKey:(NSString *)path className:(NSString *)name;
 
++ (void)clearCacheOfKey:(NSString *)key;
+
 + (void)clearAllCache;
 
 @end

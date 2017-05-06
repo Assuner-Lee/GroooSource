@@ -32,6 +32,10 @@
     return [GRCacheManager modelCacheOfKey:self.requestPath className:self.modelClassName];
 }
 
+- (void)clearCache {
+    [GRCacheManager clearCacheOfKey:self.requestPath];
+}
+
 - (void)startRequestComplete:(GRRequestComplete)complete {
     self.complete = complete;
     switch (self.httpMethod) {

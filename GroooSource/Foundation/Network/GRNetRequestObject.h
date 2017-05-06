@@ -32,4 +32,6 @@ typedef NS_ENUM(NSUInteger, GRHTTPMethod) {
 
 - (NSDictionary *)paramsDic;
 
+- (void)clearCache;
+
 @end

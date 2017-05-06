@@ -74,6 +74,7 @@
 - (void)addObservedNotification {
     [super addObservedNotification];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clearInfo) name:GRTokenInvaildNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clearInfo) name:GRLogoutSuccessNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeUpadateState) name:GRLoginSuccessNotification object:nil];
 }
 
@@ -142,6 +143,7 @@
     self.scoreLabel.text = @"***";
     self.userRatingLabel.text = @"***";
     self.addressStatusLabel.text = @"未登录";
+    [self.userInfoRequest clearCache];
 }
 
 - (void)changeUpadateState {

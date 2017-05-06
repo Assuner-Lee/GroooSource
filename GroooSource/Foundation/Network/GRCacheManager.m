@@ -51,6 +51,16 @@
     return [[self sharedManager] modelCacheOfKey:path className:modelClassName];
 }
 
++ (void)clearCacheOfKey:(NSString *)key {
+    GRCacheManager *manager = [self sharedManager];
+    if ([manager.keysArray containsObject:key]) {
+        [manager.ramCache removeObjectForKey:key];
+        [manager.romCache removeObjectForKey:key];
+        manager.keysArray = manager.romCache.allKeys;
+        [manager.romCache writeToFile:[manager filePath] atomically:YES];
+    }
+}
+
 + (void)clearAllCache {
     GRCacheManager *manager = [self sharedManager];
     [manager.ramCache removeAllObjects];

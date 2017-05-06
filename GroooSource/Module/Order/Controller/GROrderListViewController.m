@@ -73,6 +73,8 @@
     [super addObservedNotification];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeUpadateState) name:GRUpdateOrderListNextAppearedNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeUpadateState) name:GRLoginSuccessNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeUpadateState) name:GRLogoutSuccessNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clearRequestCache) name:GRTokenInvaildNotification object:nil];
 }
 
 - (void)initView {
@@ -110,6 +112,10 @@
     if (self.viewIfLoaded) {
         self.updateNextAppeared = YES;
     }
+}
+
+- (void)clearRequestCache {
+    [self.orderListRequest clearCache];
 }
 
 #pragma - SetterOverride

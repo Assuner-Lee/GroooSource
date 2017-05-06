@@ -11,6 +11,8 @@
 
 static NSString *const GRLoginSuccessNotification = @"GRLoginSuccessNotification";
 
+static NSString *const GRLogoutSuccessNotification = @"GRLogoutSuccessNotification";
+
 static NSString * const GRTokenInvaildNotification = @"GRTokenInvaildNotification";
 
 static NSString * const GRMenuReloadedNotification = @"GRMenuReloadedNotification";

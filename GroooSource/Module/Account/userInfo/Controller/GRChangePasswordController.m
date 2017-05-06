@@ -42,7 +42,7 @@
 - (instancetype)init {
     if (self = [super init]) {
         self.title = @"修改密码";
-        //self.hidesBottomBarWhenPushed = YES;
+        self.hidesBottomBarWhenPushed = YES;
     }
     return self;
 }
@@ -89,9 +89,8 @@
                 self.submitButton.enabled = YES;
                 return;
             }
-            [MBProgressHUD gr_showSuccess:@"修改成功!"];
-            [[NSNotificationCenter defaultCenter] postNotificationName:GRTokenInvaildNotification object:nil];
-            [[NSNotificationCenter defaultCenter] postNotificationName:GRUpdateOrderListNextAppearedNotification object:nil];
+            [MBProgressHUD gr_showSuccess:@"修改成功,请重新登录!"];
+            [[NSNotificationCenter defaultCenter] postNotificationName:GRLogoutSuccessNotification object:nil];
             [self back];
         }];
     }
