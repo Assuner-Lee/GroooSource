@@ -12,8 +12,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GRAppInfoViewController">
             <connections>
                 <outlet property="appIconImgView" destination="OAY-Gb-0XC" id="8bW-wZ-tgw"/>
-                <outlet property="appRatingView" destination="lu9-CN-6Db" id="V0q-Kv-QO3"/>
-                <outlet property="moreInfoView" destination="L1Y-ix-IOc" id="yaA-ca-xvu"/>
+                <outlet property="appRatingView" destination="lu9-CN-6Db" id="D2O-wX-BJL"/>
+                <outlet property="moreInfoView" destination="L1Y-ix-IOc" id="iUA-ai-tl9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,7 +29,7 @@
                         <constraint firstAttribute="height" constant="65" id="cPL-uW-JVx"/>
                     </constraints>
                 </imageView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lu9-CN-6Db" userLabel="APP Rating View">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lu9-CN-6Db" userLabel="APP Rating View" customClass="GRClickableView">
                     <rect key="frame" x="0.0" y="215" width="375" height="50"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info_rate_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Sow-0l-L4M">
@@ -71,7 +71,7 @@
                         <constraint firstItem="1X4-ht-i0F" firstAttribute="top" secondItem="lu9-CN-6Db" secondAttribute="top" id="tUl-PO-75U"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L1Y-ix-IOc" userLabel="More View">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L1Y-ix-IOc" userLabel="More View" customClass="GRClickableView">
                     <rect key="frame" x="0.0" y="275" width="375" height="50"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info_more_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Pmx-Uv-6by">

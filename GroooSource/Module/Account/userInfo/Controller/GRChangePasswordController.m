@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *secondInputField;
 @property (weak, nonatomic) IBOutlet UIButton *submitButton;
 @property (weak, nonatomic) IBOutlet UILabel *errorTipLabel;
+@property (weak, nonatomic) IBOutlet UILabel *firstTitleLabel;
 
 @end
 
@@ -32,6 +33,11 @@
     
     [self.firstInputField becomeFirstResponder];
     self.errorTipLabel.hidden = YES;
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [UIView gr_showOscillatoryAnimationWithLayer:self.firstTitleLabel.layer type:GROscillatoryAnimationToBigger range:1.3];
+    });
+
 }
 
 - (void)didReceiveMemoryWarning {

@@ -60,7 +60,7 @@ static NSString * const API_SCHOOL_NOTICE = @"/shops/announcement?school_id=1";
 
 static NSString * const kURL_FINDPASSWORD = @"http://www.grooo.cn/user/findPassword";
 
-static NSString * const kURL_GROOO_ABOUT = @"http://www.grooo.cn/about";
+static NSString * const kURL_GROOO = @"http://www.grooo.cn";
 
 //************ 商家账号 **********
 

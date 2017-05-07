@@ -11,19 +11,23 @@
 #import "GRUserInfoData.h"
 #import "GRChangePasswordController.h"
 #import "GRSettingViewController.h"
+#import "GRFindMoreViewController.h"
 
 @interface GRUserInfoController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImgView;
-@property (weak, nonatomic) IBOutlet UILabel *nickNameLabel;
+@property (weak, nonatomic) IBOutlet GRClickableLabel *nickNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *userEmailLabel;
-@property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
-@property (weak, nonatomic) IBOutlet UILabel *userRatingLabel;
-@property (weak, nonatomic) IBOutlet UIView *addressView;
+@property (weak, nonatomic) IBOutlet GRClickableLabel *scoreLabel;
+@property (weak, nonatomic) IBOutlet GRClickableLabel *userRatingLabel;
+@property (weak, nonatomic) IBOutlet GRClickableView *addressView;
+@property (weak, nonatomic) IBOutlet GRClickableView *passwordView;
 @property (weak, nonatomic) IBOutlet UILabel *addressStatusLabel;
-@property (weak, nonatomic) IBOutlet UIView *passwordView;
-@property (weak, nonatomic) IBOutlet UIView *settingView;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *settingViewTop;
+
+@property (weak, nonatomic) IBOutlet GRClickableView *findView;
+
+@property (weak, nonatomic) IBOutlet GRClickableView *settingView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *findViewTop;
 
 @property (nonatomic, strong) GRUserInfo *userInfo;
 @property (nonatomic, strong) GRUserInfoRequest *userInfoRequest;
@@ -37,7 +41,7 @@
     [super viewDidLoad];
     self.avatarImgView.layer.cornerRadius = self.avatarImgView.gr_width/2;
     self.avatarImgView.clipsToBounds = YES;
-    self.settingViewTop.constant = 16 - 2 - self.passwordView.gr_height;
+    self.findViewTop.constant = 16 - 2 - self.passwordView.gr_height;
     self.passwordView.hidden = YES;
     if (self.userInfoRequest.cache) {
         self.userInfo = [self.userInfoRequest.cache userInfo];
@@ -81,7 +85,7 @@
 - (void)setUserInfo:(GRUserInfo *)userInfo {
     _userInfo = userInfo;
     self.passwordView.hidden = NO;
-    self.settingViewTop.constant = 16;
+    self.findViewTop.constant = 16;
     [self.avatarImgView setImageWithURL:[NSURL URLWithString:userInfo.avatar] placeholderImage:[UIImage imageNamed:@"user_avatar_placeholder"]];
     self.nickNameLabel.text = userInfo.nickName;
     if (userInfo.email) {
@@ -118,30 +122,41 @@
     self.avatarImgView.userInteractionEnabled = YES;
     [self.avatarImgView addGestureRecognizer:avatarImgViewTap];
     
-    UITapGestureRecognizer *nickNameLabelTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapNickNameLabel)];
-    self.nickNameLabel.userInteractionEnabled = YES;
-    [self.nickNameLabel addGestureRecognizer:nickNameLabelTap];
+    self.nickNameLabel.actionBlock = ^{
+        if (![GRUserManager sharedManager].currentUser.loginData.token) {
+            [GRRouter open:@"present->GRLoginViewController" params:nil completed:nil];
+        } else {
+            [UIView gr_showOscillatoryAnimationWithLayer:self.nickNameLabel.layer type:GROscillatoryAnimationToSmaller range:0.7];
+        }
+    };
     
-    UITapGestureRecognizer *addressViewTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAddressView)];
-    [self.addressView addGestureRecognizer:addressViewTap];
+    self.addressView.actionBlock = ^{
+        
+    };
     
-    UITapGestureRecognizer *passwordViewTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapPasswordView)];
-    [self.passwordView addGestureRecognizer:passwordViewTap];
+    self.passwordView.actionBlock = ^{
+        [self.navigationController pushViewController:[[GRChangePasswordController alloc] init] animated:YES];
+    };
     
-    UITapGestureRecognizer *settingViewTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapSettingView)];
-    [self.settingView addGestureRecognizer:settingViewTap];
+    self.findView.actionBlock = ^{
+        [self.navigationController pushViewController:[[GRFindMoreViewController alloc] init] animated:YES];
+    };
     
-    UITapGestureRecognizer *scoreLabelTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapScoreLabel)];
-    self.scoreLabel.userInteractionEnabled = YES;
-    [self.scoreLabel addGestureRecognizer:scoreLabelTap];
+    self.settingView.actionBlock = ^{
+        [self.navigationController pushViewController:[[GRSettingViewController alloc] init] animated:YES];
+    };
     
-    UITapGestureRecognizer *userRatingLabelTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapUserRatingLabel)];
-    self.userRatingLabel.userInteractionEnabled = YES;
-    [self.userRatingLabel addGestureRecognizer:userRatingLabelTap];
+    self.scoreLabel.actionBlock = ^{
+        [UIView gr_showOscillatoryAnimationWithLayer:self.scoreLabel.layer type:GROscillatoryAnimationToBigger range:1.5];
+    };
+    
+   self.userRatingLabel.actionBlock = ^{
+       [UIView gr_showOscillatoryAnimationWithLayer:self.userRatingLabel.layer type:GROscillatoryAnimationToBigger range:1.5];
+   };
 }
 
 - (void)clearInfo {
-    self.settingViewTop.constant = 16 - 2 - self.passwordView.gr_height;
+    self.findViewTop.constant = 16 - 2 - self.passwordView.gr_height;
     self.passwordView.hidden = YES;
     self.avatarImgView.image = [UIImage imageNamed:@"user_avatar_placeholder"];
     self.nickNameLabel.text = @"点击登录";
@@ -162,34 +177,6 @@
 
 - (void)tapAvatarImgView {
     
-}
-
-- (void)tapNickNameLabel {
-    if (![GRUserManager sharedManager].currentUser.loginData.token) {
-        [GRRouter open:@"present->GRLoginViewController" params:nil completed:nil];
-    } else {
-        [UIView gr_showOscillatoryAnimationWithLayer:self.nickNameLabel.layer type:GROscillatoryAnimationToSmaller range:0.7];
-    }
-}
-
-- (void)tapAddressView {
-    
-}
-
-- (void)tapPasswordView {
-    [self.navigationController pushViewController:[[GRChangePasswordController alloc] init] animated:YES];
-}
-
-- (void)tapSettingView {
-    [self.navigationController pushViewController:[[GRSettingViewController alloc] init] animated:YES];
-}
-
-- (void)tapScoreLabel {
-    [UIView gr_showOscillatoryAnimationWithLayer:self.scoreLabel.layer type:GROscillatoryAnimationToBigger range:1.5];
-}
-
-- (void)tapUserRatingLabel {
-    [UIView gr_showOscillatoryAnimationWithLayer:self.userRatingLabel.layer type:GROscillatoryAnimationToBigger range:1.5];
 }
 
 @end

@@ -8,13 +8,13 @@
 
 #import "GRAppInfoViewController.h"
 #import <StoreKit/StoreKit.h>
-#import "GRWebViewController.h"
+#import "GRAboutGroooController.h"
 
 @interface GRAppInfoViewController () <SKStoreProductViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *appIconImgView;
-@property (weak, nonatomic) IBOutlet UIView *appRatingView;
-@property (weak, nonatomic) IBOutlet UIView *moreInfoView;
+@property (weak, nonatomic) IBOutlet GRClickableView *appRatingView;
+@property (weak, nonatomic) IBOutlet GRClickableView *moreInfoView;
 
 @property (nonatomic, strong) SKStoreProductViewController *storeProductVC;
 
@@ -26,6 +26,7 @@
     [super viewDidLoad];
     self.title = @"关于咕噜";
     [self addGesture];
+    [self performSelector:@selector(tapAppIconImgView) withObject:nil afterDelay:0.5];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,36 +38,30 @@
     self.appIconImgView.userInteractionEnabled = YES;
     [self.appIconImgView addGestureRecognizer:appIconImgViewTap];
     
-    UITapGestureRecognizer *appRatingViewTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAppRatingView)];
-    [self.appRatingView addGestureRecognizer:appRatingViewTap];
+    self.appRatingView.actionBlock = ^{
+        self.storeProductVC = [[SKStoreProductViewController alloc] init];
+        self.storeProductVC.delegate = self;
+        NSDictionary *dict = [NSDictionary dictionaryWithObject:@"1124767297" forKey:SKStoreProductParameterITunesItemIdentifier];
+        [self showProgress];
+        GRWEAK(self);
+        [self.storeProductVC loadProductWithParameters:dict completionBlock:^(BOOL result, NSError *error) {
+            GRSTRONG(self);
+            [self hideProgress];
+            if (result) {
+                [self presentViewController:self.storeProductVC animated:YES completion:nil];
+            }
+        }];
+    };
     
-    UITapGestureRecognizer *moreInfoViewTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapMoreInfoView)];
-    [self.moreInfoView addGestureRecognizer:moreInfoViewTap];
+    self.moreInfoView.actionBlock = ^{
+        [self.navigationController pushViewController:[[GRAboutGroooController alloc] init] animated:YES];
+    };
 }
 
 #pragma - Actions 
 
 - (void)tapAppIconImgView {
     [UIView gr_showOscillatoryAnimationWithLayer:self.appIconImgView.layer type:GROscillatoryAnimationToBigger range:1.5];
-}
-
-- (void)tapAppRatingView {
-    self.storeProductVC = [[SKStoreProductViewController alloc] init];
-    self.storeProductVC.delegate = self;
-    
-    NSDictionary *dict = [NSDictionary dictionaryWithObject:@"1124767297" forKey:SKStoreProductParameterITunesItemIdentifier];
-    [self showProgress];
-    GRWEAK(self);
-    [self.storeProductVC loadProductWithParameters:dict completionBlock:^(BOOL result, NSError *error) {
-        GRSTRONG(self);
-        [self hideProgress];
-        if (result) {
-            [self presentViewController:self.storeProductVC animated:YES completion:nil];
-        }
-    }];
-}
-
-- (void)tapMoreInfoView {
 }
 
 #pragma - SKStoreProductViewControllerDelegate 

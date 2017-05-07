@@ -14,9 +14,9 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *logoutBtn;
 @property (weak, nonatomic) IBOutlet UILabel *cacheSizeLabel;
-@property (weak, nonatomic) IBOutlet UIView *clearCacheView;
-@property (weak, nonatomic) IBOutlet UIView *appInfoView;
-@property (weak, nonatomic) IBOutlet UIView *autherInfoView;
+@property (weak, nonatomic) IBOutlet GRClickableView *clearCacheView;
+@property (weak, nonatomic) IBOutlet GRClickableView *appInfoView;
+@property (weak, nonatomic) IBOutlet GRClickableView *autherInfoView;
 
 
 @end
@@ -51,14 +51,25 @@
 }
 
 - (void)addGesture {
-    UITapGestureRecognizer *clearCacheViewTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapClearCacheView)];
-    [self.clearCacheView addGestureRecognizer:clearCacheViewTap];
+    self.clearCacheView.actionBlock = ^{
+        if ([self.cacheSizeLabel.text isEqualToString:@"共0.000M"]) {
+            [self showMessage:@"无需清理!"];
+        } else {
+            [self showProgress];
+            [GRCacheManager clearAllCache];
+            self.cacheSizeLabel.text = [NSString stringWithFormat:@"共%.3fM", [GRCacheManager cacheMemorySize]];
+            [self hideProgress];
+            [MBProgressHUD gr_showSuccess:@"已清理!"];
+        }
+    };
     
-    UITapGestureRecognizer *appInfoViewTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAppInfoView)];
-    [self.appInfoView addGestureRecognizer:appInfoViewTap];
+    self.appInfoView.actionBlock = ^{
+         [self.navigationController pushViewController:[[GRAppInfoViewController alloc] init] animated:YES];
+    };
     
-    UITapGestureRecognizer *autherInfoViewTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAutherInfoView)];
-    [self.autherInfoView addGestureRecognizer:autherInfoViewTap];
+    self.autherInfoView.actionBlock = ^{
+        
+    };
 }
 
 - (void)configBtn {
@@ -74,27 +85,7 @@
 
 }
 
-#pragma - Actions 
-
-- (void)tapClearCacheView {
-    if ([self.cacheSizeLabel.text isEqualToString:@"共0.000M"]) {
-        [self showMessage:@"无需清理!"];
-    } else {
-        [self showProgress];
-        [GRCacheManager clearAllCache];
-        self.cacheSizeLabel.text = [NSString stringWithFormat:@"共%.3fM", [GRCacheManager cacheMemorySize]];
-        [self hideProgress];
-        [MBProgressHUD gr_showSuccess:@"已清理!"];
-    }
-}
-
-- (void)tapAppInfoView {
-    [self.navigationController pushViewController:[[GRAppInfoViewController alloc] init] animated:YES];
-}
-
-- (void)tapAutherInfoView {
-    
-}
+#pragma - Actions
 
 - (void)btnPressed {
     if ([GRUserManager sharedManager].currentUser.loginData.token) {

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GRAboutGroooController">
+            <connections>
+                <outlet property="groooDescTextView" destination="ABQ-A9-vvg" id="Vfo-xE-iEU"/>
+                <outlet property="groooHeartImgView" destination="DEo-lk-ljy" id="1g0-eB-J2c"/>
+                <outlet property="groooTextImgView" destination="Taj-tW-pjs" id="V7z-Ql-ddM"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grooo_about" translatesAutoresizingMaskIntoConstraints="NO" id="DEo-lk-ljy">
+                    <rect key="frame" x="67" y="84" width="240" height="188"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="188" id="oe4-5C-r7O"/>
+                        <constraint firstAttribute="width" constant="240" id="qkX-68-mda"/>
+                    </constraints>
+                </imageView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ABQ-A9-vvg">
+                    <rect key="frame" x="0.0" y="518" width="375" height="168"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="168" id="7nV-bR-JkY"/>
+                    </constraints>
+                    <mutableString key="text">2014年，几个小伙伴一同创立了咕噜！通过大家的不懈努力，签约商家达数十家，每天营业额达到数千元，服务覆盖全校学生！累计数以万计人次学生享受到了送餐上门的便捷服务！
+2015年，咕噜超市重磅上线，学生购物更便捷！足不出户，静待上门！同时，咕噜在全校展开了多次福利活动，平安夜送苹果…
+…
+…
+更多功能，敬请期待！！ 
+
+———————————————
+获奖记录：
+“咕噜校园”获第五届全国大学生三创河北赛区特等奖.
+“咕噜校园”获邮储杯第八届大赛全国总决赛网络创新应用一等奖.
+“咕噜校园”获第三届“创青春”中国创新创业APP专项赛河北赛区三等奖.
+“咕噜校园”获第三届“创青春”中国创新创业APP专项赛全国总决赛优秀奖.
+———————————————
+咕噜，和你一同见证我们的成长！</mutableString>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_text" translatesAutoresizingMaskIntoConstraints="NO" id="Taj-tW-pjs">
+                    <rect key="frame" x="44" y="550" width="286" height="83"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="286" id="dDa-M9-hwe"/>
+                        <constraint firstAttribute="height" constant="83" id="gpl-vo-JPk"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ABQ-A9-vvg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Bkc-He-1jr"/>
+                <constraint firstItem="Taj-tW-pjs" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="LnE-Oj-1WI"/>
+                <constraint firstItem="DEo-lk-ljy" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Qdh-QS-LDC"/>
+                <constraint firstAttribute="trailing" secondItem="ABQ-A9-vvg" secondAttribute="trailing" id="XCh-L7-Nup"/>
+                <constraint firstItem="DEo-lk-ljy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="84" id="Z5a-yl-622"/>
+                <constraint firstItem="Taj-tW-pjs" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" constant="-34" id="a1T-zY-3AJ"/>
+                <constraint firstAttribute="bottom" secondItem="ABQ-A9-vvg" secondAttribute="bottom" constant="-19" id="zRv-SZ-TMr"/>
+            </constraints>
+            <point key="canvasLocation" x="-138.5" y="87.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="about_text" width="300" height="96"/>
+        <image name="grooo_about" width="443" height="369"/>
+    </resources>
+</document>
