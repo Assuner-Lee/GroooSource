@@ -9,6 +9,7 @@
 #import "GRSettingViewController.h"
 #import "GRCacheManager.h"
 #import "GRAppInfoViewController.h"
+#import "GRAutherInfoController.h"
 
 @interface GRSettingViewController ()
 
@@ -68,7 +69,7 @@
     };
     
     self.autherInfoView.actionBlock = ^{
-        
+         [self.navigationController pushViewController:[[GRAutherInfoController alloc] init] animated:YES];
     };
 }
 

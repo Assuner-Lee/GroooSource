@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "grooo_about.png",
+      "filename" : "auther_call_icon.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "auther_call_icon@2x.png",
       "scale" : "2x"
     },
     {

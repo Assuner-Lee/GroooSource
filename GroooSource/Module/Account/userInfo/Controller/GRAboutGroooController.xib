@@ -76,6 +76,6 @@
     </objects>
     <resources>
         <image name="about_text" width="300" height="96"/>
-        <image name="grooo_about" width="443" height="369"/>
+        <image name="grooo_about" width="887" height="739"/>
     </resources>
 </document>

@@ -89,6 +89,10 @@
 		9CC838D81EBEEDDC008CF79A /* GRClickableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC838D71EBEEDDC008CF79A /* GRClickableLabel.m */; };
 		9CC838DC1EBEF891008CF79A /* GRAboutGroooController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC838DA1EBEF891008CF79A /* GRAboutGroooController.m */; };
 		9CC838DD1EBEF891008CF79A /* GRAboutGroooController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC838DB1EBEF891008CF79A /* GRAboutGroooController.xib */; };
+		9CC838E11EBF221D008CF79A /* GRContactUsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC838DF1EBF221D008CF79A /* GRContactUsController.m */; };
+		9CC838E21EBF221D008CF79A /* GRContactUsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC838E01EBF221D008CF79A /* GRContactUsController.xib */; };
+		9CC838E61EBF2C60008CF79A /* GRAutherInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC838E41EBF2C60008CF79A /* GRAutherInfoController.m */; };
+		9CC838E71EBF2C60008CF79A /* GRAutherInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC838E51EBF2C60008CF79A /* GRAutherInfoController.xib */; };
 		9CCC22C91E950EE60029B0EB /* GRCashierdeskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCC22C71E950EE60029B0EB /* GRCashierdeskCell.m */; };
 		9CCC22CA1E950EE60029B0EB /* GRCashierdeskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CCC22C81E950EE60029B0EB /* GRCashierdeskCell.xib */; };
 		9CF50A241EB9E24300E05514 /* GRUserInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF50A221EB9E24300E05514 /* GRUserInfoController.m */; };
@@ -254,6 +258,12 @@
 		9CC838D91EBEF891008CF79A /* GRAboutGroooController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRAboutGroooController.h; sourceTree = "<group>"; };
 		9CC838DA1EBEF891008CF79A /* GRAboutGroooController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRAboutGroooController.m; sourceTree = "<group>"; };
 		9CC838DB1EBEF891008CF79A /* GRAboutGroooController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRAboutGroooController.xib; sourceTree = "<group>"; };
+		9CC838DE1EBF221D008CF79A /* GRContactUsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRContactUsController.h; sourceTree = "<group>"; };
+		9CC838DF1EBF221D008CF79A /* GRContactUsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRContactUsController.m; sourceTree = "<group>"; };
+		9CC838E01EBF221D008CF79A /* GRContactUsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRContactUsController.xib; sourceTree = "<group>"; };
+		9CC838E31EBF2C60008CF79A /* GRAutherInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRAutherInfoController.h; sourceTree = "<group>"; };
+		9CC838E41EBF2C60008CF79A /* GRAutherInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRAutherInfoController.m; sourceTree = "<group>"; };
+		9CC838E51EBF2C60008CF79A /* GRAutherInfoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRAutherInfoController.xib; sourceTree = "<group>"; };
 		9CCC22C61E950EE60029B0EB /* GRCashierdeskCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRCashierdeskCell.h; sourceTree = "<group>"; };
 		9CCC22C71E950EE60029B0EB /* GRCashierdeskCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRCashierdeskCell.m; sourceTree = "<group>"; };
 		9CCC22C81E950EE60029B0EB /* GRCashierdeskCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRCashierdeskCell.xib; sourceTree = "<group>"; };
@@ -565,6 +575,12 @@
 				9C2749071EBEAEB90022ABCC /* GRAppInfoViewController.h */,
 				9C2749081EBEAEB90022ABCC /* GRAppInfoViewController.m */,
 				9C2749091EBEAEB90022ABCC /* GRAppInfoViewController.xib */,
+				9CC838DE1EBF221D008CF79A /* GRContactUsController.h */,
+				9CC838DF1EBF221D008CF79A /* GRContactUsController.m */,
+				9CC838E01EBF221D008CF79A /* GRContactUsController.xib */,
+				9CC838E31EBF2C60008CF79A /* GRAutherInfoController.h */,
+				9CC838E41EBF2C60008CF79A /* GRAutherInfoController.m */,
+				9CC838E51EBF2C60008CF79A /* GRAutherInfoController.xib */,
 				9CC838D91EBEF891008CF79A /* GRAboutGroooController.h */,
 				9CC838DA1EBEF891008CF79A /* GRAboutGroooController.m */,
 				9CC838DB1EBEF891008CF79A /* GRAboutGroooController.xib */,
@@ -899,6 +915,7 @@
 				9C1BE9401E8B8F37007F5733 /* GRMenuCategoryCell.xib in Resources */,
 				823FE4661E4D911E008E8CB0 /* Assets.xcassets in Resources */,
 				82AF89E41E4C542000676D29 /* GRWebViewController.xib in Resources */,
+				9CC838E21EBF221D008CF79A /* GRContactUsController.xib in Resources */,
 				9CF50A251EB9E24300E05514 /* GRUserInfoController.xib in Resources */,
 				9C44D4631E8CFBA000F85757 /* GRShopRatingLeftCell.xib in Resources */,
 				9C1507F21E5085F3007C2B8F /* GRRegisterViewController.xib in Resources */,
@@ -907,6 +924,7 @@
 				823FE46B1E4D9A1D008E8CB0 /* GRLoginViewController.xib in Resources */,
 				9C44D4681E8CFD6300F85757 /* GRShopRatingRightCell.xib in Resources */,
 				9C1BE9461E8B923F007F5733 /* GRMenuDetailCell.xib in Resources */,
+				9CC838E71EBF2C60008CF79A /* GRAutherInfoController.xib in Resources */,
 				9C27490B1EBEAEB90022ABCC /* GRAppInfoViewController.xib in Resources */,
 				9CAAF56B1E6D0E8B00730810 /* GROrderListCell.xib in Resources */,
 			);
@@ -995,11 +1013,13 @@
 				823FE4601E4D6617008E8CB0 /* GRNavigationController.m in Sources */,
 				9C1BE9411E8B8F37007F5733 /* GRMenuMainView.m in Sources */,
 				9C2C3FAF1E978CCA003E77E5 /* GRPlaceOrderRequest.m in Sources */,
+				9CC838E61EBF2C60008CF79A /* GRAutherInfoController.m in Sources */,
 				9CC838D81EBEEDDC008CF79A /* GRClickableLabel.m in Sources */,
 				9C5384971E51D4BC004EDBCF /* GRRegisterRequest.m in Sources */,
 				9CAAF56A1E6D0E8B00730810 /* GROrderListCell.m in Sources */,
 				9CB92AB61E5D67AD00650CC5 /* GRShopListCell.m in Sources */,
 				823FE4631E4D850F008E8CB0 /* UIView+GRShortcut.m in Sources */,
+				9CC838E11EBF221D008CF79A /* GRContactUsController.m in Sources */,
 				9C1507F51E515905007C2B8F /* GRLoginRequest.m in Sources */,
 				82AF89D51E4B3F5200676D29 /* NSString+GRCommen.m in Sources */,
 				9CA98E441E9B2DF9008D603E /* UINavigationController+FDFullscreenPopGesture.m in Sources */,

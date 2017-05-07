@@ -9,12 +9,14 @@
 #import "GRAppInfoViewController.h"
 #import <StoreKit/StoreKit.h>
 #import "GRAboutGroooController.h"
+#import "GRContactUsController.h"
 
 @interface GRAppInfoViewController () <SKStoreProductViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *appIconImgView;
 @property (weak, nonatomic) IBOutlet GRClickableView *appRatingView;
 @property (weak, nonatomic) IBOutlet GRClickableView *moreInfoView;
+@property (weak, nonatomic) IBOutlet GRClickableView *contactUsView;
 
 @property (nonatomic, strong) SKStoreProductViewController *storeProductVC;
 
@@ -51,6 +53,10 @@
                 [self presentViewController:self.storeProductVC animated:YES completion:nil];
             }
         }];
+    };
+    
+    self.contactUsView.actionBlock = ^{
+        [self.navigationController pushViewController:[[GRContactUsController alloc] init] animated:YES];
     };
     
     self.moreInfoView.actionBlock = ^{
