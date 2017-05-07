@@ -63,6 +63,11 @@
 + (UIColor *)orangeColor {
     return [self colorWithRed:252 green:186 blue:40];
 }
+
++ (UIColor *)groooRedColor {
+    return [self colorWithRed:255 green:85 blue:38];
+}
+
 #pragma - font
 
 + (UIFont *)font12 {

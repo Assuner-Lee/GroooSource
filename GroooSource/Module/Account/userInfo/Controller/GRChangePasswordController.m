@@ -90,6 +90,7 @@
                 return;
             }
             [MBProgressHUD gr_showSuccess:@"修改成功,请重新登录!"];
+            [GRUserManager clearUserData];
             [[NSNotificationCenter defaultCenter] postNotificationName:GRLogoutSuccessNotification object:nil];
             [self back];
         }];

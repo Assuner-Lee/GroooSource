@@ -10,6 +10,7 @@
 #import "GRUserInfoRequest.h"
 #import "GRUserInfoData.h"
 #import "GRChangePasswordController.h"
+#import "GRSettingViewController.h"
 
 @interface GRUserInfoController ()
 
@@ -110,8 +111,6 @@
             }
             self.userInfo = responseObject.userInfo;
         }];
-    } else {
-        [GRRouter open:@"present->GRLoginViewController" params:nil completed:^{[MBProgressHUD gr_showFailure:@"请先登录"];}];
     }
 }
 
@@ -173,7 +172,7 @@
 }
 
 - (void)tapSettingView {
-    
+    [self.navigationController pushViewController:[[GRSettingViewController alloc] init] animated:YES];
 }
 
 @end

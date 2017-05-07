@@ -19,4 +19,6 @@
 
 + (void)clearAllCache;
 
++ (CGFloat)cacheMemorySize;
+
 @end

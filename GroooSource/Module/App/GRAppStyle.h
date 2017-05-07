@@ -38,6 +38,8 @@
 
 + (UIColor *)orangeColor;
 
++ (UIColor *)groooRedColor;
+
 //***************UIFont*****************
 
 + (UIFont *)font9;

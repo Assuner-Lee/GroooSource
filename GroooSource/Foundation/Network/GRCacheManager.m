@@ -69,6 +69,11 @@
     [manager.romCache writeToFile:[manager filePath] atomically:YES];
 }
 
++ (CGFloat)cacheMemorySize {
+    NSData *cacheData = [NSData dataWithContentsOfFile:[[self sharedManager]filePath]];
+    return [cacheData length] / 1000000.0;
+}
+
 #pragma - Private Methods
 
 - (NSString *)filePath {
