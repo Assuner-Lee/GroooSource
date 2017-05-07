@@ -42,6 +42,8 @@
 		9C2749011EBDD9F10022ABCC /* GRSchoolNoticeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2749001EBDD9F10022ABCC /* GRSchoolNoticeRequest.m */; };
 		9C2749051EBDEDB70022ABCC /* GRSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2749031EBDEDB70022ABCC /* GRSettingViewController.m */; };
 		9C2749061EBDEDB70022ABCC /* GRSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C2749041EBDEDB70022ABCC /* GRSettingViewController.xib */; };
+		9C27490A1EBEAEB90022ABCC /* GRAppInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2749081EBEAEB90022ABCC /* GRAppInfoViewController.m */; };
+		9C27490B1EBEAEB90022ABCC /* GRAppInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C2749091EBEAEB90022ABCC /* GRAppInfoViewController.xib */; };
 		9C2C3FAF1E978CCA003E77E5 /* GRPlaceOrderRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C3FAE1E978CCA003E77E5 /* GRPlaceOrderRequest.m */; };
 		9C2C3FB21E97AB5B003E77E5 /* MBProgressHUD+GRShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C3FB11E97AB5B003E77E5 /* MBProgressHUD+GRShow.m */; };
 		9C2CC6941EBC0C80001E2F31 /* GRUserInfoData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2CC6931EBC0C80001E2F31 /* GRUserInfoData.m */; };
@@ -154,6 +156,9 @@
 		9C2749021EBDEDB70022ABCC /* GRSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRSettingViewController.h; sourceTree = "<group>"; };
 		9C2749031EBDEDB70022ABCC /* GRSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRSettingViewController.m; sourceTree = "<group>"; };
 		9C2749041EBDEDB70022ABCC /* GRSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRSettingViewController.xib; sourceTree = "<group>"; };
+		9C2749071EBEAEB90022ABCC /* GRAppInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRAppInfoViewController.h; sourceTree = "<group>"; };
+		9C2749081EBEAEB90022ABCC /* GRAppInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRAppInfoViewController.m; sourceTree = "<group>"; };
+		9C2749091EBEAEB90022ABCC /* GRAppInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRAppInfoViewController.xib; sourceTree = "<group>"; };
 		9C2C3FAD1E978CCA003E77E5 /* GRPlaceOrderRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRPlaceOrderRequest.h; sourceTree = "<group>"; };
 		9C2C3FAE1E978CCA003E77E5 /* GRPlaceOrderRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRPlaceOrderRequest.m; sourceTree = "<group>"; };
 		9C2C3FB01E97AB5B003E77E5 /* MBProgressHUD+GRShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+GRShow.h"; sourceTree = "<group>"; };
@@ -699,6 +704,9 @@
 				9C2749021EBDEDB70022ABCC /* GRSettingViewController.h */,
 				9C2749031EBDEDB70022ABCC /* GRSettingViewController.m */,
 				9C2749041EBDEDB70022ABCC /* GRSettingViewController.xib */,
+				9C2749071EBEAEB90022ABCC /* GRAppInfoViewController.h */,
+				9C2749081EBEAEB90022ABCC /* GRAppInfoViewController.m */,
+				9C2749091EBEAEB90022ABCC /* GRAppInfoViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -838,6 +846,7 @@
 				823FE46B1E4D9A1D008E8CB0 /* GRLoginViewController.xib in Resources */,
 				9C44D4681E8CFD6300F85757 /* GRShopRatingRightCell.xib in Resources */,
 				9C1BE9461E8B923F007F5733 /* GRMenuDetailCell.xib in Resources */,
+				9C27490B1EBEAEB90022ABCC /* GRAppInfoViewController.xib in Resources */,
 				9CAAF56B1E6D0E8B00730810 /* GROrderListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -954,6 +963,7 @@
 				9CF50A241EB9E24300E05514 /* GRUserInfoController.m in Sources */,
 				9C1BE9451E8B923F007F5733 /* GRMenuDetailCell.m in Sources */,
 				9CB92AC91E63FC8000650CC5 /* GRTabBarViewController.m in Sources */,
+				9C27490A1EBEAEB90022ABCC /* GRAppInfoViewController.m in Sources */,
 				82AF89C51E4AF0C900676D29 /* GRShopList.m in Sources */,
 				9C2CC6941EBC0C80001E2F31 /* GRUserInfoData.m in Sources */,
 				82AF89971E48457F00676D29 /* GRAppDelegate.m in Sources */,

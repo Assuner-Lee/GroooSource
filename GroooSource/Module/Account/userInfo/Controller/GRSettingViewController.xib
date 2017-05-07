@@ -86,12 +86,24 @@
                             <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qg1-mm-0Nv" userLabel="More Label">
+                            <rect key="frame" x="346" y="0.0" width="29" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Red-5Z-3ef"/>
+                                <constraint firstAttribute="width" constant="29" id="n9X-8y-Wxw"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Qg1-mm-0Nv" secondAttribute="trailing" id="6qR-IZ-7KG"/>
                         <constraint firstItem="rqP-PG-tMZ" firstAttribute="leading" secondItem="LJH-BN-Tm0" secondAttribute="trailing" constant="11" id="A8y-QY-UvP"/>
                         <constraint firstItem="LJH-BN-Tm0" firstAttribute="top" secondItem="3Mk-ZX-7YG" secondAttribute="top" constant="15" id="Opf-xT-whK"/>
                         <constraint firstItem="LJH-BN-Tm0" firstAttribute="leading" secondItem="3Mk-ZX-7YG" secondAttribute="leading" constant="15" id="bNz-Sp-Gp8"/>
+                        <constraint firstItem="Qg1-mm-0Nv" firstAttribute="top" secondItem="3Mk-ZX-7YG" secondAttribute="top" id="edR-Zl-6jp"/>
                         <constraint firstAttribute="height" constant="50" id="hfQ-z7-ruj"/>
                         <constraint firstItem="rqP-PG-tMZ" firstAttribute="top" secondItem="3Mk-ZX-7YG" secondAttribute="top" id="nPl-EJ-fCp"/>
                     </constraints>
@@ -124,10 +136,22 @@
                             <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRW-SG-3hR" userLabel="More Label">
+                            <rect key="frame" x="346" y="0.0" width="29" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="NqG-bj-7EN"/>
+                                <constraint firstAttribute="width" constant="29" id="OPZ-t8-NeO"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="jRW-SG-3hR" secondAttribute="trailing" id="C9x-Cz-aYI"/>
                         <constraint firstItem="8OB-ZJ-k6l" firstAttribute="top" secondItem="Gbp-03-bTp" secondAttribute="top" id="FlI-yS-rga"/>
+                        <constraint firstItem="jRW-SG-3hR" firstAttribute="top" secondItem="Gbp-03-bTp" secondAttribute="top" id="LI6-CN-ctj"/>
                         <constraint firstItem="g3e-bQ-Blo" firstAttribute="leading" secondItem="Gbp-03-bTp" secondAttribute="leading" constant="18.5" id="O0I-yQ-lsk"/>
                         <constraint firstAttribute="height" constant="50" id="ezQ-lH-DpW"/>
                         <constraint firstItem="g3e-bQ-Blo" firstAttribute="top" secondItem="Gbp-03-bTp" secondAttribute="top" constant="15" id="fQu-XB-NSw"/>

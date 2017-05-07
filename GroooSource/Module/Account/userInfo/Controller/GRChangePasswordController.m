@@ -22,7 +22,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     self.submitButton.layer.cornerRadius = 4.0f;
     self.submitButton.clipsToBounds = YES;
     [self.submitButton setBackgroundImage:[UIImage imageWithColor:[GRAppStyle mainColorWithAlpha:0.4]] forState:UIControlStateDisabled];

@@ -8,6 +8,7 @@
 
 #import "GRSettingViewController.h"
 #import "GRCacheManager.h"
+#import "GRAppInfoViewController.h"
 
 @interface GRSettingViewController ()
 
@@ -24,7 +25,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     self.logoutBtn.layer.cornerRadius = 4.0f;
     self.logoutBtn.clipsToBounds = YES;
     [self.logoutBtn addTarget:self action:@selector(btnPressed) forControlEvents:UIControlEventTouchUpInside];
@@ -89,7 +89,7 @@
 }
 
 - (void)tapAppInfoView {
-    
+    [self.navigationController pushViewController:[[GRAppInfoViewController alloc] init] animated:YES];
 }
 
 - (void)tapAutherInfoView {

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GRAppInfoViewController">
+            <connections>
+                <outlet property="appIconImgView" destination="OAY-Gb-0XC" id="8bW-wZ-tgw"/>
+                <outlet property="appRatingView" destination="lu9-CN-6Db" id="V0q-Kv-QO3"/>
+                <outlet property="moreInfoView" destination="L1Y-ix-IOc" id="yaA-ca-xvu"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_icon" translatesAutoresizingMaskIntoConstraints="NO" id="OAY-Gb-0XC" userLabel="App ImgView">
+                    <rect key="frame" x="155" y="94" width="65" height="65"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="65" id="6Vk-Bf-eMe"/>
+                        <constraint firstAttribute="height" constant="65" id="cPL-uW-JVx"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lu9-CN-6Db" userLabel="APP Rating View">
+                    <rect key="frame" x="0.0" y="215" width="375" height="50"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info_rate_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Sow-0l-L4M">
+                            <rect key="frame" x="15" y="15" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="7ql-Eb-jtC"/>
+                                <constraint firstAttribute="height" constant="20" id="PIQ-Ty-oTM"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="去评分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1X4-ht-i0F">
+                            <rect key="frame" x="46" y="0.0" width="74" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="74" id="6n0-Ac-Gf3"/>
+                                <constraint firstAttribute="height" constant="50" id="jUX-1H-Fu2"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJX-KX-v5h" userLabel="More Label">
+                            <rect key="frame" x="346" y="1" width="29" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="dEY-Cv-PD1"/>
+                                <constraint firstAttribute="width" constant="29" id="pU3-z5-aj1"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="NJX-KX-v5h" firstAttribute="top" secondItem="lu9-CN-6Db" secondAttribute="top" constant="1" id="1nL-Ds-BcB"/>
+                        <constraint firstItem="Sow-0l-L4M" firstAttribute="leading" secondItem="lu9-CN-6Db" secondAttribute="leading" constant="15" id="7WK-zH-pe9"/>
+                        <constraint firstAttribute="height" constant="50" id="HR3-2g-ZoN"/>
+                        <constraint firstAttribute="trailing" secondItem="NJX-KX-v5h" secondAttribute="trailing" id="mV4-u0-170"/>
+                        <constraint firstItem="Sow-0l-L4M" firstAttribute="top" secondItem="lu9-CN-6Db" secondAttribute="top" constant="15" id="rWy-PL-bYA"/>
+                        <constraint firstItem="1X4-ht-i0F" firstAttribute="leading" secondItem="Sow-0l-L4M" secondAttribute="trailing" constant="11" id="tKG-Od-2jG"/>
+                        <constraint firstItem="1X4-ht-i0F" firstAttribute="top" secondItem="lu9-CN-6Db" secondAttribute="top" id="tUl-PO-75U"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L1Y-ix-IOc" userLabel="More View">
+                    <rect key="frame" x="0.0" y="275" width="375" height="50"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info_more_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Pmx-Uv-6by">
+                            <rect key="frame" x="15" y="15" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="atQ-7P-Bhd"/>
+                                <constraint firstAttribute="width" constant="20" id="qAE-eT-MXo"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关于咕噜校园" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Wh-K0-UkW">
+                            <rect key="frame" x="46" y="0.0" width="117" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="AkK-UW-5er"/>
+                                <constraint firstAttribute="width" constant="117" id="rMB-dq-ojA"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXO-a7-2nk" userLabel="More Label">
+                            <rect key="frame" x="346" y="1" width="29" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="1oe-i3-zzB"/>
+                                <constraint firstAttribute="width" constant="29" id="kYk-be-QEJ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Pmx-Uv-6by" firstAttribute="leading" secondItem="L1Y-ix-IOc" secondAttribute="leading" constant="15" id="MAc-A7-9yG"/>
+                        <constraint firstAttribute="height" constant="50" id="P6q-nD-0wz"/>
+                        <constraint firstAttribute="trailing" secondItem="UXO-a7-2nk" secondAttribute="trailing" id="Phw-iR-DAI"/>
+                        <constraint firstItem="Pmx-Uv-6by" firstAttribute="top" secondItem="L1Y-ix-IOc" secondAttribute="top" constant="15" id="Y1T-kL-k4d"/>
+                        <constraint firstItem="1Wh-K0-UkW" firstAttribute="top" secondItem="L1Y-ix-IOc" secondAttribute="top" id="gva-eK-Cm0"/>
+                        <constraint firstItem="1Wh-K0-UkW" firstAttribute="leading" secondItem="Pmx-Uv-6by" secondAttribute="trailing" constant="11" id="kPC-sD-Ct7"/>
+                        <constraint firstItem="UXO-a7-2nk" firstAttribute="top" secondItem="L1Y-ix-IOc" secondAttribute="top" constant="1" id="mBu-Jd-Gjl"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grooo外卖 v2.0 for iOS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rca-IH-Qth" userLabel="Version View">
+                    <rect key="frame" x="101" y="175" width="173" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="GQv-fw-Azf"/>
+                        <constraint firstAttribute="width" constant="173" id="jEh-kP-EVh"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info_team_icon" translatesAutoresizingMaskIntoConstraints="NO" id="txK-4f-gtb" userLabel="Team Info ImgView">
+                    <rect key="frame" x="41" y="632" width="292" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="292" id="J1b-om-sMv"/>
+                        <constraint firstAttribute="height" constant="15" id="W0B-O0-o7i"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="L1Y-ix-IOc" firstAttribute="top" secondItem="lu9-CN-6Db" secondAttribute="bottom" constant="10" id="0yb-n3-iVD"/>
+                <constraint firstItem="OAY-Gb-0XC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="94" id="Ci9-00-vy1"/>
+                <constraint firstItem="OAY-Gb-0XC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ikz-jE-qKG"/>
+                <constraint firstAttribute="bottom" secondItem="txK-4f-gtb" secondAttribute="bottom" constant="20" id="IzR-iX-XeE"/>
+                <constraint firstItem="rca-IH-Qth" firstAttribute="top" secondItem="OAY-Gb-0XC" secondAttribute="bottom" constant="16" id="MFu-xB-Kti"/>
+                <constraint firstItem="rca-IH-Qth" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="P5W-Wi-gsj"/>
+                <constraint firstAttribute="trailing" secondItem="L1Y-ix-IOc" secondAttribute="trailing" id="W3F-mv-V5T"/>
+                <constraint firstItem="lu9-CN-6Db" firstAttribute="top" secondItem="rca-IH-Qth" secondAttribute="bottom" constant="19" id="dXN-70-nc9"/>
+                <constraint firstAttribute="trailing" secondItem="lu9-CN-6Db" secondAttribute="trailing" id="oEL-lH-fvh"/>
+                <constraint firstItem="lu9-CN-6Db" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rJ6-TI-0tx"/>
+                <constraint firstItem="txK-4f-gtb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="sj4-JI-NFP"/>
+                <constraint firstItem="L1Y-ix-IOc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uKF-SO-LB5"/>
+            </constraints>
+            <point key="canvasLocation" x="-217" y="27"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="app_icon" width="60" height="60"/>
+        <image name="info_more_icon" width="20" height="20"/>
+        <image name="info_rate_icon" width="20" height="20"/>
+        <image name="info_team_icon" width="543" height="28"/>
+    </resources>
+</document>

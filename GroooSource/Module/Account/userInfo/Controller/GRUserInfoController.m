@@ -35,7 +35,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     self.avatarImgView.layer.cornerRadius = self.avatarImgView.gr_width/2;
     self.avatarImgView.clipsToBounds = YES;
     self.settingViewTop.constant = 16 - 2 - self.passwordView.gr_height;
@@ -131,6 +130,14 @@
     
     UITapGestureRecognizer *settingViewTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapSettingView)];
     [self.settingView addGestureRecognizer:settingViewTap];
+    
+    UITapGestureRecognizer *scoreLabelTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapScoreLabel)];
+    self.scoreLabel.userInteractionEnabled = YES;
+    [self.scoreLabel addGestureRecognizer:scoreLabelTap];
+    
+    UITapGestureRecognizer *userRatingLabelTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapUserRatingLabel)];
+    self.userRatingLabel.userInteractionEnabled = YES;
+    [self.userRatingLabel addGestureRecognizer:userRatingLabelTap];
 }
 
 - (void)clearInfo {
@@ -160,6 +167,8 @@
 - (void)tapNickNameLabel {
     if (![GRUserManager sharedManager].currentUser.loginData.token) {
         [GRRouter open:@"present->GRLoginViewController" params:nil completed:nil];
+    } else {
+        [UIView gr_showOscillatoryAnimationWithLayer:self.nickNameLabel.layer type:GROscillatoryAnimationToSmaller range:0.7];
     }
 }
 
@@ -173,6 +182,14 @@
 
 - (void)tapSettingView {
     [self.navigationController pushViewController:[[GRSettingViewController alloc] init] animated:YES];
+}
+
+- (void)tapScoreLabel {
+    [UIView gr_showOscillatoryAnimationWithLayer:self.scoreLabel.layer type:GROscillatoryAnimationToBigger range:1.5];
+}
+
+- (void)tapUserRatingLabel {
+    [UIView gr_showOscillatoryAnimationWithLayer:self.userRatingLabel.layer type:GROscillatoryAnimationToBigger range:1.5];
 }
 
 @end
