@@ -11,10 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GRSettingViewController">
             <connections>
-                <outlet property="appInfoView" destination="3Mk-ZX-7YG" id="4mm-Cj-Obk"/>
-                <outlet property="autherInfoView" destination="Gbp-03-bTp" id="N9N-Ys-d2a"/>
+                <outlet property="appInfoView" destination="3Mk-ZX-7YG" id="7Ml-08-ifb"/>
+                <outlet property="autherInfoView" destination="Gbp-03-bTp" id="P1k-zU-XtN"/>
                 <outlet property="cacheSizeLabel" destination="Hhz-NQ-fcy" id="Qcc-Lg-azL"/>
-                <outlet property="clearCacheView" destination="bOy-uj-Zaz" id="8gX-nW-aH0"/>
+                <outlet property="clearCacheView" destination="bOy-uj-Zaz" id="gl7-Ly-mOn"/>
                 <outlet property="logoutBtn" destination="0c1-RP-TaW" id="EOp-gj-Ybh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -24,7 +24,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bOy-uj-Zaz" userLabel="ClearCache View" customClass="GRClickableView">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bOy-uj-Zaz" userLabel="ClearCache View">
                     <rect key="frame" x="0.0" y="74" width="375" height="50"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="setting_clear_icon" translatesAutoresizingMaskIntoConstraints="NO" id="q2W-kg-HZ0" userLabel="Clear ImgView">
@@ -66,7 +66,7 @@
                         <constraint firstItem="CjZ-5r-rjP" firstAttribute="leading" secondItem="q2W-kg-HZ0" secondAttribute="trailing" constant="11" id="vUW-ze-cVS"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Mk-ZX-7YG" userLabel="Info View" customClass="GRClickableView">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Mk-ZX-7YG" userLabel="Info View">
                     <rect key="frame" x="0.0" y="134" width="375" height="50"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="setting_info_icon" translatesAutoresizingMaskIntoConstraints="NO" id="LJH-BN-Tm0" userLabel="Info ImgView">
@@ -116,7 +116,7 @@
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                     <state key="normal" title="退出登录"/>
                 </button>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gbp-03-bTp" userLabel="Autherinfo View" customClass="GRClickableView">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gbp-03-bTp" userLabel="Autherinfo View">
                     <rect key="frame" x="0.0" y="186" width="375" height="50"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="setting_auther" translatesAutoresizingMaskIntoConstraints="NO" id="g3e-bQ-Blo" userLabel="Auther ImgView">

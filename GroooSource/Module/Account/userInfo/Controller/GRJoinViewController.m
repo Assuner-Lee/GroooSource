@@ -10,7 +10,7 @@
 
 @interface GRJoinViewController ()
 
-@property (weak, nonatomic) IBOutlet GRClickableLabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UITextView *contentTextView;
 @end
 
@@ -22,9 +22,9 @@
     self.contentTextView.layer.cornerRadius = 4.0f;
     self.contentTextView.clipsToBounds = YES;
     
-    self.titleLabel.actionBlock = ^{
-        [self tapTitleLabel];
-    };
+    [self.titleLabel gr_addTapAction:^{
+         [self tapTitleLabel];
+    }];
     
     [self performSelector:@selector(tapTitleLabel) withObject:nil afterDelay:0.5];}
 

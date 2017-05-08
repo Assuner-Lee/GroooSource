@@ -14,7 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *shopNameLabel;
 @property (weak, nonatomic) IBOutlet GROrderStatusLabel *orderStatusLabel;
 @property (weak, nonatomic) IBOutlet UILabel *orderTimeLabel;
-@property (weak, nonatomic) IBOutlet GRClickableImgView *shopLogo;
+@property (weak, nonatomic) IBOutlet UIImageView *shopLogo;
 @property (weak, nonatomic) IBOutlet UILabel *orderSumLabel;
 @property (weak, nonatomic) IBOutlet UILabel *moreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *orderIDLabel;
@@ -42,9 +42,9 @@
     self.shopLogo.layer.cornerRadius = 2;
     self.shopLogo.clipsToBounds = YES;
     self.shopLogo.userInteractionEnabled = YES;
-    self.shopLogo.actionBlock = ^{
+    [self.shopLogo gr_addTapAction:^{
         [GRRouter open:@"push->GRMenuViewController" params:@{@"shop": _orderData.shop}];
-    };
+    }];
     self.clipsToBounds = YES;
 }
 

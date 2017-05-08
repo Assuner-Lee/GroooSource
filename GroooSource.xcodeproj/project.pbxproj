@@ -85,15 +85,12 @@
 		9CB92AC91E63FC8000650CC5 /* GRTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB92AC81E63FC8000650CC5 /* GRTabBarViewController.m */; };
 		9CB9DFA21E659D7000C8F5E8 /* GROrderList.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB9DFA11E659D7000C8F5E8 /* GROrderList.m */; };
 		9CB9DFA51E65A9F800C8F5E8 /* GROrderListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB9DFA41E65A9F800C8F5E8 /* GROrderListRequest.m */; };
-		9CC838D51EBEE862008CF79A /* GRClickableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC838D41EBEE862008CF79A /* GRClickableView.m */; };
-		9CC838D81EBEEDDC008CF79A /* GRClickableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC838D71EBEEDDC008CF79A /* GRClickableLabel.m */; };
 		9CC838DC1EBEF891008CF79A /* GRAboutGroooController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC838DA1EBEF891008CF79A /* GRAboutGroooController.m */; };
 		9CC838DD1EBEF891008CF79A /* GRAboutGroooController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC838DB1EBEF891008CF79A /* GRAboutGroooController.xib */; };
 		9CC838E11EBF221D008CF79A /* GRContactUsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC838DF1EBF221D008CF79A /* GRContactUsController.m */; };
 		9CC838E21EBF221D008CF79A /* GRContactUsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC838E01EBF221D008CF79A /* GRContactUsController.xib */; };
 		9CC838E61EBF2C60008CF79A /* GRAutherInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC838E41EBF2C60008CF79A /* GRAutherInfoController.m */; };
 		9CC838E71EBF2C60008CF79A /* GRAutherInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC838E51EBF2C60008CF79A /* GRAutherInfoController.xib */; };
-		9CC838EB1EC00BED008CF79A /* GRClickableImgView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC838EA1EC00BED008CF79A /* GRClickableImgView.m */; };
 		9CC838EE1EC0141D008CF79A /* UIView+GRClickable.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC838ED1EC0141D008CF79A /* UIView+GRClickable.m */; };
 		9CCC22C91E950EE60029B0EB /* GRCashierdeskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCC22C71E950EE60029B0EB /* GRCashierdeskCell.m */; };
 		9CCC22CA1E950EE60029B0EB /* GRCashierdeskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CCC22C81E950EE60029B0EB /* GRCashierdeskCell.xib */; };
@@ -253,10 +250,6 @@
 		9CB9DFA11E659D7000C8F5E8 /* GROrderList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GROrderList.m; sourceTree = "<group>"; };
 		9CB9DFA31E65A9F800C8F5E8 /* GROrderListRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GROrderListRequest.h; sourceTree = "<group>"; };
 		9CB9DFA41E65A9F800C8F5E8 /* GROrderListRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GROrderListRequest.m; sourceTree = "<group>"; };
-		9CC838D31EBEE862008CF79A /* GRClickableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GRClickableView.h; path = GRSegmentView/GRClickableView.h; sourceTree = "<group>"; };
-		9CC838D41EBEE862008CF79A /* GRClickableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GRClickableView.m; path = GRSegmentView/GRClickableView.m; sourceTree = "<group>"; };
-		9CC838D61EBEEDDC008CF79A /* GRClickableLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRClickableLabel.h; sourceTree = "<group>"; };
-		9CC838D71EBEEDDC008CF79A /* GRClickableLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRClickableLabel.m; sourceTree = "<group>"; };
 		9CC838D91EBEF891008CF79A /* GRAboutGroooController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRAboutGroooController.h; sourceTree = "<group>"; };
 		9CC838DA1EBEF891008CF79A /* GRAboutGroooController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRAboutGroooController.m; sourceTree = "<group>"; };
 		9CC838DB1EBEF891008CF79A /* GRAboutGroooController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRAboutGroooController.xib; sourceTree = "<group>"; };
@@ -266,8 +259,6 @@
 		9CC838E31EBF2C60008CF79A /* GRAutherInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRAutherInfoController.h; sourceTree = "<group>"; };
 		9CC838E41EBF2C60008CF79A /* GRAutherInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRAutherInfoController.m; sourceTree = "<group>"; };
 		9CC838E51EBF2C60008CF79A /* GRAutherInfoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRAutherInfoController.xib; sourceTree = "<group>"; };
-		9CC838E91EC00BED008CF79A /* GRClickableImgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRClickableImgView.h; sourceTree = "<group>"; };
-		9CC838EA1EC00BED008CF79A /* GRClickableImgView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRClickableImgView.m; sourceTree = "<group>"; };
 		9CC838EC1EC0141D008CF79A /* UIView+GRClickable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GRClickable.h"; sourceTree = "<group>"; };
 		9CC838ED1EC0141D008CF79A /* UIView+GRClickable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GRClickable.m"; sourceTree = "<group>"; };
 		9CCC22C61E950EE60029B0EB /* GRCashierdeskCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRCashierdeskCell.h; sourceTree = "<group>"; };
@@ -666,7 +657,6 @@
 		9CAAF5781E6E92C500730810 /* BaseView */ = {
 			isa = PBXGroup;
 			children = (
-				9CC838E81EC00BB3008CF79A /* GRClickableView */,
 				9CAAF5791E6E92C500730810 /* GRSegmentView */,
 			);
 			name = BaseView;
@@ -741,19 +731,6 @@
 				9CAAF57E1E6E9E4B00730810 /* GROrderListTable.m */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		9CC838E81EC00BB3008CF79A /* GRClickableView */ = {
-			isa = PBXGroup;
-			children = (
-				9CC838D31EBEE862008CF79A /* GRClickableView.h */,
-				9CC838D41EBEE862008CF79A /* GRClickableView.m */,
-				9CC838D61EBEEDDC008CF79A /* GRClickableLabel.h */,
-				9CC838D71EBEEDDC008CF79A /* GRClickableLabel.m */,
-				9CC838E91EC00BED008CF79A /* GRClickableImgView.h */,
-				9CC838EA1EC00BED008CF79A /* GRClickableImgView.m */,
-			);
-			name = GRClickableView;
 			sourceTree = "<group>";
 		};
 		9CCC22C51E950E9A0029B0EB /* GRCashierdeskView */ = {
@@ -1032,12 +1009,10 @@
 				9C1BE9411E8B8F37007F5733 /* GRMenuMainView.m in Sources */,
 				9C2C3FAF1E978CCA003E77E5 /* GRPlaceOrderRequest.m in Sources */,
 				9CC838E61EBF2C60008CF79A /* GRAutherInfoController.m in Sources */,
-				9CC838D81EBEEDDC008CF79A /* GRClickableLabel.m in Sources */,
 				9C5384971E51D4BC004EDBCF /* GRRegisterRequest.m in Sources */,
 				9CAAF56A1E6D0E8B00730810 /* GROrderListCell.m in Sources */,
 				9CB92AB61E5D67AD00650CC5 /* GRShopListCell.m in Sources */,
 				823FE4631E4D850F008E8CB0 /* UIView+GRShortcut.m in Sources */,
-				9CC838EB1EC00BED008CF79A /* GRClickableImgView.m in Sources */,
 				9CC838E11EBF221D008CF79A /* GRContactUsController.m in Sources */,
 				9C1507F51E515905007C2B8F /* GRLoginRequest.m in Sources */,
 				82AF89D51E4B3F5200676D29 /* NSString+GRCommen.m in Sources */,
@@ -1075,7 +1050,6 @@
 				9CB92AC01E601EC000650CC5 /* GRCacheManager.m in Sources */,
 				9C2749051EBDEDB70022ABCC /* GRSettingViewController.m in Sources */,
 				9CC838DC1EBEF891008CF79A /* GRAboutGroooController.m in Sources */,
-				9CC838D51EBEE862008CF79A /* GRClickableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

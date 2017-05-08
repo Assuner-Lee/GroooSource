@@ -13,10 +13,10 @@
 
 @interface GRAppInfoViewController () <SKStoreProductViewControllerDelegate>
 
-@property (weak, nonatomic) IBOutlet GRClickableImgView *appIconImgView;
-@property (weak, nonatomic) IBOutlet GRClickableView *appRatingView;
-@property (weak, nonatomic) IBOutlet GRClickableView *moreInfoView;
-@property (weak, nonatomic) IBOutlet GRClickableView *contactUsView;
+@property (weak, nonatomic) IBOutlet UIImageView *appIconImgView;
+@property (weak, nonatomic) IBOutlet UIView *appRatingView;
+@property (weak, nonatomic) IBOutlet UIView *moreInfoView;
+@property (weak, nonatomic) IBOutlet UIView *contactUsView;
 
 @property (nonatomic, strong) SKStoreProductViewController *storeProductVC;
 
@@ -36,11 +36,11 @@
 }
 
 - (void)addGesture {
-    self.appIconImgView.actionBlock = ^{
+    [self.appIconImgView gr_addTapAction:^{
         [self tapAppIconImgView];
-    };
+    }];
     
-    self.appRatingView.actionBlock = ^{
+    [self.appRatingView gr_addTapAction:^{
         self.storeProductVC = [[SKStoreProductViewController alloc] init];
         self.storeProductVC.delegate = self;
         NSDictionary *dict = [NSDictionary dictionaryWithObject:@"1124767297" forKey:SKStoreProductParameterITunesItemIdentifier];
@@ -53,15 +53,16 @@
                 [self presentViewController:self.storeProductVC animated:YES completion:nil];
             }
         }];
-    };
+
+    }];
     
-    self.contactUsView.actionBlock = ^{
+    [self.contactUsView gr_addTapAction:^{
         [self.navigationController pushViewController:[[GRContactUsController alloc] init] animated:YES];
-    };
+    }];
     
-    self.moreInfoView.actionBlock = ^{
+    [self.moreInfoView gr_addTapAction:^{
         [self.navigationController pushViewController:[[GRAboutGroooController alloc] init] animated:YES];
-    };
+    }];
 }
 
 #pragma - Actions 

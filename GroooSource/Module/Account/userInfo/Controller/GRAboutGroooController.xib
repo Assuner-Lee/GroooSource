@@ -12,8 +12,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GRAboutGroooController">
             <connections>
                 <outlet property="groooDescTextView" destination="ABQ-A9-vvg" id="Vfo-xE-iEU"/>
-                <outlet property="groooHeartImgView" destination="DEo-lk-ljy" id="xz9-tF-wKR"/>
-                <outlet property="groooTextImgView" destination="Taj-tW-pjs" id="6qX-pf-a76"/>
+                <outlet property="groooHeartImgView" destination="DEo-lk-ljy" id="VHb-Ud-cIX"/>
+                <outlet property="groooTextImgView" destination="Taj-tW-pjs" id="yRg-8d-mu6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grooo_about" translatesAutoresizingMaskIntoConstraints="NO" id="DEo-lk-ljy" customClass="GRClickableImgView">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grooo_about" translatesAutoresizingMaskIntoConstraints="NO" id="DEo-lk-ljy">
                     <rect key="frame" x="67" y="84" width="240" height="188"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="188" id="oe4-5C-r7O"/>
@@ -53,7 +53,7 @@
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_text" translatesAutoresizingMaskIntoConstraints="NO" id="Taj-tW-pjs" customClass="GRClickableImgView">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_text" translatesAutoresizingMaskIntoConstraints="NO" id="Taj-tW-pjs">
                     <rect key="frame" x="44" y="550" width="286" height="83"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="286" id="dDa-M9-hwe"/>

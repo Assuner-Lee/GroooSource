@@ -11,15 +11,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GRAutherInfoController">
             <connections>
-                <outlet property="appAutherImgView" destination="FPf-Rr-5aU" id="tEc-IT-jfb"/>
+                <outlet property="appAutherImgView" destination="FPf-Rr-5aU" id="9fb-hb-oJk"/>
                 <outlet property="appAutherNameLabel" destination="rAr-S7-c6G" id="BJU-b6-yfT"/>
-                <outlet property="blogView" destination="GhY-Or-SMv" id="Wsm-Ho-eZS"/>
+                <outlet property="blogView" destination="GhY-Or-SMv" id="h02-Wk-6PD"/>
                 <outlet property="contactInfoView" destination="88r-Xb-PAA" id="Zrd-pD-SMb"/>
-                <outlet property="contactView" destination="JwA-Sp-smE" id="Q0S-6L-U3c"/>
-                <outlet property="serviceAutherImgView" destination="Vqb-AS-QMb" id="gfV-Nz-GcD"/>
+                <outlet property="contactView" destination="JwA-Sp-smE" id="y5S-aa-3WW"/>
+                <outlet property="serviceAutherImgView" destination="Vqb-AS-QMb" id="sFS-AT-Zra"/>
                 <outlet property="serviceAutherNameLabel" destination="8iE-ax-kYd" id="aPF-ce-WUn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="e5P-dN-cu9"/>
-                <outlet property="weiboView" destination="jru-Tb-7im" id="BbZ-hd-m0y"/>
+                <outlet property="weiboView" destination="jru-Tb-7im" id="YLi-0C-pgm"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -27,14 +27,14 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="service_auther_avatar" translatesAutoresizingMaskIntoConstraints="NO" id="Vqb-AS-QMb" customClass="GRClickableImgView">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="service_auther_avatar" translatesAutoresizingMaskIntoConstraints="NO" id="Vqb-AS-QMb">
                     <rect key="frame" x="155" y="94" width="65" height="65"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="65" id="LxC-bK-ckT"/>
                         <constraint firstAttribute="height" constant="65" id="VTV-pd-kgO"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="auther_avatar" translatesAutoresizingMaskIntoConstraints="NO" id="FPf-Rr-5aU" customClass="GRClickableImgView">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="auther_avatar" translatesAutoresizingMaskIntoConstraints="NO" id="FPf-Rr-5aU">
                     <rect key="frame" x="155" y="94" width="65" height="65"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="65" id="3ft-oH-Dna"/>
@@ -61,7 +61,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GhY-Or-SMv" customClass="GRClickableView">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GhY-Or-SMv">
                     <rect key="frame" x="0.0" y="215" width="375" height="50"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="auther_blog_icon" translatesAutoresizingMaskIntoConstraints="NO" id="2mk-Xj-J9b">
@@ -103,7 +103,7 @@
                         <constraint firstItem="Wiq-X8-xkz" firstAttribute="top" secondItem="GhY-Or-SMv" secondAttribute="top" id="mfe-tO-Mj4"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jru-Tb-7im" customClass="GRClickableView">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jru-Tb-7im">
                     <rect key="frame" x="0.0" y="267" width="375" height="50"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="auther_weibo_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Zl5-Zb-6FL">
@@ -145,7 +145,7 @@
                         <constraint firstAttribute="trailing" secondItem="5t1-8X-tiG" secondAttribute="trailing" id="r4Q-il-grA"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JwA-Sp-smE" customClass="GRClickableView">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JwA-Sp-smE">
                     <rect key="frame" x="0.0" y="342" width="375" height="50"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="auther_contact_icon" translatesAutoresizingMaskIntoConstraints="NO" id="3QD-2a-B4W">

@@ -11,8 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GRFindMoreViewController">
             <connections>
-                <outlet property="joinView" destination="LSA-Dk-byq" id="voW-O9-xeD"/>
-                <outlet property="tuhaoRankView" destination="Jgj-Ob-PGm" id="tw0-8t-L9K"/>
+                <outlet property="joinView" destination="LSA-Dk-byq" id="dSF-nI-ftg"/>
+                <outlet property="tuhaoRankView" destination="Jgj-Ob-PGm" id="JiY-SY-44A"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,7 +21,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jgj-Ob-PGm" customClass="GRClickableView">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jgj-Ob-PGm">
                     <rect key="frame" x="0.0" y="74" width="375" height="50"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="find_money_icon" translatesAutoresizingMaskIntoConstraints="NO" id="PYM-Qx-H1m">
@@ -63,7 +63,7 @@
                         <constraint firstAttribute="trailing" secondItem="l2f-qo-u6o" secondAttribute="trailing" id="rGE-jP-w2W"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LSA-Dk-byq" customClass="GRClickableView">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LSA-Dk-byq">
                     <rect key="frame" x="0.0" y="134" width="375" height="50"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="find_join_icon" translatesAutoresizingMaskIntoConstraints="NO" id="4bX-Ki-KUG">

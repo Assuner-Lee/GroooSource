@@ -12,7 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GRJoinViewController">
             <connections>
                 <outlet property="contentTextView" destination="g9N-CG-lrG" id="OpX-lv-DSB"/>
-                <outlet property="titleLabel" destination="See-lE-6jf" id="7Cc-TE-U0V"/>
+                <outlet property="titleLabel" destination="See-lE-6jf" id="cIx-Cq-Dcd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,7 +21,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="人员招募" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="See-lE-6jf" customClass="GRClickableLabel">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="人员招募" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="See-lE-6jf">
                     <rect key="frame" x="16" y="79" width="89" height="34"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="89" id="A7B-Xd-AER"/>

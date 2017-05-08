@@ -11,8 +11,8 @@
 
 @interface GRFindMoreViewController ()
 
-@property (weak, nonatomic) IBOutlet GRClickableView *tuhaoRankView;
-@property (weak, nonatomic) IBOutlet GRClickableView *joinView;
+@property (weak, nonatomic) IBOutlet UIView *tuhaoRankView;
+@property (weak, nonatomic) IBOutlet UIView *joinView;
 
 @end
 
@@ -37,13 +37,13 @@
 }
 
 - (void)addGesture {
-    self.tuhaoRankView.actionBlock = ^{
+    [self.tuhaoRankView gr_addTapAction:^{
         
-    };
+    }];
     
-    self.joinView.actionBlock = ^{
+    [self.joinView gr_addTapAction:^{
         [self.navigationController pushViewController:[[GRJoinViewController alloc] init] animated:YES];
-    };
+    }];
 }
 
 @end

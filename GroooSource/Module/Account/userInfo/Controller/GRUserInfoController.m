@@ -15,18 +15,18 @@
 
 @interface GRUserInfoController ()
 
-@property (weak, nonatomic) IBOutlet GRClickableImgView *avatarImgView;
-@property (weak, nonatomic) IBOutlet GRClickableLabel *nickNameLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *avatarImgView;
+@property (weak, nonatomic) IBOutlet UILabel *nickNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *userEmailLabel;
-@property (weak, nonatomic) IBOutlet GRClickableLabel *scoreLabel;
-@property (weak, nonatomic) IBOutlet GRClickableLabel *userRatingLabel;
-@property (weak, nonatomic) IBOutlet GRClickableView *addressView;
-@property (weak, nonatomic) IBOutlet GRClickableView *passwordView;
+@property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (weak, nonatomic) IBOutlet UILabel *userRatingLabel;
+@property (weak, nonatomic) IBOutlet UIView *addressView;
+@property (weak, nonatomic) IBOutlet UIView *passwordView;
 @property (weak, nonatomic) IBOutlet UILabel *addressStatusLabel;
 
-@property (weak, nonatomic) IBOutlet GRClickableView *findView;
+@property (weak, nonatomic) IBOutlet UIView *findView;
 
-@property (weak, nonatomic) IBOutlet GRClickableView *settingView;
+@property (weak, nonatomic) IBOutlet UIView *settingView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *findViewTop;
 
 @property (nonatomic, strong) GRUserInfo *userInfo;
@@ -118,45 +118,45 @@
 }
 
 - (void)addGesture {
-    self.avatarImgView.actionBlock = ^{
+    [self.avatarImgView gr_addTapAction:^{
         
-    };
+    }];
     
-    self.nickNameLabel.actionBlock = ^{
+    [self.nickNameLabel gr_addTapAction:^{
         if (![GRUserManager sharedManager].currentUser.loginData.token) {
             [GRRouter open:@"present->GRLoginViewController" params:nil completed:nil];
         } else {
             [UIView gr_showOscillatoryAnimationWithLayer:self.nickNameLabel.layer type:GROscillatoryAnimationToSmaller range:0.7];
         }
-    };
+    }];
     
     [self.userEmailLabel gr_addTapAction:^{
         [UIView gr_showOscillatoryAnimationWithLayer:self.userEmailLabel.layer type:GROscillatoryAnimationToBigger range:1.1];
     }];
     
-    self.addressView.actionBlock = ^{
+    [self.addressView gr_addTapAction:^{
         
-    };
+    }];
     
-    self.passwordView.actionBlock = ^{
+    [self.passwordView gr_addTapAction:^{
         [self.navigationController pushViewController:[[GRChangePasswordController alloc] init] animated:YES];
-    };
+    }];
     
-    self.findView.actionBlock = ^{
+    [self.findView gr_addTapAction:^{
         [self.navigationController pushViewController:[[GRFindMoreViewController alloc] init] animated:YES];
-    };
+    }];
     
-    self.settingView.actionBlock = ^{
+    [self.settingView gr_addTapAction:^{
         [self.navigationController pushViewController:[[GRSettingViewController alloc] init] animated:YES];
-    };
+    }];
     
-    self.scoreLabel.actionBlock = ^{
-        [UIView gr_showOscillatoryAnimationWithLayer:self.scoreLabel.layer type:GROscillatoryAnimationToBigger range:1.5];
-    };
+    [self.scoreLabel gr_addTapAction:^{
+         [UIView gr_showOscillatoryAnimationWithLayer:self.scoreLabel.layer type:GROscillatoryAnimationToBigger range:1.5];
+    }];
     
-   self.userRatingLabel.actionBlock = ^{
-       [UIView gr_showOscillatoryAnimationWithLayer:self.userRatingLabel.layer type:GROscillatoryAnimationToBigger range:1.5];
-   };
+    [self.userRatingLabel gr_addTapAction:^{
+        [UIView gr_showOscillatoryAnimationWithLayer:self.userRatingLabel.layer type:GROscillatoryAnimationToBigger range:1.5];
+    }];
 }
 
 - (void)clearInfo {

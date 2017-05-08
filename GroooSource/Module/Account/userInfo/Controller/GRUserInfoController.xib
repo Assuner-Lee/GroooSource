@@ -12,16 +12,16 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GRUserInfoController">
             <connections>
                 <outlet property="addressStatusLabel" destination="b2A-ts-NKa" id="mG3-eT-4XI"/>
-                <outlet property="addressView" destination="jcF-wX-Nn4" id="BBs-eZ-IIT"/>
-                <outlet property="avatarImgView" destination="dKQ-Bw-nFj" id="7t4-Tw-fGu"/>
-                <outlet property="findView" destination="B0t-8j-HkJ" id="ULZ-lb-H0b"/>
+                <outlet property="addressView" destination="jcF-wX-Nn4" id="yBN-dm-ChE"/>
+                <outlet property="avatarImgView" destination="dKQ-Bw-nFj" id="3PW-J3-QAD"/>
+                <outlet property="findView" destination="B0t-8j-HkJ" id="FrW-VW-YlR"/>
                 <outlet property="findViewTop" destination="0eh-1v-cqJ" id="vHW-jr-zBq"/>
-                <outlet property="nickNameLabel" destination="ktR-Zn-eGa" id="hra-4g-eq4"/>
-                <outlet property="passwordView" destination="EP2-0s-thZ" id="qKg-zg-8Ja"/>
-                <outlet property="scoreLabel" destination="ajj-z9-Klb" id="Drt-uF-0dn"/>
-                <outlet property="settingView" destination="28d-t7-xzg" id="hNF-bm-LGT"/>
+                <outlet property="nickNameLabel" destination="ktR-Zn-eGa" id="2aj-Xc-QGP"/>
+                <outlet property="passwordView" destination="EP2-0s-thZ" id="iQd-ZE-8fQ"/>
+                <outlet property="scoreLabel" destination="ajj-z9-Klb" id="1U9-Qk-8Pw"/>
+                <outlet property="settingView" destination="28d-t7-xzg" id="17Y-hU-ohe"/>
                 <outlet property="userEmailLabel" destination="Xm2-nW-MVk" id="ZvU-YQ-xvE"/>
-                <outlet property="userRatingLabel" destination="nHg-LL-4B4" id="tmt-pk-DN9"/>
+                <outlet property="userRatingLabel" destination="nHg-LL-4B4" id="hfF-kd-H7b"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -33,7 +33,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wNV-3W-Xvk" userLabel="BaseInfo View">
                     <rect key="frame" x="0.0" y="64" width="375" height="100"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_avatar_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="dKQ-Bw-nFj" userLabel="Avatar ImgView" customClass="GRClickableImgView">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_avatar_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="dKQ-Bw-nFj" userLabel="Avatar ImgView">
                             <rect key="frame" x="15" y="15" width="70" height="70"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="70" id="8NK-WP-vYO"/>
@@ -47,7 +47,7 @@
                                 <constraint firstAttribute="height" constant="1" id="OaX-Ud-hUP"/>
                             </constraints>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktR-Zn-eGa" userLabel="Nickname Label" customClass="GRClickableLabel">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktR-Zn-eGa" userLabel="Nickname Label">
                             <rect key="frame" x="100" y="15" width="260" height="36"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="36" id="Iik-9L-nSJ"/>
@@ -101,7 +101,7 @@
                                 <constraint firstAttribute="width" constant="1" id="QTD-sj-nwZ"/>
                             </constraints>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="***" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajj-z9-Klb" userLabel="Score Label" customClass="GRClickableLabel">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="***" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajj-z9-Klb" userLabel="Score Label">
                             <rect key="frame" x="8" y="8" width="171" height="27"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="27" id="5G3-TR-j9I"/>
@@ -119,7 +119,7 @@
                             <color key="textColor" red="0.99953407049999998" green="0.64904962489999996" blue="0.1292102275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="***" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHg-LL-4B4" userLabel="Rating TitleLabel" customClass="GRClickableLabel">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="***" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHg-LL-4B4" userLabel="Rating TitleLabel">
                             <rect key="frame" x="196" y="10" width="171" height="27"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="27" id="cUW-xb-MDD"/>
@@ -158,7 +158,7 @@
                         <constraint firstAttribute="bottom" secondItem="XgE-7c-4gB" secondAttribute="bottom" constant="10" id="xUA-vI-jNA"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jcF-wX-Nn4" userLabel="Address View" customClass="GRClickableView">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jcF-wX-Nn4" userLabel="Address View">
                     <rect key="frame" x="0.0" y="240" width="375" height="50"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_address_icon" translatesAutoresizingMaskIntoConstraints="NO" id="FyL-GJ-d1I" userLabel="Useraddress ImgView">
@@ -212,7 +212,7 @@
                         <constraint firstItem="b2A-ts-NKa" firstAttribute="top" secondItem="jcF-wX-Nn4" secondAttribute="top" constant="1" id="uBb-rF-iQJ"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EP2-0s-thZ" userLabel="Password View" customClass="GRClickableView">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EP2-0s-thZ" userLabel="Password View">
                     <rect key="frame" x="0.0" y="292" width="375" height="50"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R27-hX-RCV" userLabel="More Label">
@@ -254,7 +254,7 @@
                         <constraint firstItem="Q0E-dy-LgX" firstAttribute="leading" secondItem="EP2-0s-thZ" secondAttribute="leading" constant="14" id="eul-95-A1O"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="28d-t7-xzg" userLabel="Setting View" customClass="GRClickableView">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="28d-t7-xzg" userLabel="Setting View">
                     <rect key="frame" x="0.0" y="423" width="375" height="50"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFS-8I-x3A" userLabel="More Label">
@@ -296,7 +296,7 @@
                         <constraint firstAttribute="height" constant="50" id="tjf-l3-B6M"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B0t-8j-HkJ" userLabel="FindMore View" customClass="GRClickableView">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B0t-8j-HkJ" userLabel="FindMore View">
                     <rect key="frame" x="0.0" y="358" width="375" height="50"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwD-gk-Hca" userLabel="More Label">
@@ -360,7 +360,7 @@
                 <constraint firstItem="jcF-wX-Nn4" firstAttribute="top" secondItem="0d3-jR-d2n" secondAttribute="bottom" constant="16" id="yEf-Ga-UCe"/>
                 <constraint firstItem="B0t-8j-HkJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="zI5-lS-yPh"/>
             </constraints>
-            <point key="canvasLocation" x="-1050" y="-544"/>
+            <point key="canvasLocation" x="-1361" y="-660"/>
         </view>
     </objects>
     <resources>

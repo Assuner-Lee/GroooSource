@@ -15,9 +15,9 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *logoutBtn;
 @property (weak, nonatomic) IBOutlet UILabel *cacheSizeLabel;
-@property (weak, nonatomic) IBOutlet GRClickableView *clearCacheView;
-@property (weak, nonatomic) IBOutlet GRClickableView *appInfoView;
-@property (weak, nonatomic) IBOutlet GRClickableView *autherInfoView;
+@property (weak, nonatomic) IBOutlet UIView *clearCacheView;
+@property (weak, nonatomic) IBOutlet UIView *appInfoView;
+@property (weak, nonatomic) IBOutlet UIView *autherInfoView;
 
 
 @end
@@ -52,7 +52,7 @@
 }
 
 - (void)addGesture {
-    self.clearCacheView.actionBlock = ^{
+    [self.clearCacheView gr_addTapAction:^{
         if ([self.cacheSizeLabel.text isEqualToString:@"共0.000M"]) {
             [self showMessage:@"无需清理!"];
         } else {
@@ -62,15 +62,16 @@
             [self hideProgress];
             [MBProgressHUD gr_showSuccess:@"已清理!"];
         }
-    };
+
+    }];
     
-    self.appInfoView.actionBlock = ^{
-         [self.navigationController pushViewController:[[GRAppInfoViewController alloc] init] animated:YES];
-    };
+    [self.appInfoView gr_addTapAction:^{
+        [self.navigationController pushViewController:[[GRAppInfoViewController alloc] init] animated:YES];
+    }];
     
-    self.autherInfoView.actionBlock = ^{
-         [self.navigationController pushViewController:[[GRAutherInfoController alloc] init] animated:YES];
-    };
+    [self.autherInfoView gr_addTapAction:^{
+        [self.navigationController pushViewController:[[GRAutherInfoController alloc] init] animated:YES];
+    }];
 }
 
 - (void)configBtn {

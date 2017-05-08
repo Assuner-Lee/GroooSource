@@ -102,7 +102,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IhG-Et-Nfr" customClass="GRClickableImgView">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IhG-Et-Nfr">
                         <rect key="frame" x="8" y="44" width="60" height="60"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="60" id="Opw-OP-CHP"/>
@@ -155,7 +155,7 @@
                 <outlet property="orderStatusLabel" destination="epq-kB-Yxz" id="TyG-gA-ega"/>
                 <outlet property="orderSumLabel" destination="GeZ-oD-Jb1" id="uhw-93-S6v"/>
                 <outlet property="orderTimeLabel" destination="e5r-y9-7CG" id="PQK-5R-70f"/>
-                <outlet property="shopLogo" destination="IhG-Et-Nfr" id="P2e-tR-c7H"/>
+                <outlet property="shopLogo" destination="IhG-Et-Nfr" id="CDH-KY-sdx"/>
                 <outlet property="shopNameLabel" destination="Oda-mD-BOl" id="9DR-VX-gtp"/>
             </connections>
             <point key="canvasLocation" x="-942" y="-170"/>

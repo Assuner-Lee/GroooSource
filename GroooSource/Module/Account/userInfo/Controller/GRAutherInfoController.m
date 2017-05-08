@@ -11,13 +11,13 @@
 
 @interface GRAutherInfoController ()
 
-@property (weak, nonatomic) IBOutlet GRClickableImgView *appAutherImgView;
-@property (weak, nonatomic) IBOutlet GRClickableImgView *serviceAutherImgView;
+@property (weak, nonatomic) IBOutlet UIImageView *appAutherImgView;
+@property (weak, nonatomic) IBOutlet UIView *serviceAutherImgView;
 @property (weak, nonatomic) IBOutlet UILabel *appAutherNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *serviceAutherNameLabel;
-@property (weak, nonatomic) IBOutlet GRClickableView *blogView;
-@property (weak, nonatomic) IBOutlet GRClickableView *weiboView;
-@property (weak, nonatomic) IBOutlet GRClickableView *contactView;
+@property (weak, nonatomic) IBOutlet UIView *blogView;
+@property (weak, nonatomic) IBOutlet UIView *weiboView;
+@property (weak, nonatomic) IBOutlet UIView *contactView;
 @property (weak, nonatomic) IBOutlet UIView *contactInfoView;
 
 @property (nonatomic, assign) BOOL isAvatarSpread;
@@ -63,15 +63,15 @@
 }
 
 - (void)addGesture {
-    self.appAutherImgView.actionBlock = ^{
+    [self.appAutherImgView gr_addTapAction:^{
         [self tapAppAutherImgView];
-    };
+    }];
     
-    self.serviceAutherImgView.actionBlock = ^{
+    [self.serviceAutherImgView gr_addTapAction:^{
         [self.navigationController pushViewController:[[GRWebViewController alloc] initWithURL:kURL_SERVICE_AUTHER_GIT title:@"后端作者负责哥的GitHub"] animated:YES];
-    };
+    }];
     
-    self.contactView.actionBlock = ^{
+    [self.contactView gr_addTapAction:^{
         if (!self.isContactInfoSpread) {
             [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseInOut animations:^{
                 self.contactInfoView.gr_height = 150;
@@ -82,15 +82,15 @@
             } completion:nil];
         }
         self.isContactInfoSpread = !self.isContactInfoSpread;
-    };
+    }];
     
-    self.blogView.actionBlock = ^{
+    [self.blogView gr_addTapAction:^{
         [self.navigationController pushViewController:[[GRWebViewController alloc] initWithURL:kURL_BLOG title:@"技术博客"] animated:YES];
-    };
+    }];
     
-    self.weiboView.actionBlock = ^{
+    [self.weiboView gr_addTapAction:^{
         [self.navigationController pushViewController:[[GRWebViewController alloc] initWithURL:kURL_WEIBO title:@"微博"] animated:YES];
-    };
+    }];
 }
 
 #pragma - Actions 
