@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GRContactUsController">
             <connections>
+                <outlet property="infoView" destination="Gfr-6h-gZ7" id="rpe-zV-X2T"/>
+                <outlet property="titleLabel" destination="p6j-dC-E59" id="pAb-zK-HP4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,31 +22,31 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gfr-6h-gZ7">
-                    <rect key="frame" x="0.0" y="84" width="375" height="250"/>
+                    <rect key="frame" x="15" y="121" width="345" height="250"/>
                     <subviews>
                         <view alpha="0.12" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="32l-3o-WUV" userLabel="Line1">
-                            <rect key="frame" x="15" y="49" width="360" height="1"/>
+                            <rect key="frame" x="15" y="49" width="330" height="1"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="GvQ-jj-89C"/>
                             </constraints>
                         </view>
                         <view alpha="0.11999999731779099" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q6U-69-tCE" userLabel="Line2">
-                            <rect key="frame" x="15" y="99" width="360" height="1"/>
+                            <rect key="frame" x="15" y="99" width="330" height="1"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="K7D-ei-RSQ"/>
                             </constraints>
                         </view>
                         <view alpha="0.11999999731779099" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZF8-7f-0GP" userLabel="Line3">
-                            <rect key="frame" x="15" y="149" width="360" height="1"/>
+                            <rect key="frame" x="15" y="149" width="330" height="1"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="o0S-GC-Fmm"/>
                             </constraints>
                         </view>
                         <view alpha="0.11999999731779099" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IEM-tZ-Ucw" userLabel="Line4">
-                            <rect key="frame" x="15" y="199" width="360" height="1"/>
+                            <rect key="frame" x="15" y="199" width="330" height="1"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="Fua-FA-bwO"/>
@@ -86,7 +88,7 @@
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="客服QQ：2608918136" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vzd-11-wnK">
-                            <rect key="frame" x="46" y="0.0" width="329" height="50"/>
+                            <rect key="frame" x="46" y="0.0" width="299" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="UlQ-Mc-hhT"/>
                             </constraints>
@@ -95,7 +97,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="微信公众号：Gulugrooo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JR-0N-ltp">
-                            <rect key="frame" x="46" y="49" width="329" height="50"/>
+                            <rect key="frame" x="46" y="49" width="299" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="SZm-6n-6qo"/>
                             </constraints>
@@ -104,7 +106,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="微信订阅号：咕噜校园" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2Z-0t-3SM">
-                            <rect key="frame" x="46" y="99" width="329" height="50"/>
+                            <rect key="frame" x="46" y="99" width="299" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="F8W-Ig-jyV"/>
                             </constraints>
@@ -113,7 +115,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="咕噜分享群：216277792" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9h-mb-s0c">
-                            <rect key="frame" x="46" y="150" width="329" height="50"/>
+                            <rect key="frame" x="46" y="150" width="299" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="Z9G-DQ-7LL"/>
                             </constraints>
@@ -122,7 +124,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="咕噜发烧友群：437238825" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xd9-yD-abD">
-                            <rect key="frame" x="46" y="199" width="329" height="50"/>
+                            <rect key="frame" x="46" y="199" width="299" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="ViF-Wz-ytL"/>
                             </constraints>
@@ -173,14 +175,26 @@
                         <constraint firstItem="mbe-ru-uw4" firstAttribute="top" secondItem="IEM-tZ-Ucw" secondAttribute="bottom" constant="15" id="y65-G2-ovu"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="联系我们" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6j-dC-E59">
+                    <rect key="frame" x="15" y="79" width="89" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="89" id="OON-LN-Sn8"/>
+                        <constraint firstAttribute="height" constant="34" id="jcb-MQ-ycz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
-                <constraint firstItem="Gfr-6h-gZ7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="84" id="D9a-jD-wfP"/>
-                <constraint firstAttribute="trailing" secondItem="Gfr-6h-gZ7" secondAttribute="trailing" id="Hwd-hW-e2z"/>
-                <constraint firstItem="Gfr-6h-gZ7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yxs-f4-0wt"/>
+                <constraint firstItem="Gfr-6h-gZ7" firstAttribute="top" secondItem="p6j-dC-E59" secondAttribute="bottom" constant="8" id="AMl-1Z-eVV"/>
+                <constraint firstItem="p6j-dC-E59" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="GIr-Pq-nnY"/>
+                <constraint firstAttribute="trailing" secondItem="Gfr-6h-gZ7" secondAttribute="trailing" constant="15" id="Hwd-hW-e2z"/>
+                <constraint firstItem="p6j-dC-E59" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="79" id="ksn-n4-c9u"/>
+                <constraint firstItem="Gfr-6h-gZ7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="yxs-f4-0wt"/>
             </constraints>
-            <point key="canvasLocation" x="-109.5" y="47.5"/>
+            <point key="canvasLocation" x="-416" y="-81"/>
         </view>
     </objects>
     <resources>

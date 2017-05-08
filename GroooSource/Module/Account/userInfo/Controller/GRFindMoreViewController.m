@@ -8,6 +8,7 @@
 
 #import "GRFindMoreViewController.h"
 #import "GRJoinViewController.h"
+#import "GRTuhaoRankController.h"
 
 @interface GRFindMoreViewController ()
 
@@ -38,7 +39,7 @@
 
 - (void)addGesture {
     [self.tuhaoRankView gr_addTapAction:^{
-        
+        [self.navigationController pushViewController:[[GRTuhaoRankController alloc] init] animated:YES];
     }];
     
     [self.joinView gr_addTapAction:^{

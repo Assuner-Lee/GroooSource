@@ -92,6 +92,12 @@
 		9CC838E61EBF2C60008CF79A /* GRAutherInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC838E41EBF2C60008CF79A /* GRAutherInfoController.m */; };
 		9CC838E71EBF2C60008CF79A /* GRAutherInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC838E51EBF2C60008CF79A /* GRAutherInfoController.xib */; };
 		9CC838EE1EC0141D008CF79A /* UIView+GRClickable.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC838ED1EC0141D008CF79A /* UIView+GRClickable.m */; };
+		9CC838F21EC0632E008CF79A /* GRTuhaoRankController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC838F01EC0632E008CF79A /* GRTuhaoRankController.m */; };
+		9CC838F31EC0632E008CF79A /* GRTuhaoRankController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC838F11EC0632E008CF79A /* GRTuhaoRankController.xib */; };
+		9CC838F81EC0641C008CF79A /* GRTuhaoRankTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC838F61EC0641C008CF79A /* GRTuhaoRankTableCell.m */; };
+		9CC838F91EC0641C008CF79A /* GRTuhaoRankTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC838F71EC0641C008CF79A /* GRTuhaoRankTableCell.xib */; };
+		9CC838FC1EC07144008CF79A /* GRTuhaoRankList.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC838FB1EC07144008CF79A /* GRTuhaoRankList.m */; };
+		9CC838FF1EC07206008CF79A /* GRRankListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC838FE1EC07206008CF79A /* GRRankListRequest.m */; };
 		9CCC22C91E950EE60029B0EB /* GRCashierdeskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCC22C71E950EE60029B0EB /* GRCashierdeskCell.m */; };
 		9CCC22CA1E950EE60029B0EB /* GRCashierdeskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CCC22C81E950EE60029B0EB /* GRCashierdeskCell.xib */; };
 		9CF50A241EB9E24300E05514 /* GRUserInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF50A221EB9E24300E05514 /* GRUserInfoController.m */; };
@@ -261,6 +267,16 @@
 		9CC838E51EBF2C60008CF79A /* GRAutherInfoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRAutherInfoController.xib; sourceTree = "<group>"; };
 		9CC838EC1EC0141D008CF79A /* UIView+GRClickable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GRClickable.h"; sourceTree = "<group>"; };
 		9CC838ED1EC0141D008CF79A /* UIView+GRClickable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GRClickable.m"; sourceTree = "<group>"; };
+		9CC838EF1EC0632E008CF79A /* GRTuhaoRankController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRTuhaoRankController.h; sourceTree = "<group>"; };
+		9CC838F01EC0632E008CF79A /* GRTuhaoRankController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRTuhaoRankController.m; sourceTree = "<group>"; };
+		9CC838F11EC0632E008CF79A /* GRTuhaoRankController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRTuhaoRankController.xib; sourceTree = "<group>"; };
+		9CC838F51EC0641C008CF79A /* GRTuhaoRankTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRTuhaoRankTableCell.h; sourceTree = "<group>"; };
+		9CC838F61EC0641C008CF79A /* GRTuhaoRankTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRTuhaoRankTableCell.m; sourceTree = "<group>"; };
+		9CC838F71EC0641C008CF79A /* GRTuhaoRankTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRTuhaoRankTableCell.xib; sourceTree = "<group>"; };
+		9CC838FA1EC07144008CF79A /* GRTuhaoRankList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRTuhaoRankList.h; sourceTree = "<group>"; };
+		9CC838FB1EC07144008CF79A /* GRTuhaoRankList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRTuhaoRankList.m; sourceTree = "<group>"; };
+		9CC838FD1EC07206008CF79A /* GRRankListRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRRankListRequest.h; sourceTree = "<group>"; };
+		9CC838FE1EC07206008CF79A /* GRRankListRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRRankListRequest.m; sourceTree = "<group>"; };
 		9CCC22C61E950EE60029B0EB /* GRCashierdeskCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRCashierdeskCell.h; sourceTree = "<group>"; };
 		9CCC22C71E950EE60029B0EB /* GRCashierdeskCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRCashierdeskCell.m; sourceTree = "<group>"; };
 		9CCC22C81E950EE60029B0EB /* GRCashierdeskCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRCashierdeskCell.xib; sourceTree = "<group>"; };
@@ -561,6 +577,9 @@
 				9C2749141EBED6730022ABCC /* GRJoinViewController.h */,
 				9C2749151EBED6730022ABCC /* GRJoinViewController.m */,
 				9C2749161EBED6730022ABCC /* GRJoinViewController.xib */,
+				9CC838EF1EC0632E008CF79A /* GRTuhaoRankController.h */,
+				9CC838F01EC0632E008CF79A /* GRTuhaoRankController.m */,
+				9CC838F11EC0632E008CF79A /* GRTuhaoRankController.xib */,
 			);
 			name = GRFindMoreViewController;
 			sourceTree = "<group>";
@@ -733,6 +752,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		9CC838F41EC063B5008CF79A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9CC838F51EC0641C008CF79A /* GRTuhaoRankTableCell.h */,
+				9CC838F61EC0641C008CF79A /* GRTuhaoRankTableCell.m */,
+				9CC838F71EC0641C008CF79A /* GRTuhaoRankTableCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		9CCC22C51E950E9A0029B0EB /* GRCashierdeskView */ = {
 			isa = PBXGroup;
 			children = (
@@ -748,6 +777,7 @@
 		9CF50A1E1EB9DE4C00E05514 /* userInfo */ = {
 			isa = PBXGroup;
 			children = (
+				9CC838F41EC063B5008CF79A /* View */,
 				9CF50A1F1EB9E20F00E05514 /* Mdoel */,
 				9CF50A201EB9E20F00E05514 /* Controller */,
 			);
@@ -763,6 +793,10 @@
 				9C2CC6961EBC1375001E2F31 /* GRUserInfoRequest.m */,
 				9C2748F71EBD7C7A0022ABCC /* GRChangePasswordRequest.h */,
 				9C2748F81EBD7C7A0022ABCC /* GRChangePasswordRequest.m */,
+				9CC838FA1EC07144008CF79A /* GRTuhaoRankList.h */,
+				9CC838FB1EC07144008CF79A /* GRTuhaoRankList.m */,
+				9CC838FD1EC07206008CF79A /* GRRankListRequest.h */,
+				9CC838FE1EC07206008CF79A /* GRRankListRequest.m */,
 			);
 			path = Mdoel;
 			sourceTree = "<group>";
@@ -905,6 +939,7 @@
 				9CCC22CA1E950EE60029B0EB /* GRCashierdeskCell.xib in Resources */,
 				9CC838DD1EBEF891008CF79A /* GRAboutGroooController.xib in Resources */,
 				9CB92AB71E5D67AD00650CC5 /* GRShopListCell.xib in Resources */,
+				9CC838F91EC0641C008CF79A /* GRTuhaoRankTableCell.xib in Resources */,
 				9C2749061EBDEDB70022ABCC /* GRSettingViewController.xib in Resources */,
 				9C2749181EBED6730022ABCC /* GRJoinViewController.xib in Resources */,
 				9C1BE9401E8B8F37007F5733 /* GRMenuCategoryCell.xib in Resources */,
@@ -922,6 +957,7 @@
 				9CC838E71EBF2C60008CF79A /* GRAutherInfoController.xib in Resources */,
 				9C27490B1EBEAEB90022ABCC /* GRAppInfoViewController.xib in Resources */,
 				9CAAF56B1E6D0E8B00730810 /* GROrderListCell.xib in Resources */,
+				9CC838F31EC0632E008CF79A /* GRTuhaoRankController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -984,6 +1020,7 @@
 				9CFF24D41E83BE0C004D92D7 /* GRMenuList.m in Sources */,
 				9CAAF57C1E6E930700730810 /* GRSegmentView.m in Sources */,
 				9C2CC6971EBC1375001E2F31 /* GRUserInfoRequest.m in Sources */,
+				9CC838FF1EC07206008CF79A /* GRRankListRequest.m in Sources */,
 				9CAAF5851E6F048E00730810 /* GROrderListViewController.m in Sources */,
 				9CB9DFA51E65A9F800C8F5E8 /* GROrderListRequest.m in Sources */,
 				9C1507F11E5085F3007C2B8F /* GRRegisterViewController.m in Sources */,
@@ -1001,6 +1038,7 @@
 				9C8CF6D41E83D1AC0030F54E /* GRMenuHeadView.m in Sources */,
 				9C44D4621E8CFBA000F85757 /* GRShopRatingLeftCell.m in Sources */,
 				9CB92ABA1E5DB14A00650CC5 /* MBProgressHUD.m in Sources */,
+				9CC838F21EC0632E008CF79A /* GRTuhaoRankController.m in Sources */,
 				9CAAF5771E6E8A0800730810 /* GROperateOrderBtn.m in Sources */,
 				9C8CF6D11E83CC350030F54E /* GRMenuViewController.m in Sources */,
 				823FE46A1E4D9A1D008E8CB0 /* GRLoginViewController.m in Sources */,
@@ -1018,6 +1056,7 @@
 				82AF89D51E4B3F5200676D29 /* NSString+GRCommen.m in Sources */,
 				9CA98E441E9B2DF9008D603E /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				9C8CF6CE1E83C5DE0030F54E /* GRMenuListRequest.m in Sources */,
+				9CC838F81EC0641C008CF79A /* GRTuhaoRankTableCell.m in Sources */,
 				82AF89E31E4C542000676D29 /* GRWebViewController.m in Sources */,
 				9CAAF57F1E6E9E4B00730810 /* GROrderListTable.m in Sources */,
 				9CC838EE1EC0141D008CF79A /* UIView+GRClickable.m in Sources */,
@@ -1049,6 +1088,7 @@
 				823FE46E1E4DC7E7008E8CB0 /* GRLoginResponse.m in Sources */,
 				9CB92AC01E601EC000650CC5 /* GRCacheManager.m in Sources */,
 				9C2749051EBDEDB70022ABCC /* GRSettingViewController.m in Sources */,
+				9CC838FC1EC07144008CF79A /* GRTuhaoRankList.m in Sources */,
 				9CC838DC1EBEF891008CF79A /* GRAboutGroooController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

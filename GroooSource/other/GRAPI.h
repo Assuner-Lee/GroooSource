@@ -56,6 +56,10 @@ static NSString * const API_USER_INFO_F = @"/accounts/%zd/profile";
 static NSString * const API_SCHOOL_NOTICE = @"/shops/announcement?school_id=1";
 //***学校通知***
 
+static NSString * const API_RANK_LIST = @"/shops/rank/user?school_id=1";
+//***积分排名
+
+
 //**************** URL ****************
 
 static NSString * const kURL_FINDPASSWORD = @"http://www.grooo.cn/user/findPassword";

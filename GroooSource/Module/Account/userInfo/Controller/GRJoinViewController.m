@@ -26,7 +26,8 @@
          [self tapTitleLabel];
     }];
     
-    [self performSelector:@selector(tapTitleLabel) withObject:nil afterDelay:0.5];}
+    [self performSelector:@selector(tapTitleLabel) withObject:nil afterDelay:0.5];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
