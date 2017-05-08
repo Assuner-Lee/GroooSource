@@ -1,15 +1,14 @@
 //
-//  GRClickableLabel.m
+//  GRClickableImgView.m
 //  GroooSource
 //
-//  Created by Assuner on 2017/5/7.
+//  Created by Assuner on 2017/5/8.
 //  Copyright © 2017年 Assuner. All rights reserved.
 //
 
-#import "GRClickableLabel.h"
+#import "GRClickableImgView.h"
 
-@implementation GRClickableLabel
-
+@implementation GRClickableImgView
 - (instancetype)init {
     if (self = [super init]) {
         [self addGesture];
@@ -33,5 +32,6 @@
         self.actionBlock();
     }
 }
+
 
 @end

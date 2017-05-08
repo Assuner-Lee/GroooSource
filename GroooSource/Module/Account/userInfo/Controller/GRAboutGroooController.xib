@@ -12,8 +12,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GRAboutGroooController">
             <connections>
                 <outlet property="groooDescTextView" destination="ABQ-A9-vvg" id="Vfo-xE-iEU"/>
-                <outlet property="groooHeartImgView" destination="DEo-lk-ljy" id="1g0-eB-J2c"/>
-                <outlet property="groooTextImgView" destination="Taj-tW-pjs" id="V7z-Ql-ddM"/>
+                <outlet property="groooHeartImgView" destination="DEo-lk-ljy" id="xz9-tF-wKR"/>
+                <outlet property="groooTextImgView" destination="Taj-tW-pjs" id="6qX-pf-a76"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grooo_about" translatesAutoresizingMaskIntoConstraints="NO" id="DEo-lk-ljy">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grooo_about" translatesAutoresizingMaskIntoConstraints="NO" id="DEo-lk-ljy" customClass="GRClickableImgView">
                     <rect key="frame" x="67" y="84" width="240" height="188"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="188" id="oe4-5C-r7O"/>
@@ -35,7 +35,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="168" id="7nV-bR-JkY"/>
                     </constraints>
-                    <mutableString key="text">2014年，几个小伙伴一同创立了咕噜！通过大家的不懈努力，签约商家达数十家，每天营业额达到数千元，服务覆盖全校学生！累计数以万计人次学生享受到了送餐上门的便捷服务！
+                    <string key="text">2014年，几个小伙伴一同创立了咕噜！通过大家的不懈努力，签约商家达数十家，每天营业额达到数千元，服务覆盖全校学生！累计数以万计人次学生享受到了送餐上门的便捷服务！
 2015年，咕噜超市重磅上线，学生购物更便捷！足不出户，静待上门！同时，咕噜在全校展开了多次福利活动，平安夜送苹果…
 …
 …
@@ -48,12 +48,12 @@
 “咕噜校园”获第三届“创青春”中国创新创业APP专项赛河北赛区三等奖.
 “咕噜校园”获第三届“创青春”中国创新创业APP专项赛全国总决赛优秀奖.
 ———————————————
-咕噜，和你一同见证我们的成长！</mutableString>
+咕噜，和你一同见证我们的成长！</string>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_text" translatesAutoresizingMaskIntoConstraints="NO" id="Taj-tW-pjs">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_text" translatesAutoresizingMaskIntoConstraints="NO" id="Taj-tW-pjs" customClass="GRClickableImgView">
                     <rect key="frame" x="44" y="550" width="286" height="83"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="286" id="dDa-M9-hwe"/>
@@ -71,7 +71,7 @@
                 <constraint firstItem="Taj-tW-pjs" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" constant="-34" id="a1T-zY-3AJ"/>
                 <constraint firstAttribute="bottom" secondItem="ABQ-A9-vvg" secondAttribute="bottom" constant="-19" id="zRv-SZ-TMr"/>
             </constraints>
-            <point key="canvasLocation" x="-138.5" y="87.5"/>
+            <point key="canvasLocation" x="-420" y="75"/>
         </view>
     </objects>
     <resources>

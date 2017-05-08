@@ -18,5 +18,6 @@
 #import "GRUserManager.h" 
 #import "GRClickableView.h"
 #import "GRClickableLabel.h"
+#import "GRClickableImgView.h"
 
 #endif /* GRHeaders_pch */

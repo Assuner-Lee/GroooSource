@@ -13,7 +13,7 @@
             <connections>
                 <outlet property="addressStatusLabel" destination="b2A-ts-NKa" id="mG3-eT-4XI"/>
                 <outlet property="addressView" destination="jcF-wX-Nn4" id="BBs-eZ-IIT"/>
-                <outlet property="avatarImgView" destination="dKQ-Bw-nFj" id="o3X-HO-uqy"/>
+                <outlet property="avatarImgView" destination="dKQ-Bw-nFj" id="7t4-Tw-fGu"/>
                 <outlet property="findView" destination="B0t-8j-HkJ" id="ULZ-lb-H0b"/>
                 <outlet property="findViewTop" destination="0eh-1v-cqJ" id="vHW-jr-zBq"/>
                 <outlet property="nickNameLabel" destination="ktR-Zn-eGa" id="hra-4g-eq4"/>
@@ -33,7 +33,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wNV-3W-Xvk" userLabel="BaseInfo View">
                     <rect key="frame" x="0.0" y="64" width="375" height="100"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_avatar_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="dKQ-Bw-nFj" userLabel="Avatar ImgView">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_avatar_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="dKQ-Bw-nFj" userLabel="Avatar ImgView" customClass="GRClickableImgView">
                             <rect key="frame" x="15" y="15" width="70" height="70"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="70" id="8NK-WP-vYO"/>

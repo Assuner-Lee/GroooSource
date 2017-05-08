@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GRAppInfoViewController">
             <connections>
-                <outlet property="appIconImgView" destination="OAY-Gb-0XC" id="8bW-wZ-tgw"/>
+                <outlet property="appIconImgView" destination="OAY-Gb-0XC" id="QY3-1x-UBd"/>
                 <outlet property="appRatingView" destination="lu9-CN-6Db" id="D2O-wX-BJL"/>
                 <outlet property="contactUsView" destination="qZW-WC-hiE" id="az6-Pd-jrS"/>
                 <outlet property="moreInfoView" destination="L1Y-ix-IOc" id="iUA-ai-tl9"/>
@@ -23,7 +23,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_icon" translatesAutoresizingMaskIntoConstraints="NO" id="OAY-Gb-0XC" userLabel="App ImgView">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_icon" translatesAutoresizingMaskIntoConstraints="NO" id="OAY-Gb-0XC" userLabel="App ImgView" customClass="GRClickableImgView">
                     <rect key="frame" x="155" y="94" width="65" height="65"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="65" id="6Vk-Bf-eMe"/>

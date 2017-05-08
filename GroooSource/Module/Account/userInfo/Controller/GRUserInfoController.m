@@ -15,7 +15,7 @@
 
 @interface GRUserInfoController ()
 
-@property (weak, nonatomic) IBOutlet UIImageView *avatarImgView;
+@property (weak, nonatomic) IBOutlet GRClickableImgView *avatarImgView;
 @property (weak, nonatomic) IBOutlet GRClickableLabel *nickNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *userEmailLabel;
 @property (weak, nonatomic) IBOutlet GRClickableLabel *scoreLabel;
@@ -118,9 +118,9 @@
 }
 
 - (void)addGesture {
-    UITapGestureRecognizer *avatarImgViewTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAvatarImgView)];
-    self.avatarImgView.userInteractionEnabled = YES;
-    [self.avatarImgView addGestureRecognizer:avatarImgViewTap];
+    self.avatarImgView.actionBlock = ^{
+        
+    };
     
     self.nickNameLabel.actionBlock = ^{
         if (![GRUserManager sharedManager].currentUser.loginData.token) {
@@ -129,6 +129,10 @@
             [UIView gr_showOscillatoryAnimationWithLayer:self.nickNameLabel.layer type:GROscillatoryAnimationToSmaller range:0.7];
         }
     };
+    
+    [self.userEmailLabel gr_addTapAction:^{
+        [UIView gr_showOscillatoryAnimationWithLayer:self.userEmailLabel.layer type:GROscillatoryAnimationToBigger range:1.1];
+    }];
     
     self.addressView.actionBlock = ^{
         
@@ -171,12 +175,6 @@
     if (self.viewIfLoaded) {
         self.updateNextAppeared = YES;
     }
-}
-
-#pragma - Actions
-
-- (void)tapAvatarImgView {
-    
 }
 
 @end

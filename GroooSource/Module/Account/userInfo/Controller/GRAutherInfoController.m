@@ -11,8 +11,8 @@
 
 @interface GRAutherInfoController ()
 
-@property (weak, nonatomic) IBOutlet UIImageView *appAutherImgView;
-@property (weak, nonatomic) IBOutlet UIImageView *serviceAutherImgView;
+@property (weak, nonatomic) IBOutlet GRClickableImgView *appAutherImgView;
+@property (weak, nonatomic) IBOutlet GRClickableImgView *serviceAutherImgView;
 @property (weak, nonatomic) IBOutlet UILabel *appAutherNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *serviceAutherNameLabel;
 @property (weak, nonatomic) IBOutlet GRClickableView *blogView;
@@ -63,13 +63,13 @@
 }
 
 - (void)addGesture {
-    UITapGestureRecognizer *appAutherImgViewTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAppAutherImgView)];
-    self.appAutherImgView.userInteractionEnabled = YES;
-    [self.appAutherImgView addGestureRecognizer:appAutherImgViewTap];
+    self.appAutherImgView.actionBlock = ^{
+        [self tapAppAutherImgView];
+    };
     
-    UITapGestureRecognizer *serviceAutherImgViewTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapServiceAutherImgView)];
-    self.serviceAutherImgView.userInteractionEnabled = YES;
-    [self.serviceAutherImgView addGestureRecognizer:serviceAutherImgViewTap];
+    self.serviceAutherImgView.actionBlock = ^{
+        [self.navigationController pushViewController:[[GRWebViewController alloc] initWithURL:kURL_SERVICE_AUTHER_GIT title:@"后端作者负责哥的GitHub"] animated:YES];
+    };
     
     self.contactView.actionBlock = ^{
         if (!self.isContactInfoSpread) {
@@ -118,9 +118,6 @@
     self.isAvatarSpread = !self.isAvatarSpread;
 }
 
-- (void)tapServiceAutherImgView {
-    [self.navigationController pushViewController:[[GRWebViewController alloc] initWithURL:kURL_SERVICE_AUTHER_GIT title:@"后端作者负责哥的GitHub"] animated:YES];
-}
 
 - (void)goGitPage {
      [self presentViewController:[GRWebViewController modalWebviewWithURL:kURL_APP_AUTHER_GIT title:@"iOS小学生的GitHub"] animation:GRTransitionTypePageUnCurl completion:nil];

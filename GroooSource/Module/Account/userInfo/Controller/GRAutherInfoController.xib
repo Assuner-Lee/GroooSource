@@ -11,12 +11,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GRAutherInfoController">
             <connections>
-                <outlet property="appAutherImgView" destination="FPf-Rr-5aU" id="hky-ov-uim"/>
+                <outlet property="appAutherImgView" destination="FPf-Rr-5aU" id="tEc-IT-jfb"/>
                 <outlet property="appAutherNameLabel" destination="rAr-S7-c6G" id="BJU-b6-yfT"/>
                 <outlet property="blogView" destination="GhY-Or-SMv" id="Wsm-Ho-eZS"/>
                 <outlet property="contactInfoView" destination="88r-Xb-PAA" id="Zrd-pD-SMb"/>
                 <outlet property="contactView" destination="JwA-Sp-smE" id="Q0S-6L-U3c"/>
-                <outlet property="serviceAutherImgView" destination="Vqb-AS-QMb" id="NvY-ii-w4H"/>
+                <outlet property="serviceAutherImgView" destination="Vqb-AS-QMb" id="gfV-Nz-GcD"/>
                 <outlet property="serviceAutherNameLabel" destination="8iE-ax-kYd" id="aPF-ce-WUn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="e5P-dN-cu9"/>
                 <outlet property="weiboView" destination="jru-Tb-7im" id="BbZ-hd-m0y"/>
@@ -27,14 +27,14 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="service_auther_avatar" translatesAutoresizingMaskIntoConstraints="NO" id="Vqb-AS-QMb">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="service_auther_avatar" translatesAutoresizingMaskIntoConstraints="NO" id="Vqb-AS-QMb" customClass="GRClickableImgView">
                     <rect key="frame" x="155" y="94" width="65" height="65"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="65" id="LxC-bK-ckT"/>
                         <constraint firstAttribute="height" constant="65" id="VTV-pd-kgO"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="auther_avatar" translatesAutoresizingMaskIntoConstraints="NO" id="FPf-Rr-5aU">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="auther_avatar" translatesAutoresizingMaskIntoConstraints="NO" id="FPf-Rr-5aU" customClass="GRClickableImgView">
                     <rect key="frame" x="155" y="94" width="65" height="65"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="65" id="3ft-oH-Dna"/>

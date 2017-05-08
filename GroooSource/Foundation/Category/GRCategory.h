@@ -18,5 +18,6 @@ typedef void (^GRBlankBlock)(void);
 #import "NSString+GRCommen.h"
 #import "MBProgressHUD+GRShow.h"
 #import "UIImageView+AFNetworking.h"
+#import "UIView+GRClickable.h"
 
 #endif /* GRCategory_h */

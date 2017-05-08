@@ -11,8 +11,8 @@
 
 @interface GRAboutGroooController ()
 
-@property (weak, nonatomic) IBOutlet UIImageView *groooHeartImgView;
-@property (weak, nonatomic) IBOutlet UIImageView *groooTextImgView;
+@property (weak, nonatomic) IBOutlet GRClickableImgView *groooHeartImgView;
+@property (weak, nonatomic) IBOutlet GRClickableImgView *groooTextImgView;
 @property (weak, nonatomic) IBOutlet UITextView *groooDescTextView;
 
 @property (nonatomic, assign) BOOL isSpread;
@@ -46,13 +46,13 @@
 }
 
 - (void)addGesture {
-    UITapGestureRecognizer *groooHeartImgViewTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGroooHeartImgView)];
-    self.groooHeartImgView.userInteractionEnabled = YES;
-    [self.groooHeartImgView addGestureRecognizer:groooHeartImgViewTap];
+    self.groooHeartImgView.actionBlock = ^{
+        [self tapGroooHeartImgView];
+    };
     
-    UITapGestureRecognizer *groooTextImgViewTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGroooTextImgView)];
-    self.groooTextImgView.userInteractionEnabled = YES;
-    [self.groooTextImgView addGestureRecognizer:groooTextImgViewTap];
+   self.groooTextImgView.actionBlock = ^{
+        [self tapGroooTextImgView];
+   };
 }
 
 #pragma - Actions

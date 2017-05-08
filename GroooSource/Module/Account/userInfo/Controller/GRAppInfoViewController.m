@@ -13,7 +13,7 @@
 
 @interface GRAppInfoViewController () <SKStoreProductViewControllerDelegate>
 
-@property (weak, nonatomic) IBOutlet UIImageView *appIconImgView;
+@property (weak, nonatomic) IBOutlet GRClickableImgView *appIconImgView;
 @property (weak, nonatomic) IBOutlet GRClickableView *appRatingView;
 @property (weak, nonatomic) IBOutlet GRClickableView *moreInfoView;
 @property (weak, nonatomic) IBOutlet GRClickableView *contactUsView;
@@ -36,9 +36,9 @@
 }
 
 - (void)addGesture {
-    UITapGestureRecognizer *appIconImgViewTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAppIconImgView)];
-    self.appIconImgView.userInteractionEnabled = YES;
-    [self.appIconImgView addGestureRecognizer:appIconImgViewTap];
+    self.appIconImgView.actionBlock = ^{
+        [self tapAppIconImgView];
+    };
     
     self.appRatingView.actionBlock = ^{
         self.storeProductVC = [[SKStoreProductViewController alloc] init];
