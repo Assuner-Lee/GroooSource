@@ -10,6 +10,7 @@
 #import <StoreKit/StoreKit.h>
 #import "GRAboutGroooController.h"
 #import "GRContactUsController.h"
+#import "GRWebViewController.h"
 
 @interface GRAppInfoViewController () <SKStoreProductViewControllerDelegate>
 
@@ -17,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIView *appRatingView;
 @property (weak, nonatomic) IBOutlet UIView *moreInfoView;
 @property (weak, nonatomic) IBOutlet UIView *contactUsView;
+@property (weak, nonatomic) IBOutlet UILabel *openSourceLabel;
 
 @property (nonatomic, strong) SKStoreProductViewController *storeProductVC;
 
@@ -62,6 +64,10 @@
     
     [self.moreInfoView gr_addTapAction:^{
         [self.navigationController pushViewController:[[GRAboutGroooController alloc] init] animated:YES];
+    }];
+    
+    [self.openSourceLabel gr_addTapAction:^{
+        [self.navigationController pushViewController:[[GRWebViewController alloc] initWithURL:kURL_OPEN_SOURCE title:@"开源地址"] animated:YES];
     }];
 }
 

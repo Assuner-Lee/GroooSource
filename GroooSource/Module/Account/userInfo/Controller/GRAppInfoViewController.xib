@@ -15,6 +15,7 @@
                 <outlet property="appRatingView" destination="lu9-CN-6Db" id="aU9-v1-cww"/>
                 <outlet property="contactUsView" destination="qZW-WC-hiE" id="NJX-BK-Wbg"/>
                 <outlet property="moreInfoView" destination="L1Y-ix-IOc" id="rjZ-GN-fum"/>
+                <outlet property="openSourceLabel" destination="oCe-AB-RAl" id="KW0-rN-IaS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -173,18 +174,40 @@
                         <constraint firstItem="1Wh-K0-UkW" firstAttribute="leading" secondItem="Pmx-Uv-6by" secondAttribute="trailing" constant="11" id="xUT-4M-eUS"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本App代码已开源" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCe-AB-RAl">
+                    <rect key="frame" x="129" y="607" width="116" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="2qa-Ct-tFK"/>
+                        <constraint firstAttribute="width" constant="116" id="n8z-GM-E51"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qbk-xL-da2" userLabel="Line">
+                    <rect key="frame" x="139" y="623" width="97" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="97" id="KqA-QX-9f0"/>
+                        <constraint firstAttribute="height" constant="1" id="de4-vY-PkG"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
                 <constraint firstItem="OAY-Gb-0XC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="94" id="Ci9-00-vy1"/>
                 <constraint firstItem="L1Y-ix-IOc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="FyE-DM-fPE"/>
                 <constraint firstAttribute="trailing" secondItem="qZW-WC-hiE" secondAttribute="trailing" id="GZK-1J-iN4"/>
+                <constraint firstItem="txK-4f-gtb" firstAttribute="top" secondItem="Qbk-xL-da2" secondAttribute="bottom" constant="8" id="IUI-rc-3xp"/>
                 <constraint firstItem="OAY-Gb-0XC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ikz-jE-qKG"/>
                 <constraint firstAttribute="bottom" secondItem="txK-4f-gtb" secondAttribute="bottom" constant="20" id="IzR-iX-XeE"/>
                 <constraint firstItem="rca-IH-Qth" firstAttribute="top" secondItem="OAY-Gb-0XC" secondAttribute="bottom" constant="16" id="MFu-xB-Kti"/>
                 <constraint firstItem="rca-IH-Qth" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="P5W-Wi-gsj"/>
+                <constraint firstItem="oCe-AB-RAl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Vjb-U0-Dkh"/>
+                <constraint firstItem="txK-4f-gtb" firstAttribute="top" secondItem="oCe-AB-RAl" secondAttribute="bottom" constant="8" id="XZT-od-Mot"/>
                 <constraint firstItem="qZW-WC-hiE" firstAttribute="top" secondItem="lu9-CN-6Db" secondAttribute="bottom" constant="10" id="bj7-pc-fbf"/>
                 <constraint firstItem="lu9-CN-6Db" firstAttribute="top" secondItem="rca-IH-Qth" secondAttribute="bottom" constant="19" id="dXN-70-nc9"/>
+                <constraint firstItem="Qbk-xL-da2" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="e6g-XV-A45"/>
                 <constraint firstAttribute="trailing" secondItem="L1Y-ix-IOc" secondAttribute="trailing" id="ez0-ts-1dM"/>
                 <constraint firstAttribute="trailing" secondItem="lu9-CN-6Db" secondAttribute="trailing" id="oEL-lH-fvh"/>
                 <constraint firstItem="lu9-CN-6Db" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rJ6-TI-0tx"/>
@@ -192,7 +215,7 @@
                 <constraint firstItem="txK-4f-gtb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="sj4-JI-NFP"/>
                 <constraint firstItem="qZW-WC-hiE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vbG-sH-kSF"/>
             </constraints>
-            <point key="canvasLocation" x="-217" y="27"/>
+            <point key="canvasLocation" x="-217.5" y="26.5"/>
         </view>
     </objects>
     <resources>

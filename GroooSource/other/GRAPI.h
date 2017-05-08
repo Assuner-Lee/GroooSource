@@ -71,7 +71,11 @@ static NSString * const kURL_BLOG = @"http://www.jianshu.com/u/2dcbeec1f48b";
 static NSString * const kURL_WEIBO = @"http://weibo.com/AssunerLee";
 
 static NSString * const kURL_SERVICE_AUTHER_GIT = @"https://github.com/responsible";
+
 static NSString * const kURL_APP_AUTHER_GIT = @"https://github.com/Assuner-Lee";
+
+static NSString * const kURL_OPEN_SOURCE = @"https://github.com/Assuner-Lee/GroooSource";
+
 
 //************ 商家账号 **********
 

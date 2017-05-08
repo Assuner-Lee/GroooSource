@@ -26,6 +26,7 @@ static NSString *GRTuhaoRankTableCellID = @"GRTuhaoRankTableCellID";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"咕噜土豪榜";
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.tableView.layer.cornerRadius = 4.0;

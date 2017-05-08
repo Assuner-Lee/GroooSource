@@ -48,7 +48,11 @@
     _rankNumber = rankNumber;
     self.rankLabel.text = @(rankNumber + 1).stringValue;
     if (rankNumber < 5) {
-        self.rankLabel.font = [UIFont boldSystemFontOfSize:17.0];
+        if (rankNumber) {
+            self.rankLabel.font = [UIFont boldSystemFontOfSize:17.0];
+        } else {
+            self.rankLabel.font = [UIFont boldSystemFontOfSize:25.0];
+        }
         self.rankLabel.textColor = [GRAppStyle orangeColor];
         self.crownImgView.hidden = NO;
         if (!self.isMoved) {
