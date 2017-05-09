@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>HappyDNS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>LPDSplashScreenManager.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -24,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Qiniu.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,12 +42,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>27E25AB3D71894DB81FFFED7413D58A8</key>
+		<key>214873E58CFAA131A110BD2D3F46BEB8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>45C5F2DCD0CFDCC610956E14EE1C0985</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>53B2B897D64E4516E75AC86348B86622</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5D74C35D92F4521A56868A2C7B407B2B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -53,11 +73,6 @@
 			<true/>
 		</dict>
 		<key>A316B54C67E947D23CECD230FA5BFAEF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E1DD75271D4499B64B1D9EF34D562B3B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

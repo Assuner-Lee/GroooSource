@@ -14,9 +14,13 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - HappyDNS (0.3.10)
   - LPDSplashScreenManager (0.1.0):
     - SDWebImage
   - MJExtension (3.0.13)
+  - Qiniu (7.1.5):
+    - AFNetworking (~> 3)
+    - HappyDNS (~> 0.3)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
@@ -25,13 +29,16 @@ DEPENDENCIES:
   - AFNetworking
   - LPDSplashScreenManager (= 0.1.0)
   - MJExtension
+  - Qiniu
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  HappyDNS: 06a9fed2796663fd87626dbf02552933265bf059
   LPDSplashScreenManager: 6feb406e847f3fbe0b242087291c2a8b6657eaa7
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  Qiniu: 77a3dba411556a383d72d17e842345a9d4c83252
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
-PODFILE CHECKSUM: 8e00245082fb661fe753697a22000182c530d3f2
+PODFILE CHECKSUM: f1e967bd2793cf4014060ee02ceefc2a6c36ae7d
 
 COCOAPODS: 1.2.1
