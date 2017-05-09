@@ -55,6 +55,7 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
         [self initView];
         self.totolPrice = [self getTotolPrice];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clearDic) name:GRMenuReloadedNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showSetAddressVC) name:GRLoginSuccessNotification object:nil];
     }
     return self;
 }
@@ -299,6 +300,11 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
     }
     [UIView gr_showOscillatoryAnimationWithLayer:_operateLabel.layer type:GROscillatoryAnimationToBigger range:1.5];
     _operateLabel.gestureRecognizers[0].enabled = NO;
+    if ([GRUserManager sharedManager].currentUser.loginData.token && ![GRUserManager sharedManager].currentUser.address) {
+        [self showSetAddressVC];
+        _operateLabel.gestureRecognizers[0].enabled = YES;
+        return;
+    }
     [MBProgressHUD gr_showProgress];
     [[[GRPlaceOrderRequest alloc] initWithShopID:_shop.shopID ordersParams:self.orderDetailArray] startRequestComplete:^(id  _Nullable responseObject, NSError * _Nullable error) {
         [MBProgressHUD gr_hideProgress];
@@ -316,6 +322,11 @@ static NSString *GRCashierdeskCellID = @"GRCashierdeskCellID";
 - (void)clearDic {
     [_loggerDic removeAllObjects];
     self.totolPrice = [self getTotolPrice];
+}
+
+- (void)showSetAddressVC {
+    [MBProgressHUD gr_showMessage:@"请先设置收货地址!"];
+    [GRRouter open:@"push->GRAddressViewController" params:nil];
 }
 
 - (void)tapClearIcon {

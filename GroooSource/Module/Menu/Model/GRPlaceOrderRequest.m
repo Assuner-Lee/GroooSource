@@ -28,8 +28,8 @@
 
 - (NSDictionary *)paramsDic {
     return @{
-             @"building": @"校内6号楼(男生)",
-             @"address": @"5150",
+             @"building": [GRUserManager sharedManager].currentUser.building.length ? [GRUserManager sharedManager].currentUser.building : @"暂无楼栋",
+             @"address": [GRUserManager sharedManager].currentUser.address.length ? [GRUserManager sharedManager].currentUser.address : @"暂无地址",
              @"detail": _orderParams
             };
 }
