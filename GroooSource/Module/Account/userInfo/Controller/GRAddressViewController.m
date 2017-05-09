@@ -97,6 +97,7 @@
 
 - (void)addGesture {
     [self.buildingView gr_addTapAction:^{
+        [self.view endEditing:YES];
         [UIView gr_showOscillatoryAnimationWithLayer:self.pickerIcon.layer type:GROscillatoryAnimationToBigger range:1.5];
         [self.picker show];
     }];
