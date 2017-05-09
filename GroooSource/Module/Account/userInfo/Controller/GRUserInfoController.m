@@ -81,6 +81,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clearInfo) name:GRTokenInvaildNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clearInfo) name:GRLogoutSuccessNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeUpadateState) name:GRLoginSuccessNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateAddressStatus) name:GRAddressSetSuccess object:nil];
 }
 
 - (void)setUserInfo:(GRUserInfo *)userInfo {
@@ -136,7 +137,11 @@
     }];
     
     [self.addressView gr_addTapAction:^{
-        [self.navigationController pushViewController:[[GRAddressViewController alloc] init] animated:YES];
+        if ([GRUserManager sharedManager].currentUser.loginData.token) {
+            [self.navigationController pushViewController:[[GRAddressViewController alloc] init] animated:YES];
+        } else {
+            [GRRouter open:@"present->GRLoginViewController" params:nil completed:nil];
+        }
     }];
     
     [self.passwordView gr_addTapAction:^{
@@ -176,6 +181,10 @@
     if (self.viewIfLoaded) {
         self.updateNextAppeared = YES;
     }
+}
+
+- (void)updateAddressStatus {
+    self.addressStatusLabel.text = @"已设置";
 }
 
 @end

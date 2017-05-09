@@ -13,9 +13,11 @@
             <connections>
                 <outlet property="buildingInfoLabel" destination="1gQ-8i-SCT" id="9Eu-N0-NxU"/>
                 <outlet property="buildingView" destination="Njk-aE-nnG" id="kzh-hZ-SlF"/>
+                <outlet property="inputIcon" destination="Vdv-bj-aa1" id="zM2-X2-32T"/>
                 <outlet property="inputOKbtn" destination="3Ql-K4-IzV" id="GXE-2n-9gV"/>
                 <outlet property="inputView" destination="S2H-e6-iwR" id="wWZ-pb-o50"/>
                 <outlet property="okBtn" destination="pJ4-zz-Ep3" id="JiC-Hz-snL"/>
+                <outlet property="pickerIcon" destination="YjF-Cd-QUJ" id="jmg-di-9jG"/>
                 <outlet property="roomInfoLabel" destination="7zb-x3-t2n" id="aqR-4K-POR"/>
                 <outlet property="roomView" destination="JZN-gR-3p6" id="hjq-eQ-8g5"/>
                 <outlet property="textField" destination="tab-eC-xPp" id="CiX-NX-2cC"/>
@@ -79,7 +81,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JZN-gR-3p6">
-                    <rect key="frame" x="0.0" y="134" width="375" height="50"/>
+                    <rect key="frame" x="0.0" y="126" width="375" height="50"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="address_room_icon" translatesAutoresizingMaskIntoConstraints="NO" id="MXx-QO-Ajd">
                             <rect key="frame" x="17" y="15" width="15" height="20"/>
@@ -88,11 +90,11 @@
                                 <constraint firstAttribute="height" constant="20" id="Qpx-ZJ-Pi1"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入房间号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDe-CZ-DaJ">
-                            <rect key="frame" x="46" y="0.0" width="105" height="50"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请填写详细地址" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDe-CZ-DaJ">
+                            <rect key="frame" x="46" y="0.0" width="124" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="MjS-Dn-VWA"/>
-                                <constraint firstAttribute="width" constant="105" id="k3P-rb-yz8"/>
+                                <constraint firstAttribute="width" constant="124" id="k3P-rb-yz8"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
@@ -106,7 +108,7 @@
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zb-x3-t2n">
-                            <rect key="frame" x="167" y="0.0" width="152" height="50"/>
+                            <rect key="frame" x="178" y="0.0" width="141" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="hQ0-BJ-82h"/>
                             </constraints>
@@ -122,7 +124,7 @@
                         <constraint firstItem="gDe-CZ-DaJ" firstAttribute="top" secondItem="JZN-gR-3p6" secondAttribute="top" id="IbB-UX-xcs"/>
                         <constraint firstItem="Vdv-bj-aa1" firstAttribute="top" secondItem="JZN-gR-3p6" secondAttribute="top" constant="12.5" id="PEB-bB-9a0"/>
                         <constraint firstAttribute="height" constant="50" id="ZmZ-cK-q8x"/>
-                        <constraint firstItem="7zb-x3-t2n" firstAttribute="leading" secondItem="gDe-CZ-DaJ" secondAttribute="trailing" constant="16" id="e0d-Z7-M8r"/>
+                        <constraint firstItem="7zb-x3-t2n" firstAttribute="leading" secondItem="gDe-CZ-DaJ" secondAttribute="trailing" constant="8" id="e0d-Z7-M8r"/>
                         <constraint firstAttribute="trailing" secondItem="Vdv-bj-aa1" secondAttribute="trailing" constant="16.5" id="foQ-yE-5la"/>
                         <constraint firstItem="MXx-QO-Ajd" firstAttribute="leading" secondItem="JZN-gR-3p6" secondAttribute="leading" constant="17" id="g8l-Rw-jc0"/>
                         <constraint firstItem="MXx-QO-Ajd" firstAttribute="top" secondItem="JZN-gR-3p6" secondAttribute="top" constant="15" id="hPl-b5-Q68"/>
@@ -132,7 +134,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S2H-e6-iwR">
                     <rect key="frame" x="0.0" y="667" width="375" height="44"/>
                     <subviews>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入房间号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tab-eC-xPp">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入详细地址，如房间号5150" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tab-eC-xPp">
                             <rect key="frame" x="8" y="5" width="306" height="34"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -162,7 +164,6 @@
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJ4-zz-Ep3">
                     <rect key="frame" x="16" y="214" width="343" height="40"/>
-                    <color key="backgroundColor" red="0.2038704023" green="0.86969942219999996" blue="0.76335604400000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="sdb-lw-If0"/>
                     </constraints>
@@ -173,10 +174,10 @@
             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="Njk-aE-nnG" secondAttribute="trailing" id="20Z-Dj-VHl"/>
-                <constraint firstItem="pJ4-zz-Ep3" firstAttribute="top" secondItem="JZN-gR-3p6" secondAttribute="bottom" constant="30" id="28u-st-F71"/>
+                <constraint firstItem="pJ4-zz-Ep3" firstAttribute="top" secondItem="JZN-gR-3p6" secondAttribute="bottom" constant="38" id="28u-st-F71"/>
                 <constraint firstItem="pJ4-zz-Ep3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="5IQ-FD-X9s"/>
                 <constraint firstItem="Njk-aE-nnG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="Gmj-v3-gB2"/>
-                <constraint firstItem="JZN-gR-3p6" firstAttribute="top" secondItem="Njk-aE-nnG" secondAttribute="bottom" constant="10" id="HSp-Sh-gH8"/>
+                <constraint firstItem="JZN-gR-3p6" firstAttribute="top" secondItem="Njk-aE-nnG" secondAttribute="bottom" constant="2" id="HSp-Sh-gH8"/>
                 <constraint firstAttribute="trailing" secondItem="JZN-gR-3p6" secondAttribute="trailing" id="Q3K-tG-Euv"/>
                 <constraint firstAttribute="trailing" secondItem="S2H-e6-iwR" secondAttribute="trailing" id="Rgv-GI-ltJ"/>
                 <constraint firstAttribute="bottom" secondItem="S2H-e6-iwR" secondAttribute="bottom" constant="-44" id="XgR-lV-G99"/>

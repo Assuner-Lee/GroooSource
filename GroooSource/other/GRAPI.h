@@ -23,7 +23,7 @@ static NSString * const API_SCHOOL_LIST = @"/accounts/school";
 static NSString * const API_USER_REGISTER = @"/accounts/";
 //***用户注册,修改密码***
 
-static NSString * const API_DORM_LIST = @"/shops/building?school_id=1";
+static NSString * const API_BUILDING_LIST = @"/shops/building?school_id=1";
 //***宿舍列表***                          
 
 static NSString * const API_USER_LOGIN = @"/accounts/token";

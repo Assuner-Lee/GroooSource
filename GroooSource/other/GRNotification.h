@@ -19,4 +19,6 @@ static NSString * const GRMenuReloadedNotification = @"GRMenuReloadedNotificatio
 
 static NSString * const GRUpdateOrderListNextAppearedNotification = @"GRUpdateOrderListNextAppearedNotification";
 
+static NSString * const GRAddressSetSuccess = @"GRAddressSetSuccess";
+
 #endif /* GRNotification_h */

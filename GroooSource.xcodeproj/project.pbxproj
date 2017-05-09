@@ -27,6 +27,8 @@
 		82AF89D51E4B3F5200676D29 /* NSString+GRCommen.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AF89D41E4B3F5200676D29 /* NSString+GRCommen.m */; };
 		82AF89E31E4C542000676D29 /* GRWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AF89E11E4C542000676D29 /* GRWebViewController.m */; };
 		82AF89E41E4C542000676D29 /* GRWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82AF89E21E4C542000676D29 /* GRWebViewController.xib */; };
+		9C0301791EC1A6D0004186F7 /* GRPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0301781EC1A6D0004186F7 /* GRPicker.m */; };
+		9C03017E1EC1B971004186F7 /* GRBuildingListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C03017D1EC1B971004186F7 /* GRBuildingListRequest.m */; };
 		9C1507F11E5085F3007C2B8F /* GRRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1507EF1E5085F3007C2B8F /* GRRegisterViewController.m */; };
 		9C1507F21E5085F3007C2B8F /* GRRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C1507F01E5085F3007C2B8F /* GRRegisterViewController.xib */; };
 		9C1507F51E515905007C2B8F /* GRLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1507F41E515905007C2B8F /* GRLoginRequest.m */; };
@@ -150,6 +152,10 @@
 		82AF89E01E4C542000676D29 /* GRWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRWebViewController.h; sourceTree = "<group>"; };
 		82AF89E11E4C542000676D29 /* GRWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRWebViewController.m; sourceTree = "<group>"; };
 		82AF89E21E4C542000676D29 /* GRWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRWebViewController.xib; sourceTree = "<group>"; };
+		9C0301771EC1A6D0004186F7 /* GRPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRPicker.h; sourceTree = "<group>"; };
+		9C0301781EC1A6D0004186F7 /* GRPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRPicker.m; sourceTree = "<group>"; };
+		9C03017C1EC1B971004186F7 /* GRBuildingListRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRBuildingListRequest.h; sourceTree = "<group>"; };
+		9C03017D1EC1B971004186F7 /* GRBuildingListRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRBuildingListRequest.m; sourceTree = "<group>"; };
 		9C1507EE1E5085F3007C2B8F /* GRRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GRRegisterViewController.h; path = ../../Login/Controller/GRRegisterViewController.h; sourceTree = "<group>"; };
 		9C1507EF1E5085F3007C2B8F /* GRRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GRRegisterViewController.m; path = ../../Login/Controller/GRRegisterViewController.m; sourceTree = "<group>"; };
 		9C1507F01E5085F3007C2B8F /* GRRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GRRegisterViewController.xib; path = ../../Login/Controller/GRRegisterViewController.xib; sourceTree = "<group>"; };
@@ -573,6 +579,15 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		9C0301761EC1A5FB004186F7 /* GRPicker */ = {
+			isa = PBXGroup;
+			children = (
+				9C0301771EC1A6D0004186F7 /* GRPicker.h */,
+				9C0301781EC1A6D0004186F7 /* GRPicker.m */,
+			);
+			name = GRPicker;
+			sourceTree = "<group>";
+		};
 		9C2749111EBED5CB0022ABCC /* GRFindMoreViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -681,6 +696,7 @@
 		9CAAF5781E6E92C500730810 /* BaseView */ = {
 			isa = PBXGroup;
 			children = (
+				9C0301761EC1A5FB004186F7 /* GRPicker */,
 				9CAAF5791E6E92C500730810 /* GRSegmentView */,
 			);
 			name = BaseView;
@@ -812,6 +828,8 @@
 				9CC838FB1EC07144008CF79A /* GRTuhaoRankList.m */,
 				9CC838FD1EC07206008CF79A /* GRRankListRequest.h */,
 				9CC838FE1EC07206008CF79A /* GRRankListRequest.m */,
+				9C03017C1EC1B971004186F7 /* GRBuildingListRequest.h */,
+				9C03017D1EC1B971004186F7 /* GRBuildingListRequest.m */,
 			);
 			path = Mdoel;
 			sourceTree = "<group>";
@@ -1085,6 +1103,7 @@
 				9C44D4491E8CAC3100F85757 /* GRShopRatingListRequest.m in Sources */,
 				9CB9DFA21E659D7000C8F5E8 /* GROrderList.m in Sources */,
 				9CAAF5741E6E83C600730810 /* GROrderStatusLabel.m in Sources */,
+				9C0301791EC1A6D0004186F7 /* GRPicker.m in Sources */,
 				9C2C3FB21E97AB5B003E77E5 /* MBProgressHUD+GRShow.m in Sources */,
 				9C44D46C1E8F82F600F85757 /* GRCashierdeskView.m in Sources */,
 				9CCC22C91E950EE60029B0EB /* GRCashierdeskCell.m in Sources */,
@@ -1097,6 +1116,7 @@
 				82AF89D11E4B2FA100676D29 /* GRViewController.m in Sources */,
 				9C2748F51EBD64620022ABCC /* GRChangePasswordController.m in Sources */,
 				9CF50A241EB9E24300E05514 /* GRUserInfoController.m in Sources */,
+				9C03017E1EC1B971004186F7 /* GRBuildingListRequest.m in Sources */,
 				9C1BE9451E8B923F007F5733 /* GRMenuDetailCell.m in Sources */,
 				9CB92AC91E63FC8000650CC5 /* GRTabBarViewController.m in Sources */,
 				9C27490A1EBEAEB90022ABCC /* GRAppInfoViewController.m in Sources */,
