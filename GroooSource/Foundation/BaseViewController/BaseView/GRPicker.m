@@ -32,6 +32,7 @@
 - (instancetype)initWithTitleArray:(NSArray<NSString *> *)pickerTitleArray mainColor:(UIColor *)aColor selectedAction:(GRPickerSelectBlock)block {
     if (self = [super init]) {
         _pickerTitleArray = pickerTitleArray;
+        _selectedText = pickerTitleArray[0];
         _mainColor = aColor;
         _selectBlock = block;
         [self initView];
@@ -92,6 +93,7 @@
 - (void)selectRow:(NSUInteger)index {
     if (index < self.pickerTitleArray.count) {
          [self.pickerView selectRow:index inComponent:0 animated:YES];
+         self.selectedText = _pickerTitleArray[index];
     }
 }
 
