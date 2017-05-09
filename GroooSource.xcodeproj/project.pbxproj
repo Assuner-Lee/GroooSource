@@ -98,6 +98,8 @@
 		9CC838F91EC0641C008CF79A /* GRTuhaoRankTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC838F71EC0641C008CF79A /* GRTuhaoRankTableCell.xib */; };
 		9CC838FC1EC07144008CF79A /* GRTuhaoRankList.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC838FB1EC07144008CF79A /* GRTuhaoRankList.m */; };
 		9CC838FF1EC07206008CF79A /* GRRankListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC838FE1EC07206008CF79A /* GRRankListRequest.m */; };
+		9CC839041EC159C2008CF79A /* GRAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC839021EC159C2008CF79A /* GRAddressViewController.m */; };
+		9CC839051EC159C2008CF79A /* GRAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC839031EC159C2008CF79A /* GRAddressViewController.xib */; };
 		9CCC22C91E950EE60029B0EB /* GRCashierdeskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCC22C71E950EE60029B0EB /* GRCashierdeskCell.m */; };
 		9CCC22CA1E950EE60029B0EB /* GRCashierdeskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CCC22C81E950EE60029B0EB /* GRCashierdeskCell.xib */; };
 		9CF50A241EB9E24300E05514 /* GRUserInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF50A221EB9E24300E05514 /* GRUserInfoController.m */; };
@@ -277,6 +279,9 @@
 		9CC838FB1EC07144008CF79A /* GRTuhaoRankList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRTuhaoRankList.m; sourceTree = "<group>"; };
 		9CC838FD1EC07206008CF79A /* GRRankListRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRRankListRequest.h; sourceTree = "<group>"; };
 		9CC838FE1EC07206008CF79A /* GRRankListRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRRankListRequest.m; sourceTree = "<group>"; };
+		9CC839011EC159C2008CF79A /* GRAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRAddressViewController.h; sourceTree = "<group>"; };
+		9CC839021EC159C2008CF79A /* GRAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRAddressViewController.m; sourceTree = "<group>"; };
+		9CC839031EC159C2008CF79A /* GRAddressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRAddressViewController.xib; sourceTree = "<group>"; };
 		9CCC22C61E950EE60029B0EB /* GRCashierdeskCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRCashierdeskCell.h; sourceTree = "<group>"; };
 		9CCC22C71E950EE60029B0EB /* GRCashierdeskCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRCashierdeskCell.m; sourceTree = "<group>"; };
 		9CCC22C81E950EE60029B0EB /* GRCashierdeskCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRCashierdeskCell.xib; sourceTree = "<group>"; };
@@ -762,6 +767,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		9CC839001EC15985008CF79A /* GRAddressViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9CC839011EC159C2008CF79A /* GRAddressViewController.h */,
+				9CC839021EC159C2008CF79A /* GRAddressViewController.m */,
+				9CC839031EC159C2008CF79A /* GRAddressViewController.xib */,
+			);
+			name = GRAddressViewController;
+			sourceTree = "<group>";
+		};
 		9CCC22C51E950E9A0029B0EB /* GRCashierdeskView */ = {
 			isa = PBXGroup;
 			children = (
@@ -807,6 +822,7 @@
 				9CF50A211EB9E24300E05514 /* GRUserInfoController.h */,
 				9CF50A221EB9E24300E05514 /* GRUserInfoController.m */,
 				9CF50A231EB9E24300E05514 /* GRUserInfoController.xib */,
+				9CC839001EC15985008CF79A /* GRAddressViewController */,
 				9C2749131EBED6330022ABCC /* GRChangePasswordController */,
 				9C2749111EBED5CB0022ABCC /* GRFindMoreViewController */,
 				9C2749121EBED61D0022ABCC /* GRSettingViewController */,
@@ -953,6 +969,7 @@
 				9C2748F61EBD64620022ABCC /* GRChangePasswordController.xib in Resources */,
 				823FE46B1E4D9A1D008E8CB0 /* GRLoginViewController.xib in Resources */,
 				9C44D4681E8CFD6300F85757 /* GRShopRatingRightCell.xib in Resources */,
+				9CC839051EC159C2008CF79A /* GRAddressViewController.xib in Resources */,
 				9C1BE9461E8B923F007F5733 /* GRMenuDetailCell.xib in Resources */,
 				9CC838E71EBF2C60008CF79A /* GRAutherInfoController.xib in Resources */,
 				9C27490B1EBEAEB90022ABCC /* GRAppInfoViewController.xib in Resources */,
@@ -1041,6 +1058,7 @@
 				9CC838F21EC0632E008CF79A /* GRTuhaoRankController.m in Sources */,
 				9CAAF5771E6E8A0800730810 /* GROperateOrderBtn.m in Sources */,
 				9C8CF6D11E83CC350030F54E /* GRMenuViewController.m in Sources */,
+				9CC839041EC159C2008CF79A /* GRAddressViewController.m in Sources */,
 				823FE46A1E4D9A1D008E8CB0 /* GRLoginViewController.m in Sources */,
 				9C1BE93F1E8B8F37007F5733 /* GRMenuCategoryCell.m in Sources */,
 				823FE4601E4D6617008E8CB0 /* GRNavigationController.m in Sources */,

@@ -12,6 +12,7 @@
 #import "GRChangePasswordController.h"
 #import "GRSettingViewController.h"
 #import "GRFindMoreViewController.h"
+#import "GRAddressViewController.h"
 
 @interface GRUserInfoController ()
 
@@ -135,7 +136,7 @@
     }];
     
     [self.addressView gr_addTapAction:^{
-        
+        [self.navigationController pushViewController:[[GRAddressViewController alloc] init] animated:YES];
     }];
     
     [self.passwordView gr_addTapAction:^{
