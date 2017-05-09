@@ -39,6 +39,7 @@
     
     self.operateStatusBtn.layer.cornerRadius = 8;
     self.operateStatusBtn.clipsToBounds = YES;
+    
     self.shopLogo.layer.cornerRadius = 2;
     self.shopLogo.clipsToBounds = YES;
     self.shopLogo.userInteractionEnabled = YES;
@@ -66,7 +67,7 @@
     _shopNameLabel.text = [NSString stringWithFormat:@"♨ %@", orderData.shop.shopName];
     _orderTimeLabel.text = orderData.placeOrderTime;
     _orderSumLabel.text = [NSString stringWithFormat:@"总额: ¥%zd", orderData.cost];
-    _operateStatusBtn.orderStatus = orderData.orderStatus;
+    _operateStatusBtn.order = self.orderData;
     
     [_shopLogo setImageWithURL:[NSURL URLWithString:[orderData.shop.shopLogo stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]] placeholderImage:[UIImage imageNamed:@"shop_placeholder"]];
     [self configOrderDetailView:orderData];

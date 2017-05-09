@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "GROrderStatusEnum.h"
+#import "GROrderList.h"
 
 @interface GROperateOrderBtn : UIButton
 
-@property (nonatomic, assign) GROrderStatus orderStatus;
+@property (nonatomic, strong) GROrder *order;
 
 @end

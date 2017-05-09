@@ -29,6 +29,7 @@
 		82AF89E41E4C542000676D29 /* GRWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82AF89E21E4C542000676D29 /* GRWebViewController.xib */; };
 		9C0301791EC1A6D0004186F7 /* GRPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0301781EC1A6D0004186F7 /* GRPicker.m */; };
 		9C03017E1EC1B971004186F7 /* GRBuildingListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C03017D1EC1B971004186F7 /* GRBuildingListRequest.m */; };
+		9C0301811EC2066B004186F7 /* GROperateOrderStatusRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0301801EC2066B004186F7 /* GROperateOrderStatusRequest.m */; };
 		9C1507F11E5085F3007C2B8F /* GRRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1507EF1E5085F3007C2B8F /* GRRegisterViewController.m */; };
 		9C1507F21E5085F3007C2B8F /* GRRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C1507F01E5085F3007C2B8F /* GRRegisterViewController.xib */; };
 		9C1507F51E515905007C2B8F /* GRLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1507F41E515905007C2B8F /* GRLoginRequest.m */; };
@@ -156,6 +157,8 @@
 		9C0301781EC1A6D0004186F7 /* GRPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRPicker.m; sourceTree = "<group>"; };
 		9C03017C1EC1B971004186F7 /* GRBuildingListRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRBuildingListRequest.h; sourceTree = "<group>"; };
 		9C03017D1EC1B971004186F7 /* GRBuildingListRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRBuildingListRequest.m; sourceTree = "<group>"; };
+		9C03017F1EC2066B004186F7 /* GROperateOrderStatusRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GROperateOrderStatusRequest.h; sourceTree = "<group>"; };
+		9C0301801EC2066B004186F7 /* GROperateOrderStatusRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GROperateOrderStatusRequest.m; sourceTree = "<group>"; };
 		9C1507EE1E5085F3007C2B8F /* GRRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GRRegisterViewController.h; path = ../../Login/Controller/GRRegisterViewController.h; sourceTree = "<group>"; };
 		9C1507EF1E5085F3007C2B8F /* GRRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GRRegisterViewController.m; path = ../../Login/Controller/GRRegisterViewController.m; sourceTree = "<group>"; };
 		9C1507F01E5085F3007C2B8F /* GRRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GRRegisterViewController.xib; path = ../../Login/Controller/GRRegisterViewController.xib; sourceTree = "<group>"; };
@@ -234,10 +237,10 @@
 		9CAAF5691E6D0E8B00730810 /* GROrderListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GROrderListCell.xib; sourceTree = "<group>"; };
 		9CAAF5701E6D6FA200730810 /* GRHeaders.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GRHeaders.pch; sourceTree = "<group>"; };
 		9CAAF5711E6E808900730810 /* GROrderStatusEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GROrderStatusEnum.h; sourceTree = "<group>"; };
-		9CAAF5721E6E83C600730810 /* GROrderStatusLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GROrderStatusLabel.h; sourceTree = "<group>"; };
-		9CAAF5731E6E83C600730810 /* GROrderStatusLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GROrderStatusLabel.m; sourceTree = "<group>"; };
-		9CAAF5751E6E8A0800730810 /* GROperateOrderBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GROperateOrderBtn.h; sourceTree = "<group>"; };
-		9CAAF5761E6E8A0800730810 /* GROperateOrderBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GROperateOrderBtn.m; sourceTree = "<group>"; };
+		9CAAF5721E6E83C600730810 /* GROrderStatusLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GROrderStatusLabel.h; path = ../Model/GROrderStatusLabel.h; sourceTree = "<group>"; };
+		9CAAF5731E6E83C600730810 /* GROrderStatusLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GROrderStatusLabel.m; path = ../Model/GROrderStatusLabel.m; sourceTree = "<group>"; };
+		9CAAF5751E6E8A0800730810 /* GROperateOrderBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GROperateOrderBtn.h; path = ../Model/GROperateOrderBtn.h; sourceTree = "<group>"; };
+		9CAAF5761E6E8A0800730810 /* GROperateOrderBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GROperateOrderBtn.m; path = ../Model/GROperateOrderBtn.m; sourceTree = "<group>"; };
 		9CAAF57A1E6E930700730810 /* GRSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRSegmentView.h; sourceTree = "<group>"; };
 		9CAAF57B1E6E930700730810 /* GRSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRSegmentView.m; sourceTree = "<group>"; };
 		9CAAF57D1E6E9E4B00730810 /* GROrderListTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GROrderListTable.h; sourceTree = "<group>"; };
@@ -753,10 +756,8 @@
 				9CB9DFA31E65A9F800C8F5E8 /* GROrderListRequest.h */,
 				9CB9DFA41E65A9F800C8F5E8 /* GROrderListRequest.m */,
 				9CAAF5711E6E808900730810 /* GROrderStatusEnum.h */,
-				9CAAF5721E6E83C600730810 /* GROrderStatusLabel.h */,
-				9CAAF5731E6E83C600730810 /* GROrderStatusLabel.m */,
-				9CAAF5751E6E8A0800730810 /* GROperateOrderBtn.h */,
-				9CAAF5761E6E8A0800730810 /* GROperateOrderBtn.m */,
+				9C03017F1EC2066B004186F7 /* GROperateOrderStatusRequest.h */,
+				9C0301801EC2066B004186F7 /* GROperateOrderStatusRequest.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -764,6 +765,10 @@
 		9CB9DF9F1E659CE400C8F5E8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9CAAF5721E6E83C600730810 /* GROrderStatusLabel.h */,
+				9CAAF5731E6E83C600730810 /* GROrderStatusLabel.m */,
+				9CAAF5751E6E8A0800730810 /* GROperateOrderBtn.h */,
+				9CAAF5761E6E8A0800730810 /* GROperateOrderBtn.m */,
 				9CAAF5671E6D0E8B00730810 /* GROrderListCell.h */,
 				9CAAF5681E6D0E8B00730810 /* GROrderListCell.m */,
 				9CAAF5691E6D0E8B00730810 /* GROrderListCell.xib */,
@@ -1083,6 +1088,7 @@
 				9C1BE9411E8B8F37007F5733 /* GRMenuMainView.m in Sources */,
 				9C2C3FAF1E978CCA003E77E5 /* GRPlaceOrderRequest.m in Sources */,
 				9CC838E61EBF2C60008CF79A /* GRAutherInfoController.m in Sources */,
+				9C0301811EC2066B004186F7 /* GROperateOrderStatusRequest.m in Sources */,
 				9C5384971E51D4BC004EDBCF /* GRRegisterRequest.m in Sources */,
 				9CAAF56A1E6D0E8B00730810 /* GROrderListCell.m in Sources */,
 				9CB92AB61E5D67AD00650CC5 /* GRShopListCell.m in Sources */,
