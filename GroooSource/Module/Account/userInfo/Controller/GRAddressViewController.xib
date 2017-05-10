@@ -101,10 +101,10 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="address_edit_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Vdv-bj-aa1">
-                            <rect key="frame" x="333.5" y="12.5" width="25" height="25"/>
+                            <rect key="frame" x="333.5" y="13.5" width="23" height="23"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="25" id="8C3-LG-8wC"/>
-                                <constraint firstAttribute="width" constant="25" id="ac1-Ea-BW0"/>
+                                <constraint firstAttribute="height" constant="23" id="8C3-LG-8wC"/>
+                                <constraint firstAttribute="width" constant="23" id="ac1-Ea-BW0"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zb-x3-t2n">
@@ -122,10 +122,10 @@
                         <constraint firstItem="gDe-CZ-DaJ" firstAttribute="leading" secondItem="MXx-QO-Ajd" secondAttribute="trailing" constant="14" id="4gy-MU-RId"/>
                         <constraint firstItem="7zb-x3-t2n" firstAttribute="top" secondItem="JZN-gR-3p6" secondAttribute="top" id="8Yf-hB-3zn"/>
                         <constraint firstItem="gDe-CZ-DaJ" firstAttribute="top" secondItem="JZN-gR-3p6" secondAttribute="top" id="IbB-UX-xcs"/>
-                        <constraint firstItem="Vdv-bj-aa1" firstAttribute="top" secondItem="JZN-gR-3p6" secondAttribute="top" constant="12.5" id="PEB-bB-9a0"/>
+                        <constraint firstItem="Vdv-bj-aa1" firstAttribute="top" secondItem="JZN-gR-3p6" secondAttribute="top" constant="13.5" id="PEB-bB-9a0"/>
                         <constraint firstAttribute="height" constant="50" id="ZmZ-cK-q8x"/>
                         <constraint firstItem="7zb-x3-t2n" firstAttribute="leading" secondItem="gDe-CZ-DaJ" secondAttribute="trailing" constant="8" id="e0d-Z7-M8r"/>
-                        <constraint firstAttribute="trailing" secondItem="Vdv-bj-aa1" secondAttribute="trailing" constant="16.5" id="foQ-yE-5la"/>
+                        <constraint firstAttribute="trailing" secondItem="Vdv-bj-aa1" secondAttribute="trailing" constant="18.5" id="foQ-yE-5la"/>
                         <constraint firstItem="MXx-QO-Ajd" firstAttribute="leading" secondItem="JZN-gR-3p6" secondAttribute="leading" constant="17" id="g8l-Rw-jc0"/>
                         <constraint firstItem="MXx-QO-Ajd" firstAttribute="top" secondItem="JZN-gR-3p6" secondAttribute="top" constant="15" id="hPl-b5-Q68"/>
                         <constraint firstItem="Vdv-bj-aa1" firstAttribute="leading" secondItem="7zb-x3-t2n" secondAttribute="trailing" constant="14.5" id="izh-me-f8h"/>
@@ -191,7 +191,7 @@
     </objects>
     <resources>
         <image name="address_building_icon" width="20" height="20"/>
-        <image name="address_edit_icon" width="30" height="30"/>
+        <image name="address_edit_icon" width="40" height="40"/>
         <image name="address_ok_icon" width="40" height="40"/>
         <image name="address_picker_icon" width="30" height="30"/>
         <image name="address_room_icon" width="15" height="20"/>
