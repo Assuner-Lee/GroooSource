@@ -128,8 +128,10 @@
     }
     CGRect keyboardEndFrame = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
     keyboardEndFrame = [self.view convertRect:keyboardEndFrame toView:self.view];
-    self.inputView.gr_bottom = self.view.gr_height - keyboardEndFrame.size.height;
-    self.isKeyBoardShow = YES;
+    [UIView animateWithDuration:0.3 animations:^{
+        self.inputView.gr_bottom = self.view.gr_height - keyboardEndFrame.size.height;
+        self.isKeyBoardShow = YES;
+    }];
     
     
 }

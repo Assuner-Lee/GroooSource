@@ -9,6 +9,7 @@
 #import "GROperateOrderBtn.h"
 #import "GROperateOrderStatusRequest.h"
 #import "GROrderListViewController.h"
+#import "GRRateViewController.h"
 
 @implementation GROperateOrderBtn
 
@@ -71,6 +72,8 @@
             [MBProgressHUD gr_showSuccess:@"更新状态!"];
             [(GROrderListViewController *)([GRRouter hostViewController].topViewController) startRequest];
         }];
+    } else if (_order.orderStatus == GROrderStatusDone) {
+        [GRRouter open:@"push->GRRateViewController" params:@{@"order": _order}];
     }
 }
 

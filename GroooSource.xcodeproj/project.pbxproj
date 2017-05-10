@@ -30,6 +30,12 @@
 		9C0301791EC1A6D0004186F7 /* GRPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0301781EC1A6D0004186F7 /* GRPicker.m */; };
 		9C03017E1EC1B971004186F7 /* GRBuildingListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C03017D1EC1B971004186F7 /* GRBuildingListRequest.m */; };
 		9C0301811EC2066B004186F7 /* GROperateOrderStatusRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0301801EC2066B004186F7 /* GROperateOrderStatusRequest.m */; };
+		9C0301C21EC2E101004186F7 /* GRStarsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0301BD1EC2E101004186F7 /* GRStarsView.m */; };
+		9C0301C31EC2E101004186F7 /* GRStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0301BF1EC2E101004186F7 /* GRStarView.m */; };
+		9C0301C41EC2E101004186F7 /* light_star.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C0301C01EC2E101004186F7 /* light_star.png */; };
+		9C0301C51EC2E101004186F7 /* pray_star.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C0301C11EC2E101004186F7 /* pray_star.png */; };
+		9C0301CC1EC2F001004186F7 /* GRRateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0301CA1EC2F001004186F7 /* GRRateViewController.m */; };
+		9C0301CD1EC2F001004186F7 /* GRRateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C0301CB1EC2F001004186F7 /* GRRateViewController.xib */; };
 		9C1507F11E5085F3007C2B8F /* GRRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1507EF1E5085F3007C2B8F /* GRRegisterViewController.m */; };
 		9C1507F21E5085F3007C2B8F /* GRRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C1507F01E5085F3007C2B8F /* GRRegisterViewController.xib */; };
 		9C1507F51E515905007C2B8F /* GRLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1507F41E515905007C2B8F /* GRLoginRequest.m */; };
@@ -159,6 +165,15 @@
 		9C03017D1EC1B971004186F7 /* GRBuildingListRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRBuildingListRequest.m; sourceTree = "<group>"; };
 		9C03017F1EC2066B004186F7 /* GROperateOrderStatusRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GROperateOrderStatusRequest.h; sourceTree = "<group>"; };
 		9C0301801EC2066B004186F7 /* GROperateOrderStatusRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GROperateOrderStatusRequest.m; sourceTree = "<group>"; };
+		9C0301BC1EC2E101004186F7 /* GRStarsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRStarsView.h; sourceTree = "<group>"; };
+		9C0301BD1EC2E101004186F7 /* GRStarsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRStarsView.m; sourceTree = "<group>"; };
+		9C0301BE1EC2E101004186F7 /* GRStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRStarView.h; sourceTree = "<group>"; };
+		9C0301BF1EC2E101004186F7 /* GRStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRStarView.m; sourceTree = "<group>"; };
+		9C0301C01EC2E101004186F7 /* light_star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = light_star.png; sourceTree = "<group>"; };
+		9C0301C11EC2E101004186F7 /* pray_star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pray_star.png; sourceTree = "<group>"; };
+		9C0301C91EC2F001004186F7 /* GRRateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRRateViewController.h; sourceTree = "<group>"; };
+		9C0301CA1EC2F001004186F7 /* GRRateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRRateViewController.m; sourceTree = "<group>"; };
+		9C0301CB1EC2F001004186F7 /* GRRateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRRateViewController.xib; sourceTree = "<group>"; };
 		9C1507EE1E5085F3007C2B8F /* GRRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GRRegisterViewController.h; path = ../../Login/Controller/GRRegisterViewController.h; sourceTree = "<group>"; };
 		9C1507EF1E5085F3007C2B8F /* GRRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GRRegisterViewController.m; path = ../../Login/Controller/GRRegisterViewController.m; sourceTree = "<group>"; };
 		9C1507F01E5085F3007C2B8F /* GRRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GRRegisterViewController.xib; path = ../../Login/Controller/GRRegisterViewController.xib; sourceTree = "<group>"; };
@@ -591,6 +606,19 @@
 			name = GRPicker;
 			sourceTree = "<group>";
 		};
+		9C0301BB1EC2E101004186F7 /* GRStarsView */ = {
+			isa = PBXGroup;
+			children = (
+				9C0301BC1EC2E101004186F7 /* GRStarsView.h */,
+				9C0301BD1EC2E101004186F7 /* GRStarsView.m */,
+				9C0301BE1EC2E101004186F7 /* GRStarView.h */,
+				9C0301BF1EC2E101004186F7 /* GRStarView.m */,
+				9C0301C01EC2E101004186F7 /* light_star.png */,
+				9C0301C11EC2E101004186F7 /* pray_star.png */,
+			);
+			path = GRStarsView;
+			sourceTree = "<group>";
+		};
 		9C2749111EBED5CB0022ABCC /* GRFindMoreViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -699,6 +727,7 @@
 		9CAAF5781E6E92C500730810 /* BaseView */ = {
 			isa = PBXGroup;
 			children = (
+				9C0301BB1EC2E101004186F7 /* GRStarsView */,
 				9C0301761EC1A5FB004186F7 /* GRPicker */,
 				9CAAF5791E6E92C500730810 /* GRSegmentView */,
 			);
@@ -744,6 +773,9 @@
 			children = (
 				9CAAF5831E6F048E00730810 /* GROrderListViewController.h */,
 				9CAAF5841E6F048E00730810 /* GROrderListViewController.m */,
+				9C0301C91EC2F001004186F7 /* GRRateViewController.h */,
+				9C0301CA1EC2F001004186F7 /* GRRateViewController.m */,
+				9C0301CB1EC2F001004186F7 /* GRRateViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -988,11 +1020,14 @@
 				9CF50A251EB9E24300E05514 /* GRUserInfoController.xib in Resources */,
 				9C44D4631E8CFBA000F85757 /* GRShopRatingLeftCell.xib in Resources */,
 				9C1507F21E5085F3007C2B8F /* GRRegisterViewController.xib in Resources */,
+				9C0301CD1EC2F001004186F7 /* GRRateViewController.xib in Resources */,
 				9C2749101EBECFD60022ABCC /* GRFindMoreViewController.xib in Resources */,
 				9C2748F61EBD64620022ABCC /* GRChangePasswordController.xib in Resources */,
 				823FE46B1E4D9A1D008E8CB0 /* GRLoginViewController.xib in Resources */,
+				9C0301C51EC2E101004186F7 /* pray_star.png in Resources */,
 				9C44D4681E8CFD6300F85757 /* GRShopRatingRightCell.xib in Resources */,
 				9CC839051EC159C2008CF79A /* GRAddressViewController.xib in Resources */,
+				9C0301C41EC2E101004186F7 /* light_star.png in Resources */,
 				9C1BE9461E8B923F007F5733 /* GRMenuDetailCell.xib in Resources */,
 				9CC838E71EBF2C60008CF79A /* GRAutherInfoController.xib in Resources */,
 				9C27490B1EBEAEB90022ABCC /* GRAppInfoViewController.xib in Resources */,
@@ -1106,8 +1141,10 @@
 				9CB92AC61E63F1A700650CC5 /* GRRouter.m in Sources */,
 				82AF89811E48418800676D29 /* main.m in Sources */,
 				9C53849F1E52F626004EDBCF /* GRUserManager.m in Sources */,
+				9C0301C21EC2E101004186F7 /* GRStarsView.m in Sources */,
 				9C44D4491E8CAC3100F85757 /* GRShopRatingListRequest.m in Sources */,
 				9CB9DFA21E659D7000C8F5E8 /* GROrderList.m in Sources */,
+				9C0301C31EC2E101004186F7 /* GRStarView.m in Sources */,
 				9CAAF5741E6E83C600730810 /* GROrderStatusLabel.m in Sources */,
 				9C0301791EC1A6D0004186F7 /* GRPicker.m in Sources */,
 				9C2C3FB21E97AB5B003E77E5 /* MBProgressHUD+GRShow.m in Sources */,
@@ -1128,6 +1165,7 @@
 				9C27490A1EBEAEB90022ABCC /* GRAppInfoViewController.m in Sources */,
 				82AF89C51E4AF0C900676D29 /* GRShopList.m in Sources */,
 				9C2CC6941EBC0C80001E2F31 /* GRUserInfoData.m in Sources */,
+				9C0301CC1EC2F001004186F7 /* GRRateViewController.m in Sources */,
 				82AF89971E48457F00676D29 /* GRAppDelegate.m in Sources */,
 				823FE46E1E4DC7E7008E8CB0 /* GRLoginResponse.m in Sources */,
 				9CB92AC01E601EC000650CC5 /* GRCacheManager.m in Sources */,
