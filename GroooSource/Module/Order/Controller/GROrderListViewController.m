@@ -65,10 +65,6 @@
     return self;
 }
 
-- (void)setupBarItem {
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"刷新" style:UIBarButtonItemStylePlain target:self action:@selector(startRequest)];
-}
-
 - (void)addObservedNotification {
     [super addObservedNotification];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeUpadateState) name:GRUpdateOrderListNextAppearedNotification object:nil];

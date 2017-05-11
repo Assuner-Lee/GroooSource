@@ -11,6 +11,7 @@
 #import "GRShopListRequest.h"
 #import "GRShopListCell.h"
 #import "GRSchoolNoticeView.h"
+#import <MJRefresh/MJRefresh.h>
 
 static NSString *GRShopListCellID = @"GRShopListCellID";
 
@@ -31,6 +32,7 @@ static NSString *GRShopListCellID = @"GRShopListCellID";
 
 @property (nonatomic, strong) UIBarButtonItem *searchItem;
 @property (nonatomic, strong) UIBarButtonItem *closeItem;
+
 
 @end
 
@@ -74,7 +76,7 @@ static NSString *GRShopListCellID = @"GRShopListCellID";
 }
 
 - (void)initView {
-    self.shopListTableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+    self.shopListTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     self.shopListTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.shopListTableView.backgroundColor = self.view.backgroundColor;
     self.shopListTableView.delegate = self;
@@ -82,12 +84,16 @@ static NSString *GRShopListCellID = @"GRShopListCellID";
     self.shopListTableView.scrollsToTop = YES;
     [self.view addSubview:self.shopListTableView];
     [self.shopListTableView registerNib:[UINib nibWithNibName:@"GRShopListCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:GRShopListCellID];
+    self.shopListTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [self startRequest];
+    }];
     
     self.searchBar = [[UISearchBar alloc] initWithFrame:self.searchBarBeginFrame];
     self.searchBar.placeholder = @"查询";
     self.searchBar.delegate = self;
     
     [self.view addSubview:[[GRSchoolNoticeView alloc] init]];
+    
 }
 
 - (void)initRequest {
@@ -105,6 +111,7 @@ static NSString *GRShopListCellID = @"GRShopListCellID";
     [self.shopListRequest startRequestComplete:^(GRShopList *  _Nullable responseObject, NSError * _Nullable error) {
         GRSTRONG(self);
         [self hideProgress];
+        [self.shopListTableView.mj_header endRefreshing];
         if (error) {
             [self showTimeOut];
             return;

@@ -8,6 +8,8 @@
 
 #import "GROrderListTable.h"
 #import "GROrderListCell.h"
+#import <MJRefresh/MJRefresh.h>
+#import "GROrderListViewController.h"
 
 static NSString *GROrderListCellID = @"GROrderListCellID";
 
@@ -24,6 +26,9 @@ static NSString *GROrderListCellID = @"GROrderListCellID";
     if (self = [super init]) {
         _tableType = type;
         [self initView];
+        self.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+             [(GROrderListViewController *)([GRRouter hostViewController].topViewController) startRequest];
+        }];
     }
     return self;
 }
@@ -48,6 +53,7 @@ static NSString *GROrderListCellID = @"GROrderListCellID";
 }
 
 - (void)setCellDataArray:(NSArray<GROrder *> *)cellDataArray {
+    [self.mj_header endRefreshing];
     [_blankView removeFromSuperview];
     _cellDataArray = cellDataArray;
     [self reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];

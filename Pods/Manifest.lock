@@ -17,6 +17,7 @@ PODS:
   - LPDSplashScreenManager (0.1.0):
     - SDWebImage
   - MJExtension (3.0.13)
+  - MJRefresh (3.1.12)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
@@ -25,13 +26,15 @@ DEPENDENCIES:
   - AFNetworking
   - LPDSplashScreenManager (= 0.1.0)
   - MJExtension
+  - MJRefresh
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   LPDSplashScreenManager: 6feb406e847f3fbe0b242087291c2a8b6657eaa7
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
-PODFILE CHECKSUM: 8e00245082fb661fe753697a22000182c530d3f2
+PODFILE CHECKSUM: 747acd43c5673f4ba619df51f708c7b8931f7666
 
 COCOAPODS: 1.2.1
