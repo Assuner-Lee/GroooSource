@@ -36,6 +36,7 @@
 		9C0301C51EC2E101004186F7 /* pray_star.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C0301C11EC2E101004186F7 /* pray_star.png */; };
 		9C0301CC1EC2F001004186F7 /* GRRateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0301CA1EC2F001004186F7 /* GRRateViewController.m */; };
 		9C0301CD1EC2F001004186F7 /* GRRateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C0301CB1EC2F001004186F7 /* GRRateViewController.xib */; };
+		9C0301D01EC3F910004186F7 /* GRRatingOrderRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0301CF1EC3F910004186F7 /* GRRatingOrderRequest.m */; };
 		9C1507F11E5085F3007C2B8F /* GRRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1507EF1E5085F3007C2B8F /* GRRegisterViewController.m */; };
 		9C1507F21E5085F3007C2B8F /* GRRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C1507F01E5085F3007C2B8F /* GRRegisterViewController.xib */; };
 		9C1507F51E515905007C2B8F /* GRLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1507F41E515905007C2B8F /* GRLoginRequest.m */; };
@@ -174,6 +175,8 @@
 		9C0301C91EC2F001004186F7 /* GRRateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRRateViewController.h; sourceTree = "<group>"; };
 		9C0301CA1EC2F001004186F7 /* GRRateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRRateViewController.m; sourceTree = "<group>"; };
 		9C0301CB1EC2F001004186F7 /* GRRateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRRateViewController.xib; sourceTree = "<group>"; };
+		9C0301CE1EC3F910004186F7 /* GRRatingOrderRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRRatingOrderRequest.h; sourceTree = "<group>"; };
+		9C0301CF1EC3F910004186F7 /* GRRatingOrderRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRRatingOrderRequest.m; sourceTree = "<group>"; };
 		9C1507EE1E5085F3007C2B8F /* GRRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GRRegisterViewController.h; path = ../../Login/Controller/GRRegisterViewController.h; sourceTree = "<group>"; };
 		9C1507EF1E5085F3007C2B8F /* GRRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GRRegisterViewController.m; path = ../../Login/Controller/GRRegisterViewController.m; sourceTree = "<group>"; };
 		9C1507F01E5085F3007C2B8F /* GRRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GRRegisterViewController.xib; path = ../../Login/Controller/GRRegisterViewController.xib; sourceTree = "<group>"; };
@@ -790,6 +793,8 @@
 				9CAAF5711E6E808900730810 /* GROrderStatusEnum.h */,
 				9C03017F1EC2066B004186F7 /* GROperateOrderStatusRequest.h */,
 				9C0301801EC2066B004186F7 /* GROperateOrderStatusRequest.m */,
+				9C0301CE1EC3F910004186F7 /* GRRatingOrderRequest.h */,
+				9C0301CF1EC3F910004186F7 /* GRRatingOrderRequest.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1167,6 +1172,7 @@
 				9C2CC6941EBC0C80001E2F31 /* GRUserInfoData.m in Sources */,
 				9C0301CC1EC2F001004186F7 /* GRRateViewController.m in Sources */,
 				82AF89971E48457F00676D29 /* GRAppDelegate.m in Sources */,
+				9C0301D01EC3F910004186F7 /* GRRatingOrderRequest.m in Sources */,
 				823FE46E1E4DC7E7008E8CB0 /* GRLoginResponse.m in Sources */,
 				9CB92AC01E601EC000650CC5 /* GRCacheManager.m in Sources */,
 				9C2749051EBDEDB70022ABCC /* GRSettingViewController.m in Sources */,

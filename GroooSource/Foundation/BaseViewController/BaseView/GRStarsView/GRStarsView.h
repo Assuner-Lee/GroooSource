@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef  void (^GRTappedActionBlock)(CGFloat score);
+typedef  void (^GRTouchedActionBlock)(CGFloat score);
 
 @interface GRStarsView : UIView
 
@@ -17,7 +17,7 @@ typedef  void (^GRTappedActionBlock)(CGFloat score);
 @property (nonatomic, assign) BOOL allowDecimal;
 @property (nonatomic, assign) BOOL allowDragSelect;
 
-@property (nonatomic, copy) GRTappedActionBlock tappedActionBlock;
+@property (nonatomic, copy) GRTouchedActionBlock touchedActionBlock;
 
 - (instancetype)initWithStarSize:(CGSize)size margin:(CGFloat)margin numberOfStars:(NSInteger)number;
 

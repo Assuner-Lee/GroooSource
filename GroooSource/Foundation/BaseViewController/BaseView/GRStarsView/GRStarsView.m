@@ -54,8 +54,8 @@
             lastLightStarView.lightPercent = _score - wholeLightStarsCount;
         }
     }
-    if (self.tappedActionBlock) {
-        self.tappedActionBlock(_score);
+    if (self.touchedActionBlock) {
+        self.touchedActionBlock(_score);
     }
     
 }
@@ -100,6 +100,7 @@
         }
         
     }
+    _score = [NSString stringWithFormat:@"%.2f", _score].floatValue;
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -113,8 +114,8 @@
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    if (self.tappedActionBlock) {
-        self.tappedActionBlock(_score);
+    if (self.touchedActionBlock) {
+        self.touchedActionBlock(_score);
     }
 }
 

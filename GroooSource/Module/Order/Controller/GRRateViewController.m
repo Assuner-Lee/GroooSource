@@ -8,6 +8,7 @@
 
 #import "GRRateViewController.h"
 #import "GRStarsView.h"
+#import "GRRatingOrderRequest.h"
 
 @interface GRRateViewController () <UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *shopLogo;
@@ -107,7 +108,7 @@
 
 - (void)addGesture {
     GRWEAK(self);
-    self.starsView.tappedActionBlock = ^(CGFloat score) {
+    self.starsView.touchedActionBlock = ^(CGFloat score) {
         GRSTRONG(self);
         if (score > 4.3) {
             self.goodRateLabel.backgroundColor = [GRAppStyle mainColor];
@@ -151,6 +152,8 @@
     [self.shopLogo gr_addTapAction:^{
         [GRRouter open:@"push->GRMenuViewController" params:@{@"shop": _order.shop}];
     }];
+    
+    [self.submitBtn addTarget:self action:@selector(submit) forControlEvents:UIControlEventTouchUpInside];
 }
 
 #pragma - textField
@@ -179,6 +182,25 @@
     } else {
         self.submitBtn.enabled = NO;
     }
+}
+
+#pragma - Actions
+
+- (void)submit {
+    [self showProgress];
+    self.submitBtn.enabled = NO;
+    [[[GRRatingOrderRequest alloc] initWithOrder:_order rating:self.starsView.score remark:self.textView.text] startRequestComplete:^(id  _Nullable responseObject, NSError * _Nullable error) {
+        [self hideProgress];
+        if (error) {
+            [self showFailure:@"提交失败"];
+            self.submitBtn.enabled = YES;
+            return;
+        }
+        self.submitBtn.enabled = YES;
+        [MBProgressHUD gr_showSuccess:@"提交成功"];
+        [[NSNotificationCenter defaultCenter] postNotificationName:GRUpdateOrderListNextAppearedNotification object:nil];
+        [self back];
+    }];
 }
 
 @end
