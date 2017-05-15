@@ -11,7 +11,7 @@
 @interface GRRatingOrderRequest ()
 
 @property (nonatomic, strong) GROrder *order;
-@property (nonatomic, assign) CGFloat rating;
+@property (nonatomic, assign) NSInteger rating;
 @property (nonatomic, strong) NSString *remark;
 
 @end
@@ -21,7 +21,7 @@
 - (instancetype)initWithOrder:(GROrder *)order rating:(CGFloat)rating remark:(NSString *)remark {
     if (self = [super init]) {
         _order = order;
-        _rating = rating;
+        _rating = (NSInteger)rating;
         _remark = remark;
         self.requestPath = API_USER_ORDER;
         self.httpMethod = GRHTTPMethodPost;
